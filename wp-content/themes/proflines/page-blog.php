@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+HELLO!
 <?php
 // Get ACF fields for blog page
 $blog_badge = get_field('blog_badge');
