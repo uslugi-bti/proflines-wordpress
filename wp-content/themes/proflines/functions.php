@@ -277,3 +277,20 @@ function brif_template_include($template) {
     return $template;
 }
 add_filter('template_include', 'brif_template_include');
+
+function redirect_services_archive_to_home() {
+    if (is_category('services') || is_category(get_cat_ID('services'))) {
+        wp_redirect(home_url(), 301);
+        exit;
+    }
+
+    if (strpos($_SERVER['REQUEST_URI'], '/services/') === 0 && !is_single()) {
+        $request_uri = $_SERVER['REQUEST_URI'];
+        
+        if ($request_uri === '/services/' || $request_uri === '/services') {
+            wp_redirect(home_url(), 301);
+            exit;
+        }
+    }
+}
+add_action('template_redirect', 'redirect_services_archive_to_home');
