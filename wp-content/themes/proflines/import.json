@@ -1,0 +1,142 @@
+[
+    {
+        "key": "group_67b5f8d4c5a12",
+        "title": "Blog Archive",
+        "fields": [
+            {
+                "key": "field_67b5f8d4d6b23",
+                "label": "Hlavička blogu",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_67b5f8d4e7c34",
+                "label": "Blog - Badge",
+                "name": "blog_badge",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Text v odznaku (napr. 'Blog & Insights')",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Blog & Insights",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67b5f8d4f8d45",
+                "label": "Blog - Nadpis",
+                "name": "blog_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Hlavný nadpis stránky blogu",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Blog & Insights",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67b5f8d509e56",
+                "label": "JSON-LD nastavenia",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_67b5f8d5e0f67",
+                "label": "JSON-LD - Názov",
+                "name": "blog_json_ld_name",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Názov pre JSON-LD (napr. 'Blog | ProfLines marketing agency')",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Blog | ProfLines marketing agency",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67b5f8d6f1a78",
+                "label": "JSON-LD - Popis",
+                "name": "blog_json_ld_description",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "Popis pre JSON-LD",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Najnovšie články, trendy a tipy zo sveta digitálneho marketingu, SEO, PPC a umelej inteligencie.",
+                "maxlength": "",
+                "rows": 4,
+                "placeholder": "",
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "blog.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Pole pre stránku blogu (archív).",
+        "show_in_rest": 0
+    }
+]
