@@ -252,69 +252,28 @@ add_action('wp_head', 'proflines_output_json_ld');
 
 add_theme_support( 'post-thumbnails' );
 
-function proflines_add_rewrite_rules() {
+function add_brif_rewrite_rules() {
     add_rewrite_rule(
         '^services/([^/]+)/brif/?$',
-        'index.php?service_slug=$matches[1]&service_brief=1',
-        'top'
-    );
-    
-    add_rewrite_rule(
-        '^services/([^/]+)/?$',
-        'index.php?service_slug=$matches[1]&service_brief=0',
+        'index.php?name=$matches[1]&brif=1',
         'top'
     );
 }
-add_action('init', 'proflines_add_rewrite_rules');
+add_action('init', 'add_brif_rewrite_rules');
 
-function proflines_add_query_vars($vars) {
-    $vars[] = 'service_slug';
-    $vars[] = 'service_brief';
+function add_brif_query_var($vars) {
+    $vars[] = 'brif';
     return $vars;
 }
-add_filter('query_vars', 'proflines_add_query_vars');
+add_filter('query_vars', 'add_brif_query_var');
 
-function proflines_service_template_redirect() {
-    $service_slug = get_query_var('service_slug');
-    $is_brief = get_query_var('service_brief');
-    
-    if (!$service_slug) {
-        return;
-    }
-    
-    $service = get_page_by_path($service_slug, OBJECT, 'services');
-    
-    if (!$service) {
-        global $wp_query;
-        $wp_query->set_404();
-        status_header(404);
-        include get_template_directory() . '/404.php';
-        exit;
-    }
-    
-    $is_secondary = has_category('ina-sluzba', $service);
-    
-    if ($is_brief) {
-        include get_template_directory() . '/service-brief.php';
-        exit;
-    } else {
-        if ($is_secondary) {
-            wp_redirect(home_url('/services/' . $service_slug . '/brif/'));
-            exit;
-        } else {
-            include get_template_directory() . '/single-service.php';
-            exit;
-        }
-    }
-}
-add_action('template_redirect', 'proflines_service_template_redirect');
-
-function proflines_single_template($template) {
-    if (is_singular('post')) {
-        if (in_category('blog')) {
-            return get_template_directory() . '/single-blog.php';
+function brif_template_include($template) {
+    if (get_query_var('brif') == 1) {
+        $new_template = locate_template(array('single-services_brif.php'));
+        if (!empty($new_template)) {
+            return $new_template;
         }
     }
     return $template;
 }
-add_filter('single_template', 'proflines_single_template');
+add_filter('template_include', 'brif_template_include');
