@@ -1,10 +1,4 @@
-<?php
-/**
- * Template Name: Маркетинговый исследование
- * Шаблон для услуги "Marketingový prieskum"
- */
-get_header();
-?>
+<?php get_header(); ?>
 
 <main id="primary" class="site-main">
     <?php while (have_posts()) : the_post(); ?>
@@ -41,5 +35,4 @@ get_header();
     <?php endwhile; ?>
 </main>
 
-<?php
-get_footer();
+<?php get_footer(); ?>
