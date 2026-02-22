@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="service-hero__img">
-                    <picture><source srcset="img/marketing/01.webp" type="image/webp"><img src="img/marketing/01.png" alt="hero"></picture>
+                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/marketing/01.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/marketing/01.png" alt="hero"></picture>
                 </div>
             </div>
         </div>
@@ -45,19 +45,19 @@
                 <div class="companys__marquee">
                     <div class="companys__track">
                         <div class="companys__items">
-                            <div class="companys__item"><picture><source srcset="img/companys/01.svg" type="image/webp"><img src="img/companys/01.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="img/companys/02.svg" type="image/webp"><img src="img/companys/02.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="img/companys/03.svg" type="image/webp"><img src="img/companys/03.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="img/companys/04.svg" type="image/webp"><img src="img/companys/04.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="img/companys/05.svg" type="image/webp"><img src="img/companys/05.svg"></picture></div>
+                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/01.svg"></picture></div>
+                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/02.svg"></picture></div>
+                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/03.svg"></picture></div>
+                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/04.svg"></picture></div>
+                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/05.svg"></picture></div>
                         </div>
 
                         <div class="companys__items">
-                            <div class="companys__item"><picture><source srcset="img/companys/01.svg" type="image/webp"><img src="img/companys/01.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="img/companys/02.svg" type="image/webp"><img src="img/companys/02.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="img/companys/03.svg" type="image/webp"><img src="img/companys/03.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="img/companys/04.svg" type="image/webp"><img src="img/companys/04.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="img/companys/05.svg" type="image/webp"><img src="img/companys/05.svg"></picture></div>
+                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/01.svg"></picture></div>
+                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/02.svg"></picture></div>
+                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/03.svg"></picture></div>
+                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/04.svg"></picture></div>
+                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/05.svg"></picture></div>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="img/statistics/01.svg" type="image/webp"><img src="img/statistics/01.svg" alt="icon"></picture>
+                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/statistics/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/statistics/01.svg" alt="icon"></picture>
                         </div>
                         <div class="columns-item__title">
                             <h2>Ka&#x17E;d&#xFD;ch 9 min&#xFA;t</h2>
@@ -91,7 +91,7 @@
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="img/statistics/02.svg" type="image/webp"><img src="img/statistics/02.svg" alt="icon"></picture>
+                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/statistics/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/statistics/02.svg" alt="icon"></picture>
                         </div>
                         <div class="columns-item__title">
                             <h2>164 firiem denne</h2>
@@ -104,7 +104,7 @@
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="img/statistics/03.svg" type="image/webp"><img src="img/statistics/03.svg" alt="icon"></picture>
+                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/statistics/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/statistics/03.svg" alt="icon"></picture>
                         </div>
                         <div class="columns-item__title">
                             <h2>3&#xD7; vy&#x161;&#x161;ia &#xFA;mrtnos&#x165; ne&#x17E; v E&#xDA;</h2>
@@ -117,7 +117,7 @@
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="img/statistics/04.svg" type="image/webp"><img src="img/statistics/04.svg" alt="icon"></picture>
+                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/statistics/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/statistics/04.svg" alt="icon"></picture>
                         </div>
                         <div class="columns-item__title">
                             <h2>&#x17D;ivnostn&#xED;ci v ohrozen&#xED;</h2>
@@ -130,7 +130,7 @@
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="img/statistics/05.svg" type="image/webp"><img src="img/statistics/05.svg" alt="icon"></picture>
+                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/statistics/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/statistics/05.svg" alt="icon"></picture>
                         </div>
                         <div class="columns-item__title">
                             <h2>Stena 3 rokov</h2>
@@ -143,7 +143,7 @@
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="img/statistics/06.svg" type="image/webp"><img src="img/statistics/06.svg" alt="icon"></picture>
+                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/statistics/06.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/statistics/06.svg" alt="icon"></picture>
                         </div>
                         <div class="columns-item__title">
                             <h2>Nov&#xE1; da&#x148;ov&#xE1; licencia</h2>
@@ -290,7 +290,7 @@
                     <div class="columns__item">
                         <div class="columns-item__head">
                             <div class="columns-item__icon">
-                                <picture><source srcset="img/expect/01.svg" type="image/webp"><img src="img/expect/01.svg" alt="icon"></picture>
+                                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/expect/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/expect/01.svg" alt="icon"></picture>
                             </div>
                             <div class="columns-item__title">
                                 <h2>&#x17D;iadna zbyto&#x10D;n&#xE1; te&#xF3;ria. Len konkr&#xE9;tne odpovede, ktor&#xE9; potrebujete:</h2>
@@ -306,7 +306,7 @@
                     <div class="columns__item">
                         <div class="columns-item__head">
                             <div class="columns-item__icon">
-                                <picture><source srcset="img/expect/02.svg" type="image/webp"><img src="img/expect/02.svg" alt="icon"></picture>
+                                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/expect/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/expect/02.svg" alt="icon"></picture>
                             </div>
                             <div class="columns-item__title">
                                 <h2>Nie je to len generick&#xE1; spr&#xE1;va &#x2013; je to praktick&#xFD; pl&#xE1;n na &#xFA;spech:</h2>
@@ -323,7 +323,7 @@
                     <div class="columns__item">
                         <div class="columns-item__head">
                             <div class="columns-item__icon">
-                                <picture><source srcset="img/expect/03.svg" type="image/webp"><img src="img/expect/03.svg" alt="icon"></picture>
+                                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/expect/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/expect/03.svg" alt="icon"></picture>
                             </div>
                             <div class="columns-item__title">
                                 <h2>Dostanete n&#xE1;vod k &#xFA;spechu:</h2>
@@ -355,7 +355,7 @@
                         <div class="columns__item">
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="img/principles-marketing/01.svg" type="image/webp"><img src="img/principles-marketing/01.svg" alt="icon"></picture>
+                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/principles-marketing/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/principles-marketing/01.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Systematick&#xFD; pr&#xED;stup</h2>
@@ -368,7 +368,7 @@
                         <div class="columns__item">
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="img/principles-marketing/02.svg" type="image/webp"><img src="img/principles-marketing/02.svg" alt="icon"></picture>
+                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/principles-marketing/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/principles-marketing/02.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>AI n&#xE1;stroje</h2>
@@ -381,7 +381,7 @@
                         <div class="columns__item">
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="img/principles-marketing/03.svg" type="image/webp"><img src="img/principles-marketing/03.svg" alt="icon"></picture>
+                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/principles-marketing/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/principles-marketing/03.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Kritick&#xE1; rev&#xED;zia</h2>
@@ -1004,14 +1004,14 @@
                         <div class="quote__info">
                             <div class="quote-info__head">
                                 <div class="quote-info__icon">
-                                    <picture><source srcset="img/quote/icons/01.svg" type="image/webp"><img src="img/quote/icons/01.svg" alt="icon"></picture>
+                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/quote/icons/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/quote/icons/01.svg" alt="icon"></picture>
                                 </div>
                                 <div class="quote-info__text">
                                     <p>&#x2013; Marek Kov&#xE1;&#x10D; , Koordin&#xE1;tor projektov a jeho pracovn&#xFD; princ&#xED;p</p>
                                 </div>
                             </div>
                             <div class="quote-info__img">
-                                <picture><source srcset="img/quote/01.webp" type="image/webp"><img src="img/quote/01.png" alt="quote"></picture>
+                                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/quote/01.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/quote/01.png" alt="quote"></picture>
                             </div>
                         </div>
                     </div>
@@ -1028,7 +1028,7 @@
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="img/transparency/01.svg" type="image/webp"><img src="img/transparency/01.svg" alt="icon"></picture>
+                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/transparency/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/transparency/01.svg" alt="icon"></picture>
                         </div>
                         <div class="columns-item__title">
                             <h2>Dokument&#xE1;cia</h2>
@@ -1041,7 +1041,7 @@
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="img/transparency/02.svg" type="image/webp"><img src="img/transparency/02.svg" alt="icon"></picture>
+                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/transparency/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/transparency/02.svg" alt="icon"></picture>
                         </div>
                         <div class="columns-item__title">
                             <h2>Garancia hodnoty</h2>
@@ -1054,7 +1054,7 @@
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="img/transparency/03.svg" type="image/webp"><img src="img/transparency/03.svg" alt="icon"></picture>
+                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/transparency/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/transparency/03.svg" alt="icon"></picture>
                         </div>
                         <div class="columns-item__title">
                             <h2>Podpora expertov</h2>
@@ -1181,7 +1181,7 @@
             <div class="gradient-block__body">
                 <div class="gradient-block__container">
                     <div class="gradient-block__badge blue">
-                        <picture><source srcset="img/difference/icons/01.svg" type="image/webp"><img src="img/difference/icons/01.svg" alt="icon"></picture>
+                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/difference/icons/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/difference/icons/01.svg" alt="icon"></picture>
                         <p>Bezplatn&#xE9; vzorky</p>
                     </div>
                     <div class="gradient-block__title">
@@ -1195,7 +1195,7 @@
                             <div class="columns__item">
                                 <div class="columns-item__head">
                                     <div class="columns-item__icon">
-                                        <picture><source srcset="img/difference/icons/02.svg" type="image/webp"><img src="img/difference/icons/02.svg" alt="icon"></picture>
+                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/difference/icons/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/difference/icons/02.svg" alt="icon"></picture>
                                     </div>
                                     <div class="columns-item__title">
                                         <h2>Starter</h2>
@@ -1216,7 +1216,7 @@
                             <div class="columns__item">
                                 <div class="columns-item__head">
                                     <div class="columns-item__icon">
-                                        <picture><source srcset="img/difference/icons/03.svg" type="image/webp"><img src="img/difference/icons/03.svg" alt="icon"></picture>
+                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/difference/icons/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/difference/icons/03.svg" alt="icon"></picture>
                                     </div>
                                     <div class="columns-item__title">
                                         <h2>Basic</h2>
@@ -1237,7 +1237,7 @@
                             <div class="columns__item">
                                 <div class="columns-item__head">
                                     <div class="columns-item__icon">
-                                        <picture><source srcset="img/difference/icons/04.svg" type="image/webp"><img src="img/difference/icons/04.svg" alt="icon"></picture>
+                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/difference/icons/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/difference/icons/04.svg" alt="icon"></picture>
                                     </div>
                                     <div class="columns-item__title">
                                         <h2>Advanced</h2>
@@ -1257,7 +1257,7 @@
                         <div class="columns__item span-three">
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="img/difference/icons/05.svg" type="image/webp"><img src="img/difference/icons/05.svg" alt="icon"></picture>
+                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/difference/icons/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/difference/icons/05.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Z&#xED;skajte v&#x161;etky 3 vzorky v plnej verzii zadarmo</h2>
@@ -1312,7 +1312,7 @@
                     <div class="analysis__item blue">
                         <div class="analysis-item__head">
                             <div class="analysis-item__icon">
-                                <picture><source srcset="img/analysis/01.svg" type="image/webp"><img src="img/analysis/01.svg" alt="icon"></picture>
+                                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/analysis/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/analysis/01.svg" alt="icon"></picture>
                             </div>
                             <div class="analysis-item__badge">
                                 <span>&#x26A0; Rekord</span>
@@ -1329,7 +1329,7 @@
                     <div class="analysis__item white">
                         <div class="analysis-item__head">
                             <div class="analysis-item__icon">
-                                <picture><source srcset="img/analysis/02.svg" type="image/webp"><img src="img/analysis/02.svg" alt="icon"></picture>
+                                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/analysis/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/analysis/02.svg" alt="icon"></picture>
                             </div>
                             <div class="analysis-item__badge">
                                 <span>&#x17D;ivnostn&#xED;ci</span>
@@ -1346,7 +1346,7 @@
                     <div class="analysis__item yellow">
                         <div class="analysis-item__head">
                             <div class="analysis-item__icon">
-                                <picture><source srcset="img/analysis/03.svg" type="image/webp"><img src="img/analysis/03.svg" alt="icon"></picture>
+                                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/analysis/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/analysis/03.svg" alt="icon"></picture>
                             </div>
                             <div class="analysis-item__badge">
                                 <span>3 roky</span>
@@ -1395,7 +1395,7 @@
                     <div class="analysis__item blue">
                         <div class="analysis-item__head">
                             <div class="analysis-item__icon">
-                                <picture><source srcset="img/analysis/04.svg" type="image/webp"><img src="img/analysis/04.svg" alt="icon"></picture>
+                                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/analysis/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/analysis/04.svg" alt="icon"></picture>
                             </div>
                         </div>
                         <div class="analysis-item__title">
@@ -1409,7 +1409,7 @@
                     <div class="analysis__item blue">
                         <div class="analysis-item__head">
                             <div class="analysis-item__icon">
-                                <picture><source srcset="img/analysis/05.svg" type="image/webp"><img src="img/analysis/05.svg" alt="icon"></picture>
+                                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/analysis/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/analysis/05.svg" alt="icon"></picture>
                             </div>
                         </div>
                         <div class="analysis-item__title">
@@ -1423,7 +1423,7 @@
                     <div class="analysis__item blue">
                         <div class="analysis-item__head">
                             <div class="analysis-item__icon">
-                                <picture><source srcset="img/analysis/06.svg" type="image/webp"><img src="img/analysis/06.svg" alt="icon"></picture>
+                                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/analysis/06.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/analysis/06.svg" alt="icon"></picture>
                             </div>
                         </div>
                         <div class="analysis-item__title">
@@ -1527,7 +1527,7 @@
                 <div class="banner__body gradient">
                     <div class="banner__container" style="padding: 32px;">
                         <div class="banner__icon">
-                            <picture><source srcset="img/banners/02.svg" type="image/webp"><img src="img/banners/02.svg" alt="icon"></picture>
+                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/banners/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/banners/02.svg" alt="icon"></picture>
                         </div>
                         <div class="banner__title">
                             <h1>Bezplatn&#xFD; bonus</h1>
@@ -1540,7 +1540,7 @@
                 <div class="banner__body white">
                     <div class="banner__container">
                         <div class="banner__icon">
-                            <picture><source srcset="img/banners/01.svg" type="image/webp"><img src="img/banners/01.svg" alt="icon"></picture>
+                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/banners/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/banners/01.svg" alt="icon"></picture>
                         </div>
                         <div class="banner__title">
                             <h1>Na&#x161;a dodato&#x10D;n&#xE1; garancia spokojnosti</h1>
