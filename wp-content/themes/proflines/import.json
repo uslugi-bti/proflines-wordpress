@@ -338,7 +338,7 @@
                 "name": "statistics_banner_text",
                 "aria-label": "",
                 "type": "group",
-                "instructions": "Texty pre banner so žltým gradientom. Forma sa needitue.",
+                "instructions": "Texty pre banner so žltým gradientom. Forma sa needituje.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3231,7 +3231,7 @@
                 "name": "",
                 "aria-label": "",
                 "type": "tab",
-                "instructions": "Formulár je fixný, needituje sa. Texty áno.",
+                "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3482,6 +3482,814 @@
                         "parent_repeater": "field_67ba28ea87fdc"
                     }
                 ]
+            },
+            {
+                "key": "field_67ba2a3c54321",
+                "label": "Brief Formulár - Polia",
+                "name": "brief_form_fields",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "Nastavenie polí pre brief formulár",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_67ba2a4c54322",
+                "label": "Názov služby pre brief",
+                "name": "brief_service_name",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Napríklad: Prieskum trhu a marketingový prieskum",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Prieskum trhu a marketingový prieskum",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2a7b54323",
+                "label": "Podnadpis v briefe",
+                "name": "brief_subtitle",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Krátky popis pod hlavným nadpisom",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Komplexná analýza trhu pre vaše podnikanie",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2aa154324",
+                "label": "Hlavný text briefu",
+                "name": "brief_main_text",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "Hlavný popis služby v brief sekcii",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Profesionálny marketingový výskum a analýza trhu pre vaše podnikanie. Získajte dáta potrebné pre správne strategické rozhodnutia.",
+                "maxlength": "",
+                "rows": 4,
+                "placeholder": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_67ba2ac054325",
+                "label": "Kontaktné informácie - Nadpis",
+                "name": "brief_contact_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Nadpis pre sekciu kontaktných informácií",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Kontaktné informácie",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2ad854326",
+                "label": "Kontaktné informácie - Popis",
+                "name": "brief_contact_text",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "Popis pre sekciu kontaktných informácií",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Vyplňte prosím vaše kontaktné údaje",
+                "maxlength": "",
+                "rows": 2,
+                "placeholder": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_67ba2aea54327",
+                "label": "Meno a priezvisko - Label",
+                "name": "brief_name_label",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Label pre pole Meno a priezvisko",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "*Meno a priezvisko:",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2b0054328",
+                "label": "Meno a priezvisko - Placeholder",
+                "name": "brief_name_placeholder",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Placeholder pre pole Meno a priezvisko",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Meno a priezvisko",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2b1054329",
+                "label": "Názov spoločnosti - Label",
+                "name": "brief_company_label",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Label pre pole Názov spoločnosti",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Názov spoločnosti (ak existuje):",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2b1e54330",
+                "label": "Názov spoločnosti - Placeholder",
+                "name": "brief_company_placeholder",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Placeholder pre pole Názov spoločnosti",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Názov spoločnosti",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2b2e54331",
+                "label": "Telefón - Label",
+                "name": "brief_phone_label",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Label pre pole Telefón",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Telefón:",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2b3b54332",
+                "label": "Telefón - Placeholder",
+                "name": "brief_phone_placeholder",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Placeholder pre pole Telefón",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "+421",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2b4c54333",
+                "label": "E-mail - Label",
+                "name": "brief_email_label",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Label pre pole E-mail",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "*E-mail:",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2b5b54334",
+                "label": "E-mail - Placeholder",
+                "name": "brief_email_placeholder",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Placeholder pre pole E-mail",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "E-mail:",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2b6b54335",
+                "label": "Badge text",
+                "name": "brief_badge_text",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "Text pre badge (upozornenie na spam)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "ak nevidíte našu odpoveď v doručenej pošte – skontrolujte priečinok \"Spam\". Pridajte si nás do \"Kontaktov\", aby ďalšie správy prichádzali priamo do doručenej pošty.",
+                "maxlength": "",
+                "rows": 2,
+                "placeholder": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_67ba2b7c54336",
+                "label": "Preferovaný kontakt - Nadpis",
+                "name": "brief_contact_method_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Nadpis pre sekciu preferovaný kontakt",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "*Preferovaný spôsob kontaktu:",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2b8d54337",
+                "label": "Detaily problému - Nadpis",
+                "name": "brief_details_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Nadpis pre sekciu Detaily problému",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Detaily problému a účtu",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2b9d54338",
+                "label": "Detaily problému - Popis",
+                "name": "brief_details_text",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "Popis pre sekciu Detaily problému",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Tieto informácie sú potrebné na počiatočnú diagnostiku",
+                "maxlength": "",
+                "rows": 2,
+                "placeholder": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_67ba2bb054339",
+                "label": "Odkaz na web - Label",
+                "name": "brief_website_label",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Label pre pole Odkaz na web",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "*Odkaz na váš web / e-shop:",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2bc654340",
+                "label": "Odkaz na web - Placeholder",
+                "name": "brief_website_placeholder",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Placeholder pre pole Odkaz na web",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "https://",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2bd354341",
+                "label": "Odkaz na web - Poznámka",
+                "name": "brief_website_note",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Poznámka pod pole Odkaz na web",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "(Potrebujeme preveriť technický stav)",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2be254342",
+                "label": "Konzultácia - Nadpis",
+                "name": "brief_consultation_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Nadpis pre sekciu Konzultácia",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Potrebujete konzultáciu pred začiatkom?",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2bf154343",
+                "label": "Rozpočet - Label",
+                "name": "brief_budget_label",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Label pre pole Rozpočet",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Približný rozpočet:",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2c0254344",
+                "label": "Rozpočet - Placeholder",
+                "name": "brief_budget_placeholder",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Placeholder pre pole Rozpočet",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Napr. 500-1000 EUR",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2c1054345",
+                "label": "Hlavný cieľ - Nadpis",
+                "name": "brief_goal_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Nadpis pre sekciu Hlavný cieľ",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Aký hlavný cieľ chcete dosiahnuť?",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2c1e54346",
+                "label": "Ciele - možnosti",
+                "name": "brief_goal_options",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Pridajte možnosti pre hlavný cieľ (checkboxy)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Pridať možnosť",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_67ba2c2f54347",
+                        "label": "Text možnosti",
+                        "name": "option_text",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "80",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Napr. Zvýšiť predaj a získať nových klientov",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67ba2c1e54346"
+                    },
+                    {
+                        "key": "field_67ba2c3f54348",
+                        "label": "Má pole 'Iné'?",
+                        "name": "has_other",
+                        "aria-label": "",
+                        "type": "true_false",
+                        "instructions": "Zaškrtnite, ak je táto možnosť 'Iné'",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "20",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "",
+                        "default_value": 0,
+                        "ui_on_text": "",
+                        "ui_off_text": "",
+                        "ui": 1,
+                        "parent_repeater": "field_67ba2c1e54346"
+                    }
+                ]
+            },
+            {
+                "key": "field_67ba2c5d54349",
+                "label": "Oblasť / produkt - Label",
+                "name": "brief_area_label",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Label pre pole Oblasť/produkt",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "*Oblasť / produkt / služba:",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2c6e54350",
+                "label": "Oblasť / produkt - Placeholder",
+                "name": "brief_area_placeholder",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Placeholder pre pole Oblasť/produkt",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Napr.: e-commerce, IT služby, gastronómia ...",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2c7e54351",
+                "label": "Marketingový cieľ - Nadpis",
+                "name": "brief_marketing_goal_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Nadpis pre sekciu Marketingový cieľ",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "*Hlavný cieľ marketingového prieskumu:",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2c8c54352",
+                "label": "Marketingové ciele - možnosti",
+                "name": "brief_marketing_goal_options",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Pridajte možnosti pre marketingový cieľ (checkboxy)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Pridať možnosť",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_67ba2c9a54353",
+                        "label": "Text možnosti",
+                        "name": "option_text",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Napr. Overiť nápad pred spustením",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67ba2c8c54352"
+                    }
+                ]
+            },
+            {
+                "key": "field_67ba2cb054354",
+                "label": "Doplňujúce informácie - Label",
+                "name": "brief_additional_label",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Label pre pole Doplňujúce informácie",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Doplňujúce informácie:",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2cc054355",
+                "label": "Doplňujúce informácie - Placeholder",
+                "name": "brief_additional_placeholder",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Placeholder pre pole Doplňujúce informácie",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Čokoľvek ďalšie, čo by sme mali vedieť...",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2cd054356",
+                "label": "GDPR - Nadpis",
+                "name": "brief_gdpr_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Nadpis pre sekciu GDPR",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Spracovanie osobných údajov (GDPR)",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2ce054357",
+                "label": "GDPR Súhlas - Text",
+                "name": "brief_gdpr_consent_text",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "Text pre GDPR súhlas",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "*Súhlasím s podmienkami spracovania osobných údajov podľa GDPR",
+                "maxlength": "",
+                "rows": 2,
+                "placeholder": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_67ba2cf054358",
+                "label": "Newsletter Súhlas - Text",
+                "name": "brief_newsletter_text",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "Text pre newsletter súhlas",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Súhlasím so zasielaním užitočného obsahu (case štúdie, tipy, e-booky), maximálne 1× týždenne. Môžem sa kedykoľvek odhlásiť.",
+                "maxlength": "",
+                "rows": 3,
+                "placeholder": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_67ba2d0054359",
+                "label": "Text na tlačidle",
+                "name": "brief_submit_button_text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Text pre odosielacie tlačidlo",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Odoslať",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67ba2d0e54360",
+                "label": "Text v pätičke formulára",
+                "name": "brief_footer_text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Text v pätičke formulára",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "P.S.: Ak e-mail neprišiel, pozrite aj Spam",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
             }
         ],
         "location": [
@@ -3500,116 +4308,7 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "Kompletné nastavenia pre stránku Prieskum trhu",
-        "show_in_rest": 0
-    },
-    {
-        "key": "group_67ba2a3c12345",
-        "title": "Brief Formulár pre služby",
-        "fields": [
-            {
-                "key": "field_67ba2a4c12346",
-                "label": "Názov služby pre brief",
-                "name": "brief_service_name",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Napríklad: Optimalizácia pre vyhľadávanie v AI (AIO / GEO)",
-                "required": 1,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2a7b12347",
-                "label": "Podnadpis v briefe",
-                "name": "brief_subtitle",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Krátky popis pod hlavným nadpisom.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Služba novej generácie, ktorá pomáha značkám zobrazovať sa v AI Overviews (Google) a vo výsledkoch vyhľadávania v ChatGPT.",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2aa112348",
-                "label": "Hlavný text briefu",
-                "name": "brief_main_text",
-                "aria-label": "",
-                "type": "textarea",
-                "instructions": "Hlavný popis služby. Môžete použiť <br> pre nové riadky.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Optimalizujeme obsah pre odpovede umelej inteligencie. Upravíme vaše texty a dáta tak, aby vás ChatGPT, Gemini a nové Google vyhľadávanie odporúčali ako prvú voľbu.\n\nŠtruktúrujeme web tak, aby mu stroje rozumeli. Technicky prispôsobíme stránky, aby algoritmy vnímali vašu firmu ako autoritu a citovali ju ako overený zdroj.\n\nZabezpečíme viditeľnosť tam, kde bežné SEO nestačí. Dostaneme vašu značku priamo do generovaných odpovedí (AI Overviews), ktoré používatelia čítajú bez nutnosti klikania na odkazy.\n\nDáme vám technologický náskok pred konkurenciou. Kým ostatní ladia len kľúčové slová, my pripravíme váš biznis na budúcnosť vyhľadávania skôr, než sa stane štandardom.\n\nVyplňte krátky briefing a do 24 hodín vám pošleme odporúčanie + cenovú ponuku na mieru.",
-                "maxlength": "",
-                "rows": 12,
-                "placeholder": "",
-                "new_lines": "wpautop"
-            },
-            {
-                "key": "field_67ba2b1012349",
-                "label": "Text v pätičke formulára",
-                "name": "brief_footer_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Napr. P.S.: Ak e-mail neprišiel, pozrite aj Spam",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "P.S.: Ak e-mail neprišiel, pozrite aj Spam",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            }
-        ],
-        "location": [
-            [
-                {
-                    "param": "post_type",
-                    "operator": "==",
-                    "value": "page"
-                },
-                {
-                    "param": "page_template",
-                    "operator": "==",
-                    "value": "briff-page.php"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": "Pole pre editovateľný obsah na stránke briefu.",
+        "description": "Kompletné nastavenia pre stránku Prieskum trhu vrátane brief formulára",
         "show_in_rest": 0
     }
 ]
