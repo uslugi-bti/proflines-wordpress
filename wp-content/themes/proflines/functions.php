@@ -44,9 +44,6 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 	return $data;
 }
 
-/**
- * Generate dynamic JSON-LD structured data
- */
 function proflines_json_ld() {
     $json_ld = array();
     
