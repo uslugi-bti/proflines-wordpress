@@ -1585,7 +1585,7 @@
                 "name": "table_rows",
                 "aria-label": "",
                 "type": "repeater",
-                "instructions": "Pridajte riadky porovnávacej tabuľky. Pre skupinové nadpisy použite 'Je skupinový nadpis'.",
+                "instructions": "Pridajte riadky porovnávacej tabuľky.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -1602,12 +1602,33 @@
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
-                        "key": "field_67ba1ca0e4ab3",
-                        "label": "Je skupinový nadpis?",
-                        "name": "is_heading",
+                        "key": "field_67ba1ce2e4ab4",
+                        "label": "Názov služby / Popis",
+                        "name": "service_name",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "Pre tučné nadpisy použite <strong> tagy.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "30",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "rows": 2,
+                        "placeholder": "Napr. <strong>1. Analýza trhu a dopytu</strong>",
+                        "new_lines": "",
+                        "parent_repeater": "field_67ba1c78e4ab2"
+                    },
+                    {
+                        "key": "field_67ba1d08e4ab5",
+                        "label": "Zobraziť info ikonu?",
+                        "name": "show_info",
                         "aria-label": "",
                         "type": "true_false",
-                        "instructions": "Zaškrtnite, ak je tento riadok tučným nadpisom kategórie.",
+                        "instructions": "Zaškrtnite pre zobrazenie info ikony",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -1623,35 +1644,22 @@
                         "parent_repeater": "field_67ba1c78e4ab2"
                     },
                     {
-                        "key": "field_67ba1ce2e4ab4",
-                        "label": "Názov služby / Popis",
-                        "name": "service_name",
-                        "aria-label": "",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "40",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "rows": 2,
-                        "placeholder": "Napr. Analýza trhu a dopytu",
-                        "new_lines": "",
-                        "parent_repeater": "field_67ba1c78e4ab2"
-                    },
-                    {
-                        "key": "field_67ba1d08e4ab5",
-                        "label": "Text pre info tooltip",
+                        "key": "field_67ba1d08e4ab6",
+                        "label": "Text pre info",
                         "name": "info_text",
                         "aria-label": "",
                         "type": "textarea",
-                        "instructions": "Voliteľný text, ktorý sa zobrazí po kliknutí na ikonu 'i'.",
+                        "instructions": "Text, ktorý sa zobrazí po kliknutí na info ikonu",
                         "required": 0,
-                        "conditional_logic": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_67ba1d08e4ab5",
+                                    "operator": "==",
+                                    "value": "1"
+                                }
+                            ]
+                        ],
                         "wrapper": {
                             "width": "",
                             "class": "",
@@ -1665,16 +1673,16 @@
                         "parent_repeater": "field_67ba1c78e4ab2"
                     },
                     {
-                        "key": "field_67ba1c3be4ab6",
-                        "label": "Dostupné v Starter",
-                        "name": "in_starter",
+                        "key": "field_67ba1c3be4ab7",
+                        "label": "Starter - typ",
+                        "name": "starter_type",
                         "aria-label": "",
                         "type": "select",
-                        "instructions": "",
+                        "instructions": "Typ ikony pre Starter",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "15",
+                            "width": "10",
                             "class": "",
                             "id": ""
                         },
@@ -1693,16 +1701,66 @@
                         "parent_repeater": "field_67ba1c78e4ab2"
                     },
                     {
-                        "key": "field_67ba1c4ce4ab7",
-                        "label": "Dostupné v Basic",
-                        "name": "in_basic",
+                        "key": "field_67ba1c3be4ab8",
+                        "label": "Starter - zobraziť text?",
+                        "name": "starter_show_text",
                         "aria-label": "",
-                        "type": "select",
-                        "instructions": "",
+                        "type": "true_false",
+                        "instructions": "Zobraziť text namiesto ikony?",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "15",
+                            "width": "5",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "",
+                        "default_value": 0,
+                        "ui_on_text": "",
+                        "ui_off_text": "",
+                        "ui": 1,
+                        "parent_repeater": "field_67ba1c78e4ab2"
+                    },
+                    {
+                        "key": "field_67ba1c3be4ab9",
+                        "label": "Starter - vlastný text",
+                        "name": "starter_custom_text",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Ak chcete zobraziť text namiesto ikony",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_67ba1c3be4ab8",
+                                    "operator": "==",
+                                    "value": "1"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Text pre Starter",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67ba1c78e4ab2"
+                    },
+                    {
+                        "key": "field_67ba1c4ce4ab10",
+                        "label": "Basic - typ",
+                        "name": "basic_type",
+                        "aria-label": "",
+                        "type": "select",
+                        "instructions": "Typ ikony pre Basic",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "10",
                             "class": "",
                             "id": ""
                         },
@@ -1721,16 +1779,66 @@
                         "parent_repeater": "field_67ba1c78e4ab2"
                     },
                     {
-                        "key": "field_67ba1c5ce4ab8",
-                        "label": "Dostupné v Advanced",
-                        "name": "in_advanced",
+                        "key": "field_67ba1c4ce4ab11",
+                        "label": "Basic - zobraziť text?",
+                        "name": "basic_show_text",
                         "aria-label": "",
-                        "type": "select",
-                        "instructions": "",
+                        "type": "true_false",
+                        "instructions": "Zobraziť text namiesto ikony?",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "15",
+                            "width": "5",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "",
+                        "default_value": 0,
+                        "ui_on_text": "",
+                        "ui_off_text": "",
+                        "ui": 1,
+                        "parent_repeater": "field_67ba1c78e4ab2"
+                    },
+                    {
+                        "key": "field_67ba1c4ce4ab12",
+                        "label": "Basic - vlastný text",
+                        "name": "basic_custom_text",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Ak chcete zobraziť text namiesto ikony",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_67ba1c4ce4ab11",
+                                    "operator": "==",
+                                    "value": "1"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Text pre Basic",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67ba1c78e4ab2"
+                    },
+                    {
+                        "key": "field_67ba1c5ce4ab13",
+                        "label": "Advanced - typ",
+                        "name": "advanced_type",
+                        "aria-label": "",
+                        "type": "select",
+                        "instructions": "Typ ikony pre Advanced",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "10",
                             "class": "",
                             "id": ""
                         },
@@ -1746,6 +1854,56 @@
                         "ui": 0,
                         "ajax": 0,
                         "placeholder": "",
+                        "parent_repeater": "field_67ba1c78e4ab2"
+                    },
+                    {
+                        "key": "field_67ba1c5ce4ab14",
+                        "label": "Advanced - zobraziť text?",
+                        "name": "advanced_show_text",
+                        "aria-label": "",
+                        "type": "true_false",
+                        "instructions": "Zobraziť text namiesto ikony?",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "5",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "",
+                        "default_value": 0,
+                        "ui_on_text": "",
+                        "ui_off_text": "",
+                        "ui": 1,
+                        "parent_repeater": "field_67ba1c78e4ab2"
+                    },
+                    {
+                        "key": "field_67ba1c5ce4ab15",
+                        "label": "Advanced - vlastný text",
+                        "name": "advanced_custom_text",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Ak chcete zobraziť text namiesto ikony",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_67ba1c5ce4ab14",
+                                    "operator": "==",
+                                    "value": "1"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Text pre Advanced",
+                        "prepend": "",
+                        "append": "",
                         "parent_repeater": "field_67ba1c78e4ab2"
                     }
                 ]
@@ -2136,6 +2294,28 @@
                         "placeholder": "",
                         "prepend": "",
                         "append": ""
+                    },
+                    {
+                        "key": "field_67ba20e787f9c",
+                        "label": "Cena Starter",
+                        "name": "price_starter_value",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "Cena pre Starter balík",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": 800,
+                        "min": "",
+                        "max": "",
+                        "placeholder": "",
+                        "step": "",
+                        "prepend": "€",
+                        "append": ""
                     }
                 ]
             },
@@ -2239,6 +2419,28 @@
                         "placeholder": "",
                         "prepend": "",
                         "append": ""
+                    },
+                    {
+                        "key": "field_67ba216387fa1",
+                        "label": "Cena Basic",
+                        "name": "price_basic_value",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "Cena pre Basic balík",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": 1200,
+                        "min": "",
+                        "max": "",
+                        "placeholder": "",
+                        "step": "",
+                        "prepend": "€",
+                        "append": ""
                     }
                 ]
             },
@@ -2341,6 +2543,28 @@
                         "maxlength": "",
                         "placeholder": "",
                         "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_67ba21da87fa6",
+                        "label": "Cena Advanced",
+                        "name": "price_advanced_value",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "Cena pre Advanced balík",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": 1800,
+                        "min": "",
+                        "max": "",
+                        "placeholder": "",
+                        "step": "",
+                        "prepend": "€",
                         "append": ""
                     }
                 ]
@@ -2732,7 +2956,7 @@
             {
                 "key": "field_67ba2d2012345",
                 "label": "Tabuľka - Sumár kľúčových metrík",
-                "name": "summary_table",
+                "name": "",
                 "aria-label": "",
                 "type": "tab",
                 "instructions": "",
@@ -3418,7 +3642,7 @@
             },
             {
                 "key": "field_67ba27a487fd2",
-                "label": "Brief Sekcia",
+                "label": "Sekcia s formulárom",
                 "name": "",
                 "aria-label": "",
                 "type": "tab",
@@ -3610,7 +3834,7 @@
             },
             {
                 "key": "field_67ba2a3c54321",
-                "label": "Brief Formulár - Polia",
+                "label": "Polia formulára",
                 "name": "",
                 "aria-label": "",
                 "type": "tab",
@@ -3717,7 +3941,7 @@
                         "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "20",
+                            "width": "15",
                             "class": "",
                             "id": ""
                         },
@@ -3745,7 +3969,28 @@
                         "parent_repeater": "field_67ba2e0012355"
                     },
                     {
-                        "key": "field_67ba2e2012357",
+                        "key": "field_67ba2e1512357",
+                        "label": "Názov poľa (name)",
+                        "name": "field_name",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "HTML name atribút (bez medzier, len písmená, čísla, podčiarkovníky)",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "15",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "napr. meno_priezvisko",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67ba2e0012355"
+                    },
+                    {
+                        "key": "field_67ba2e2012358",
                         "label": "Šírka poľa",
                         "name": "field_width",
                         "aria-label": "",
@@ -3754,7 +3999,7 @@
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "15",
+                            "width": "10",
                             "class": "",
                             "id": ""
                         },
@@ -3772,7 +4017,7 @@
                         "parent_repeater": "field_67ba2e0012355"
                     },
                     {
-                        "key": "field_67ba2e3012358",
+                        "key": "field_67ba2e3012359",
                         "label": "Label (popis)",
                         "name": "field_label",
                         "aria-label": "",
@@ -3781,7 +4026,7 @@
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "25",
+                            "width": "20",
                             "class": "",
                             "id": ""
                         },
@@ -3793,7 +4038,7 @@
                         "parent_repeater": "field_67ba2e0012355"
                     },
                     {
-                        "key": "field_67ba2e4012359",
+                        "key": "field_67ba2e4012360",
                         "label": "Placeholder",
                         "name": "field_placeholder",
                         "aria-label": "",
@@ -3802,7 +4047,7 @@
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "20",
+                            "width": "15",
                             "class": "",
                             "id": ""
                         },
@@ -3814,7 +4059,7 @@
                         "parent_repeater": "field_67ba2e0012355"
                     },
                     {
-                        "key": "field_67ba2e5012360",
+                        "key": "field_67ba2e5012361",
                         "label": "Povinné?",
                         "name": "is_required",
                         "aria-label": "",
@@ -3835,7 +4080,7 @@
                         "parent_repeater": "field_67ba2e0012355"
                     },
                     {
-                        "key": "field_67ba2e6012361",
+                        "key": "field_67ba2e6012362",
                         "label": "Možnosti",
                         "name": "field_options",
                         "aria-label": "",
@@ -3879,7 +4124,7 @@
                         "rows_per_page": 20,
                         "sub_fields": [
                             {
-                                "key": "field_67ba2e7012362",
+                                "key": "field_67ba2e7012363",
                                 "label": "Hodnota",
                                 "name": "option_value",
                                 "aria-label": "",
@@ -3897,10 +4142,10 @@
                                 "placeholder": "value",
                                 "prepend": "",
                                 "append": "",
-                                "parent_repeater": "field_67ba2e6012361"
+                                "parent_repeater": "field_67ba2e6012362"
                             },
                             {
-                                "key": "field_67ba2e8012363",
+                                "key": "field_67ba2e8012364",
                                 "label": "Text",
                                 "name": "option_text",
                                 "aria-label": "",
@@ -3918,13 +4163,13 @@
                                 "placeholder": "Zobrazený text",
                                 "prepend": "",
                                 "append": "",
-                                "parent_repeater": "field_67ba2e6012361"
+                                "parent_repeater": "field_67ba2e6012362"
                             }
                         ],
                         "parent_repeater": "field_67ba2e0012355"
                     },
                     {
-                        "key": "field_67ba2e9012364",
+                        "key": "field_67ba2e9012365",
                         "label": "Vlastný HTML",
                         "name": "custom_html",
                         "aria-label": "",
