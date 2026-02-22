@@ -2730,7 +2730,132 @@
                 "new_lines": "wpautop"
             },
             {
-                "key": "field_67ba24bb87fb9",
+                "key": "field_67ba2d2012345",
+                "label": "Tabuľka - Sumár kľúčových metrík",
+                "name": "summary_table",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_67ba2d3012346",
+                "label": "Riadky tabuľky metrík",
+                "name": "summary_rows",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Pridajte riadky pre tabuľku Sumár kľúčových metrík",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "row",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Pridať riadok",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_67ba2d4012347",
+                        "label": "Metrika",
+                        "name": "metric",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Názov metriky",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Napr. Celkový počet zaniknutí",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67ba2d3012346"
+                    },
+                    {
+                        "key": "field_67ba2d5012348",
+                        "label": "Rok / Kohorta",
+                        "name": "year",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "15",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Napr. 2023",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67ba2d3012346"
+                    },
+                    {
+                        "key": "field_67ba2d6012349",
+                        "label": "Hodnota",
+                        "name": "value",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Hlavná hodnota metriky",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "20",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Napr. 57 544",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67ba2d3012346"
+                    },
+                    {
+                        "key": "field_67ba2d7012350",
+                        "label": "Kontext",
+                        "name": "context",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Doplňujúci popis",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "40",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Napr. Najvyššia úroveň za 8 rokov",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67ba2d3012346"
+                    }
+                ]
+            },
+            {
+                "key": "field_67ba2d8012351",
                 "label": "Bannery pod Analýzou",
                 "name": "",
                 "aria-label": "",
@@ -3226,6 +3351,72 @@
                 "append": ""
             },
             {
+                "key": "field_67ba2d9012352",
+                "label": "FAQ Otázky",
+                "name": "faq_items",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Pridajte otázky a odpovede do FAQ",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "row",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Pridať otázku",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_67ba2da012353",
+                        "label": "Otázka",
+                        "name": "question",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "40",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "rows": 2,
+                        "placeholder": "Napíšte otázku",
+                        "new_lines": "",
+                        "parent_repeater": "field_67ba2d9012352"
+                    },
+                    {
+                        "key": "field_67ba2db012354",
+                        "label": "Odpoveď",
+                        "name": "answer",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "60",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "rows": 3,
+                        "placeholder": "Napíšte odpoveď",
+                        "new_lines": "wpautop",
+                        "parent_repeater": "field_67ba2d9012352"
+                    }
+                ]
+            },
+            {
                 "key": "field_67ba27a487fd2",
                 "label": "Brief Sekcia",
                 "name": "",
@@ -3418,78 +3609,12 @@
                 "append": ""
             },
             {
-                "key": "field_67ba28ea87fdc",
-                "label": "FAQ Otázky a Odpovede",
-                "name": "jsonld_faq_items",
-                "aria-label": "",
-                "type": "repeater",
-                "instructions": "Pridajte otázky a odpovede pre FAQPage.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "layout": "row",
-                "pagination": 0,
-                "min": 0,
-                "max": 0,
-                "collapsed": "",
-                "button_label": "Pridať FAQ",
-                "rows_per_page": 20,
-                "sub_fields": [
-                    {
-                        "key": "field_67ba290387fdd",
-                        "label": "Otázka",
-                        "name": "question",
-                        "aria-label": "",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "40",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "rows": 2,
-                        "placeholder": "",
-                        "new_lines": "",
-                        "parent_repeater": "field_67ba28ea87fdc"
-                    },
-                    {
-                        "key": "field_67ba291987fde",
-                        "label": "Odpoveď",
-                        "name": "answer",
-                        "aria-label": "",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "60",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "rows": 3,
-                        "placeholder": "",
-                        "new_lines": "",
-                        "parent_repeater": "field_67ba28ea87fdc"
-                    }
-                ]
-            },
-            {
                 "key": "field_67ba2a3c54321",
                 "label": "Brief Formulár - Polia",
-                "name": "brief_form_fields",
+                "name": "",
                 "aria-label": "",
                 "type": "tab",
-                "instructions": "Nastavenie polí pre brief formulár",
+                "instructions": "Vytvorte polia pre brief formulár",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3561,432 +3686,12 @@
                 "new_lines": "wpautop"
             },
             {
-                "key": "field_67ba2ac054325",
-                "label": "Kontaktné informácie - Nadpis",
-                "name": "brief_contact_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Nadpis pre sekciu kontaktných informácií",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Kontaktné informácie",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2ad854326",
-                "label": "Kontaktné informácie - Popis",
-                "name": "brief_contact_text",
-                "aria-label": "",
-                "type": "textarea",
-                "instructions": "Popis pre sekciu kontaktných informácií",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Vyplňte prosím vaše kontaktné údaje",
-                "maxlength": "",
-                "rows": 2,
-                "placeholder": "",
-                "new_lines": "wpautop"
-            },
-            {
-                "key": "field_67ba2aea54327",
-                "label": "Meno a priezvisko - Label",
-                "name": "brief_name_label",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Label pre pole Meno a priezvisko",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "*Meno a priezvisko:",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2b0054328",
-                "label": "Meno a priezvisko - Placeholder",
-                "name": "brief_name_placeholder",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Placeholder pre pole Meno a priezvisko",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Meno a priezvisko",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2b1054329",
-                "label": "Názov spoločnosti - Label",
-                "name": "brief_company_label",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Label pre pole Názov spoločnosti",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Názov spoločnosti (ak existuje):",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2b1e54330",
-                "label": "Názov spoločnosti - Placeholder",
-                "name": "brief_company_placeholder",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Placeholder pre pole Názov spoločnosti",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Názov spoločnosti",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2b2e54331",
-                "label": "Telefón - Label",
-                "name": "brief_phone_label",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Label pre pole Telefón",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Telefón:",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2b3b54332",
-                "label": "Telefón - Placeholder",
-                "name": "brief_phone_placeholder",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Placeholder pre pole Telefón",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "+421",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2b4c54333",
-                "label": "E-mail - Label",
-                "name": "brief_email_label",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Label pre pole E-mail",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "*E-mail:",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2b5b54334",
-                "label": "E-mail - Placeholder",
-                "name": "brief_email_placeholder",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Placeholder pre pole E-mail",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "E-mail:",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2b6b54335",
-                "label": "Badge text",
-                "name": "brief_badge_text",
-                "aria-label": "",
-                "type": "textarea",
-                "instructions": "Text pre badge (upozornenie na spam)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "ak nevidíte našu odpoveď v doručenej pošte – skontrolujte priečinok \"Spam\". Pridajte si nás do \"Kontaktov\", aby ďalšie správy prichádzali priamo do doručenej pošty.",
-                "maxlength": "",
-                "rows": 2,
-                "placeholder": "",
-                "new_lines": "wpautop"
-            },
-            {
-                "key": "field_67ba2b7c54336",
-                "label": "Preferovaný kontakt - Nadpis",
-                "name": "brief_contact_method_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Nadpis pre sekciu preferovaný kontakt",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "*Preferovaný spôsob kontaktu:",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2b8d54337",
-                "label": "Detaily problému - Nadpis",
-                "name": "brief_details_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Nadpis pre sekciu Detaily problému",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Detaily problému a účtu",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2b9d54338",
-                "label": "Detaily problému - Popis",
-                "name": "brief_details_text",
-                "aria-label": "",
-                "type": "textarea",
-                "instructions": "Popis pre sekciu Detaily problému",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Tieto informácie sú potrebné na počiatočnú diagnostiku",
-                "maxlength": "",
-                "rows": 2,
-                "placeholder": "",
-                "new_lines": "wpautop"
-            },
-            {
-                "key": "field_67ba2bb054339",
-                "label": "Odkaz na web - Label",
-                "name": "brief_website_label",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Label pre pole Odkaz na web",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "*Odkaz na váš web / e-shop:",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2bc654340",
-                "label": "Odkaz na web - Placeholder",
-                "name": "brief_website_placeholder",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Placeholder pre pole Odkaz na web",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "https://",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2bd354341",
-                "label": "Odkaz na web - Poznámka",
-                "name": "brief_website_note",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Poznámka pod pole Odkaz na web",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "(Potrebujeme preveriť technický stav)",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2be254342",
-                "label": "Konzultácia - Nadpis",
-                "name": "brief_consultation_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Nadpis pre sekciu Konzultácia",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Potrebujete konzultáciu pred začiatkom?",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2bf154343",
-                "label": "Rozpočet - Label",
-                "name": "brief_budget_label",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Label pre pole Rozpočet",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Približný rozpočet:",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2c0254344",
-                "label": "Rozpočet - Placeholder",
-                "name": "brief_budget_placeholder",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Placeholder pre pole Rozpočet",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Napr. 500-1000 EUR",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2c1054345",
-                "label": "Hlavný cieľ - Nadpis",
-                "name": "brief_goal_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Nadpis pre sekciu Hlavný cieľ",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Aký hlavný cieľ chcete dosiahnuť?",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2c1e54346",
-                "label": "Ciele - možnosti",
-                "name": "brief_goal_options",
+                "key": "field_67ba2e0012355",
+                "label": "Polia formulára",
+                "name": "brief_form_fields",
                 "aria-label": "",
                 "type": "repeater",
-                "instructions": "Pridajte možnosti pre hlavný cieľ (checkboxy)",
+                "instructions": "Pridajte polia do brief formulára",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3994,46 +3699,131 @@
                     "class": "",
                     "id": ""
                 },
-                "layout": "table",
+                "layout": "row",
                 "pagination": 0,
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Pridať možnosť",
+                "button_label": "Pridať pole",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
-                        "key": "field_67ba2c2f54347",
-                        "label": "Text možnosti",
-                        "name": "option_text",
+                        "key": "field_67ba2e1012356",
+                        "label": "Typ poľa",
+                        "name": "field_type",
                         "aria-label": "",
-                        "type": "text",
-                        "instructions": "",
+                        "type": "select",
+                        "instructions": "Vyberte typ formulárového poľa",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "20",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "text": "Textový vstup (input)",
+                            "textarea": "Textová oblasť (textarea)",
+                            "select": "Rozbaľovací zoznam (select)",
+                            "radio": "Radio button",
+                            "checkbox": "Checkbox",
+                            "email": "Email",
+                            "tel": "Telefón",
+                            "number": "Číslo",
+                            "url": "URL",
+                            "heading": "Nadpis (len text)",
+                            "badge": "Badge (informačný text)",
+                            "html": "Vlastný HTML kód"
+                        },
+                        "default_value": "text",
+                        "return_format": "value",
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "ui": 0,
+                        "ajax": 0,
+                        "placeholder": "",
+                        "parent_repeater": "field_67ba2e0012355"
+                    },
+                    {
+                        "key": "field_67ba2e2012357",
+                        "label": "Šírka poľa",
+                        "name": "field_width",
+                        "aria-label": "",
+                        "type": "select",
+                        "instructions": "span-two = plná šírka, inak polovičná",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "80",
+                            "width": "15",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "span-one": "Polovičná šírka",
+                            "span-two": "Plná šírka"
+                        },
+                        "default_value": "span-one",
+                        "return_format": "value",
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "ui": 0,
+                        "ajax": 0,
+                        "placeholder": "",
+                        "parent_repeater": "field_67ba2e0012355"
+                    },
+                    {
+                        "key": "field_67ba2e3012358",
+                        "label": "Label (popis)",
+                        "name": "field_label",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Text nad poľom",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "25",
                             "class": "",
                             "id": ""
                         },
                         "default_value": "",
                         "maxlength": "",
-                        "placeholder": "Napr. Zvýšiť predaj a získať nových klientov",
+                        "placeholder": "Napr. Meno a priezvisko:",
                         "prepend": "",
                         "append": "",
-                        "parent_repeater": "field_67ba2c1e54346"
+                        "parent_repeater": "field_67ba2e0012355"
                     },
                     {
-                        "key": "field_67ba2c3f54348",
-                        "label": "Má pole 'Iné'?",
-                        "name": "has_other",
+                        "key": "field_67ba2e4012359",
+                        "label": "Placeholder",
+                        "name": "field_placeholder",
                         "aria-label": "",
-                        "type": "true_false",
-                        "instructions": "Zaškrtnite, ak je táto možnosť 'Iné'",
+                        "type": "text",
+                        "instructions": "Text v poli pred písaním",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "20",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67ba2e0012355"
+                    },
+                    {
+                        "key": "field_67ba2e5012360",
+                        "label": "Povinné?",
+                        "name": "is_required",
+                        "aria-label": "",
+                        "type": "true_false",
+                        "instructions": "Označiť ako povinné (*)",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "10",
                             "class": "",
                             "id": ""
                         },
@@ -4042,101 +3832,114 @@
                         "ui_on_text": "",
                         "ui_off_text": "",
                         "ui": 1,
-                        "parent_repeater": "field_67ba2c1e54346"
-                    }
-                ]
-            },
-            {
-                "key": "field_67ba2c5d54349",
-                "label": "Oblasť / produkt - Label",
-                "name": "brief_area_label",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Label pre pole Oblasť/produkt",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "*Oblasť / produkt / služba:",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2c6e54350",
-                "label": "Oblasť / produkt - Placeholder",
-                "name": "brief_area_placeholder",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Placeholder pre pole Oblasť/produkt",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Napr.: e-commerce, IT služby, gastronómia ...",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2c7e54351",
-                "label": "Marketingový cieľ - Nadpis",
-                "name": "brief_marketing_goal_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Nadpis pre sekciu Marketingový cieľ",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "*Hlavný cieľ marketingového prieskumu:",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2c8c54352",
-                "label": "Marketingové ciele - možnosti",
-                "name": "brief_marketing_goal_options",
-                "aria-label": "",
-                "type": "repeater",
-                "instructions": "Pridajte možnosti pre marketingový cieľ (checkboxy)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "layout": "table",
-                "pagination": 0,
-                "min": 0,
-                "max": 0,
-                "collapsed": "",
-                "button_label": "Pridať možnosť",
-                "rows_per_page": 20,
-                "sub_fields": [
+                        "parent_repeater": "field_67ba2e0012355"
+                    },
                     {
-                        "key": "field_67ba2c9a54353",
-                        "label": "Text možnosti",
-                        "name": "option_text",
+                        "key": "field_67ba2e6012361",
+                        "label": "Možnosti",
+                        "name": "field_options",
                         "aria-label": "",
-                        "type": "text",
-                        "instructions": "",
+                        "type": "repeater",
+                        "instructions": "Pre select, radio, checkbox - pridajte možnosti",
                         "required": 0,
-                        "conditional_logic": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_67ba2e1012356",
+                                    "operator": "==",
+                                    "value": "select"
+                                }
+                            ],
+                            [
+                                {
+                                    "field": "field_67ba2e1012356",
+                                    "operator": "==",
+                                    "value": "radio"
+                                }
+                            ],
+                            [
+                                {
+                                    "field": "field_67ba2e1012356",
+                                    "operator": "==",
+                                    "value": "checkbox"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "table",
+                        "pagination": 0,
+                        "min": 0,
+                        "max": 0,
+                        "collapsed": "",
+                        "button_label": "Pridať možnosť",
+                        "rows_per_page": 20,
+                        "sub_fields": [
+                            {
+                                "key": "field_67ba2e7012362",
+                                "label": "Hodnota",
+                                "name": "option_value",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "value",
+                                "prepend": "",
+                                "append": "",
+                                "parent_repeater": "field_67ba2e6012361"
+                            },
+                            {
+                                "key": "field_67ba2e8012363",
+                                "label": "Text",
+                                "name": "option_text",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "70",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "Zobrazený text",
+                                "prepend": "",
+                                "append": "",
+                                "parent_repeater": "field_67ba2e6012361"
+                            }
+                        ],
+                        "parent_repeater": "field_67ba2e0012355"
+                    },
+                    {
+                        "key": "field_67ba2e9012364",
+                        "label": "Vlastný HTML",
+                        "name": "custom_html",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "Ak ste vybrali typ 'Vlastný HTML kód'",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_67ba2e1012356",
+                                    "operator": "==",
+                                    "value": "html"
+                                }
+                            ]
+                        ],
                         "wrapper": {
                             "width": "",
                             "class": "",
@@ -4144,132 +3947,12 @@
                         },
                         "default_value": "",
                         "maxlength": "",
-                        "placeholder": "Napr. Overiť nápad pred spustením",
-                        "prepend": "",
-                        "append": "",
-                        "parent_repeater": "field_67ba2c8c54352"
+                        "rows": 4,
+                        "placeholder": "Sem vložte vlastný HTML kód",
+                        "new_lines": "",
+                        "parent_repeater": "field_67ba2e0012355"
                     }
                 ]
-            },
-            {
-                "key": "field_67ba2cb054354",
-                "label": "Doplňujúce informácie - Label",
-                "name": "brief_additional_label",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Label pre pole Doplňujúce informácie",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Doplňujúce informácie:",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2cc054355",
-                "label": "Doplňujúce informácie - Placeholder",
-                "name": "brief_additional_placeholder",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Placeholder pre pole Doplňujúce informácie",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Čokoľvek ďalšie, čo by sme mali vedieť...",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2cd054356",
-                "label": "GDPR - Nadpis",
-                "name": "brief_gdpr_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Nadpis pre sekciu GDPR",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Spracovanie osobných údajov (GDPR)",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67ba2ce054357",
-                "label": "GDPR Súhlas - Text",
-                "name": "brief_gdpr_consent_text",
-                "aria-label": "",
-                "type": "textarea",
-                "instructions": "Text pre GDPR súhlas",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "*Súhlasím s podmienkami spracovania osobných údajov podľa GDPR",
-                "maxlength": "",
-                "rows": 2,
-                "placeholder": "",
-                "new_lines": "wpautop"
-            },
-            {
-                "key": "field_67ba2cf054358",
-                "label": "Newsletter Súhlas - Text",
-                "name": "brief_newsletter_text",
-                "aria-label": "",
-                "type": "textarea",
-                "instructions": "Text pre newsletter súhlas",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Súhlasím so zasielaním užitočného obsahu (case štúdie, tipy, e-booky), maximálne 1× týždenne. Môžem sa kedykoľvek odhlásiť.",
-                "maxlength": "",
-                "rows": 3,
-                "placeholder": "",
-                "new_lines": "wpautop"
-            },
-            {
-                "key": "field_67ba2d0054359",
-                "label": "Text na tlačidle",
-                "name": "brief_submit_button_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Text pre odosielacie tlačidlo",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Odoslať",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
             },
             {
                 "key": "field_67ba2d0e54360",
@@ -4308,7 +3991,7 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "Kompletné nastavenia pre stránku Prieskum trhu vrátane brief formulára",
+        "description": "Kompletné nastavenia pre stránku Prieskum trhu vrátane všetkých dynamických prvkov",
         "show_in_rest": 0
     }
 ]
