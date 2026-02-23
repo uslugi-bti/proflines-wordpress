@@ -1,11 +1,11 @@
 [
     {
         "key": "group_67ba12f0d8a34",
-        "title": "Услуга: Маркетинговое исследование (Prieskum trhu)",
+        "title": "Služba: Prieskum trhu",
         "fields": [
             {
                 "key": "field_67ba1301e4a6f",
-                "label": "Герой (Hero)",
+                "label": "Hero Sekcia",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -21,10 +21,10 @@
             },
             {
                 "key": "field_67ba1317e4a70",
-                "label": "Заголовок H1",
+                "label": "Nadpis H1",
                 "name": "service_hero_title",
                 "type": "text",
-                "instructions": "Главный заголовок страницы (H1).",
+                "instructions": "Hlavný nadpis stránky (H1).",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -40,10 +40,10 @@
             },
             {
                 "key": "field_67ba1346e4a71",
-                "label": "Подзаголовок",
+                "label": "Popis pod nadpisom",
                 "name": "service_hero_subtitle",
                 "type": "text",
-                "instructions": "Краткое описание под заголовком.",
+                "instructions": "Krátky podnadpis / perex.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -59,10 +59,10 @@
             },
             {
                 "key": "field_67ba1363e4a72",
-                "label": "Текст на кнопке",
+                "label": "Text na tlačidle",
                 "name": "service_hero_button_text",
                 "type": "text",
-                "instructions": "Текст для главной кнопки (URL не редактируется).",
+                "instructions": "Text pre hlavné tlačidlo (URL nie je editovateľná).",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -78,10 +78,10 @@
             },
             {
                 "key": "field_67ba13d8e4a73",
-                "label": "Изображение",
+                "label": "Obrázok v Hero",
                 "name": "service_hero_image",
                 "type": "image",
-                "instructions": "Рекомендуемый размер: 600x400px. Формат: PNG или WebP.",
+                "instructions": "Odporúčaná veľkosť: 600x400px. Formát: PNG alebo WebP.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -101,7 +101,7 @@
             },
             {
                 "key": "field_67ba1406e4a74",
-                "label": "Логотипы компаний",
+                "label": "Logá spoločností",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -117,10 +117,10 @@
             },
             {
                 "key": "field_67ba1411e4a75",
-                "label": "Заголовок секции",
+                "label": "Nadpis sekcie",
                 "name": "companys_title",
                 "type": "text",
-                "instructions": "Например: <strong>Dôverujú</strong>nám a používame:",
+                "instructions": "Napríklad: <strong>Dôverujú</strong>nám a používame:",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -136,10 +136,10 @@
             },
             {
                 "key": "field_67ba1435e4a76",
-                "label": "Список логотипов",
+                "label": "Zoznam log",
                 "name": "companys_logos",
                 "type": "gallery",
-                "instructions": "Загрузите логотипы партнеров/клиентов (идеально SVG).",
+                "instructions": "Nahrajte logá partnerov/klientov (ideálne SVG).",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -161,7 +161,7 @@
             },
             {
                 "key": "field_67ba146ae4a77",
-                "label": "Статистика и Проблемы",
+                "label": "Štatistiky a Bolesti",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -177,7 +177,7 @@
             },
             {
                 "key": "field_67ba149ae4a78",
-                "label": "Заголовок блока статистики",
+                "label": "Nadpis bloku štatistík",
                 "name": "statistics_title",
                 "type": "text",
                 "instructions": "",
@@ -196,7 +196,7 @@
             },
             {
                 "key": "field_67ba14b8e4a79",
-                "label": "Подзаголовок статистики",
+                "label": "Podnadpis štatistík",
                 "name": "statistics_subtitle",
                 "type": "text",
                 "instructions": "",
@@ -215,10 +215,10 @@
             },
             {
                 "key": "field_67ba14e0e4a7a",
-                "label": "Элементы статистики",
+                "label": "Položky štatistík",
                 "name": "statistics_items",
                 "type": "repeater",
-                "instructions": "Добавьте отдельные статистические данные.",
+                "instructions": "Pridajte jednotlivé štatistické údaje.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -231,12 +231,12 @@
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Добавить элемент",
+                "button_label": "Pridať položku",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67ba1503e4a7b",
-                        "label": "Иконка",
+                        "label": "Ikona",
                         "name": "icon",
                         "type": "image",
                         "instructions": "",
@@ -259,7 +259,7 @@
                     },
                     {
                         "key": "field_67ba1519e4a7c",
-                        "label": "Заголовок",
+                        "label": "Nadpis",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -271,17 +271,17 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Напр. Každých 9 minút",
+                        "placeholder": "Napr. Každých 9 minút",
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
                     },
                     {
                         "key": "field_67ba153ae4a7d",
-                        "label": "Текст",
+                        "label": "Text",
                         "name": "text",
                         "type": "textarea",
-                        "instructions": "Можно использовать теги <strong>.",
+                        "instructions": "Môžete použiť <strong> tagy.",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -299,7 +299,7 @@
             },
             {
                 "key": "field_67ba1571e4a7e",
-                "label": "Баннер в секции Статистики",
+                "label": "Banner v sekcii Štatistiky",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -315,10 +315,10 @@
             },
             {
                 "key": "field_67ba158be4a7f",
-                "label": "Текст баннера",
+                "label": "Text Banneru",
                 "name": "statistics_banner_text",
                 "type": "group",
-                "instructions": "Тексты для баннера с желтым градиентом. Форма не редактируется.",
+                "instructions": "Texty pre banner so žltým gradientom. Forma sa needituje.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -330,7 +330,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba15a9e4a80",
-                        "label": "Заголовок",
+                        "label": "Titulok",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -349,7 +349,7 @@
                     },
                     {
                         "key": "field_67ba15c6e4a81",
-                        "label": "Текст",
+                        "label": "Text",
                         "name": "text",
                         "type": "textarea",
                         "instructions": "",
@@ -368,7 +368,7 @@
                     },
                     {
                         "key": "field_67ba15e7e4a82",
-                        "label": "Текст на кнопке",
+                        "label": "Text na tlačidle",
                         "name": "button_text",
                         "type": "text",
                         "instructions": "",
@@ -389,7 +389,7 @@
             },
             {
                 "key": "field_67ba162fe4a83",
-                "label": "Проблемы и Решения",
+                "label": "Bolesti a Riešenie",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -405,10 +405,10 @@
             },
             {
                 "key": "field_67ba1640e4a84",
-                "label": "Заголовок секции",
+                "label": "Titulok sekcie",
                 "name": "pain_solution_title",
                 "type": "text",
-                "instructions": "Например: Prečo bez webu prichádzate o zákazníkov",
+                "instructions": "Napríklad: Prečo bez webu prichádzate o zákazníkov",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -424,7 +424,7 @@
             },
             {
                 "key": "field_67ba1663e4a85",
-                "label": "Содержание - Красный баннер",
+                "label": "Obsah - Červený Banner",
                 "name": "pain_red_banner",
                 "type": "group",
                 "instructions": "",
@@ -439,7 +439,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba1680e4a86",
-                        "label": "Текст",
+                        "label": "Text",
                         "name": "text",
                         "type": "textarea",
                         "instructions": "",
@@ -458,7 +458,7 @@
                     },
                     {
                         "key": "field_67ba16a6e4a87",
-                        "label": "Список вопросов",
+                        "label": "Zoznam otázok",
                         "name": "list",
                         "type": "repeater",
                         "instructions": "",
@@ -474,12 +474,12 @@
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
-                        "button_label": "Добавить вопрос",
+                        "button_label": "Pridať otázku",
                         "rows_per_page": 20,
                         "sub_fields": [
                             {
                                 "key": "field_67ba16bee4a88",
-                                "label": "Текст вопроса",
+                                "label": "Text otázky",
                                 "name": "item",
                                 "type": "textarea",
                                 "instructions": "",
@@ -502,7 +502,7 @@
             },
             {
                 "key": "field_67ba1702e4a89",
-                "label": "Содержание - Синий баннер (Решение)",
+                "label": "Obsah - Modrý Banner (Riešenie)",
                 "name": "pain_blue_banner",
                 "type": "group",
                 "instructions": "",
@@ -517,7 +517,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba171ce4a8a",
-                        "label": "Заголовок",
+                        "label": "Titulok",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -536,7 +536,7 @@
                     },
                     {
                         "key": "field_67ba1739e4a8b",
-                        "label": "Текст",
+                        "label": "Text",
                         "name": "text",
                         "type": "textarea",
                         "instructions": "",
@@ -557,10 +557,10 @@
             },
             {
                 "key": "field_67ba1775e4a8c",
-                "label": "Содержание - Белый баннер (Гарантия)",
+                "label": "Obsah - Biely Banner (Garancia)",
                 "name": "pain_white_banner",
                 "type": "group",
-                "instructions": "Тексты для белого баннера с гарантией. Терминал (анимация) фиксирован.",
+                "instructions": "Texty pre biely banner s garanciou. Terminal animácia je fixná.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -572,7 +572,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba1794e4a8d",
-                        "label": "Заголовок",
+                        "label": "Titulok",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -591,7 +591,7 @@
                     },
                     {
                         "key": "field_67ba17abe4a8e",
-                        "label": "Текст",
+                        "label": "Text",
                         "name": "text",
                         "type": "textarea",
                         "instructions": "",
@@ -612,10 +612,10 @@
             },
             {
                 "key": "field_67ba1d3a42ad8",
-                "label": "Проблемы начинающих предпринимателей",
+                "label": "Bolesti začínajúcich podnikateľov",
                 "name": "pain_points_section",
                 "type": "group",
-                "instructions": "Содержание для секции 'Bolesti začínajúcich podnikateľov a riešenie cez prieskum trhu'",
+                "instructions": "Obsah pre sekciu 'Bolesti začínajúcich podnikateľov a riešenie cez prieskum trhu'",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -627,7 +627,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba1d7142ad9",
-                        "label": "Заголовок секции",
+                        "label": "Titulok sekcie",
                         "name": "section_title",
                         "type": "text",
                         "instructions": "",
@@ -646,7 +646,7 @@
                     },
                     {
                         "key": "field_67ba1d9a42ada",
-                        "label": "Текст в белом баннере (span-row-two)",
+                        "label": "Text v bielom bannery (span-row-two)",
                         "name": "white_banner_text",
                         "type": "textarea",
                         "instructions": "",
@@ -665,7 +665,7 @@
                     },
                     {
                         "key": "field_67ba1dc542adb",
-                        "label": "Список проблем (в белом баннере)",
+                        "label": "Zoznam bolestí (v bielom bannery)",
                         "name": "pain_list",
                         "type": "repeater",
                         "instructions": "",
@@ -681,12 +681,12 @@
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
-                        "button_label": "Добавить проблему",
+                        "button_label": "Pridať bolesť",
                         "rows_per_page": 20,
                         "sub_fields": [
                             {
                                 "key": "field_67ba1de242adc",
-                                "label": "Текст проблемы",
+                                "label": "Text bolesti",
                                 "name": "item",
                                 "type": "text",
                                 "instructions": "",
@@ -707,7 +707,7 @@
                     },
                     {
                         "key": "field_67ba1e1442add",
-                        "label": "Текст в сером баннере (первый)",
+                        "label": "Text v šedom bannery (prvý)",
                         "name": "grey_banner_one_text",
                         "type": "textarea",
                         "instructions": "",
@@ -726,7 +726,7 @@
                     },
                     {
                         "key": "field_67ba1e3242ade",
-                        "label": "Заголовок в белом баннере (Что приносит исследование)",
+                        "label": "Titulok v bielom bannery (Čo prináša prieskum)",
                         "name": "solution_white_title",
                         "type": "text",
                         "instructions": "",
@@ -745,7 +745,7 @@
                     },
                     {
                         "key": "field_67ba1e4f42adf",
-                        "label": "Список решений (в белом баннере)",
+                        "label": "Zoznam riešení (v bielom bannery)",
                         "name": "solution_list",
                         "type": "repeater",
                         "instructions": "",
@@ -761,12 +761,12 @@
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
-                        "button_label": "Добавить решение",
+                        "button_label": "Pridať riešenie",
                         "rows_per_page": 20,
                         "sub_fields": [
                             {
                                 "key": "field_67ba1e5b42ae0",
-                                "label": "Текст решения",
+                                "label": "Text riešenia",
                                 "name": "item",
                                 "type": "text",
                                 "instructions": "",
@@ -787,7 +787,7 @@
                     },
                     {
                         "key": "field_67ba1e8642ae1",
-                        "label": "Текст в нижнем сером баннере",
+                        "label": "Text v spodnom šedom bannery",
                         "name": "grey_banner_two_text",
                         "type": "textarea",
                         "instructions": "",
@@ -808,7 +808,7 @@
             },
             {
                 "key": "field_67ba186be4a8f",
-                "label": "Чего ожидать",
+                "label": "Čo očakávať",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -824,7 +824,7 @@
             },
             {
                 "key": "field_67ba1876e4a90",
-                "label": "Заголовок секции",
+                "label": "Titulok sekcie",
                 "name": "expect_title",
                 "type": "text",
                 "instructions": "",
@@ -843,7 +843,7 @@
             },
             {
                 "key": "field_67ba18a4e4a91",
-                "label": "Элементы",
+                "label": "Položky",
                 "name": "expect_items",
                 "type": "repeater",
                 "instructions": "",
@@ -859,12 +859,12 @@
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Добавить элемент",
+                "button_label": "Pridať položku",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67ba18bbe4a92",
-                        "label": "Иконка",
+                        "label": "Ikona",
                         "name": "icon",
                         "type": "image",
                         "instructions": "",
@@ -887,7 +887,7 @@
                     },
                     {
                         "key": "field_67ba18d3e4a93",
-                        "label": "Заголовок",
+                        "label": "Nadpis",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -906,7 +906,7 @@
                     },
                     {
                         "key": "field_67ba18f4e4a94",
-                        "label": "Список пунктов",
+                        "label": "Zoznam odrážok",
                         "name": "list",
                         "type": "repeater",
                         "instructions": "",
@@ -922,12 +922,12 @@
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
-                        "button_label": "Добавить пункт",
+                        "button_label": "Pridať odrážku",
                         "rows_per_page": 20,
                         "sub_fields": [
                             {
                                 "key": "field_67ba190ae4a95",
-                                "label": "Текст",
+                                "label": "Text",
                                 "name": "item",
                                 "type": "textarea",
                                 "instructions": "",
@@ -950,7 +950,7 @@
             },
             {
                 "key": "field_67ba1945e4a96",
-                "label": "Принципы Методологии",
+                "label": "Princípy Metodiky",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -966,7 +966,7 @@
             },
             {
                 "key": "field_67ba1951e4a97",
-                "label": "Заголовок секции",
+                "label": "Titulok sekcie",
                 "name": "principles_title",
                 "type": "text",
                 "instructions": "",
@@ -985,7 +985,7 @@
             },
             {
                 "key": "field_67ba1966e4a98",
-                "label": "Текст секции",
+                "label": "Text sekcie",
                 "name": "principles_text",
                 "type": "textarea",
                 "instructions": "",
@@ -1004,7 +1004,7 @@
             },
             {
                 "key": "field_67ba198ce4a99",
-                "label": "Принципы - элементы",
+                "label": "Princípy - položky",
                 "name": "principles_items",
                 "type": "repeater",
                 "instructions": "",
@@ -1020,12 +1020,12 @@
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Добавить принцип",
+                "button_label": "Pridať princíp",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67ba199ee4a9a",
-                        "label": "Иконка",
+                        "label": "Ikona",
                         "name": "icon",
                         "type": "image",
                         "instructions": "",
@@ -1048,7 +1048,7 @@
                     },
                     {
                         "key": "field_67ba19b7e4a9b",
-                        "label": "Заголовок",
+                        "label": "Nadpis",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -1067,7 +1067,7 @@
                     },
                     {
                         "key": "field_67ba19cfe4a9c",
-                        "label": "Текст",
+                        "label": "Text",
                         "name": "text",
                         "type": "text",
                         "instructions": "",
@@ -1088,7 +1088,7 @@
             },
             {
                 "key": "field_67ba1a00e4a9d",
-                "label": "Желтый баннер в принципах",
+                "label": "Žltý banner v princípoch",
                 "name": "principles_yellow_banner",
                 "type": "group",
                 "instructions": "",
@@ -1103,7 +1103,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba1a18e4a9e",
-                        "label": "Заголовок",
+                        "label": "Titulok",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -1122,7 +1122,7 @@
                     },
                     {
                         "key": "field_67ba1a32e4a9f",
-                        "label": "Текст на кнопке",
+                        "label": "Text na tlačidle",
                         "name": "button_text",
                         "type": "text",
                         "instructions": "",
@@ -1143,7 +1143,7 @@
             },
             {
                 "key": "field_67ba1a60e4aa0",
-                "label": "Процесс реализации",
+                "label": "Postup realizácie",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -1159,7 +1159,7 @@
             },
             {
                 "key": "field_67ba1a6be4aa1",
-                "label": "Заголовок секции",
+                "label": "Titulok sekcie",
                 "name": "process_title",
                 "type": "text",
                 "instructions": "",
@@ -1178,7 +1178,7 @@
             },
             {
                 "key": "field_67ba1a83e4aa2",
-                "label": "Подзаголовок секции",
+                "label": "Podnadpis sekcie",
                 "name": "process_subtitle",
                 "type": "text",
                 "instructions": "",
@@ -1197,7 +1197,7 @@
             },
             {
                 "key": "field_67ba1a9fe4aa3",
-                "label": "Шаги реализации",
+                "label": "Kroky realizácie",
                 "name": "process_steps",
                 "type": "repeater",
                 "instructions": "",
@@ -1213,12 +1213,12 @@
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Добавить шаг",
+                "button_label": "Pridať krok",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67ba1ac5e4aa4",
-                        "label": "Название шага",
+                        "label": "Názov kroku",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -1237,7 +1237,7 @@
                     },
                     {
                         "key": "field_67ba1ae2e4aa5",
-                        "label": "Описание шага",
+                        "label": "Popis kroku",
                         "name": "description",
                         "type": "textarea",
                         "instructions": "",
@@ -1258,7 +1258,7 @@
             },
             {
                 "key": "field_67ba1b1ce4aa6",
-                "label": "Как это работает",
+                "label": "Ako to funguje",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -1274,7 +1274,7 @@
             },
             {
                 "key": "field_67ba1b2ae4aa7",
-                "label": "Заголовок секции",
+                "label": "Titulok sekcie",
                 "name": "how_it_works_title",
                 "type": "text",
                 "instructions": "",
@@ -1293,7 +1293,7 @@
             },
             {
                 "key": "field_67ba1b42e4aa8",
-                "label": "Подзаголовок секции",
+                "label": "Podnadpis sekcie",
                 "name": "how_it_works_subtitle",
                 "type": "text",
                 "instructions": "",
@@ -1312,7 +1312,7 @@
             },
             {
                 "key": "field_67ba1b62e4aa9",
-                "label": "Шаги 'Как это работает'",
+                "label": "Kroky 'Ako to funguje'",
                 "name": "how_it_works_steps",
                 "type": "repeater",
                 "instructions": "",
@@ -1328,12 +1328,12 @@
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Добавить шаг",
+                "button_label": "Pridať krok",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67ba1b75e4aaa",
-                        "label": "Название шага",
+                        "label": "Názov kroku",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -1352,7 +1352,7 @@
                     },
                     {
                         "key": "field_67ba1b8ce4aab",
-                        "label": "Описание шага",
+                        "label": "Popis kroku",
                         "name": "description",
                         "type": "textarea",
                         "instructions": "",
@@ -1373,7 +1373,7 @@
             },
             {
                 "key": "field_67ba1bc1e4aac",
-                "label": "Таблица пакетов",
+                "label": "Tabuľka balíkov",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -1389,7 +1389,7 @@
             },
             {
                 "key": "field_67ba1bcfe4aad",
-                "label": "Заголовок над таблицей",
+                "label": "Titulok nad tabuľkou",
                 "name": "pricing_table_title",
                 "type": "text",
                 "instructions": "",
@@ -1408,10 +1408,10 @@
             },
             {
                 "key": "field_67ba1c78e4ab2",
-                "label": "Строки таблицы",
+                "label": "Riadky tabuľky",
                 "name": "table_rows",
                 "type": "repeater",
-                "instructions": "Добавьте строки сравнительной таблицы. Для жирных заголовков используйте теги <strong>.",
+                "instructions": "Pridajte riadky porovnávacej tabuľky. Pre tučné nadpisy použite <strong> tagy.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -1424,19 +1424,19 @@
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Добавить строку",
+                "button_label": "Pridať riadok",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67ba1ce2e4ab4",
-                        "label": "Название услуги / Описание",
+                        "label": "Názov služby / Popis",
                         "name": "service_name",
                         "type": "textarea",
-                        "instructions": "Для жирных заголовков используйте <strong>. Например: <strong>1. Analýza trhu a dopytu</strong>",
+                        "instructions": "Pre tučné nadpisy použite <strong> tagy. Napr.: <strong>1. Analýza trhu a dopytu</strong>",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "40",
+                            "width": "30",
                             "class": "",
                             "id": ""
                         },
@@ -1448,10 +1448,10 @@
                     },
                     {
                         "key": "field_67ba1d08e4ab5",
-                        "label": "Показывать иконку информации?",
+                        "label": "Zobraziť info ikonu?",
                         "name": "show_info",
                         "type": "true_false",
-                        "instructions": "Отметьте, чтобы показать иконку информации (i).",
+                        "instructions": "Zaškrtnite pre zobrazenie info ikony",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -1467,10 +1467,10 @@
                     },
                     {
                         "key": "field_67ba1d08e4ab6",
-                        "label": "Текст для информации",
+                        "label": "Text pre info",
                         "name": "info_text",
                         "type": "textarea",
-                        "instructions": "Текст, который появится при нажатии на иконку информации.",
+                        "instructions": "Text, ktorý sa zobrazí po kliknutí na info ikonu",
                         "required": 0,
                         "conditional_logic": [
                             [
@@ -1497,7 +1497,7 @@
                         "label": "Starter",
                         "name": "starter_type",
                         "type": "select",
-                        "instructions": "Выберите тип иконки для Starter.",
+                        "instructions": "Vyberte typ pre Starter",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -1506,9 +1506,9 @@
                             "id": ""
                         },
                         "choices": {
-                            "true": "Да (✓)",
-                            "false": "Нет (✕)",
-                            "true-false": "Ограничено (◔)"
+                            "true": "Áno (✓)",
+                            "false": "Nie (✕)",
+                            "true-false": "Obmedzene (◔)"
                         },
                         "default_value": "false",
                         "return_format": "value",
@@ -1520,10 +1520,10 @@
                     },
                     {
                         "key": "field_67ba1c3be4ab7",
-                        "label": "Starter - свой текст",
+                        "label": "Starter - vlastný text",
                         "name": "starter_text",
                         "type": "text",
-                        "instructions": "Если нужно показать текст вместо иконки, заполните это поле.",
+                        "instructions": "Ak chcete zobraziť text namiesto ikony, vyplňte toto pole",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -1532,7 +1532,7 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Напр. '10 hodín'",
+                        "placeholder": "Napr. '10 hodín'",
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
@@ -1542,7 +1542,7 @@
                         "label": "Basic",
                         "name": "basic_type",
                         "type": "select",
-                        "instructions": "Выберите тип иконки для Basic.",
+                        "instructions": "Vyberte typ pre Basic",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -1551,9 +1551,9 @@
                             "id": ""
                         },
                         "choices": {
-                            "true": "Да (✓)",
-                            "false": "Нет (✕)",
-                            "true-false": "Ограничено (◔)"
+                            "true": "Áno (✓)",
+                            "false": "Nie (✕)",
+                            "true-false": "Obmedzene (◔)"
                         },
                         "default_value": "false",
                         "return_format": "value",
@@ -1565,10 +1565,10 @@
                     },
                     {
                         "key": "field_67ba1c4ce4ab9",
-                        "label": "Basic - свой текст",
+                        "label": "Basic - vlastný text",
                         "name": "basic_text",
                         "type": "text",
-                        "instructions": "Если нужно показать текст вместо иконки, заполните это поле.",
+                        "instructions": "Ak chcete zobraziť text namiesto ikony, vyplňte toto pole",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -1577,7 +1577,7 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Напр. '20 hodín'",
+                        "placeholder": "Napr. '20 hodín'",
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
@@ -1587,7 +1587,7 @@
                         "label": "Advanced",
                         "name": "advanced_type",
                         "type": "select",
-                        "instructions": "Выберите тип иконки для Advanced.",
+                        "instructions": "Vyberte typ pre Advanced",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -1596,9 +1596,9 @@
                             "id": ""
                         },
                         "choices": {
-                            "true": "Да (✓)",
-                            "false": "Нет (✕)",
-                            "true-false": "Ограничено (◔)"
+                            "true": "Áno (✓)",
+                            "false": "Nie (✕)",
+                            "true-false": "Obmedzene (◔)"
                         },
                         "default_value": "false",
                         "return_format": "value",
@@ -1610,10 +1610,10 @@
                     },
                     {
                         "key": "field_67ba1c5ce4ab11",
-                        "label": "Advanced - свой текст",
+                        "label": "Advanced - vlastný text",
                         "name": "advanced_text",
                         "type": "text",
-                        "instructions": "Если нужно показать текст вместо иконки, заполните это поле.",
+                        "instructions": "Ak chcete zobraziť text namiesto ikony, vyplňte toto pole",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -1622,7 +1622,7 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Напр. '30 hodín'",
+                        "placeholder": "Napr. '30 hodín'",
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
@@ -1631,7 +1631,7 @@
             },
             {
                 "key": "field_67ba1ef287f89",
-                "label": "Секция Цитаты",
+                "label": "Quote Sekcia",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -1647,7 +1647,7 @@
             },
             {
                 "key": "field_67ba1f0287f8a",
-                "label": "Текст цитаты",
+                "label": "Text Citátu",
                 "name": "quote_text",
                 "type": "textarea",
                 "instructions": "",
@@ -1666,7 +1666,7 @@
             },
             {
                 "key": "field_67ba1f1c87f8b",
-                "label": "Автор цитаты",
+                "label": "Autor Citátu",
                 "name": "quote_author",
                 "type": "text",
                 "instructions": "",
@@ -1685,7 +1685,7 @@
             },
             {
                 "key": "field_67ba1f3e87f8c",
-                "label": "Фото автора",
+                "label": "Fotografia autora",
                 "name": "quote_author_image",
                 "type": "image",
                 "instructions": "",
@@ -1708,7 +1708,7 @@
             },
             {
                 "key": "field_67ba1f6d87f8d",
-                "label": "Прозрачность",
+                "label": "Transparentnosť",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -1724,7 +1724,7 @@
             },
             {
                 "key": "field_67ba1f7887f8e",
-                "label": "Заголовок секции",
+                "label": "Titulok sekcie",
                 "name": "transparency_title",
                 "type": "text",
                 "instructions": "",
@@ -1743,7 +1743,7 @@
             },
             {
                 "key": "field_67ba1f8f87f8f",
-                "label": "Элементы прозрачности",
+                "label": "Položky transparentnosti",
                 "name": "transparency_items",
                 "type": "repeater",
                 "instructions": "",
@@ -1759,12 +1759,12 @@
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Добавить элемент",
+                "button_label": "Pridať položku",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67ba1f9d87f90",
-                        "label": "Иконка",
+                        "label": "Ikona",
                         "name": "icon",
                         "type": "image",
                         "instructions": "",
@@ -1787,7 +1787,7 @@
                     },
                     {
                         "key": "field_67ba1fb387f91",
-                        "label": "Заголовок",
+                        "label": "Nadpis",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -1806,7 +1806,7 @@
                     },
                     {
                         "key": "field_67ba1fcb87f92",
-                        "label": "Текст",
+                        "label": "Text",
                         "name": "text",
                         "type": "textarea",
                         "instructions": "",
@@ -1827,7 +1827,7 @@
             },
             {
                 "key": "field_67ba1ff787f93",
-                "label": "Пакеты Услуг (Карточки)",
+                "label": "Balíky Služieb (Karty)",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -1843,7 +1843,7 @@
             },
             {
                 "key": "field_67ba200b87f94",
-                "label": "Заголовок секции",
+                "label": "Titulok sekcie",
                 "name": "packages_title",
                 "type": "text",
                 "instructions": "",
@@ -1862,7 +1862,7 @@
             },
             {
                 "key": "field_67ba202787f95",
-                "label": "Подзаголовок секции",
+                "label": "Podnadpis sekcie",
                 "name": "packages_subtitle",
                 "type": "text",
                 "instructions": "",
@@ -1881,10 +1881,10 @@
             },
             {
                 "key": "field_67ba204987f96",
-                "label": "Текст ссылки под карточками",
+                "label": "Text pre odkaz pod kartami",
                 "name": "packages_link_text",
                 "type": "text",
-                "instructions": "Текст ссылки, которая ведет на детальное сравнение пакетов.",
+                "instructions": "Text odkazu, ktorý vedie na detailné porovnanie.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -1900,7 +1900,7 @@
             },
             {
                 "key": "field_67ba207f87f97",
-                "label": "Пакет Starter",
+                "label": "Balík Starter",
                 "name": "package_starter",
                 "type": "group",
                 "instructions": "",
@@ -1915,7 +1915,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba209687f98",
-                        "label": "Описание под названием",
+                        "label": "Popis pod názvom",
                         "name": "description",
                         "type": "text",
                         "instructions": "",
@@ -1934,7 +1934,7 @@
                     },
                     {
                         "key": "field_67ba20af87f99",
-                        "label": "Список преимуществ / особенностей",
+                        "label": "Zoznam výhod / vlastností",
                         "name": "features",
                         "type": "repeater",
                         "instructions": "",
@@ -1950,12 +1950,12 @@
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
-                        "button_label": "Добавить особенность",
+                        "button_label": "Pridať vlastnosť",
                         "rows_per_page": 20,
                         "sub_fields": [
                             {
                                 "key": "field_67ba20c387f9a",
-                                "label": "Текст",
+                                "label": "Text",
                                 "name": "item",
                                 "type": "text",
                                 "instructions": "",
@@ -1976,7 +1976,7 @@
                     },
                     {
                         "key": "field_67ba20e787f9b",
-                        "label": "Текст на кнопке",
+                        "label": "Text na tlačidle",
                         "name": "button_text",
                         "type": "text",
                         "instructions": "",
@@ -1995,10 +1995,10 @@
                     },
                     {
                         "key": "field_67ba20e787f9c",
-                        "label": "Цена Starter",
+                        "label": "Cena Starter",
                         "name": "price_starter",
                         "type": "number",
-                        "instructions": "Цена для пакета Starter",
+                        "instructions": "Cena pre Starter balík",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -2018,7 +2018,7 @@
             },
             {
                 "key": "field_67ba211587f9c",
-                "label": "Пакет Basic",
+                "label": "Balík Basic",
                 "name": "package_basic",
                 "type": "group",
                 "instructions": "",
@@ -2033,7 +2033,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba212587f9d",
-                        "label": "Описание под названием",
+                        "label": "Popis pod názvom",
                         "name": "description",
                         "type": "text",
                         "instructions": "",
@@ -2052,7 +2052,7 @@
                     },
                     {
                         "key": "field_67ba213b87f9e",
-                        "label": "Список преимуществ / особенностей",
+                        "label": "Zoznam výhod / vlastností",
                         "name": "features",
                         "type": "repeater",
                         "instructions": "",
@@ -2068,12 +2068,12 @@
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
-                        "button_label": "Добавить особенность",
+                        "button_label": "Pridať vlastnosť",
                         "rows_per_page": 20,
                         "sub_fields": [
                             {
                                 "key": "field_67ba214a87f9f",
-                                "label": "Текст",
+                                "label": "Text",
                                 "name": "item",
                                 "type": "text",
                                 "instructions": "",
@@ -2094,7 +2094,7 @@
                     },
                     {
                         "key": "field_67ba216387fa0",
-                        "label": "Текст на кнопке",
+                        "label": "Text na tlačidle",
                         "name": "button_text",
                         "type": "text",
                         "instructions": "",
@@ -2113,10 +2113,10 @@
                     },
                     {
                         "key": "field_67ba216387fa1",
-                        "label": "Цена Basic",
+                        "label": "Cena Basic",
                         "name": "price_basic",
                         "type": "number",
-                        "instructions": "Цена для пакета Basic",
+                        "instructions": "Cena pre Basic balík",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -2136,7 +2136,7 @@
             },
             {
                 "key": "field_67ba218f87fa1",
-                "label": "Пакет Advanced",
+                "label": "Balík Advanced",
                 "name": "package_advanced",
                 "type": "group",
                 "instructions": "",
@@ -2151,7 +2151,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba219e87fa2",
-                        "label": "Описание под названием",
+                        "label": "Popis pod názvom",
                         "name": "description",
                         "type": "text",
                         "instructions": "",
@@ -2170,7 +2170,7 @@
                     },
                     {
                         "key": "field_67ba21b587fa3",
-                        "label": "Список преимуществ / особенностей",
+                        "label": "Zoznam výhod / vlastností",
                         "name": "features",
                         "type": "repeater",
                         "instructions": "",
@@ -2186,12 +2186,12 @@
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
-                        "button_label": "Добавить особенность",
+                        "button_label": "Pridať vlastnosť",
                         "rows_per_page": 20,
                         "sub_fields": [
                             {
                                 "key": "field_67ba21c587fa4",
-                                "label": "Текст",
+                                "label": "Text",
                                 "name": "item",
                                 "type": "text",
                                 "instructions": "",
@@ -2212,7 +2212,7 @@
                     },
                     {
                         "key": "field_67ba21da87fa5",
-                        "label": "Текст на кнопке",
+                        "label": "Text na tlačidle",
                         "name": "button_text",
                         "type": "text",
                         "instructions": "",
@@ -2231,10 +2231,10 @@
                     },
                     {
                         "key": "field_67ba21da87fa6",
-                        "label": "Цена Advanced",
+                        "label": "Cena Advanced",
                         "name": "price_advanced",
                         "type": "number",
-                        "instructions": "Цена для пакета Advanced",
+                        "instructions": "Cena pre Advanced balík",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -2254,7 +2254,7 @@
             },
             {
                 "key": "field_67ba220887fa6",
-                "label": "Секция загрузки (Примеры отчетов)",
+                "label": "Download Sekcia (Vzorky)",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -2270,7 +2270,7 @@
             },
             {
                 "key": "field_67ba221987fa7",
-                "label": "Заголовок секции",
+                "label": "Titulok sekcie",
                 "name": "samples_title",
                 "type": "text",
                 "instructions": "",
@@ -2289,7 +2289,7 @@
             },
             {
                 "key": "field_67ba223487fa8",
-                "label": "Текст секции",
+                "label": "Text sekcie",
                 "name": "samples_text",
                 "type": "textarea",
                 "instructions": "",
@@ -2308,7 +2308,7 @@
             },
             {
                 "key": "field_67ba225587fa9",
-                "label": "Элементы для скачивания",
+                "label": "Položky na stiahnutie",
                 "name": "sample_items",
                 "type": "repeater",
                 "instructions": "",
@@ -2324,12 +2324,12 @@
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Добавить образец",
+                "button_label": "Pridať vzorku",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67ba226687faa",
-                        "label": "Иконка",
+                        "label": "Ikona",
                         "name": "icon",
                         "type": "image",
                         "instructions": "",
@@ -2352,7 +2352,7 @@
                     },
                     {
                         "key": "field_67ba228487fab",
-                        "label": "Название (Starter/Basic/Advanced)",
+                        "label": "Názov (Starter/Basic/Advanced)",
                         "name": "name",
                         "type": "text",
                         "instructions": "",
@@ -2371,7 +2371,7 @@
                     },
                     {
                         "key": "field_67ba229f87fac",
-                        "label": "Описание",
+                        "label": "Popis",
                         "name": "description",
                         "type": "text",
                         "instructions": "",
@@ -2390,10 +2390,10 @@
                     },
                     {
                         "key": "field_67ba22bc87fad",
-                        "label": "Информация о файле",
+                        "label": "Informácia o súbore",
                         "name": "file_info",
                         "type": "text",
-                        "instructions": "Напр. 📄 PDF • 2.4 MB",
+                        "instructions": "Napr. 📄 PDF • 2.4 MB",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -2409,10 +2409,10 @@
                     },
                     {
                         "key": "field_67ba22e587fae",
-                        "label": "Текст для быстрого просмотра",
+                        "label": "Text pre rýchly náhľad",
                         "name": "quick_view_text",
                         "type": "text",
-                        "instructions": "Напр. Rýchly náhľad (1 str.)",
+                        "instructions": "Napr. Rýchly náhľad (1 str.)",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -2430,10 +2430,10 @@
             },
             {
                 "key": "field_67ba231687faf",
-                "label": "Форма для скачивания",
+                "label": "Formulár pre stiahnutie",
                 "name": "",
                 "type": "tab",
-                "instructions": "Форма для скачивания фиксирована, не редактируется.",
+                "instructions": "Formulár na stiahnutie je fixný, needituje sa.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -2446,7 +2446,7 @@
             },
             {
                 "key": "field_67ba233987fb0",
-                "label": "Заголовок в блоке формы",
+                "label": "Nadpis v bloku formulára",
                 "name": "sample_form_title",
                 "type": "text",
                 "instructions": "",
@@ -2465,7 +2465,7 @@
             },
             {
                 "key": "field_67ba236187fb1",
-                "label": "Текст под заголовком",
+                "label": "Text pod nadpisom",
                 "name": "sample_form_text",
                 "type": "textarea",
                 "instructions": "",
@@ -2484,7 +2484,7 @@
             },
             {
                 "key": "field_67ba239087fb2",
-                "label": "Текст на кнопке формы",
+                "label": "Text na tlačidle formulára",
                 "name": "sample_form_button_text",
                 "type": "text",
                 "instructions": "",
@@ -2503,10 +2503,10 @@
             },
             {
                 "key": "field_67ba23b087fb3",
-                "label": "Анализ провалов",
+                "label": "Analýza zlyhania",
                 "name": "",
                 "type": "tab",
-                "instructions": "Тексты для секции 'Анализ провалов'. Графики (canvas) фиксированы, не редактируются.",
+                "instructions": "Texty pre sekciu 'Analýza zlyhania'. Canvas grafy sú fixné, needitujú sa.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -2519,7 +2519,7 @@
             },
             {
                 "key": "field_67ba23ce87fb4",
-                "label": "Заголовок секции",
+                "label": "Titulok sekcie",
                 "name": "analysis_title",
                 "type": "text",
                 "instructions": "",
@@ -2538,7 +2538,7 @@
             },
             {
                 "key": "field_67ba23ef87fb5",
-                "label": "Подзаголовок секции",
+                "label": "Podnadpis sekcie",
                 "name": "analysis_subtitle",
                 "type": "text",
                 "instructions": "",
@@ -2557,7 +2557,7 @@
             },
             {
                 "key": "field_67ba240e87fb6",
-                "label": "Текст для кнопки 'Získať riešenie'",
+                "label": "Text pre tlačidlo 'Získať riešenie'",
                 "name": "analysis_button_text",
                 "type": "text",
                 "instructions": "",
@@ -2576,7 +2576,7 @@
             },
             {
                 "key": "field_67ba242c87fb7",
-                "label": "Заголовок 'Hlavné bariéry podnikania'",
+                "label": "Titulok 'Hlavné bariéry podnikania'",
                 "name": "barriers_title",
                 "type": "text",
                 "instructions": "",
@@ -2595,7 +2595,7 @@
             },
             {
                 "key": "field_67ba244d87fb8",
-                "label": "Заключительная цитата (Záver)",
+                "label": "Záverečný quote (Záver)",
                 "name": "analysis_conclusion",
                 "type": "textarea",
                 "instructions": "",
@@ -2614,7 +2614,7 @@
             },
             {
                 "key": "field_67ba2d2012345",
-                "label": "Таблица - Сводка ключевых метрик",
+                "label": "Tabuľka - Sumár kľúčových metrík",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -2630,10 +2630,10 @@
             },
             {
                 "key": "field_67ba2d3012346",
-                "label": "Строки таблицы метрик",
+                "label": "Riadky tabuľky metrík",
                 "name": "summary_rows",
                 "type": "repeater",
-                "instructions": "Добавьте строки для таблицы 'Сводка ключевых метрик'",
+                "instructions": "Pridajte riadky pre tabuľku Sumár kľúčových metrík",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -2646,15 +2646,15 @@
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Добавить строку",
+                "button_label": "Pridať riadok",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67ba2d4012347",
-                        "label": "Метрика",
+                        "label": "Metrika",
                         "name": "metric",
                         "type": "text",
-                        "instructions": "Название метрики",
+                        "instructions": "Názov metriky",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -2663,14 +2663,14 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Напр. Celkový počet zaniknutí",
+                        "placeholder": "Napr. Celkový počet zaniknutí",
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
                     },
                     {
                         "key": "field_67ba2d5012348",
-                        "label": "Год / Когорта",
+                        "label": "Rok / Kohorta",
                         "name": "year",
                         "type": "text",
                         "instructions": "",
@@ -2682,17 +2682,17 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Напр. 2023",
+                        "placeholder": "Napr. 2023",
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
                     },
                     {
                         "key": "field_67ba2d6012349",
-                        "label": "Значение",
+                        "label": "Hodnota",
                         "name": "value",
                         "type": "text",
-                        "instructions": "Главное значение метрики",
+                        "instructions": "Hlavná hodnota metriky",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -2701,17 +2701,17 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Напр. 57 544",
+                        "placeholder": "Napr. 57 544",
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
                     },
                     {
                         "key": "field_67ba2d7012350",
-                        "label": "Контекст",
+                        "label": "Kontext",
                         "name": "context",
                         "type": "text",
-                        "instructions": "Дополнительное описание",
+                        "instructions": "Doplňujúci popis",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -2720,7 +2720,7 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Напр. Najvyššia úroveň za 8 rokov",
+                        "placeholder": "Napr. Najvyššia úroveň za 8 rokov",
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
@@ -2729,7 +2729,7 @@
             },
             {
                 "key": "field_67ba2d8012351",
-                "label": "Баннеры под Анализом",
+                "label": "Bannery pod Analýzou",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -2745,7 +2745,7 @@
             },
             {
                 "key": "field_67ba24ca87fba",
-                "label": "Первый баннер (градиент)",
+                "label": "Prvý banner (gradient)",
                 "name": "banner_gradient",
                 "type": "group",
                 "instructions": "",
@@ -2760,7 +2760,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba24e487fbb",
-                        "label": "Заголовок",
+                        "label": "Titulok",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -2779,7 +2779,7 @@
                     },
                     {
                         "key": "field_67ba24f987fbc",
-                        "label": "Текст",
+                        "label": "Text",
                         "name": "text",
                         "type": "textarea",
                         "instructions": "",
@@ -2800,7 +2800,7 @@
             },
             {
                 "key": "field_67ba252287fbd",
-                "label": "Второй баннер (белый)",
+                "label": "Druhý banner (biely)",
                 "name": "banner_white",
                 "type": "group",
                 "instructions": "",
@@ -2815,7 +2815,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba253487fbe",
-                        "label": "Заголовок",
+                        "label": "Titulok",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -2834,7 +2834,7 @@
                     },
                     {
                         "key": "field_67ba254b87fbf",
-                        "label": "Текст",
+                        "label": "Text",
                         "name": "text",
                         "type": "textarea",
                         "instructions": "",
@@ -2855,7 +2855,7 @@
             },
             {
                 "key": "field_67ba257c87fc0",
-                "label": "Третий баннер (желтый, span-two)",
+                "label": "Tretí banner (žltý, span-two)",
                 "name": "banner_yellow",
                 "type": "group",
                 "instructions": "",
@@ -2870,7 +2870,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba259087fc1",
-                        "label": "Заголовок",
+                        "label": "Titulok",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -2889,7 +2889,7 @@
                     },
                     {
                         "key": "field_67ba25a687fc2",
-                        "label": "Текст",
+                        "label": "Text",
                         "name": "text",
                         "type": "textarea",
                         "instructions": "",
@@ -2908,7 +2908,7 @@
                     },
                     {
                         "key": "field_67ba25c387fc3",
-                        "label": "Текст на кнопке",
+                        "label": "Text na tlačidle",
                         "name": "button_text",
                         "type": "text",
                         "instructions": "",
@@ -2929,7 +2929,7 @@
             },
             {
                 "key": "field_67ba260287fc4",
-                "label": "Баннер 21 ошибок",
+                "label": "Banner 21 chýb",
                 "name": "banner_21_errors",
                 "type": "group",
                 "instructions": "",
@@ -2944,7 +2944,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67ba261687fc5",
-                        "label": "Заголовок секции",
+                        "label": "Titulok sekcie",
                         "name": "section_title",
                         "type": "text",
                         "instructions": "",
@@ -2963,7 +2963,7 @@
                     },
                     {
                         "key": "field_67ba262f87fc6",
-                        "label": "Текст в первом белом баннере",
+                        "label": "Text v prvom bielom bannery",
                         "name": "white_banner_text",
                         "type": "textarea",
                         "instructions": "",
@@ -2982,7 +2982,7 @@
                     },
                     {
                         "key": "field_67ba264987fc7",
-                        "label": "Список ошибок (юридические)",
+                        "label": "Zoznam chýb (právne)",
                         "name": "errors_list_legal",
                         "type": "repeater",
                         "instructions": "",
@@ -2998,12 +2998,12 @@
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
-                        "button_label": "Добавить ошибку",
+                        "button_label": "Pridať chybu",
                         "rows_per_page": 20,
                         "sub_fields": [
                             {
                                 "key": "field_67ba265e87fc8",
-                                "label": "Текст ошибки",
+                                "label": "Text chyby",
                                 "name": "item",
                                 "type": "text",
                                 "instructions": "",
@@ -3024,7 +3024,7 @@
                     },
                     {
                         "key": "field_67ba268387fc9",
-                        "label": "Текст в сером баннере (первый)",
+                        "label": "Text v šedom bannery (prvý)",
                         "name": "grey_banner_text",
                         "type": "textarea",
                         "instructions": "",
@@ -3043,7 +3043,7 @@
                     },
                     {
                         "key": "field_67ba26a387fca",
-                        "label": "Заголовок (налоговые ошибки)",
+                        "label": "Titulok (daňové chyby)",
                         "name": "tax_errors_title",
                         "type": "text",
                         "instructions": "",
@@ -3062,7 +3062,7 @@
                     },
                     {
                         "key": "field_67ba26be87fcb",
-                        "label": "Список ошибок (налоговые)",
+                        "label": "Zoznam chýb (daňové)",
                         "name": "errors_list_tax",
                         "type": "repeater",
                         "instructions": "",
@@ -3078,12 +3078,12 @@
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
-                        "button_label": "Добавить ошибку",
+                        "button_label": "Pridať chybu",
                         "rows_per_page": 20,
                         "sub_fields": [
                             {
                                 "key": "field_67ba26d087fcc",
-                                "label": "Текст ошибки",
+                                "label": "Text chyby",
                                 "name": "item",
                                 "type": "text",
                                 "instructions": "",
@@ -3104,7 +3104,7 @@
                     },
                     {
                         "key": "field_67ba26fb87fcd",
-                        "label": "Текст в нижнем сером баннере",
+                        "label": "Text v spodnom šedom bannery",
                         "name": "bottom_grey_banner_text",
                         "type": "textarea",
                         "instructions": "",
@@ -3125,7 +3125,7 @@
             },
             {
                 "key": "field_67ba272a87fce",
-                "label": "Секция FAQ",
+                "label": "FAQ Sekcia",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -3141,7 +3141,7 @@
             },
             {
                 "key": "field_67ba273687fcf",
-                "label": "Заголовок FAQ",
+                "label": "Titulok FAQ",
                 "name": "faq_title",
                 "type": "text",
                 "instructions": "",
@@ -3160,7 +3160,7 @@
             },
             {
                 "key": "field_67ba275387fd0",
-                "label": "Текст на кнопке 'Zobraziť všetky'",
+                "label": "Text na tlačidle 'Zobraziť všetky'",
                 "name": "faq_button_text",
                 "type": "text",
                 "instructions": "",
@@ -3179,10 +3179,10 @@
             },
             {
                 "key": "field_67ba276f87fd1",
-                "label": "Текст для ссылки в ответе",
+                "label": "Text pre odkaz v odpovedi",
                 "name": "faq_link_text",
                 "type": "text",
-                "instructions": "Текст ссылки, который появится в 4-м вопросе (Pozrite si ukážkové vzorky správ).",
+                "instructions": "Text odkazu, ktorý sa zobrazí v 4. otázke (Pozrite si ukážkové vzorky správ).",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3198,10 +3198,10 @@
             },
             {
                 "key": "field_67ba2d9012352",
-                "label": "Вопросы FAQ",
+                "label": "FAQ Otázky",
                 "name": "faq_items",
                 "type": "repeater",
-                "instructions": "Добавьте вопросы и ответы в FAQ",
+                "instructions": "Pridajte otázky a odpovede do FAQ",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3214,12 +3214,12 @@
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Добавить вопрос",
+                "button_label": "Pridať otázku",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67ba2da012353",
-                        "label": "Вопрос",
+                        "label": "Otázka",
                         "name": "question",
                         "type": "textarea",
                         "instructions": "",
@@ -3231,14 +3231,14 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Напишите вопрос",
+                        "placeholder": "Napíšte otázku",
                         "maxlength": "",
                         "rows": 2,
                         "new_lines": ""
                     },
                     {
                         "key": "field_67ba2db012354",
-                        "label": "Ответ",
+                        "label": "Odpoveď",
                         "name": "answer",
                         "type": "textarea",
                         "instructions": "",
@@ -3250,7 +3250,7 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Напишите ответ",
+                        "placeholder": "Napíšte odpoveď",
                         "maxlength": "",
                         "rows": 3,
                         "new_lines": "wpautop"
@@ -3259,7 +3259,7 @@
             },
             {
                 "key": "field_67ba27a487fd2",
-                "label": "Секция с формой (Brief)",
+                "label": "Sekcia s formulárom",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -3275,7 +3275,7 @@
             },
             {
                 "key": "field_67ba27b587fd3",
-                "label": "Текст перед заголовком",
+                "label": "Text pred nadpisom",
                 "name": "brief_pre_title",
                 "type": "textarea",
                 "instructions": "",
@@ -3294,7 +3294,7 @@
             },
             {
                 "key": "field_67ba27d087fd4",
-                "label": "Главный заголовок",
+                "label": "Hlavný nadpis",
                 "name": "brief_title",
                 "type": "text",
                 "instructions": "",
@@ -3313,7 +3313,7 @@
             },
             {
                 "key": "field_67ba27f087fd5",
-                "label": "Цитата (блоковая цитата)",
+                "label": "Quote (bloková citácia)",
                 "name": "brief_quote",
                 "type": "textarea",
                 "instructions": "",
@@ -3332,10 +3332,10 @@
             },
             {
                 "key": "field_67ba282e87fd6",
-                "label": "Структурированные данные (JSON-LD)",
+                "label": "Structured Data (JSON-LD)",
                 "name": "",
                 "type": "tab",
-                "instructions": "Отредактируйте значения для структурированных данных JSON-LD.",
+                "instructions": "Upravte hodnoty pre JSON-LD štruktúrované dáta.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3348,10 +3348,10 @@
             },
             {
                 "key": "field_67ba284387fd7",
-                "label": "Название услуги (Service Name)",
+                "label": "Názov služby (Service Name)",
                 "name": "jsonld_service_name",
                 "type": "text",
-                "instructions": "Для поля 'name' в Service.",
+                "instructions": "Pre pole 'name' v Service.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3367,7 +3367,7 @@
             },
             {
                 "key": "field_67ba286887fd8",
-                "label": "URL услуги",
+                "label": "URL služby",
                 "name": "jsonld_service_url",
                 "type": "url",
                 "instructions": "",
@@ -3384,7 +3384,7 @@
             },
             {
                 "key": "field_67ba289087fd9",
-                "label": "Описание услуги",
+                "label": "Popis služby",
                 "name": "jsonld_service_description",
                 "type": "textarea",
                 "instructions": "",
@@ -3403,7 +3403,7 @@
             },
             {
                 "key": "field_67ba28b287fda",
-                "label": "Страна (areaServed)",
+                "label": "Krajina (areaServed)",
                 "name": "jsonld_area_served",
                 "type": "text",
                 "instructions": "",
@@ -3422,7 +3422,7 @@
             },
             {
                 "key": "field_67ba28ce87fdb",
-                "label": "Название организации (provider)",
+                "label": "Názov organizácie (provider)",
                 "name": "jsonld_org_name",
                 "type": "text",
                 "instructions": "",
@@ -3441,10 +3441,10 @@
             },
             {
                 "key": "field_67ba2a3c54321",
-                "label": "Поля формы (Brief)",
+                "label": "Polia formulára",
                 "name": "",
                 "type": "tab",
-                "instructions": "Создайте поля для формы брифа",
+                "instructions": "Vytvorte polia pre brief formulár",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3457,10 +3457,10 @@
             },
             {
                 "key": "field_67ba2a4c54322",
-                "label": "Название услуги для брифа",
+                "label": "Názov služby pre brief",
                 "name": "brief_service_name",
                 "type": "text",
-                "instructions": "Например: Prieskum trhu a marketingový prieskum",
+                "instructions": "Napríklad: Prieskum trhu a marketingový prieskum",
                 "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3476,10 +3476,10 @@
             },
             {
                 "key": "field_67ba2a7b54323",
-                "label": "Подзаголовок в брифе",
+                "label": "Podnadpis v briefe",
                 "name": "brief_subtitle",
                 "type": "text",
-                "instructions": "Краткое описание под главным заголовком",
+                "instructions": "Krátky popis pod hlavným nadpisom",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3495,10 +3495,10 @@
             },
             {
                 "key": "field_67ba2aa154324",
-                "label": "Основной текст брифа",
+                "label": "Hlavný text briefu",
                 "name": "brief_main_text",
                 "type": "textarea",
-                "instructions": "Основное описание услуги в секции брифа",
+                "instructions": "Hlavný popis služby v brief sekcii",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3514,10 +3514,10 @@
             },
             {
                 "key": "field_67ba2e0012355",
-                "label": "Поля формы",
+                "label": "Polia formulára",
                 "name": "brief_form_fields",
                 "type": "repeater",
-                "instructions": "Добавьте поля в форму брифа",
+                "instructions": "Pridajte polia do brief formulára",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3530,15 +3530,15 @@
                 "min": 0,
                 "max": 0,
                 "collapsed": "",
-                "button_label": "Добавить поле",
+                "button_label": "Pridať pole",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67ba2e1012356",
-                        "label": "Тип поля",
+                        "label": "Typ poľa",
                         "name": "field_type",
                         "type": "select",
-                        "instructions": "Выберите тип поля формы",
+                        "instructions": "Vyberte typ formulárového poľa",
                         "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -3547,18 +3547,18 @@
                             "id": ""
                         },
                         "choices": {
-                            "text": "Текстовый ввод (input)",
-                            "textarea": "Текстовая область (textarea)",
-                            "select": "Выпадающий список (select)",
+                            "text": "Textový vstup (input)",
+                            "textarea": "Textová oblasť (textarea)",
+                            "select": "Rozbaľovací zoznam (select)",
                             "radio": "Radio button",
                             "checkbox": "Checkbox",
                             "email": "Email",
-                            "tel": "Телефон",
-                            "number": "Число",
+                            "tel": "Telefón",
+                            "number": "Číslo",
                             "url": "URL",
-                            "heading": "Заголовок (только текст)",
-                            "badge": "Badge (информационный текст)",
-                            "html": "Свой HTML код"
+                            "heading": "Nadpis (len text)",
+                            "badge": "Badge (informačný text)",
+                            "html": "Vlastný HTML kód"
                         },
                         "default_value": "text",
                         "return_format": "value",
@@ -3570,10 +3570,10 @@
                     },
                     {
                         "key": "field_67ba2e1512357",
-                        "label": "Имя поля (name)",
+                        "label": "Názov poľa (name)",
                         "name": "field_name",
                         "type": "text",
-                        "instructions": "HTML атрибут name (без пробелов, только буквы, цифры, подчеркивания)",
+                        "instructions": "HTML name atribút (bez medzier, len písmená, čísla, podčiarkovníky)",
                         "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -3582,17 +3582,17 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "например, meno_priezvisko",
+                        "placeholder": "napr. meno_priezvisko",
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
                     },
                     {
                         "key": "field_67ba2e2012358",
-                        "label": "Ширина поля",
+                        "label": "Šírka poľa",
                         "name": "field_width",
                         "type": "select",
-                        "instructions": "span-two = полная ширина, иначе половина",
+                        "instructions": "span-two = plná šírka, inak polovičná",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -3601,8 +3601,8 @@
                             "id": ""
                         },
                         "choices": {
-                            "span-one": "Половина ширины",
-                            "span-two": "Полная ширина"
+                            "span-one": "Polovičná šírka",
+                            "span-two": "Plná šírka"
                         },
                         "default_value": "span-one",
                         "return_format": "value",
@@ -3614,10 +3614,10 @@
                     },
                     {
                         "key": "field_67ba2e3012359",
-                        "label": "Label (подпись)",
+                        "label": "Label (popis)",
                         "name": "field_label",
                         "type": "text",
-                        "instructions": "Текст над полем",
+                        "instructions": "Text nad poľom",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -3626,7 +3626,7 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Напр. Meno a priezvisko:",
+                        "placeholder": "Napr. Meno a priezvisko:",
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
@@ -3636,7 +3636,7 @@
                         "label": "Placeholder",
                         "name": "field_placeholder",
                         "type": "text",
-                        "instructions": "Текст в поле до ввода",
+                        "instructions": "Text v poli pred písaním",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -3652,10 +3652,10 @@
                     },
                     {
                         "key": "field_67ba2e5012361",
-                        "label": "Обязательное?",
+                        "label": "Povinné?",
                         "name": "is_required",
                         "type": "true_false",
-                        "instructions": "Отметить как обязательное (*)",
+                        "instructions": "Označiť ako povinné (*)",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -3671,10 +3671,10 @@
                     },
                     {
                         "key": "field_67ba2e6012362",
-                        "label": "Опции",
+                        "label": "Možnosti",
                         "name": "field_options",
                         "type": "repeater",
-                        "instructions": "Для select, radio, checkbox - добавьте опции",
+                        "instructions": "Pre select, radio, checkbox - pridajte možnosti",
                         "required": 0,
                         "conditional_logic": [
                             [
@@ -3709,12 +3709,12 @@
                         "min": 0,
                         "max": 0,
                         "collapsed": "",
-                        "button_label": "Добавить опцию",
+                        "button_label": "Pridať možnosť",
                         "rows_per_page": 20,
                         "sub_fields": [
                             {
                                 "key": "field_67ba2e7012363",
-                                "label": "Значение",
+                                "label": "Hodnota",
                                 "name": "option_value",
                                 "type": "text",
                                 "instructions": "",
@@ -3733,7 +3733,7 @@
                             },
                             {
                                 "key": "field_67ba2e8012364",
-                                "label": "Текст",
+                                "label": "Text",
                                 "name": "option_text",
                                 "type": "text",
                                 "instructions": "",
@@ -3745,7 +3745,7 @@
                                     "id": ""
                                 },
                                 "default_value": "",
-                                "placeholder": "Отображаемый текст",
+                                "placeholder": "Zobrazený text",
                                 "prepend": "",
                                 "append": "",
                                 "maxlength": ""
@@ -3754,10 +3754,10 @@
                     },
                     {
                         "key": "field_67ba2e9012365",
-                        "label": "Свой HTML",
+                        "label": "Vlastný HTML",
                         "name": "custom_html",
                         "type": "textarea",
-                        "instructions": "Если вы выбрали тип 'Свой HTML код'",
+                        "instructions": "Ak ste vybrali typ 'Vlastný HTML kód'",
                         "required": 0,
                         "conditional_logic": [
                             [
@@ -3774,7 +3774,7 @@
                             "id": ""
                         },
                         "default_value": "",
-                        "placeholder": "Вставьте сюда свой HTML код",
+                        "placeholder": "Sem vložte vlastný HTML kód",
                         "maxlength": "",
                         "rows": 4,
                         "new_lines": ""
@@ -3783,10 +3783,10 @@
             },
             {
                 "key": "field_67ba2d0e54360",
-                "label": "Текст в подвале формы",
+                "label": "Text v pätičke formulára",
                 "name": "brief_footer_text",
                 "type": "text",
-                "instructions": "Текст в подвале формы",
+                "instructions": "Text v pätičke formulára",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -3817,7 +3817,7 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "Полные настройки для страницы 'Prieskum trhu' со всеми динамическими элементами",
+        "description": "Kompletné nastavenia pre stránku Prieskum trhu vrátane všetkých dynamických prvkov",
         "show_in_rest": 0
     }
 ]
