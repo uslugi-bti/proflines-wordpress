@@ -1,2168 +1,2182 @@
 [
-    {
-        "key": "group_67bc9a8f3d7e4",
-        "title": "Prieskum trhu a marketingový prieskum",
-        "fields": [
-            {
-                "key": "field_67bc9a9f4a1b2",
-                "label": "Nastavenia stránky",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bc9abf4a1b3",
-                "label": "JSON-LD dáta",
-                "name": "service_json_ld",
-                "type": "group",
-                "instructions": "Nastavenia pre štruktúrované dáta",
-                "required": 0,
-                "layout": "block",
-                "sub_fields": [
-                    {
-                        "key": "field_67bc9adf4a1b4",
-                        "label": "Názov služby",
-                        "name": "name",
-                        "type": "text",
-                        "instructions": "Prieskum trhu a marketingový prieskum",
-                        "required": 0,
-                        "default_value": "Prieskum trhu a marketingový prieskum"
-                    },
-                    {
-                        "key": "field_67bc9b0f4a1b5",
-                        "label": "URL",
-                        "name": "url",
-                        "type": "url",
-                        "instructions": "https://proflines.agency/marketingovy-prieskum",
-                        "required": 0,
-                        "default_value": "https://proflines.agency/marketingovy-prieskum"
-                    },
-                    {
-                        "key": "field_67bc9b2f4a1b6",
-                        "label": "Popis",
-                        "name": "description",
-                        "type": "textarea",
-                        "instructions": "Hĺbková analýza trhu, konkurencie a zákazníkov s využitím AI a overených dát",
-                        "required": 0,
-                        "rows": 3,
-                        "default_value": "Hĺbková analýza trhu, konkurencie a zákazníkov s využitím AI a overených dát pre bezpečné strategické rozhodnutia."
-                    }
-                ]
-            },
-            {
-                "key": "field_67bc9b4f4a1c1",
-                "label": "Hero sekcia",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bc9b6f4a1c2",
-                "label": "Hero nadpis",
-                "name": "hero_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Prieskum trhu a marketingový prieskum"
-            },
-            {
-                "key": "field_67bc9b8f4a1c3",
-                "label": "Hero podnadpis",
-                "name": "hero_subtitle",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Profesionálny marketingový výskum a analýza trhu pre vaše podnikanie"
-            },
-            {
-                "key": "field_67bc9baf4a1c4",
-                "label": "Hero text tlačidla",
-                "name": "hero_button_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Získať bezplatnú konzultáciu"
-            },
-            {
-                "key": "field_67bc9bcf4a1c5",
-                "label": "Hero obrázok",
-                "name": "hero_image",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "return_format": "url",
-                "preview_size": "medium",
-                "library": "all"
-            },
-            {
-                "key": "field_67bc9bef4a1d1",
-                "label": "Spoločnosti",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bc9c0f4a1d2",
-                "label": "Nadpis sekcie",
-                "name": "companies_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Dôverujú nám a používame:"
-            },
-            {
-                "key": "field_67bc9c2f4a1d3",
-                "label": "Logá spoločností",
-                "name": "companies_logos",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "table",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bc9c4f4a1d4",
-                        "label": "Logo",
-                        "name": "logo",
-                        "type": "image",
-                        "instructions": "",
-                        "required": 0,
-                        "return_format": "url",
-                        "preview_size": "thumbnail",
-                        "library": "all"
-                    }
-                ]
-            },
-            {
-                "key": "field_67bc9c6f4a1e1",
-                "label": "Štatistiky",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bc9c8f4a1e2",
-                "label": "Hlavný nadpis",
-                "name": "statistics_main_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Slovenský trh neodpúšťa chyby. Štatistiky sú neúprosné."
-            },
-            {
-                "key": "field_67bc9caf4a1e3",
-                "label": "Hlavný popis",
-                "name": "statistics_main_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Analýza dynamiky neúspešnosti mikro a malých podnikov v SR (2020-2025)"
-            },
-            {
-                "key": "field_67bc9ccf4a1e4",
-                "label": "Štatistické položky",
-                "name": "statistics_items",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bc9cef4a1e5",
-                        "label": "Ikona",
-                        "name": "icon",
-                        "type": "image",
-                        "instructions": "",
-                        "required": 0,
-                        "return_format": "url",
-                        "preview_size": "thumbnail",
-                        "library": "all"
-                    },
-                    {
-                        "key": "field_67bc9d0f4a1e6",
-                        "label": "Nadpis",
-                        "name": "title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bc9d2f4a1e7",
-                        "label": "Text",
-                        "name": "text",
-                        "type": "wysiwyg",
-                        "instructions": "",
-                        "required": 0,
-                        "tabs": "all",
-                        "toolbar": "basic",
-                        "media_upload": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bc9d4f4a1f1",
-                "label": "Banner - Google Merchant",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bc9d6f4a1f2",
-                "label": "Banner nadpis",
-                "name": "banner_merchant_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Pošlite nám screenshot chybového hlásenia z Merchant Center"
-            },
-            {
-                "key": "field_67bc9d8f4a1f3",
-                "label": "Banner text",
-                "name": "banner_merchant_text",
+  {
+    "key": "group_67bc9a8f3d7e4",
+    "title": "Prieskum trhu a marketingový prieskum",
+    "fields": [
+      {
+        "key": "field_67bc9a9f4a1b2",
+        "label": "Nastavenia stránky",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bc9abf4a1b3",
+        "label": "JSON-LD dáta",
+        "name": "service_json_ld",
+        "type": "group",
+        "instructions": "Nastavenia pre štruktúrované dáta",
+        "required": 0,
+        "layout": "block",
+        "sub_fields": [
+          {
+            "key": "field_67bc9adf4a1b4",
+            "label": "Názov služby",
+            "name": "name",
+            "type": "text",
+            "instructions": "Prieskum trhu a marketingový prieskum",
+            "required": 0,
+            "default_value": "Prieskum trhu a marketingový prieskum"
+          },
+          {
+            "key": "field_67bc9b0f4a1b5",
+            "label": "URL",
+            "name": "url",
+            "type": "url",
+            "instructions": "https://proflines.agency/marketingovy-prieskum",
+            "required": 0,
+            "default_value": "https://proflines.agency/marketingovy-prieskum"
+          },
+          {
+            "key": "field_67bc9b2f4a1b6",
+            "label": "Popis",
+            "name": "description",
+            "type": "textarea",
+            "instructions": "Hĺbková analýza trhu, konkurencie a zákazníkov s využitím AI a overených dát",
+            "required": 0,
+            "rows": 3,
+            "default_value": "Hĺbková analýza trhu, konkurencie a zákazníkov s využitím AI a overených dát pre bezpečné strategické rozhodnutia."
+          }
+        ]
+      },
+      {
+        "key": "field_67bc9b4f4a1c1",
+        "label": "Hero sekcia",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bc9b6f4a1c2",
+        "label": "Hero nadpis",
+        "name": "hero_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Prieskum trhu a marketingový prieskum"
+      },
+      {
+        "key": "field_67bc9b8f4a1c3",
+        "label": "Hero podnadpis",
+        "name": "hero_subtitle",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Profesionálny marketingový výskum a analýza trhu pre vaše podnikanie"
+      },
+      {
+        "key": "field_67bc9baf4a1c4",
+        "label": "Hero text tlačidla",
+        "name": "hero_button_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Získať bezplatnú konzultáciu"
+      },
+      {
+        "key": "field_67bc9bcf4a1c5",
+        "label": "Hero obrázok",
+        "name": "hero_image",
+        "type": "image",
+        "instructions": "",
+        "required": 0,
+        "return_format": "url",
+        "preview_size": "medium",
+        "library": "all"
+      },
+      {
+        "key": "field_67bc9bef4a1d1",
+        "label": "Spoločnosti",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bc9c0f4a1d2",
+        "label": "Nadpis sekcie",
+        "name": "companies_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Dôverujú nám a používame:"
+      },
+      {
+        "key": "field_67bc9c2f4a1d3",
+        "label": "Logá spoločností",
+        "name": "companies_logos",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "table",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bc9c4f4a1d4",
+            "label": "Logo",
+            "name": "logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+          }
+        ]
+      },
+      {
+        "key": "field_67bc9c6f4a1e1",
+        "label": "Štatistiky",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bc9c8f4a1e2",
+        "label": "Hlavný nadpis",
+        "name": "statistics_main_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Slovenský trh neodpúšťa chyby. Štatistiky sú neúprosné."
+      },
+      {
+        "key": "field_67bc9caf4a1e3",
+        "label": "Hlavný popis",
+        "name": "statistics_main_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Analýza dynamiky neúspešnosti mikro a malých podnikov v SR (2020-2025)"
+      },
+      {
+        "key": "field_67bc9ccf4a1e4",
+        "label": "Štatistické položky",
+        "name": "statistics_items",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bc9cef4a1e5",
+            "label": "Ikona",
+            "name": "icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+          },
+          {
+            "key": "field_67bc9d0f4a1e6",
+            "label": "Nadpis",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bc9d2f4a1e7",
+            "label": "Text",
+            "name": "text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bc9d4f4a1f1",
+        "label": "Banner - Google Merchant",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bc9d6f4a1f2",
+        "label": "Banner nadpis",
+        "name": "banner_merchant_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Pošlite nám screenshot chybového hlásenia z Merchant Center"
+      },
+      {
+        "key": "field_67bc9d8f4a1f3",
+        "label": "Banner text",
+        "name": "banner_merchant_text",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "default_value": "Náš expert situáciu posúdi a do 24 hodín vám dáme vedieť, či je možné účet zachrániť."
+      },
+      {
+        "key": "field_67bc9daf4a1f4",
+        "label": "Banner text tlačidla",
+        "name": "banner_merchant_button_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Získať posúdenie zadarmo"
+      },
+      {
+        "key": "field_67bc9dcf4a201",
+        "label": "Obavy a riešenia",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bc9def4a202",
+        "label": "Nadpis sekcie",
+        "name": "worries_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Prečo bez webu prichádzate o zákazníkov"
+      },
+      {
+        "key": "field_67bc9e0f4a203",
+        "label": "Červený banner - text",
+        "name": "red_banner_text",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "default_value": "Začiatky podnikania sú prirodzene spojené s obavami Ak ste si položili jednu z nasledujúcich otázok, ste na správnom mieste."
+      },
+      {
+        "key": "field_67bc9e2f4a204",
+        "label": "Červený banner - zoznam",
+        "name": "red_banner_list",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "table",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bc9e4f4a205",
+            "label": "Položka",
+            "name": "item",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "rows": 2
+          }
+        ]
+      },
+      {
+        "key": "field_67bc9e6f4a206",
+        "label": "Modrý banner - text",
+        "name": "blue_banner_text",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0
+      },
+      {
+        "key": "field_67bc9e8f4a207",
+        "label": "Biely banner - text",
+        "name": "white_banner_refund_text",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0,
+        "default_value": "Ak prieskum neprinesie hodnotné dáta, <strong>peniaze vám vrátime 100%</strong>"
+      },
+      {
+        "key": "field_67bc9eaf4a208",
+        "label": "Terminálový text",
+        "name": "terminal_text",
+        "type": "repeater",
+        "instructions": "Text pre terminálovú animáciu",
+        "required": 0,
+        "layout": "table",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bc9ecf4a209",
+            "label": "Riadok",
+            "name": "line",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bc9eef4a210",
+        "label": "Bolesti podnikateľov",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bc9f0f4a211",
+        "label": "Nadpis sekcie",
+        "name": "pains_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Bolesti začínajúcich podnikateľov a riešenie cez prieskum trhu"
+      },
+      {
+        "key": "field_67bc9f2f4a212",
+        "label": "Zoznam bolestí",
+        "name": "pains_list",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "table",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bc9f4f4a213",
+            "label": "Položka",
+            "name": "item",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bc9f6f4a214",
+        "label": "Štatistický text",
+        "name": "pains_stat_text",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0,
+        "default_value": "Štatistiky ukazujú, že 10% až 25% startupov neprežije prvých 5 rokov. Mnohým z týchto zlyhajú sa dá predísť poznaním najčastejších chýb a spôsobov, ako im zabrániť."
+      },
+      {
+        "key": "field_67bc9f8f4a215",
+        "label": "Čo prináša prieskum",
+        "name": "pains_solutions",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "table",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bc9faf4a216",
+            "label": "Položka",
+            "name": "item",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bc9fcf4a217",
+        "label": "Záverečný text",
+        "name": "pains_final_text",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0
+      },
+      {
+        "key": "field_67bc9fef4a301",
+        "label": "Čo očakávať",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bca00f4a302",
+        "label": "Nadpis sekcie",
+        "name": "expect_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Čo očakávať od marketingového prieskumu trhu"
+      },
+      {
+        "key": "field_67bca02f4a303",
+        "label": "Položky",
+        "name": "expect_items",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bca04f4a304",
+            "label": "Ikona",
+            "name": "icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+          },
+          {
+            "key": "field_67bca06f4a305",
+            "label": "Nadpis",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bca08f4a306",
+            "label": "Zoznam",
+            "name": "list",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "layout": "table",
+            "sub_fields": [
+              {
+                "key": "field_67bca0af4a307",
+                "label": "Položka",
+                "name": "item",
                 "type": "textarea",
                 "instructions": "",
                 "required": 0,
-                "rows": 2,
-                "default_value": "Náš expert situáciu posúdi a do 24 hodín vám dáme vedieť, či je možné účet zachrániť."
-            },
-            {
-                "key": "field_67bc9daf4a1f4",
-                "label": "Banner text tlačidla",
-                "name": "banner_merchant_button_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Získať posúdenie zadarmo"
-            },
-            {
-                "key": "field_67bc9dcf4a201",
-                "label": "Obavy a riešenia",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bc9def4a202",
-                "label": "Nadpis sekcie",
-                "name": "worries_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Prečo bez webu prichádzate o zákazníkov"
-            },
-            {
-                "key": "field_67bc9e0f4a203",
-                "label": "Červený banner - text",
-                "name": "red_banner_text",
-                "type": "textarea",
-                "instructions": "",
-                "required": 0,
-                "rows": 2,
-                "default_value": "Začiatky podnikania sú prirodzene spojené s obavami Ak ste si položili jednu z nasledujúcich otázok, ste na správnom mieste."
-            },
-            {
-                "key": "field_67bc9e2f4a204",
-                "label": "Červený banner - zoznam",
-                "name": "red_banner_list",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "table",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bc9e4f4a205",
-                        "label": "Položka",
-                        "name": "item",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "rows": 2
-                    }
-                ]
-            },
-            {
-                "key": "field_67bc9e6f4a206",
-                "label": "Modrý banner - text",
-                "name": "blue_banner_text",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0
-            },
-            {
-                "key": "field_67bc9e8f4a207",
-                "label": "Biely banner - text",
-                "name": "white_banner_refund_text",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0,
-                "default_value": "Ak prieskum neprinesie hodnotné dáta, <strong>peniaze vám vrátime 100%</strong>"
-            },
-            {
-                "key": "field_67bc9eaf4a208",
-                "label": "Terminálový text",
-                "name": "terminal_text",
-                "type": "repeater",
-                "instructions": "Text pre terminálovú animáciu",
-                "required": 0,
-                "layout": "table",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bc9ecf4a209",
-                        "label": "Riadok",
-                        "name": "line",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bc9eef4a210",
-                "label": "Bolesti podnikateľov",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bc9f0f4a211",
-                "label": "Nadpis sekcie",
-                "name": "pains_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Bolesti začínajúcich podnikateľov a riešenie cez prieskum trhu"
-            },
-            {
-                "key": "field_67bc9f2f4a212",
-                "label": "Zoznam bolestí",
-                "name": "pains_list",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "table",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bc9f4f4a213",
-                        "label": "Položka",
-                        "name": "item",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bc9f6f4a214",
-                "label": "Štatistický text",
-                "name": "pains_stat_text",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0,
-                "default_value": "Štatistiky ukazujú, že 10% až 25% startupov neprežije prvých 5 rokov. Mnohým z týchto zlyhajú sa dá predísť poznaním najčastejších chýb a spôsobov, ako im zabrániť."
-            },
-            {
-                "key": "field_67bc9f8f4a215",
-                "label": "Čo prináša prieskum",
-                "name": "pains_solutions",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "table",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bc9faf4a216",
-                        "label": "Položka",
-                        "name": "item",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bc9fcf4a217",
-                "label": "Záverečný text",
-                "name": "pains_final_text",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0
-            },
-            {
-                "key": "field_67bc9fef4a301",
-                "label": "Čo očakávať",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bca00f4a302",
-                "label": "Nadpis sekcie",
-                "name": "expect_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Čo očakávať od marketingového prieskumu trhu"
-            },
-            {
-                "key": "field_67bca02f4a303",
-                "label": "Položky",
-                "name": "expect_items",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bca04f4a304",
-                        "label": "Ikona",
-                        "name": "icon",
-                        "type": "image",
-                        "instructions": "",
-                        "required": 0,
-                        "return_format": "url",
-                        "preview_size": "thumbnail",
-                        "library": "all"
-                    },
-                    {
-                        "key": "field_67bca06f4a305",
-                        "label": "Nadpis",
-                        "name": "title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bca08f4a306",
-                        "label": "Zoznam",
-                        "name": "list",
-                        "type": "repeater",
-                        "instructions": "",
-                        "required": 0,
-                        "layout": "table",
-                        "sub_fields": [
-                            {
-                                "key": "field_67bca0af4a307",
-                                "label": "Položka",
-                                "name": "item",
-                                "type": "textarea",
-                                "instructions": "",
-                                "required": 0,
-                                "rows": 2
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "key": "field_67bca0cf4a401",
-                "label": "Princípy metodiky",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bca0ef4a402",
-                "label": "Hlavný nadpis",
-                "name": "principles_main_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Hlavné princípy metodiky"
-            },
-            {
-                "key": "field_67bca10f4a403",
-                "label": "Hlavný text",
-                "name": "principles_main_text",
-                "type": "textarea",
-                "instructions": "",
-                "required": 0,
-                "rows": 4,
-                "default_value": "Prieskum sa realizuje systematicky s využitím overených nástrojov umelej inteligencie na zber, analýzu a vizualizáciu údajov, čo zabezpečuje objektivitu a moderný prístup. Každá fáza prechádza kritickou revíziou, finálna správa sa kontroluje a dopracúva so zohľadnením odborných skúseností. Výstupom je profesionálny report v dvoch jazykoch (slovenský a anglický)."
-            },
-            {
-                "key": "field_67bca12f4a404",
-                "label": "Princípy",
-                "name": "principles_items",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bca14f4a405",
-                        "label": "Ikona",
-                        "name": "icon",
-                        "type": "image",
-                        "instructions": "",
-                        "required": 0,
-                        "return_format": "url",
-                        "preview_size": "thumbnail",
-                        "library": "all"
-                    },
-                    {
-                        "key": "field_67bca16f4a406",
-                        "label": "Nadpis",
-                        "name": "title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bca18f4a407",
-                        "label": "Text",
-                        "name": "text",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bca1af4a408",
-                "label": "Žltý banner - nadpis",
-                "name": "yellow_banner_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "21 chýb pri štarte podnikania na Slovensku"
-            },
-            {
-                "key": "field_67bca1cf4a409",
-                "label": "Žltý banner - text tlačidla",
-                "name": "yellow_banner_button_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Prečítajte si všetky chyby"
-            },
-            {
-                "key": "field_67bca1ef4a501",
-                "label": "Postup realizácie",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bca20f4a502",
-                "label": "Nadpis sekcie",
-                "name": "process_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Postup realizácie prieskumu"
-            },
-            {
-                "key": "field_67bca22f4a503",
-                "label": "Podnadpis",
-                "name": "process_subtitle",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Na základe získaných vstupných informácií sa jasne definujú úlohy výskumu"
-            },
-            {
-                "key": "field_67bca24f4a504",
-                "label": "Kroky",
-                "name": "process_steps",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bca26f4a505",
-                        "label": "Číslo",
-                        "name": "number",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "default_value": "01"
-                    },
-                    {
-                        "key": "field_67bca28f4a506",
-                        "label": "Nadpis",
-                        "name": "title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bca2af4a507",
-                        "label": "Text",
-                        "name": "text",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "rows": 3
-                    }
-                ]
-            },
-            {
-                "key": "field_67bca2cf4a601",
-                "label": "Ako to funguje",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bca2ef4a602",
-                "label": "Nadpis sekcie",
-                "name": "how_it_works_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Ako to funguje"
-            },
-            {
-                "key": "field_67bca30f4a603",
-                "label": "Podnadpis",
-                "name": "how_it_works_subtitle",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Na základe získaných vstupných informácií sa jasne definujú úlohy výskumu"
-            },
-            {
-                "key": "field_67bca32f4a604",
-                "label": "Kroky",
-                "name": "how_it_works_steps",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bca34f4a605",
-                        "label": "Číslo",
-                        "name": "number",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bca36f4a606",
-                        "label": "Nadpis",
-                        "name": "title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bca38f4a607",
-                        "label": "Text",
-                        "name": "text",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "rows": 3
-                    },
-                    {
-                        "key": "field_67bca3af4a608",
-                        "label": "Nálepka",
-                        "name": "sticker",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bca3cf4a701",
-                "label": "Porovnávacia tabuľka",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bca3ef4a702",
-                "label": "Nadpis tabuľky",
-                "name": "table_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Balíky služieb a marketingového výskumu"
-            },
-            {
-                "key": "field_67bca40f4a703",
-                "label": "Položky tabuľky",
-                "name": "table_items",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bca42f4a704",
-                        "label": "Názov služby",
-                        "name": "service_name",
-                        "type": "text",
-                        "instructions": "Použite <strong> pre zvýraznenie",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bca44f4a705",
-                        "label": "Info ikona",
-                        "name": "has_info",
-                        "type": "true_false",
-                        "instructions": "Zobraziť info ikonu?",
-                        "required": 0,
-                        "message": "",
-                        "default_value": 0,
-                        "ui": 1,
-                        "ui_on_text": "Áno",
-                        "ui_off_text": "Nie"
-                    },
-                    {
-                        "key": "field_67bca46f4a706",
-                        "label": "Info text",
-                        "name": "info_text",
-                        "type": "wysiwyg",
-                        "instructions": "Text pre info ikonu",
-                        "required": 0,
-                        "tabs": "all",
-                        "toolbar": "basic",
-                        "media_upload": 0,
-                        "conditional_logic": [
-                            [
-                                {
-                                    "field": "field_67bca44f4a705",
-                                    "operator": "==",
-                                    "value": "1"
-                                }
-                            ]
-                        ]
-                    },
-                    {
-                        "key": "field_67bca48f4a707",
-                        "label": "Starter",
-                        "name": "starter",
-                        "type": "group",
-                        "instructions": "",
-                        "required": 0,
-                        "layout": "block",
-                        "sub_fields": [
-                            {
-                                "key": "field_67bca4af4a708",
-                                "label": "Typ",
-                                "name": "type",
-                                "type": "select",
-                                "instructions": "true = áno, false = nie, partial = čiastočne",
-                                "required": 0,
-                                "choices": {
-                                    "true": "Áno",
-                                    "false": "Nie",
-                                    "partial": "Čiastočne"
-                                },
-                                "default_value": "false",
-                                "allow_null": 0,
-                                "multiple": 0,
-                                "ui": 1,
-                                "return_format": "value"
-                            },
-                            {
-                                "key": "field_67bca4cf4a709",
-                                "label": "Vlastný text",
-                                "name": "custom_text",
-                                "type": "text",
-                                "instructions": "Ak chcete namiesto ikony zobraziť text",
-                                "required": 0
-                            }
-                        ]
-                    },
-                    {
-                        "key": "field_67bca4ef4a710",
-                        "label": "Basic",
-                        "name": "basic",
-                        "type": "group",
-                        "instructions": "",
-                        "required": 0,
-                        "layout": "block",
-                        "sub_fields": [
-                            {
-                                "key": "field_67bca50f4a711",
-                                "label": "Typ",
-                                "name": "type",
-                                "type": "select",
-                                "instructions": "true = áno, false = nie, partial = čiastočne",
-                                "required": 0,
-                                "choices": {
-                                    "true": "Áno",
-                                    "false": "Nie",
-                                    "partial": "Čiastočne"
-                                },
-                                "default_value": "false",
-                                "allow_null": 0,
-                                "multiple": 0,
-                                "ui": 1,
-                                "return_format": "value"
-                            },
-                            {
-                                "key": "field_67bca52f4a712",
-                                "label": "Vlastný text",
-                                "name": "custom_text",
-                                "type": "text",
-                                "instructions": "Ak chcete namiesto ikony zobraziť text",
-                                "required": 0
-                            }
-                        ]
-                    },
-                    {
-                        "key": "field_67bca54f4a713",
-                        "label": "Advanced",
-                        "name": "advanced",
-                        "type": "group",
-                        "instructions": "",
-                        "required": 0,
-                        "layout": "block",
-                        "sub_fields": [
-                            {
-                                "key": "field_67bca56f4a714",
-                                "label": "Typ",
-                                "name": "type",
-                                "type": "select",
-                                "instructions": "true = áno, false = nie, partial = čiastočne",
-                                "required": 0,
-                                "choices": {
-                                    "true": "Áno",
-                                    "false": "Nie",
-                                    "partial": "Čiastočne"
-                                },
-                                "default_value": "false",
-                                "allow_null": 0,
-                                "multiple": 0,
-                                "ui": 1,
-                                "return_format": "value"
-                            },
-                            {
-                                "key": "field_67bca58f4a715",
-                                "label": "Vlastný text",
-                                "name": "custom_text",
-                                "type": "text",
-                                "instructions": "Ak chcete namiesto ikony zobraziť text",
-                                "required": 0
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "key": "field_67bca5af4a716",
-                "label": "Ceny",
-                "name": "table_prices",
-                "type": "group",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "sub_fields": [
-                    {
-                        "key": "field_67bca5cf4a717",
-                        "label": "Starter cena",
-                        "name": "starter_price",
-                        "type": "number",
-                        "instructions": "",
-                        "required": 0,
-                        "default_value": 800,
-                        "min": 0,
-                        "max": "",
-                        "step": ""
-                    },
-                    {
-                        "key": "field_67bca5ef4a718",
-                        "label": "Basic cena",
-                        "name": "basic_price",
-                        "type": "number",
-                        "instructions": "",
-                        "required": 0,
-                        "default_value": 1200,
-                        "min": 0,
-                        "max": "",
-                        "step": ""
-                    },
-                    {
-                        "key": "field_67bca60f4a719",
-                        "label": "Advanced cena",
-                        "name": "advanced_price",
-                        "type": "number",
-                        "instructions": "",
-                        "required": 0,
-                        "default_value": 1800,
-                        "min": 0,
-                        "max": "",
-                        "step": ""
-                    }
-                ]
-            },
-            {
-                "key": "field_67bca62f4a720",
-                "label": "Text tlačidiel",
-                "name": "table_buttons_text",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "table",
-                "min": 3,
-                "max": 3,
-                "sub_fields": [
-                    {
-                        "key": "field_67bca64f4a721",
-                        "label": "Text tlačidla",
-                        "name": "button_text",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bca66f4a801",
-                "label": "Quote sekcia",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bca68f4a802",
-                "label": "Citát",
-                "name": "quote_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Marketing je domáca úloha, ktorú robíme ešte predtým, než máme produkt"
-            },
-            {
-                "key": "field_67bca6af4a803",
-                "label": "Autor",
-                "name": "quote_author",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "– Marek Kováč, Koordinátor projektov a jeho pracovný princíp"
-            },
-            {
-                "key": "field_67bca6cf4a804",
-                "label": "Autor ikona",
-                "name": "quote_author_icon",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "return_format": "url",
-                "preview_size": "thumbnail",
-                "library": "all"
-            },
-            {
-                "key": "field_67bca6ef4a805",
-                "label": "Autor fotka",
-                "name": "quote_author_photo",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "return_format": "url",
-                "preview_size": "medium",
-                "library": "all"
-            },
-            {
-                "key": "field_67bca70f4a901",
-                "label": "Transparentnosť",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bca72f4a902",
-                "label": "Nadpis",
-                "name": "transparency_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Transparentnosť prieskumu"
-            },
-            {
-                "key": "field_67bca74f4a903",
-                "label": "Položky",
-                "name": "transparency_items",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bca76f4a904",
-                        "label": "Ikona",
-                        "name": "icon",
-                        "type": "image",
-                        "instructions": "",
-                        "required": 0,
-                        "return_format": "url",
-                        "preview_size": "thumbnail",
-                        "library": "all"
-                    },
-                    {
-                        "key": "field_67bca78f4a905",
-                        "label": "Nadpis",
-                        "name": "title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bca7af4a906",
-                        "label": "Text",
-                        "name": "text",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bca7cf4b001",
-                "label": "Balíky (karty)",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bca7ef4b002",
-                "label": "Nadpis sekcie",
-                "name": "packages_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Balíky služieb a marketingového výskumu"
-            },
-            {
-                "key": "field_67bca80f4b003",
-                "label": "Podnadpis",
-                "name": "packages_subtitle",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Sila AI v kombinácii s ľudskou odbornosťou"
-            },
-            {
-                "key": "field_67bca82f4b004",
-                "label": "Balíky",
-                "name": "packages_items",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 3,
-                "max": 3,
-                "sub_fields": [
-                    {
-                        "key": "field_67bca84f4b005",
-                        "label": "Názov",
-                        "name": "name",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bca86f4b006",
-                        "label": "Popis",
-                        "name": "description",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bca88f4b007",
-                        "label": "Cena",
-                        "name": "price",
-                        "type": "number",
-                        "instructions": "",
-                        "required": 0,
-                        "min": 0,
-                        "max": "",
-                        "step": ""
-                    },
-                    {
-                        "key": "field_67bca8af4b008",
-                        "label": "Zoznam funkcií",
-                        "name": "features",
-                        "type": "repeater",
-                        "instructions": "",
-                        "required": 0,
-                        "layout": "table",
-                        "sub_fields": [
-                            {
-                                "key": "field_67bca8cf4b009",
-                                "label": "Funkcia",
-                                "name": "feature",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0
-                            }
-                        ]
-                    },
-                    {
-                        "key": "field_67bca8ef4b010",
-                        "label": "Text tlačidla",
-                        "name": "button_text",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bca90f4b011",
-                        "label": "Tmavý variant",
-                        "name": "is_dark",
-                        "type": "true_false",
-                        "instructions": "Použiť tmavý štýl?",
-                        "required": 0,
-                        "message": "",
-                        "default_value": 0,
-                        "ui": 1,
-                        "ui_on_text": "Áno",
-                        "ui_off_text": "Nie"
-                    }
-                ]
-            },
-            {
-                "key": "field_67bca92f4b012",
-                "label": "Odkaz na porovnanie",
-                "name": "packages_compare_link_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Zobraziť detailné porovnanie balíkov"
-            },
-            {
-                "key": "field_67bca94f4b101",
-                "label": "Vzorky reportov",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bca96f4b102",
-                "label": "Nadpis",
-                "name": "samples_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Chcete vidiet rozdiel v detailoch?"
-            },
-            {
-                "key": "field_67bca98f4b103",
-                "label": "Text",
-                "name": "samples_text",
-                "type": "textarea",
-                "instructions": "",
-                "required": 0,
-                "rows": 2,
-                "default_value": "Stiahnite si ukážky dvojjazyčných reportov. Každý projekt je jedinečný a prispôsobený vášmu segmentu a strategickým cieľom."
-            },
-            {
-                "key": "field_67bca9af4b104",
-                "label": "Vzorky",
-                "name": "samples_items",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bca9cf4b105",
-                        "label": "Názov",
-                        "name": "name",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bca9ef4b106",
-                        "label": "Ikona",
-                        "name": "icon",
-                        "type": "image",
-                        "instructions": "",
-                        "required": 0,
-                        "return_format": "url",
-                        "preview_size": "thumbnail",
-                        "library": "all"
-                    },
-                    {
-                        "key": "field_67bcaa0f4b107",
-                        "label": "Popis",
-                        "name": "description",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcaa2f4b108",
-                        "label": "Informácia o súbore",
-                        "name": "file_info",
-                        "type": "text",
-                        "instructions": "napr. PDF • 2.4 MB",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcaa4f4b109",
-                        "label": "Odkaz na stiahnutie",
-                        "name": "file_url",
-                        "type": "url",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcaa6f4b110",
-                "label": "Text pre formulár",
-                "name": "samples_form_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Zadajte email a okamžite vám pošleme kompletné ukážkové reporty"
-            },
-            {
-                "key": "field_67bcaa8f4b201",
-                "label": "Analýza zlyhania",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bcaaaf4b202",
-                "label": "Nadpis",
-                "name": "analysis_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Analýza zlyhania mikro a malých podnikov na Slovensku"
-            },
-            {
-                "key": "field_67bcaacf4b203",
-                "label": "Podnadpis",
-                "name": "analysis_subtitle",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Komplexný prehľad dynamiky a rizík podnikania v období 2016–2023"
-            },
-            {
-                "key": "field_67bcabef4b204",
-                "label": "Štatistické karty",
-                "name": "analysis_cards",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bcac0f4b205",
-                        "label": "Ikona",
-                        "name": "icon",
-                        "type": "image",
-                        "instructions": "",
-                        "required": 0,
-                        "return_format": "url",
-                        "preview_size": "thumbnail",
-                        "library": "all"
-                    },
-                    {
-                        "key": "field_67bcac2f4b206",
-                        "label": "Odznak",
-                        "name": "badge",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcac4f4b207",
-                        "label": "Hodnota",
-                        "name": "value",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcac6f4b208",
-                        "label": "Popis 1",
-                        "name": "desc1",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcac8f4b209",
-                        "label": "Popis 2",
-                        "name": "desc2",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcacaf4b210",
-                        "label": "Farba",
-                        "name": "color",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "choices": {
-                            "blue": "Modrá",
-                            "white": "Biela",
-                            "yellow": "Žltá"
-                        },
-                        "default_value": "blue",
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 1,
-                        "return_format": "value"
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcaccf4b211",
-                "label": "Text pre graf",
-                "name": "analysis_chart_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Vývoj počtu zaniknutí 2016–2023"
-            },
-            {
-                "key": "field_67bcacef4b212",
-                "label": "Popis grafu",
-                "name": "analysis_chart_desc",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Počet zaniknutých subjektov s výrazným nárastom po pandémii"
-            },
-            {
-                "key": "field_67bcad0f4b213",
-                "label": "Dáta pre graf (JSON)",
-                "name": "analysis_chart_data",
-                "type": "textarea",
-                "instructions": "Vložte JSON dáta pre graf",
-                "required": 0,
-                "rows": 4
-            },
-            {
-                "key": "field_67bcad2f4b214",
-                "label": "Legenda grafu",
-                "name": "analysis_chart_legend",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "table",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bcad4f4b215",
-                        "label": "Farba",
-                        "name": "color",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "choices": {
-                            "green": "Zelená",
-                            "yellow": "Žltá"
-                        },
-                        "default_value": "green",
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 1,
-                        "return_format": "value"
-                    },
-                    {
-                        "key": "field_67bcad6f4b216",
-                        "label": "Text",
-                        "name": "text",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcad8f4b217",
-                "label": "Text tlačidla",
-                "name": "analysis_button_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Získať riešenie"
-            },
-            {
-                "key": "field_67bcadaf4b218",
-                "label": "Hlavné bariéry - nadpis",
-                "name": "analysis_barriers_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Hlavné bariéry podnikania"
-            },
-            {
-                "key": "field_67bcadcf4b219",
-                "label": "Bariéry karty",
-                "name": "analysis_barriers",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bcadef4b220",
-                        "label": "Ikona",
-                        "name": "icon",
-                        "type": "image",
-                        "instructions": "",
-                        "required": 0,
-                        "return_format": "url",
-                        "preview_size": "thumbnail",
-                        "library": "all"
-                    },
-                    {
-                        "key": "field_67bcae0f4b221",
-                        "label": "Hodnota",
-                        "name": "value",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcae2f4b222",
-                        "label": "Popis 1",
-                        "name": "desc1",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcae4f4b223",
-                        "label": "Popis 2",
-                        "name": "desc2",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcae6f4b224",
-                "label": "Tabuľka metrík",
-                "name": "analysis_metrics_table",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "table",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bcae8f4b225",
-                        "label": "Metrika",
-                        "name": "metric",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcaeaf4b226",
-                        "label": "Rok/Kohorta",
-                        "name": "year",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcaecf4b227",
-                        "label": "Hodnota",
-                        "name": "value",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcaefef4b228",
-                        "label": "Kontext",
-                        "name": "context",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcaf0f4b229",
-                "label": "Záver",
-                "name": "analysis_conclusion",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0
-            },
-            {
-                "key": "field_67bcaf2f4b301",
-                "label": "Bannery",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bcaf4f4b302",
-                "label": "Prvý banner",
-                "name": "banner_first",
-                "type": "group",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "sub_fields": [
-                    {
-                        "key": "field_67bcaf6f4b303",
-                        "label": "Typ",
-                        "name": "type",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "choices": {
-                            "gradient": "Gradient",
-                            "white": "Biely",
-                            "yellow": "Žltý"
-                        },
-                        "default_value": "gradient",
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 1,
-                        "return_format": "value"
-                    },
-                    {
-                        "key": "field_67bcaf8f4b304",
-                        "label": "Ikona",
-                        "name": "icon",
-                        "type": "image",
-                        "instructions": "",
-                        "required": 0,
-                        "return_format": "url",
-                        "preview_size": "thumbnail",
-                        "library": "all"
-                    },
-                    {
-                        "key": "field_67bcafaf4b305",
-                        "label": "Nadpis",
-                        "name": "title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcafcf4b306",
-                        "label": "Text",
-                        "name": "text",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "rows": 3
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcafef4b307",
-                "label": "Druhý banner",
-                "name": "banner_second",
-                "type": "group",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "sub_fields": [
-                    {
-                        "key": "field_67bcb00f4b308",
-                        "label": "Typ",
-                        "name": "type",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "choices": {
-                            "gradient": "Gradient",
-                            "white": "Biely",
-                            "yellow": "Žltý"
-                        },
-                        "default_value": "white",
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 1,
-                        "return_format": "value"
-                    },
-                    {
-                        "key": "field_67bcb02f4b309",
-                        "label": "Ikona",
-                        "name": "icon",
-                        "type": "image",
-                        "instructions": "",
-                        "required": 0,
-                        "return_format": "url",
-                        "preview_size": "thumbnail",
-                        "library": "all"
-                    },
-                    {
-                        "key": "field_67bcb04f4b310",
-                        "label": "Nadpis",
-                        "name": "title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcb06f4b311",
-                        "label": "Text",
-                        "name": "text",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "rows": 3
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcb08f4b312",
-                "label": "Tretí banner",
-                "name": "banner_third",
-                "type": "group",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "sub_fields": [
-                    {
-                        "key": "field_67bcb0af4b313",
-                        "label": "Typ",
-                        "name": "type",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "choices": {
-                            "gradient": "Gradient",
-                            "white": "Biely",
-                            "yellow": "Žltý"
-                        },
-                        "default_value": "yellow",
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 1,
-                        "return_format": "value"
-                    },
-                    {
-                        "key": "field_67bcb0cf4b314",
-                        "label": "Nadpis",
-                        "name": "title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcb0ef4b315",
-                        "label": "Text",
-                        "name": "text",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "rows": 4
-                    },
-                    {
-                        "key": "field_67bcb10f4b316",
-                        "label": "Text tlačidla",
-                        "name": "button_text",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcb12f4b401",
-                "label": "21 chýb",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bcb14f4b402",
-                "label": "Nadpis",
-                "name": "errors_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "21 chýb pri štarte podnikania na Slovensku"
-            },
-            {
-                "key": "field_67bcb16f4b403",
-                "label": "Právne chyby",
-                "name": "errors_legal",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "table",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bcb18f4b404",
-                        "label": "Chyba",
-                        "name": "error",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcb1af4b405",
-                "label": "Štatistický text",
-                "name": "errors_stats_text",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0,
-                "default_value": "Štatistiky ukazujú, <strong>že 10% až 25% startupov neprežije prvých 5 rokov.</strong> Mnohým z týchto zlyhajú sa dá predísť poznaním najčastejších chýb a spôsobov, ako im zabrániť."
-            },
-            {
-                "key": "field_67bcb1cf4b406",
-                "label": "Daňové chyby",
-                "name": "errors_tax",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "table",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bcb1ef4b407",
-                        "label": "Chyba",
-                        "name": "error",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcb20f4b408",
-                "label": "Text pre odkaz",
-                "name": "errors_download_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Stiahnuť bezplatný checklist PDF"
-            },
-            {
-                "key": "field_67bcb22f4b409",
-                "label": "Doplňujúci text",
-                "name": "errors_additional_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "+ Dokumentácia, zmluvy, marketing, operačné chyby a ďalšie..."
-            },
-            {
-                "key": "field_67bcb24f4b501",
-                "label": "FAQ",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bcb26f4b502",
-                "label": "Nadpis FAQ",
-                "name": "faq_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Často kladené otázky o marketingovom prieskume"
-            },
-            {
-                "key": "field_67bcb28f4b503",
-                "label": "FAQ položky",
-                "name": "faq_items",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bcb2af4b504",
-                        "label": "Otázka",
-                        "name": "question",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcb2cf4b505",
-                        "label": "Odpoveď",
-                        "name": "answer",
-                        "type": "wysiwyg",
-                        "instructions": "",
-                        "required": 0,
-                        "tabs": "all",
-                        "toolbar": "basic",
-                        "media_upload": 0
-                    },
-                    {
-                        "key": "field_67bcb2ef4b506",
-                        "label": "Tlačidlo v odpovedi",
-                        "name": "has_button",
-                        "type": "true_false",
-                        "instructions": "Zobraziť tlačidlo?",
-                        "required": 0,
-                        "message": "",
-                        "default_value": 0,
-                        "ui": 1,
-                        "ui_on_text": "Áno",
-                        "ui_off_text": "Nie"
-                    },
-                    {
-                        "key": "field_67bcb30f4b507",
-                        "label": "Text tlačidla",
-                        "name": "button_text",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": [
-                            [
-                                {
-                                    "field": "field_67bcb2ef4b506",
-                                    "operator": "==",
-                                    "value": "1"
-                                }
-                            ]
-                        ]
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcb32f4b508",
-                "label": "Text tlačidla pre zobrazenie všetkých",
-                "name": "faq_button_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Zobraziť všetky otázky"
-            },
-            {
-                "key": "field_67bcb34f4b601",
-                "label": "Sekcia s formulárom",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67bcb36f4b602",
-                "label": "Text vľavo hore",
-                "name": "form_left_top_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "ďakujeme za váš záujem o sociálnu iniciatívu marketingovej agentúry ProfLines."
-            },
-            {
-                "key": "field_67bcb38f4b603",
-                "label": "Hlavný nadpis vľavo",
-                "name": "form_left_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Bezplatný mini-audit vašej trhovej niky"
-            },
-            {
-                "key": "field_67bcb3af4b604",
-                "label": "Citát vľavo",
-                "name": "form_left_quote",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0,
-                "default_value": "<strong>Dôležitá informácia:</strong> Program „Digitálny výťah“ je vlastnou iniciatívou našej agentúry. Nečerpáme žiadne financovanie od štátu, fondov EÚ ani externých sponzorov. Investujeme vlastný čas a zdroje s cieľom podporiť lokálnu ekonomiku Slovenska."
-            },
-            {
-                "key": "field_67bcb3cf4b605",
-                "label": "Položky formulára",
-                "name": "form_fields",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "sub_fields": [
-                    {
-                        "key": "field_67bcb3ef4b606",
-                        "label": "ID poľa",
-                        "name": "field_id",
-                        "type": "text",
-                        "instructions": "Unikátny identifikátor (napr. meno, email)",
-                        "required": 1
-                    },
-                    {
-                        "key": "field_67bcb40f4b607",
-                        "label": "Názov poľa",
-                        "name": "field_name",
-                        "type": "text",
-                        "instructions": "Zobrazovaný názov",
-                        "required": 1
-                    },
-                    {
-                        "key": "field_67bcb42f4b608",
-                        "label": "Typ poľa",
-                        "name": "field_type",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 1,
-                        "choices": {
-                            "text": "Textový input",
-                            "email": "Email",
-                            "tel": "Telefón",
-                            "textarea": "Textová oblasť",
-                            "select": "Rozbaľovací zoznam",
-                            "radio": "Rádio tlačidlá",
-                            "checkbox": "Checkboxy",
-                            "heading": "Nadpis sekcie",
-                            "badge": "Informačný odznak"
-                        },
-                        "default_value": "text",
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 1,
-                        "return_format": "value"
-                    },
-                    {
-                        "key": "field_67bcb44f4b609",
-                        "label": "Šírka poľa",
-                        "name": "field_width",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "choices": {
-                            "normal": "Normal",
-                            "span-two": "Span Two (celá šírka)"
-                        },
-                        "default_value": "normal",
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 1,
-                        "return_format": "value"
-                    },
-                    {
-                        "key": "field_67bcb46f4b610",
-                        "label": "Povinné",
-                        "name": "required",
-                        "type": "true_false",
-                        "instructions": "",
-                        "required": 0,
-                        "message": "",
-                        "default_value": 0,
-                        "ui": 1,
-                        "ui_on_text": "Áno",
-                        "ui_off_text": "Nie"
-                    },
-                    {
-                        "key": "field_67bcb48f4b611",
-                        "label": "Placeholder",
-                        "name": "placeholder",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcb4af4b612",
-                        "label": "Pomocný text",
-                        "name": "helper_text",
-                        "type": "text",
-                        "instructions": "Malý text pod poľom",
-                        "required": 0
-                    },
-                    {
-                        "key": "field_67bcb4cf4b613",
-                        "label": "Možnosti (pre select, radio, checkbox)",
-                        "name": "options",
-                        "type": "repeater",
-                        "instructions": "",
-                        "required": 0,
-                        "layout": "table",
-                        "min": 0,
-                        "max": 0,
-                        "conditional_logic": [
-                            [
-                                {
-                                    "field": "field_67bcb42f4b608",
-                                    "operator": "in",
-                                    "value": ["select", "radio", "checkbox"]
-                                }
-                            ]
-                        ],
-                        "sub_fields": [
-                            {
-                                "key": "field_67bcb4ef4b614",
-                                "label": "Hodnota",
-                                "name": "value",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0
-                            },
-                            {
-                                "key": "field_67bcb50f4b615",
-                                "label": "Text",
-                                "name": "label",
-                                "type": "text",
-                                "instructions": "",
-                                "required": 0
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "key": "field_67bcb52f4b616",
-                "label": "Text tlačidla odoslať",
-                "name": "form_submit_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Získať bezplatný miniaudít"
-            },
-            {
-                "key": "field_67bcb54f4b617",
-                "label": "Text pod tlačidlom",
-                "name": "form_caption",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "default_value": "Ozveme sa do 24 hodín. Bez záväzkov."
-            }
-        ],
-        "location": [
-            [
-                {
-                    "param": "page",
-                    "operator": "==",
-                    "value": "225"
-                }
+                "rows": 2
+              }
             ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": "",
-        "show_in_rest": 1
-    }
+          }
+        ]
+      },
+      {
+        "key": "field_67bca0cf4a401",
+        "label": "Princípy metodiky",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bca0ef4a402",
+        "label": "Hlavný nadpis",
+        "name": "principles_main_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Hlavné princípy metodiky"
+      },
+      {
+        "key": "field_67bca10f4a403",
+        "label": "Hlavný text",
+        "name": "principles_main_text",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 4,
+        "default_value": "Prieskum sa realizuje systematicky s využitím overených nástrojov umelej inteligencie na zber, analýzu a vizualizáciu údajov, čo zabezpečuje objektivitu a moderný prístup. Každá fáza prechádza kritickou revíziou, finálna správa sa kontroluje a dopracúva so zohľadnením odborných skúseností. Výstupom je profesionálny report v dvoch jazykoch (slovenský a anglický)."
+      },
+      {
+        "key": "field_67bca12f4a404",
+        "label": "Princípy",
+        "name": "principles_items",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bca14f4a405",
+            "label": "Ikona",
+            "name": "icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+          },
+          {
+            "key": "field_67bca16f4a406",
+            "label": "Nadpis",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bca18f4a407",
+            "label": "Text",
+            "name": "text",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bca1af4a408",
+        "label": "Žltý banner - nadpis",
+        "name": "yellow_banner_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "21 chýb pri štarte podnikania na Slovensku"
+      },
+      {
+        "key": "field_67bca1cf4a409",
+        "label": "Žltý banner - text tlačidla",
+        "name": "yellow_banner_button_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Prečítajte si všetky chyby"
+      },
+      {
+        "key": "field_67bca1ef4a501",
+        "label": "Postup realizácie",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bca20f4a502",
+        "label": "Nadpis sekcie",
+        "name": "process_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Postup realizácie prieskumu"
+      },
+      {
+        "key": "field_67bca22f4a503",
+        "label": "Podnadpis",
+        "name": "process_subtitle",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Na základe získaných vstupných informácií sa jasne definujú úlohy výskumu"
+      },
+      {
+        "key": "field_67bca24f4a504",
+        "label": "Kroky",
+        "name": "process_steps",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bca26f4a505",
+            "label": "Číslo",
+            "name": "number",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "default_value": "01"
+          },
+          {
+            "key": "field_67bca28f4a506",
+            "label": "Nadpis",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bca2af4a507",
+            "label": "Text",
+            "name": "text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "rows": 3
+          }
+        ]
+      },
+      {
+        "key": "field_67bca2cf4a601",
+        "label": "Ako to funguje",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bca2ef4a602",
+        "label": "Nadpis sekcie",
+        "name": "how_it_works_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Ako to funguje"
+      },
+      {
+        "key": "field_67bca30f4a603",
+        "label": "Podnadpis",
+        "name": "how_it_works_subtitle",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Na základe získaných vstupných informácií sa jasne definujú úlohy výskumu"
+      },
+      {
+        "key": "field_67bca32f4a604",
+        "label": "Kroky",
+        "name": "how_it_works_steps",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bca34f4a605",
+            "label": "Číslo",
+            "name": "number",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bca36f4a606",
+            "label": "Nadpis",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bca38f4a607",
+            "label": "Text",
+            "name": "text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "rows": 3
+          },
+          {
+            "key": "field_67bca3af4a608",
+            "label": "Nálepka",
+            "name": "sticker",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bca3cf4a701",
+        "label": "Porovnávacia tabuľka",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bca3ef4a702",
+        "label": "Nadpis tabuľky",
+        "name": "table_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Balíky služieb a marketingového výskumu"
+      },
+      {
+        "key": "field_67bca40f4a703",
+        "label": "Položky tabuľky",
+        "name": "table_items",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bca42f4a704",
+            "label": "Názov služby",
+            "name": "service_name",
+            "type": "text",
+            "instructions": "Použite <strong> pre zvýraznenie",
+            "required": 0
+          },
+          {
+            "key": "field_67bca44f4a705",
+            "label": "Info ikona",
+            "name": "has_info",
+            "type": "true_false",
+            "instructions": "Zobraziť info ikonu?",
+            "required": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Áno",
+            "ui_off_text": "Nie"
+          },
+          {
+            "key": "field_67bca46f4a706",
+            "label": "Info text",
+            "name": "info_text",
+            "type": "wysiwyg",
+            "instructions": "Text pre info ikonu",
+            "required": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "conditional_logic": [
+              [
+                {
+                  "field": "field_67bca44f4a705",
+                  "operator": "==",
+                  "value": "1"
+                }
+              ]
+            ]
+          },
+          {
+            "key": "field_67bca48f4a707",
+            "label": "Starter",
+            "name": "starter",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "layout": "block",
+            "sub_fields": [
+              {
+                "key": "field_67bca4af4a708",
+                "label": "Typ",
+                "name": "type",
+                "type": "select",
+                "instructions": "true = áno, false = nie, partial = čiastočne",
+                "required": 0,
+                "choices": {
+                  "true": "Áno",
+                  "false": "Nie",
+                  "partial": "Čiastočne"
+                },
+                "default_value": "false",
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 1,
+                "return_format": "value"
+              },
+              {
+                "key": "field_67bca4cf4a709",
+                "label": "Vlastný text",
+                "name": "custom_text",
+                "type": "text",
+                "instructions": "Ak chcete namiesto ikony zobraziť text",
+                "required": 0
+              }
+            ]
+          },
+          {
+            "key": "field_67bca4ef4a710",
+            "label": "Basic",
+            "name": "basic",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "layout": "block",
+            "sub_fields": [
+              {
+                "key": "field_67bca50f4a711",
+                "label": "Typ",
+                "name": "type",
+                "type": "select",
+                "instructions": "true = áno, false = nie, partial = čiastočne",
+                "required": 0,
+                "choices": {
+                  "true": "Áno",
+                  "false": "Nie",
+                  "partial": "Čiastočne"
+                },
+                "default_value": "false",
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 1,
+                "return_format": "value"
+              },
+              {
+                "key": "field_67bca52f4a712",
+                "label": "Vlastný text",
+                "name": "custom_text",
+                "type": "text",
+                "instructions": "Ak chcete namiesto ikony zobraziť text",
+                "required": 0
+              }
+            ]
+          },
+          {
+            "key": "field_67bca54f4a713",
+            "label": "Advanced",
+            "name": "advanced",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "layout": "block",
+            "sub_fields": [
+              {
+                "key": "field_67bca56f4a714",
+                "label": "Typ",
+                "name": "type",
+                "type": "select",
+                "instructions": "true = áno, false = nie, partial = čiastočne",
+                "required": 0,
+                "choices": {
+                  "true": "Áno",
+                  "false": "Nie",
+                  "partial": "Čiastočne"
+                },
+                "default_value": "false",
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 1,
+                "return_format": "value"
+              },
+              {
+                "key": "field_67bca58f4a715",
+                "label": "Vlastný text",
+                "name": "custom_text",
+                "type": "text",
+                "instructions": "Ak chcete namiesto ikony zobraziť text",
+                "required": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "field_67bca5af4a716",
+        "label": "Ceny",
+        "name": "table_prices",
+        "type": "group",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "sub_fields": [
+          {
+            "key": "field_67bca5cf4a717",
+            "label": "Starter cena",
+            "name": "starter_price",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "default_value": 800,
+            "min": 0,
+            "max": "",
+            "step": ""
+          },
+          {
+            "key": "field_67bca5ef4a718",
+            "label": "Basic cena",
+            "name": "basic_price",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "default_value": 1200,
+            "min": 0,
+            "max": "",
+            "step": ""
+          },
+          {
+            "key": "field_67bca60f4a719",
+            "label": "Advanced cena",
+            "name": "advanced_price",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "default_value": 1800,
+            "min": 0,
+            "max": "",
+            "step": ""
+          }
+        ]
+      },
+      {
+        "key": "field_67bca62f4a720",
+        "label": "Text tlačidiel",
+        "name": "table_buttons_text",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "table",
+        "min": 3,
+        "max": 3,
+        "sub_fields": [
+          {
+            "key": "field_67bca64f4a721",
+            "label": "Text tlačidla",
+            "name": "button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bca66f4a801",
+        "label": "Quote sekcia",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bca68f4a802",
+        "label": "Citát",
+        "name": "quote_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Marketing je domáca úloha, ktorú robíme ešte predtým, než máme produkt"
+      },
+      {
+        "key": "field_67bca6af4a803",
+        "label": "Autor",
+        "name": "quote_author",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "– Marek Kováč, Koordinátor projektov a jeho pracovný princíp"
+      },
+      {
+        "key": "field_67bca6cf4a804",
+        "label": "Autor ikona",
+        "name": "quote_author_icon",
+        "type": "image",
+        "instructions": "",
+        "required": 0,
+        "return_format": "url",
+        "preview_size": "thumbnail",
+        "library": "all"
+      },
+      {
+        "key": "field_67bca6ef4a805",
+        "label": "Autor fotka",
+        "name": "quote_author_photo",
+        "type": "image",
+        "instructions": "",
+        "required": 0,
+        "return_format": "url",
+        "preview_size": "medium",
+        "library": "all"
+      },
+      {
+        "key": "field_67bca70f4a901",
+        "label": "Transparentnosť",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bca72f4a902",
+        "label": "Nadpis",
+        "name": "transparency_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Transparentnosť prieskumu"
+      },
+      {
+        "key": "field_67bca74f4a903",
+        "label": "Položky",
+        "name": "transparency_items",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bca76f4a904",
+            "label": "Ikona",
+            "name": "icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+          },
+          {
+            "key": "field_67bca78f4a905",
+            "label": "Nadpis",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bca7af4a906",
+            "label": "Text",
+            "name": "text",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bca7cf4b001",
+        "label": "Balíky (karty)",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bca7ef4b002",
+        "label": "Nadpis sekcie",
+        "name": "packages_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Balíky služieb a marketingového výskumu"
+      },
+      {
+        "key": "field_67bca80f4b003",
+        "label": "Podnadpis",
+        "name": "packages_subtitle",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Sila AI v kombinácii s ľudskou odbornosťou"
+      },
+      {
+        "key": "field_67bca82f4b004",
+        "label": "Balíky",
+        "name": "packages_items",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 3,
+        "max": 3,
+        "sub_fields": [
+          {
+            "key": "field_67bca84f4b005",
+            "label": "Názov",
+            "name": "name",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bca86f4b006",
+            "label": "Popis",
+            "name": "description",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bca88f4b007",
+            "label": "Cena",
+            "name": "price",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "min": 0,
+            "max": "",
+            "step": ""
+          },
+          {
+            "key": "field_67bca8af4b008",
+            "label": "Zoznam funkcií",
+            "name": "features",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "layout": "table",
+            "sub_fields": [
+              {
+                "key": "field_67bca8cf4b009",
+                "label": "Funkcia",
+                "name": "feature",
+                "type": "text",
+                "instructions": "",
+                "required": 0
+              }
+            ]
+          },
+          {
+            "key": "field_67bca8ef4b010",
+            "label": "Text tlačidla",
+            "name": "button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bca90f4b011",
+            "label": "Tmavý variant",
+            "name": "is_dark",
+            "type": "true_false",
+            "instructions": "Použiť tmavý štýl?",
+            "required": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Áno",
+            "ui_off_text": "Nie"
+          }
+        ]
+      },
+      {
+        "key": "field_67bca92f4b012",
+        "label": "Odkaz na porovnanie",
+        "name": "packages_compare_link_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Zobraziť detailné porovnanie balíkov"
+      },
+      {
+        "key": "field_67bca94f4b101",
+        "label": "Vzorky reportov",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bca96f4b102",
+        "label": "Nadpis",
+        "name": "samples_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Chcete vidiet rozdiel v detailoch?"
+      },
+      {
+        "key": "field_67bca98f4b103",
+        "label": "Text",
+        "name": "samples_text",
+        "type": "textarea",
+        "instructions": "",
+        "required": 0,
+        "rows": 2,
+        "default_value": "Stiahnite si ukážky dvojjazyčných reportov. Každý projekt je jedinečný a prispôsobený vášmu segmentu a strategickým cieľom."
+      },
+      {
+        "key": "field_67bca9af4b104",
+        "label": "Vzorky",
+        "name": "samples_items",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bca9cf4b105",
+            "label": "Názov",
+            "name": "name",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bca9ef4b106",
+            "label": "Ikona",
+            "name": "icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+          },
+          {
+            "key": "field_67bcaa0f4b107",
+            "label": "Popis",
+            "name": "description",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcaa2f4b108",
+            "label": "Informácia o súbore",
+            "name": "file_info",
+            "type": "text",
+            "instructions": "napr. PDF • 2.4 MB",
+            "required": 0
+          },
+          {
+            "key": "field_67bcaa4f4b109",
+            "label": "Odkaz na stiahnutie",
+            "name": "file_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bcaa6f4b110",
+        "label": "Text pre formulár",
+        "name": "samples_form_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Zadajte email a okamžite vám pošleme kompletné ukážkové reporty"
+      },
+      {
+        "key": "field_67bcaa8f4b201",
+        "label": "Analýza zlyhania",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bcaaaf4b202",
+        "label": "Nadpis",
+        "name": "analysis_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Analýza zlyhania mikro a malých podnikov na Slovensku"
+      },
+      {
+        "key": "field_67bcaacf4b203",
+        "label": "Podnadpis",
+        "name": "analysis_subtitle",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Komplexný prehľad dynamiky a rizík podnikania v období 2016–2023"
+      },
+      {
+        "key": "field_67bcabef4b204",
+        "label": "Štatistické karty",
+        "name": "analysis_cards",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bcac0f4b205",
+            "label": "Ikona",
+            "name": "icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+          },
+          {
+            "key": "field_67bcac2f4b206",
+            "label": "Odznak",
+            "name": "badge",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcac4f4b207",
+            "label": "Hodnota",
+            "name": "value",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcac6f4b208",
+            "label": "Popis 1",
+            "name": "desc1",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcac8f4b209",
+            "label": "Popis 2",
+            "name": "desc2",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcacaf4b210",
+            "label": "Farba",
+            "name": "color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "choices": {
+              "blue": "Modrá",
+              "white": "Biela",
+              "yellow": "Žltá"
+            },
+            "default_value": "blue",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "return_format": "value"
+          }
+        ]
+      },
+      {
+        "key": "field_67bcaccf4b211",
+        "label": "Text pre graf",
+        "name": "analysis_chart_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Vývoj počtu zaniknutí 2016–2023"
+      },
+      {
+        "key": "field_67bcacef4b212",
+        "label": "Popis grafu",
+        "name": "analysis_chart_desc",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Počet zaniknutých subjektov s výrazným nárastom po pandémii"
+      },
+      {
+        "key": "field_67bcad0f4b213",
+        "label": "Dáta pre graf (JSON)",
+        "name": "analysis_chart_data",
+        "type": "textarea",
+        "instructions": "Vložte JSON dáta pre graf",
+        "required": 0,
+        "rows": 4
+      },
+      {
+        "key": "field_67bcad2f4b214",
+        "label": "Legenda grafu",
+        "name": "analysis_chart_legend",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "table",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bcad4f4b215",
+            "label": "Farba",
+            "name": "color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "choices": {
+              "green": "Zelená",
+              "yellow": "Žltá"
+            },
+            "default_value": "green",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "return_format": "value"
+          },
+          {
+            "key": "field_67bcad6f4b216",
+            "label": "Text",
+            "name": "text",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bcad8f4b217",
+        "label": "Text tlačidla",
+        "name": "analysis_button_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Získať riešenie"
+      },
+      {
+        "key": "field_67bcadaf4b218",
+        "label": "Hlavné bariéry - nadpis",
+        "name": "analysis_barriers_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Hlavné bariéry podnikania"
+      },
+      {
+        "key": "field_67bcadcf4b219",
+        "label": "Bariéry karty",
+        "name": "analysis_barriers",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bcadef4b220",
+            "label": "Ikona",
+            "name": "icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+          },
+          {
+            "key": "field_67bcae0f4b221",
+            "label": "Hodnota",
+            "name": "value",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcae2f4b222",
+            "label": "Popis 1",
+            "name": "desc1",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcae4f4b223",
+            "label": "Popis 2",
+            "name": "desc2",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bcae6f4b224",
+        "label": "Tabuľka metrík",
+        "name": "analysis_metrics_table",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "table",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bcae8f4b225",
+            "label": "Metrika",
+            "name": "metric",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcaeaf4b226",
+            "label": "Rok/Kohorta",
+            "name": "year",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcaecf4b227",
+            "label": "Hodnota",
+            "name": "value",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcaefef4b228",
+            "label": "Kontext",
+            "name": "context",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bcaf0f4b229",
+        "label": "Záver",
+        "name": "analysis_conclusion",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0
+      },
+      {
+        "key": "field_67bcaf2f4b301",
+        "label": "Bannery",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bcaf4f4b302",
+        "label": "Prvý banner",
+        "name": "banner_first",
+        "type": "group",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "sub_fields": [
+          {
+            "key": "field_67bcaf6f4b303",
+            "label": "Typ",
+            "name": "type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "choices": {
+              "gradient": "Gradient",
+              "white": "Biely",
+              "yellow": "Žltý"
+            },
+            "default_value": "gradient",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "return_format": "value"
+          },
+          {
+            "key": "field_67bcaf8f4b304",
+            "label": "Ikona",
+            "name": "icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+          },
+          {
+            "key": "field_67bcafaf4b305",
+            "label": "Nadpis",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcafcf4b306",
+            "label": "Text",
+            "name": "text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "rows": 3
+          }
+        ]
+      },
+      {
+        "key": "field_67bcafef4b307",
+        "label": "Druhý banner",
+        "name": "banner_second",
+        "type": "group",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "sub_fields": [
+          {
+            "key": "field_67bcb00f4b308",
+            "label": "Typ",
+            "name": "type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "choices": {
+              "gradient": "Gradient",
+              "white": "Biely",
+              "yellow": "Žltý"
+            },
+            "default_value": "white",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "return_format": "value"
+          },
+          {
+            "key": "field_67bcb02f4b309",
+            "label": "Ikona",
+            "name": "icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all"
+          },
+          {
+            "key": "field_67bcb04f4b310",
+            "label": "Nadpis",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcb06f4b311",
+            "label": "Text",
+            "name": "text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "rows": 3
+          }
+        ]
+      },
+      {
+        "key": "field_67bcb08f4b312",
+        "label": "Tretí banner",
+        "name": "banner_third",
+        "type": "group",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "sub_fields": [
+          {
+            "key": "field_67bcb0af4b313",
+            "label": "Typ",
+            "name": "type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "choices": {
+              "gradient": "Gradient",
+              "white": "Biely",
+              "yellow": "Žltý"
+            },
+            "default_value": "yellow",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "return_format": "value"
+          },
+          {
+            "key": "field_67bcb0cf4b314",
+            "label": "Nadpis",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcb0ef4b315",
+            "label": "Text",
+            "name": "text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "rows": 4
+          },
+          {
+            "key": "field_67bcb10f4b316",
+            "label": "Text tlačidla",
+            "name": "button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bcb12f4b401",
+        "label": "21 chýb",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bcb14f4b402",
+        "label": "Nadpis",
+        "name": "errors_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "21 chýb pri štarte podnikania na Slovensku"
+      },
+      {
+        "key": "field_67bcb16f4b403",
+        "label": "Právne chyby",
+        "name": "errors_legal",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "table",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bcb18f4b404",
+            "label": "Chyba",
+            "name": "error",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bcb1af4b405",
+        "label": "Štatistický text",
+        "name": "errors_stats_text",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0,
+        "default_value": "Štatistiky ukazujú, <strong>že 10% až 25% startupov neprežije prvých 5 rokov.</strong> Mnohým z týchto zlyhajú sa dá predísť poznaním najčastejších chýb a spôsobov, ako im zabrániť."
+      },
+      {
+        "key": "field_67bcb1cf4b406",
+        "label": "Daňové chyby",
+        "name": "errors_tax",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "table",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bcb1ef4b407",
+            "label": "Chyba",
+            "name": "error",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_67bcb20f4b408",
+        "label": "Text pre odkaz",
+        "name": "errors_download_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Stiahnuť bezplatný checklist PDF"
+      },
+      {
+        "key": "field_67bcb22f4b409",
+        "label": "Doplňujúci text",
+        "name": "errors_additional_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "+ Dokumentácia, zmluvy, marketing, operačné chyby a ďalšie..."
+      },
+      {
+        "key": "field_67bcb24f4b501",
+        "label": "FAQ",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bcb26f4b502",
+        "label": "Nadpis FAQ",
+        "name": "faq_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Často kladené otázky o marketingovom prieskume"
+      },
+      {
+        "key": "field_67bcb28f4b503",
+        "label": "FAQ položky",
+        "name": "faq_items",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bcb2af4b504",
+            "label": "Otázka",
+            "name": "question",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcb2cf4b505",
+            "label": "Odpoveď",
+            "name": "answer",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0
+          },
+          {
+            "key": "field_67bcb2ef4b506",
+            "label": "Tlačidlo v odpovedi",
+            "name": "has_button",
+            "type": "true_false",
+            "instructions": "Zobraziť tlačidlo?",
+            "required": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Áno",
+            "ui_off_text": "Nie"
+          },
+          {
+            "key": "field_67bcb30f4b507",
+            "label": "Text tlačidla",
+            "name": "button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+              [
+                {
+                  "field": "field_67bcb2ef4b506",
+                  "operator": "==",
+                  "value": "1"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "key": "field_67bcb32f4b508",
+        "label": "Text tlačidla pre zobrazenie všetkých",
+        "name": "faq_button_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Zobraziť všetky otázky"
+      },
+      {
+        "key": "field_67bcb34f4b601",
+        "label": "Sekcia s formulárom",
+        "name": "",
+        "type": "tab",
+        "instructions": "",
+        "required": 0,
+        "placement": "top",
+        "endpoint": 0
+      },
+      {
+        "key": "field_67bcb36f4b602",
+        "label": "Text vľavo hore",
+        "name": "form_left_top_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "ďakujeme za váš záujem o sociálnu iniciatívu marketingovej agentúry ProfLines."
+      },
+      {
+        "key": "field_67bcb38f4b603",
+        "label": "Hlavný nadpis vľavo",
+        "name": "form_left_title",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Bezplatný mini-audit vašej trhovej niky"
+      },
+      {
+        "key": "field_67bcb3af4b604",
+        "label": "Citát vľavo",
+        "name": "form_left_quote",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "basic",
+        "media_upload": 0,
+        "default_value": "<strong>Dôležitá informácia:</strong> Program „Digitálny výťah“ je vlastnou iniciatívou našej agentúry. Nečerpáme žiadne financovanie od štátu, fondov EÚ ani externých sponzorov. Investujeme vlastný čas a zdroje s cieľom podporiť lokálnu ekonomiku Slovenska."
+      },
+      {
+        "key": "field_67bcb3cf4b605",
+        "label": "Položky formulára",
+        "name": "form_fields",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "layout": "block",
+        "min": 0,
+        "max": 0,
+        "sub_fields": [
+          {
+            "key": "field_67bcb3ef4b606",
+            "label": "ID poľa",
+            "name": "field_id",
+            "type": "text",
+            "instructions": "Unikátny identifikátor (napr. meno, email)",
+            "required": 1
+          },
+          {
+            "key": "field_67bcb40f4b607",
+            "label": "Názov poľa",
+            "name": "field_name",
+            "type": "text",
+            "instructions": "Zobrazovaný názov",
+            "required": 1
+          },
+          {
+            "key": "field_67bcb42f4b608",
+            "label": "Typ poľa",
+            "name": "field_type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "choices": {
+              "text": "Textový input",
+              "email": "Email",
+              "tel": "Telefón",
+              "textarea": "Textová oblasť",
+              "select": "Rozbaľovací zoznam",
+              "radio": "Rádio tlačidlá",
+              "checkbox": "Checkboxy",
+              "heading": "Nadpis sekcie",
+              "badge": "Informačný odznak"
+            },
+            "default_value": "text",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "return_format": "value"
+          },
+          {
+            "key": "field_67bcb44f4b609",
+            "label": "Šírka poľa",
+            "name": "field_width",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "choices": {
+              "normal": "Normal",
+              "span-two": "Span Two (celá šírka)"
+            },
+            "default_value": "normal",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "return_format": "value"
+          },
+          {
+            "key": "field_67bcb46f4b610",
+            "label": "Povinné",
+            "name": "required",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Áno",
+            "ui_off_text": "Nie"
+          },
+          {
+            "key": "field_67bcb48f4b611",
+            "label": "Placeholder",
+            "name": "placeholder",
+            "type": "text",
+            "instructions": "",
+            "required": 0
+          },
+          {
+            "key": "field_67bcb4af4b612",
+            "label": "Pomocný text",
+            "name": "helper_text",
+            "type": "text",
+            "instructions": "Malý text pod poľom",
+            "required": 0
+          },
+          {
+            "key": "field_67bcb4cf4b613",
+            "label": "Možnosti (pre select, radio, checkbox)",
+            "name": "options",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "conditional_logic": [
+              [
+                {
+                  "field": "field_67bcb42f4b608",
+                  "operator": "==",
+                  "value": "select"
+                }
+              ],
+              [
+                {
+                  "field": "field_67bcb42f4b608",
+                  "operator": "==",
+                  "value": "radio"
+                }
+              ],
+              [
+                {
+                  "field": "field_67bcb42f4b608",
+                  "operator": "==",
+                  "value": "checkbox"
+                }
+              ]
+            ],
+            "sub_fields": [
+              {
+                "key": "field_67bcb4ef4b614",
+                "label": "Hodnota",
+                "name": "value",
+                "type": "text",
+                "instructions": "",
+                "required": 0
+              },
+              {
+                "key": "field_67bcb50f4b615",
+                "label": "Text",
+                "name": "label",
+                "type": "text",
+                "instructions": "",
+                "required": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "field_67bcb52f4b616",
+        "label": "Text tlačidla odoslať",
+        "name": "form_submit_text",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Získať bezplatný miniaudít"
+      },
+      {
+        "key": "field_67bcb54f4b617",
+        "label": "Text pod tlačidlom",
+        "name": "form_caption",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "default_value": "Ozveme sa do 24 hodín. Bez záväzkov."
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page",
+          "operator": "==",
+          "value": "225"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1
+  }
 ]
