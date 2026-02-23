@@ -43,7 +43,7 @@
                         "name": "name",
                         "aria-label": "",
                         "type": "text",
-                        "instructions": "Prieskum trhu a marketingový prieskum",
+                        "instructions": "",
                         "required": 0,
                         "conditional_logic": false,
                         "wrapper": {
@@ -63,7 +63,7 @@
                         "name": "url",
                         "aria-label": "",
                         "type": "url",
-                        "instructions": "https:\/\/proflines.agency\/marketingovy-prieskum",
+                        "instructions": "",
                         "required": 0,
                         "conditional_logic": false,
                         "wrapper": {
@@ -80,7 +80,7 @@
                         "name": "description",
                         "aria-label": "",
                         "type": "textarea",
-                        "instructions": "Hĺbková analýza trhu, konkurencie a zákazníkov s využitím AI a overených dát",
+                        "instructions": "",
                         "required": 0,
                         "conditional_logic": false,
                         "wrapper": {
@@ -3953,7 +3953,7 @@
             },
             {
                 "key": "field_67bcb34f4b601",
-                "label": "Sekcia s formulárom",
+                "label": "Brif sekcia na hlavnej stránke",
                 "name": "",
                 "aria-label": "",
                 "type": "tab",
@@ -3972,7 +3972,7 @@
             {
                 "key": "field_67bcb36f4b602",
                 "label": "Text vľavo hore",
-                "name": "form_left_top_text",
+                "name": "briff_left_top_text",
                 "aria-label": "",
                 "type": "text",
                 "instructions": "",
@@ -3992,7 +3992,7 @@
             {
                 "key": "field_67bcb38f4b603",
                 "label": "Hlavný nadpis vľavo",
-                "name": "form_left_title",
+                "name": "briff_left_title",
                 "aria-label": "",
                 "type": "text",
                 "instructions": "",
@@ -4012,7 +4012,7 @@
             {
                 "key": "field_67bcb3af4b604",
                 "label": "Citát vľavo",
-                "name": "form_left_quote",
+                "name": "briff_left_quote",
                 "aria-label": "",
                 "type": "wysiwyg",
                 "instructions": "",
@@ -4030,12 +4030,130 @@
                 "delay": 0
             },
             {
-                "key": "field_67bcb3cf4b605",
-                "label": "Položky formulára",
-                "name": "form_fields",
+                "key": "field_67bcb52f4b616",
+                "label": "Text tlačidla odoslať",
+                "name": "briff_submit_text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Získať bezplatný miniaudít",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67bcb54f4b617",
+                "label": "Text pod tlačidlom",
+                "name": "briff_caption",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Ozveme sa do 24 hodín. Bez záväzkov.",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67bcb6014b618",
+                "label": "Samostatná stránka brífu",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_67bcb6114b619",
+                "label": "Nadpis stránky brífu",
+                "name": "brif_page_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO / GEO)",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67bcb6214b620",
+                "label": "Podnadpis stránky brífu",
+                "name": "brif_page_subtitle",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "rows": 2,
+                "default_value": "Služba novej generácie, ktorá pomáha značkám zobrazovať sa v AI Overviews (Google) a vo výsledkoch vyhľadávania v ChatGPT.",
+                "new_lines": "",
+                "maxlength": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_67bcb6314b621",
+                "label": "Text stránky brífu",
+                "name": "brif_page_text",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "default_value": "Optimalizujeme obsah pre odpovede umelej inteligencie. Upravíme vaše texty a dáta tak, aby vás ChatGPT, Gemini a nové Google vyhľadávanie odporúčali ako prvú voľbu.\n\nŠtruktúrujeme web tak, aby mu stroje rozumeli. Technicky prispôsobíme stránky, aby algoritmy vnímali vašu firmu ako autoritu a citovali ju ako overený zdroj.\n\nZabezpečíme viditeľnosť tam, kde bežné SEO nestačí. Dostaneme vašu značku priamo do generovaných odpovedí (AI Overviews), ktoré používatelia čítajú bez nutnosti klikania na odkazy.\n\nDáme vám technologický náskok pred konkurenciou. Kým ostatní ladia len kľúčové slová, my pripravíme váš biznis na budúcnosť vyhľadávania skôr, než sa stane štandardom.\n\nVyplňte krátky briefing a do 24 hodín vám pošleme odporúčanie + cenovú ponuku na mieru.",
+                "delay": 0
+            },
+            {
+                "key": "field_67bcb6414b622",
+                "label": "Položky formulára pre brif stránku",
+                "name": "brif_page_form_fields",
                 "aria-label": "",
                 "type": "repeater",
-                "instructions": "Vytvorte polia pre brif formulár",
+                "instructions": "Vytvorte polia pre brif formulár na samostatnej stránke",
                 "required": 0,
                 "conditional_logic": false,
                 "wrapper": {
@@ -4048,33 +4166,12 @@
                 "max": 0,
                 "rows_per_page": 20,
                 "button_label": "Pridať pole",
-                "collapsed": "field_67bcb40f4b607",
+                "collapsed": "field_67bcb6514b623",
                 "sub_fields": [
                     {
-                        "key": "field_67bcb3ef4b606",
-                        "label": "ID poľa",
-                        "name": "field_id",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "Unikátny identifikátor (napr. meno, email, telefon)",
-                        "required": 1,
-                        "conditional_logic": false,
-                        "wrapper": {
-                            "width": "33",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "parent_repeater": "field_67bcb3cf4b605"
-                    },
-                    {
-                        "key": "field_67bcb40f4b607",
+                        "key": "field_67bcb6514b623",
                         "label": "Názov poľa",
-                        "name": "field_name",
+                        "name": "field_label",
                         "aria-label": "",
                         "type": "text",
                         "instructions": "Zobrazovaný názov poľa",
@@ -4090,10 +4187,10 @@
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
-                        "parent_repeater": "field_67bcb3cf4b605"
+                        "parent_repeater": "field_67bcb6414b622"
                     },
                     {
-                        "key": "field_67bcb42f4b608",
+                        "key": "field_67bcb6614b624",
                         "label": "Typ poľa",
                         "name": "field_type",
                         "aria-label": "",
@@ -4126,10 +4223,46 @@
                         "placeholder": "",
                         "create_options": 0,
                         "save_options": 0,
-                        "parent_repeater": "field_67bcb3cf4b605"
+                        "parent_repeater": "field_67bcb6414b622"
                     },
                     {
-                        "key": "field_67bcb44f4b609",
+                        "key": "field_67bcb6714b625",
+                        "label": "ID poľa",
+                        "name": "field_id",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Unikátny identifikátor pre name atribút (napr. meno, email)",
+                        "required": 1,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_67bcb6614b624",
+                                    "operator": "!=",
+                                    "value": "heading"
+                                }
+                            ],
+                            [
+                                {
+                                    "field": "field_67bcb6614b624",
+                                    "operator": "!=",
+                                    "value": "badge"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67bcb6414b622"
+                    },
+                    {
+                        "key": "field_67bcb6814b626",
                         "label": "Šírka poľa",
                         "name": "field_width",
                         "aria-label": "",
@@ -4138,7 +4271,7 @@
                         "required": 0,
                         "conditional_logic": false,
                         "wrapper": {
-                            "width": "33",
+                            "width": "50",
                             "class": "",
                             "id": ""
                         },
@@ -4153,62 +4286,77 @@
                         "return_format": "value",
                         "ajax": 0,
                         "placeholder": "",
-                        "parent_repeater": "field_67bcb3cf4b605"
+                        "parent_repeater": "field_67bcb6414b622"
                     },
                     {
-                        "key": "field_67bcb46f4b610",
+                        "key": "field_67bcb6914b627",
                         "label": "Povinné",
                         "name": "required",
                         "aria-label": "",
                         "type": "true_false",
-                        "instructions": "Označiť ako povinné pole?",
-                        "required": 0,
-                        "conditional_logic": false,
-                        "wrapper": {
-                            "width": "33",
-                            "class": "",
-                            "id": ""
-                        },
-                        "message": "",
-                        "default_value": 0,
-                        "ui": 1,
-                        "ui_on_text": "Áno",
-                        "ui_off_text": "Nie",
-                        "parent_repeater": "field_67bcb3cf4b605"
-                    },
-                    {
-                        "key": "field_67bcb48f4b611",
-                        "label": "Placeholder",
-                        "name": "placeholder",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "Text, ktorý sa zobrazí ako placeholder",
+                        "instructions": "",
                         "required": 0,
                         "conditional_logic": [
                             [
                                 {
-                                    "field": "field_67bcb42f4b608",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "heading"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_67bcb42f4b608",
+                                    "field": "field_67bcb6614b624",
+                                    "operator": "!=",
+                                    "value": "badge"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "Povinné pole?",
+                        "default_value": 0,
+                        "ui": 1,
+                        "ui_on_text": "Áno",
+                        "ui_off_text": "Nie",
+                        "parent_repeater": "field_67bcb6414b622"
+                    },
+                    {
+                        "key": "field_67bcb6a14b628",
+                        "label": "Placeholder",
+                        "name": "placeholder",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_67bcb6614b624",
+                                    "operator": "!=",
+                                    "value": "heading"
+                                }
+                            ],
+                            [
+                                {
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "badge"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_67bcb42f4b608",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "checkbox"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_67bcb42f4b608",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "radio"
                                 }
@@ -4224,10 +4372,10 @@
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
-                        "parent_repeater": "field_67bcb3cf4b605"
+                        "parent_repeater": "field_67bcb6414b622"
                     },
                     {
-                        "key": "field_67bcb4af4b612",
+                        "key": "field_67bcb6b14b629",
                         "label": "Pomocný text",
                         "name": "helper_text",
                         "aria-label": "",
@@ -4245,10 +4393,10 @@
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
-                        "parent_repeater": "field_67bcb3cf4b605"
+                        "parent_repeater": "field_67bcb6414b622"
                     },
                     {
-                        "key": "field_67bcb4cf4b613",
+                        "key": "field_67bcb6c14b630",
                         "label": "Možnosti",
                         "name": "options",
                         "aria-label": "",
@@ -4258,21 +4406,21 @@
                         "conditional_logic": [
                             [
                                 {
-                                    "field": "field_67bcb42f4b608",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "==",
                                     "value": "select"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_67bcb42f4b608",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "==",
                                     "value": "radio"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_67bcb42f4b608",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "==",
                                     "value": "checkbox"
                                 }
@@ -4291,7 +4439,7 @@
                         "collapsed": "",
                         "sub_fields": [
                             {
-                                "key": "field_67bcb4ef4b614",
+                                "key": "field_67bcb6d14b631",
                                 "label": "Hodnota",
                                 "name": "value",
                                 "aria-label": "",
@@ -4309,10 +4457,10 @@
                                 "placeholder": "",
                                 "prepend": "",
                                 "append": "",
-                                "parent_repeater": "field_67bcb4cf4b613"
+                                "parent_repeater": "field_67bcb6c14b630"
                             },
                             {
-                                "key": "field_67bcb50f4b615",
+                                "key": "field_67bcb6e14b632",
                                 "label": "Text",
                                 "name": "label",
                                 "aria-label": "",
@@ -4330,17 +4478,17 @@
                                 "placeholder": "",
                                 "prepend": "",
                                 "append": "",
-                                "parent_repeater": "field_67bcb4cf4b613"
+                                "parent_repeater": "field_67bcb6c14b630"
                             }
                         ],
-                        "parent_repeater": "field_67bcb3cf4b605"
+                        "parent_repeater": "field_67bcb6414b622"
                     }
                 ]
             },
             {
-                "key": "field_67bcb52f4b616",
-                "label": "Text tlačidla odoslať",
-                "name": "form_submit_text",
+                "key": "field_67bcb6f14b633",
+                "label": "Text tlačidla odoslať pre brif stránku",
+                "name": "brif_page_submit_text",
                 "aria-label": "",
                 "type": "text",
                 "instructions": "",
@@ -4351,16 +4499,16 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Získať bezplatný miniaudít",
+                "default_value": "Odoslať",
                 "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
                 "append": ""
             },
             {
-                "key": "field_67bcb54f4b617",
-                "label": "Text pod tlačidlom",
-                "name": "form_caption",
+                "key": "field_67bcb7014b634",
+                "label": "Text pod tlačidlom pre brif stránku",
+                "name": "brif_page_caption",
                 "aria-label": "",
                 "type": "text",
                 "instructions": "",
@@ -4371,11 +4519,31 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Ozveme sa do 24 hodín. Bez záväzkov.",
+                "default_value": "P.S.: Ak e-mail neprišiel, pozrite aj Spam",
                 "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
                 "append": ""
+            },
+            {
+                "key": "field_67bcb7114b635",
+                "label": "Odznak pre formulár",
+                "name": "brif_page_badge",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "rows": 2,
+                "default_value": "ak nevidíte našu odpoveď v doručenej pošte – skontrolujte priečinok \"Spam\". Pridajte si nás do \"Kontaktov\", aby ďalšie správy prichádzali priamo do doručenej pošty.",
+                "new_lines": "",
+                "maxlength": "",
+                "placeholder": ""
             }
         ],
         "location": [
