@@ -238,7 +238,6 @@ function proflines_json_ld() {
         $json_ld[] = $post_json;
     }
 
-    // JSON-LD for service pages (services category and its children)
     if (is_singular('post') && has_category('services')) {
         $post_id = get_the_ID();
         
@@ -386,7 +385,7 @@ function proflines_json_ld() {
             }
         }
         
-        // Add offers if available
+        // Add offers if available - TOTO JE DÔLEŽITÉ!
         if (!empty($offers)) {
             $service_data['hasOfferCatalog'] = array(
                 "@type" => "OfferCatalog",
