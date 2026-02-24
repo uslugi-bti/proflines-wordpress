@@ -238,7 +238,6 @@ function proflines_json_ld() {
         $json_ld[] = $post_json;
     }
 
-    // JSON-LD for service pages (services category and its children)
     if (is_singular('post') && has_category('services')) {
         $post_id = get_the_ID();
         
@@ -251,54 +250,45 @@ function proflines_json_ld() {
         $service_json_ld = get_field('service_json_ld', $post_id);
         $faq_items = get_field('faq_items', $post_id);
         
-        // Получаем цены из таблицы
-        $table_prices = get_field('table_prices', $post_id);
+        // Получаем пакеты из repeater поля packages_items
+        $packages = get_field('packages_items', $post_id);
         
         // Собираем предложения (offers)
         $offers = array();
         
-        // Дефолтные описания (на случай если в ACF пусто)
-        $default_starter_desc = "Odhad veľkosti trhu (TAM), kľúčové hnacie sily, mapovanie konkurentov, právny kompliance.";
-        $default_basic_desc = "Segmentácia (SAM/SOM), klientské persóny, cenová citlivosť, bod zvratu.";
-        $default_advanced_desc = "Analýza sezónnosti, Jobs-to-be-Done, biele miesta na trhu (White Space), detailný finančný model.";
-        
-        // Проверяем, что table_prices - это массив и добавляем предложения
-        if (is_array($table_prices)) {
-            
-            // Starter
-            if (isset($table_prices['starter_price']) && !empty($table_prices['starter_price'])) {
-                $offers[] = array(
-                    "@type" => "Offer",
-                    "name" => "Starter",
-                    "price" => strval($table_prices['starter_price']),
-                    "priceCurrency" => "EUR",
-                    "availability" => "https://schema.org/InStock",
-                    "description" => $default_starter_desc
-                );
-            }
-            
-            // Basic
-            if (isset($table_prices['basic_price']) && !empty($table_prices['basic_price'])) {
-                $offers[] = array(
-                    "@type" => "Offer",
-                    "name" => "Basic",
-                    "price" => strval($table_prices['basic_price']),
-                    "priceCurrency" => "EUR",
-                    "availability" => "https://schema.org/InStock",
-                    "description" => $default_basic_desc
-                );
-            }
-            
-            // Advanced
-            if (isset($table_prices['advanced_price']) && !empty($table_prices['advanced_price'])) {
-                $offers[] = array(
-                    "@type" => "Offer",
-                    "name" => "Advanced",
-                    "price" => strval($table_prices['advanced_price']),
-                    "priceCurrency" => "EUR",
-                    "availability" => "https://schema.org/InStock",
-                    "description" => $default_advanced_desc
-                );
+        // Проходим по всем пакетам
+        if (is_array($packages) && !empty($packages)) {
+            foreach ($packages as $package) {
+                // Проверяем, что у пакета есть название и цена
+                if (isset($package['name']) && isset($package['price']) && !empty($package['price'])) {
+                    
+                    // Собираем описание из функций пакета
+                    $description = '';
+                    if (isset($package['features']) && is_array($package['features'])) {
+                        $features = array();
+                        foreach ($package['features'] as $feature) {
+                            if (isset($feature['feature'])) {
+                                $features[] = $feature['feature'];
+                            }
+                        }
+                        $description = implode(', ', $features);
+                    }
+                    
+                    // Если нет функций, используем описание пакета
+                    if (empty($description) && isset($package['description'])) {
+                        $description = $package['description'];
+                    }
+                    
+                    // Добавляем предложение
+                    $offers[] = array(
+                        "@type" => "Offer",
+                        "name" => $package['name'],
+                        "price" => strval($package['price']),
+                        "priceCurrency" => "EUR",
+                        "availability" => "https://schema.org/InStock",
+                        "description" => $description
+                    );
+                }
             }
         }
         
@@ -351,7 +341,7 @@ function proflines_json_ld() {
             }
         }
         
-        // ВОТ ЗДЕСЬ ДОБАВЛЯЕМ КАТАЛОГ ПРЕДЛОЖЕНИЙ
+        // ДОБАВЛЯЕМ КАТАЛОГ ПРЕДЛОЖЕНИЙ
         if (!empty($offers)) {
             $service_data['hasOfferCatalog'] = array(
                 "@type" => "OfferCatalog",
