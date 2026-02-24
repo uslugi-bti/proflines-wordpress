@@ -238,6 +238,7 @@ function proflines_json_ld() {
         $json_ld[] = $post_json;
     }
 
+    // JSON-LD for service pages (services category and its children)
     if (is_singular('post') && has_category('services')) {
         $post_id = get_the_ID();
         
@@ -250,93 +251,58 @@ function proflines_json_ld() {
         $service_json_ld = get_field('service_json_ld', $post_id);
         $faq_items = get_field('faq_items', $post_id);
         
-        // Get prices from table
+        // Получаем цены из таблицы
         $table_prices = get_field('table_prices', $post_id);
         
-        // Build offers array
+        // Собираем предложения (offers)
         $offers = array();
         
-        // Default descriptions
+        // Дефолтные описания (на случай если в ACF пусто)
         $default_starter_desc = "Odhad veľkosti trhu (TAM), kľúčové hnacie sily, mapovanie konkurentov, právny kompliance.";
         $default_basic_desc = "Segmentácia (SAM/SOM), klientské persóny, cenová citlivosť, bod zvratu.";
         $default_advanced_desc = "Analýza sezónnosti, Jobs-to-be-Done, biele miesta na trhu (White Space), detailný finančný model.";
         
-        // Starter offer
-        if ($table_prices && is_array($table_prices) && isset($table_prices['starter_price'])) {
-            $starter_desc = $default_starter_desc;
+        // Проверяем, что table_prices - это массив и добавляем предложения
+        if (is_array($table_prices)) {
             
-            // Try to get description from table items
-            if (have_rows('table_items', $post_id)) {
-                while (have_rows('table_items', $post_id)) {
-                    the_row();
-                    $service_name = get_sub_field('service_name');
-                    if (is_string($service_name) && (strpos($service_name, 'Starter') !== false || strpos($service_name, 'starter') !== false)) {
-                        $starter_desc = wp_strip_all_tags($service_name);
-                    }
-                }
+            // Starter
+            if (isset($table_prices['starter_price']) && !empty($table_prices['starter_price'])) {
+                $offers[] = array(
+                    "@type" => "Offer",
+                    "name" => "Starter",
+                    "price" => strval($table_prices['starter_price']),
+                    "priceCurrency" => "EUR",
+                    "availability" => "https://schema.org/InStock",
+                    "description" => $default_starter_desc
+                );
             }
             
-            $offers[] = array(
-                "@type" => "Offer",
-                "name" => "Starter",
-                "price" => strval($table_prices['starter_price']),
-                "priceCurrency" => "EUR",
-                "availability" => "https://schema.org/InStock",
-                "description" => $starter_desc
-            );
-        }
-        
-        // Basic offer
-        if ($table_prices && is_array($table_prices) && isset($table_prices['basic_price'])) {
-            $basic_desc = $default_basic_desc;
-            
-            // Try to get description from table items
-            if (have_rows('table_items', $post_id)) {
-                while (have_rows('table_items', $post_id)) {
-                    the_row();
-                    $service_name = get_sub_field('service_name');
-                    if (is_string($service_name) && (strpos($service_name, 'Basic') !== false || strpos($service_name, 'basic') !== false)) {
-                        $basic_desc = wp_strip_all_tags($service_name);
-                    }
-                }
+            // Basic
+            if (isset($table_prices['basic_price']) && !empty($table_prices['basic_price'])) {
+                $offers[] = array(
+                    "@type" => "Offer",
+                    "name" => "Basic",
+                    "price" => strval($table_prices['basic_price']),
+                    "priceCurrency" => "EUR",
+                    "availability" => "https://schema.org/InStock",
+                    "description" => $default_basic_desc
+                );
             }
             
-            $offers[] = array(
-                "@type" => "Offer",
-                "name" => "Basic",
-                "price" => strval($table_prices['basic_price']),
-                "priceCurrency" => "EUR",
-                "availability" => "https://schema.org/InStock",
-                "description" => $basic_desc
-            );
-        }
-        
-        // Advanced offer
-        if ($table_prices && is_array($table_prices) && isset($table_prices['advanced_price'])) {
-            $advanced_desc = $default_advanced_desc;
-            
-            // Try to get description from table items
-            if (have_rows('table_items', $post_id)) {
-                while (have_rows('table_items', $post_id)) {
-                    the_row();
-                    $service_name = get_sub_field('service_name');
-                    if (is_string($service_name) && (strpos($service_name, 'Advanced') !== false || strpos($service_name, 'advanced') !== false)) {
-                        $advanced_desc = wp_strip_all_tags($service_name);
-                    }
-                }
+            // Advanced
+            if (isset($table_prices['advanced_price']) && !empty($table_prices['advanced_price'])) {
+                $offers[] = array(
+                    "@type" => "Offer",
+                    "name" => "Advanced",
+                    "price" => strval($table_prices['advanced_price']),
+                    "priceCurrency" => "EUR",
+                    "availability" => "https://schema.org/InStock",
+                    "description" => $default_advanced_desc
+                );
             }
-            
-            $offers[] = array(
-                "@type" => "Offer",
-                "name" => "Advanced",
-                "price" => strval($table_prices['advanced_price']),
-                "priceCurrency" => "EUR",
-                "availability" => "https://schema.org/InStock",
-                "description" => $advanced_desc
-            );
         }
         
-        // Build FAQ entities
+        // Собираем FAQ
         $faq_entities = array();
         if ($faq_items && is_array($faq_items)) {
             foreach ($faq_items as $item) {
@@ -353,7 +319,7 @@ function proflines_json_ld() {
             }
         }
         
-        // Construct service JSON-LD with proper checks
+        // Основные данные услуги
         $service_data = array(
             "@type" => "Service",
             "serviceType" => "Market Research",
@@ -372,7 +338,7 @@ function proflines_json_ld() {
             )
         );
         
-        // Override with ACF values if they exist and are valid
+        // Переопределяем значения из ACF если они есть
         if (is_array($service_json_ld)) {
             if (isset($service_json_ld['name']) && !empty($service_json_ld['name'])) {
                 $service_data['name'] = $service_json_ld['name'];
@@ -385,7 +351,7 @@ function proflines_json_ld() {
             }
         }
         
-        // Add offers if available - TOTO JE DÔLEŽITÉ!
+        // ВОТ ЗДЕСЬ ДОБАВЛЯЕМ КАТАЛОГ ПРЕДЛОЖЕНИЙ
         if (!empty($offers)) {
             $service_data['hasOfferCatalog'] = array(
                 "@type" => "OfferCatalog",
@@ -394,10 +360,10 @@ function proflines_json_ld() {
             );
         }
         
-        // Build graph
+        // Формируем граф
         $graph = array($service_data);
         
-        // Add FAQ if available
+        // Добавляем FAQ если есть
         if (!empty($faq_entities)) {
             $graph[] = array(
                 "@type" => "FAQPage",
