@@ -26,7 +26,7 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                     <a href="<?php echo home_url(); ?>">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href="<?php echo home_url('/sluzby'); ?>">Balíky služieb</a>
+                    <a href="<?php echo home_url('/services'); ?>">Balíky služieb</a>
                 </li>
                 <li class="breadcrump__item">
                     <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
