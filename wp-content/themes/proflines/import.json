@@ -4,24 +4,6 @@
         "title": "Prieskum trhu a marketingový prieskum",
         "fields": [
             {
-                "key": "field_67bc9a9f4a1b2",
-                "label": "Nastavenia stránky",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": false,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0,
-                "selected": 0
-            },
-            {
                 "key": "field_67bc9b4f4a1c1",
                 "label": "Hero sekcia",
                 "name": "",
@@ -4282,28 +4264,6 @@
                         "collapsed": "",
                         "parent_repeater": "field_67bcb6414b622",
                         "sub_fields": [
-                            {
-                                "key": "field_699d6fb6e6b66",
-                                "label": "Povinné",
-                                "name": "povinne",
-                                "aria-label": "",
-                                "type": "true_false",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "message": "Povinné pole?",
-                                "default_value": 0,
-                                "allow_in_bindings": 0,
-                                "ui_on_text": "",
-                                "ui_off_text": "",
-                                "ui": 1,
-                                "parent_repeater": "field_67bcb6c14b630"
-                            },
                             {
                                 "key": "field_67bcb6e14b632",
                                 "label": "Text",
