@@ -68,7 +68,8 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                                 $field_label = $field['field_label'];
                                 $field_type = $field['field_type'];
                                 $field_width = isset($field['field_width']) ? $field['field_width'] : 'normal';
-                                $required = isset($field['required']) && $field['required'] ? 'required' : '';
+                                $required = isset($field['required']) && $field['required'];
+                                $required_class = $required ? 'form-group--required' : '';
                                 $placeholder = isset($field['placeholder']) ? $field['placeholder'] : '';
                                 $helper_text = isset($field['helper_text']) ? $field['helper_text'] : '';
                                 $options = isset($field['options']) ? $field['options'] : array();
@@ -95,9 +96,9 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                             
                             <?php elseif ($field_type === 'select'): ?>
                                 <!-- Выпадающий список -->
-                                <div class="form-group <?php echo $field_width; ?>">
+                                <div class="form-group <?php echo $field_width; ?> <?php echo $required_class; ?>">
                                     <label><?php echo $field_label; ?>:</label>
-                                    <select name="<?php echo esc_attr($field_id); ?>" <?php echo $required; ?>>
+                                    <select name="<?php echo esc_attr($field_id); ?>">
                                         <?php if (!empty($options) && is_array($options)): ?>
                                             <?php foreach ($options as $option): ?>
                                                 <option value="<?php echo esc_attr($option['value']); ?>">
@@ -113,7 +114,7 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                             
                             <?php elseif ($field_type === 'radio'): ?>
                                 <!-- Радио кнопки -->
-                                <div class="form-group radio <?php echo $field_width; ?>" <?php echo $required; ?>>
+                                <div class="form-group radio <?php echo $field_width; ?> <?php echo $required_class; ?>">
                                     <h4><?php echo $field_label; ?>:</h4>
                                     <div class="form-group__body">
                                         <?php if (!empty($options) && is_array($options)): ?>
@@ -136,7 +137,7 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                             
                             <?php elseif ($field_type === 'checkbox'): ?>
                                 <!-- Чекбоксы -->
-                                <div class="form-group checkbox <?php echo $field_width; ?>">
+                                <div class="form-group checkbox <?php echo $field_width; ?> <?php echo $required_class; ?>">
                                     <h4><?php echo $field_label; ?>:</h4>
                                     <div class="form-group__body">
                                         <?php if (!empty($options) && is_array($options)): ?>
@@ -157,11 +158,10 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                             
                             <?php elseif ($field_type === 'textarea'): ?>
                                 <!-- Текстовая область -->
-                                <div class="form-group <?php echo $field_width; ?>">
+                                <div class="form-group <?php echo $field_width; ?> <?php echo $required_class; ?>">
                                     <h4><?php echo $field_label; ?>:</h4>
                                     <textarea name="<?php echo esc_attr($field_id); ?>" 
-                                              placeholder="<?php echo esc_attr($placeholder); ?>"
-                                              <?php echo $required; ?>></textarea>
+                                              placeholder="<?php echo esc_attr($placeholder); ?>"></textarea>
                                     <?php if ($helper_text): ?>
                                         <span><?php echo $helper_text; ?></span>
                                     <?php endif; ?>
@@ -169,12 +169,11 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                             
                             <?php else: // text, email, tel ?>
                                 <!-- Текстовые поля -->
-                                <div class="form-group <?php echo $field_width; ?>">
+                                <div class="form-group <?php echo $field_width; ?> <?php echo $required_class; ?>">
                                     <label><?php echo $field_label; ?>:</label>
                                     <input type="<?php echo esc_attr($field_type); ?>" 
                                            name="<?php echo esc_attr($field_id); ?>"
                                            placeholder="<?php echo esc_attr($placeholder); ?>"
-                                           <?php echo $required; ?>
                                            autocomplete="off">
                                     <?php if ($helper_text): ?>
                                         <span><?php echo $helper_text; ?></span>
@@ -206,3 +205,4 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
 
 <?php
 get_footer();
+?>
