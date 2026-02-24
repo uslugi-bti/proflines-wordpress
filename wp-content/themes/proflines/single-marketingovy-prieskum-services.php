@@ -432,7 +432,6 @@
             </div>
 
             <?php if (have_rows('table_items')): ?>
-            <?php $prices = get_field('table_prices'); ?>
             <div class="table__body table-container">
                 <table class="table__table">
                     <colgroup>
@@ -521,23 +520,6 @@
                             </td>
                         </tr>
                         <?php endwhile; ?>
-                        
-                        <?php if ($prices): ?>
-                        <tr>
-                            <td>
-                                <strong>Cena</strong>
-                            </td>
-                            <td>
-                                <h3><?php echo $prices['starter_price']; ?></h3>
-                            </td>
-                            <td>
-                                <h3><?php echo $prices['basic_price']; ?></h3>
-                            </td>
-                            <td>
-                                <h3><?php echo $prices['advanced_price']; ?></h3>
-                            </td>
-                        </tr>
-                        <?php endif; ?>
                     </tbody>
                 </table>
             </div>
