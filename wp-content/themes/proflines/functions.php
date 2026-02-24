@@ -260,7 +260,7 @@ function proflines_json_ld() {
         if (is_array($packages) && !empty($packages)) {
             foreach ($packages as $package) {
                 // Проверяем, что у пакета есть название и цена
-                if (isset($package['name']) && isset($package['price']) && !empty($package['price'])) {
+                if (isset($package['name'])) {
                     
                     // Собираем описание из функций пакета
                     $description = '';
