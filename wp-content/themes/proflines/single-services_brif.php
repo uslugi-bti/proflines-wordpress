@@ -113,16 +113,16 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                             
                             <?php elseif ($field_type === 'radio'): ?>
                                 <!-- Радио кнопки -->
-                                <div class="form-group radio <?php echo $field_width; ?>">
+                                <div class="form-group radio <?php echo $field_width; ?>" <?php echo $required; ?>>
                                     <h4><?php echo $field_label; ?>:</h4>
                                     <div class="form-group__body">
                                         <?php if (!empty($options) && is_array($options)): ?>
                                             <?php foreach ($options as $option): ?>
                                                 <label>
                                                     <input type="radio" 
-                                                           name="<?php echo esc_attr($field_id); ?>" 
-                                                           value="<?php echo esc_attr($option['value']); ?>"
-                                                           <?php echo $required; ?>>
+                                                        name="<?php echo esc_attr($field_id); ?>" 
+                                                        value="<?php echo esc_attr($option['value']); ?>"
+                                                    >
                                                     <span></span>
                                                     <p><?php echo ($option['label']); ?></p>
                                                 </label>
