@@ -86,16 +86,18 @@ function proflines_json_ld() {
         $faq_items = get_field('faq_items', $front_page_id);
         $faq_entities = array();
         
-        if ($faq_items) {
+        if ($faq_items && is_array($faq_items)) {
             foreach ($faq_items as $item) {
-                $faq_entities[] = array(
-                    "@type" => "Question",
-                    "name" => $item['question'],
-                    "acceptedAnswer" => array(
-                        "@type" => "Answer",
-                        "text" => $item['answer']
-                    )
-                );
+                if (is_array($item) && isset($item['question']) && isset($item['answer'])) {
+                    $faq_entities[] = array(
+                        "@type" => "Question",
+                        "name" => $item['question'],
+                        "acceptedAnswer" => array(
+                            "@type" => "Answer",
+                            "text" => $item['answer']
+                        )
+                    );
+                }
             }
         }
 
@@ -245,7 +247,7 @@ function proflines_json_ld() {
         $legal_name = get_field('legal_name', $front_page_id) ?: get_bloginfo('name');
         $site_url = get_site_url();
         
-        // Get service data
+        // Get service data - with proper checks
         $service_json_ld = get_field('service_json_ld', $post_id);
         $faq_items = get_field('faq_items', $post_id);
         
@@ -255,14 +257,21 @@ function proflines_json_ld() {
         // Build offers array
         $offers = array();
         
+        // Default descriptions
+        $default_starter_desc = "Odhad veľkosti trhu (TAM), kľúčové hnacie sily, mapovanie konkurentov, právny kompliance.";
+        $default_basic_desc = "Segmentácia (SAM/SOM), klientské persóny, cenová citlivosť, bod zvratu.";
+        $default_advanced_desc = "Analýza sezónnosti, Jobs-to-be-Done, biele miesta na trhu (White Space), detailný finančný model.";
+        
         // Starter offer
-        if ($table_prices && isset($table_prices['starter_price'])) {
-            $starter_desc = '';
+        if ($table_prices && is_array($table_prices) && isset($table_prices['starter_price'])) {
+            $starter_desc = $default_starter_desc;
+            
+            // Try to get description from table items
             if (have_rows('table_items', $post_id)) {
                 while (have_rows('table_items', $post_id)) {
                     the_row();
                     $service_name = get_sub_field('service_name');
-                    if (strpos($service_name, 'Starter') !== false || strpos($service_name, 'starter') !== false) {
+                    if (is_string($service_name) && (strpos($service_name, 'Starter') !== false || strpos($service_name, 'starter') !== false)) {
                         $starter_desc = wp_strip_all_tags($service_name);
                     }
                 }
@@ -274,18 +283,20 @@ function proflines_json_ld() {
                 "price" => strval($table_prices['starter_price']),
                 "priceCurrency" => "EUR",
                 "availability" => "https://schema.org/InStock",
-                "description" => $starter_desc ?: "Odhad veľkosti trhu (TAM), kľúčové hnacie sily, mapovanie konkurentov, právny kompliance."
+                "description" => $starter_desc
             );
         }
         
         // Basic offer
-        if ($table_prices && isset($table_prices['basic_price'])) {
-            $basic_desc = '';
+        if ($table_prices && is_array($table_prices) && isset($table_prices['basic_price'])) {
+            $basic_desc = $default_basic_desc;
+            
+            // Try to get description from table items
             if (have_rows('table_items', $post_id)) {
                 while (have_rows('table_items', $post_id)) {
                     the_row();
                     $service_name = get_sub_field('service_name');
-                    if (strpos($service_name, 'Basic') !== false || strpos($service_name, 'basic') !== false) {
+                    if (is_string($service_name) && (strpos($service_name, 'Basic') !== false || strpos($service_name, 'basic') !== false)) {
                         $basic_desc = wp_strip_all_tags($service_name);
                     }
                 }
@@ -297,18 +308,20 @@ function proflines_json_ld() {
                 "price" => strval($table_prices['basic_price']),
                 "priceCurrency" => "EUR",
                 "availability" => "https://schema.org/InStock",
-                "description" => $basic_desc ?: "Segmentácia (SAM/SOM), klientské persóny, cenová citlivosť, bod zvratu."
+                "description" => $basic_desc
             );
         }
         
         // Advanced offer
-        if ($table_prices && isset($table_prices['advanced_price'])) {
-            $advanced_desc = '';
+        if ($table_prices && is_array($table_prices) && isset($table_prices['advanced_price'])) {
+            $advanced_desc = $default_advanced_desc;
+            
+            // Try to get description from table items
             if (have_rows('table_items', $post_id)) {
                 while (have_rows('table_items', $post_id)) {
                     the_row();
                     $service_name = get_sub_field('service_name');
-                    if (strpos($service_name, 'Advanced') !== false || strpos($service_name, 'advanced') !== false) {
+                    if (is_string($service_name) && (strpos($service_name, 'Advanced') !== false || strpos($service_name, 'advanced') !== false)) {
                         $advanced_desc = wp_strip_all_tags($service_name);
                     }
                 }
@@ -320,62 +333,83 @@ function proflines_json_ld() {
                 "price" => strval($table_prices['advanced_price']),
                 "priceCurrency" => "EUR",
                 "availability" => "https://schema.org/InStock",
-                "description" => $advanced_desc ?: "Analýza sezónnosti, Jobs-to-be-Done, biele miesta na trhu (White Space), detailný finančný model."
+                "description" => $advanced_desc
             );
         }
         
         // Build FAQ entities
         $faq_entities = array();
-        if ($faq_items) {
+        if ($faq_items && is_array($faq_items)) {
             foreach ($faq_items as $item) {
-                $faq_entities[] = array(
-                    "@type" => "Question",
-                    "name" => $item['question'],
-                    "acceptedAnswer" => array(
-                        "@type" => "Answer",
-                        "text" => wp_strip_all_tags($item['answer'])
-                    )
-                );
+                if (is_array($item) && isset($item['question']) && isset($item['answer'])) {
+                    $faq_entities[] = array(
+                        "@type" => "Question",
+                        "name" => $item['question'],
+                        "acceptedAnswer" => array(
+                            "@type" => "Answer",
+                            "text" => wp_strip_all_tags($item['answer'])
+                        )
+                    );
+                }
             }
         }
         
-        // Construct service JSON-LD
-        $service_json = array(
-            "@context" => "https://schema.org",
-            "@graph" => array(
-                // Service data
-                array(
-                    "@type" => "Service",
-                    "serviceType" => "Market Research",
-                    "category" => "Business Consulting & Market Analysis",
-                    "name" => $service_json_ld['name'] ?: get_the_title(),
-                    "url" => $service_json_ld['url'] ?: get_permalink(),
-                    "description" => $service_json_ld['description'] ?: wp_trim_words(strip_tags(get_the_content()), 30, '...'),
-                    "areaServed" => array(
-                        "@type" => "Country",
-                        "name" => "Slovakia"
-                    ),
-                    "provider" => array(
-                        "@type" => "Organization",
-                        "name" => $legal_name,
-                        "url" => $site_url
-                    ),
-                    "hasOfferCatalog" => !empty($offers) ? array(
-                        "@type" => "OfferCatalog",
-                        "name" => "Balíky prieskumu trhu",
-                        "itemListElement" => $offers
-                    ) : null
-                ),
-                // FAQ data (only if there are FAQ items)
-                !empty($faq_entities) ? array(
-                    "@type" => "FAQPage",
-                    "mainEntity" => $faq_entities
-                ) : null
+        // Construct service JSON-LD with proper checks
+        $service_data = array(
+            "@type" => "Service",
+            "serviceType" => "Market Research",
+            "category" => "Business Consulting & Market Analysis",
+            "name" => get_the_title(),
+            "url" => get_permalink(),
+            "description" => wp_trim_words(strip_tags(get_the_content()), 30, '...'),
+            "areaServed" => array(
+                "@type" => "Country",
+                "name" => "Slovakia"
+            ),
+            "provider" => array(
+                "@type" => "Organization",
+                "name" => $legal_name,
+                "url" => $site_url
             )
         );
         
-        // Filter out null values
-        $service_json['@graph'] = array_filter($service_json['@graph']);
+        // Override with ACF values if they exist and are valid
+        if (is_array($service_json_ld)) {
+            if (isset($service_json_ld['name']) && !empty($service_json_ld['name'])) {
+                $service_data['name'] = $service_json_ld['name'];
+            }
+            if (isset($service_json_ld['url']) && !empty($service_json_ld['url'])) {
+                $service_data['url'] = $service_json_ld['url'];
+            }
+            if (isset($service_json_ld['description']) && !empty($service_json_ld['description'])) {
+                $service_data['description'] = $service_json_ld['description'];
+            }
+        }
+        
+        // Add offers if available
+        if (!empty($offers)) {
+            $service_data['hasOfferCatalog'] = array(
+                "@type" => "OfferCatalog",
+                "name" => "Balíky prieskumu trhu",
+                "itemListElement" => $offers
+            );
+        }
+        
+        // Build graph
+        $graph = array($service_data);
+        
+        // Add FAQ if available
+        if (!empty($faq_entities)) {
+            $graph[] = array(
+                "@type" => "FAQPage",
+                "mainEntity" => $faq_entities
+            );
+        }
+        
+        $service_json = array(
+            "@context" => "https://schema.org",
+            "@graph" => $graph
+        );
         
         $json_ld[] = $service_json;
     }
