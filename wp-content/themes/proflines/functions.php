@@ -9,6 +9,9 @@ function proflines_enqueue_assets() {
     if (is_front_page()) {
         wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js', array(), null, true);
     }
+    if (is_single(298)) {
+        wp_enqueue_script('chart', 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js', array(), null, true);
+    }
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/script.min.js', null, '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'proflines_enqueue_assets');
