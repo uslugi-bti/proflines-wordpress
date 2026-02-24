@@ -143,8 +143,7 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                                             <?php foreach ($options as $option): ?>
                                                 <label>
                                                     <input type="checkbox" 
-                                                           name="<?php echo esc_attr($field_id); ?>[]" 
-                                                           value="<?php echo esc_attr($option['value']); ?>">
+                                                           name="<?php echo esc_attr($field_id); ?>[]">
                                                     <span></span>
                                                     <p><?php echo esc_html($option['label']); ?></p>
                                                 </label>
