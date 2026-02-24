@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="banners__column">
-                    <div class="banner__body gradient">
+                    <div class="banner__body gradient" style="height: auto;">
                         <div class="banner__container left icon">
                             <div class="banner__title">
                                 <h3>Rie&#x161;enie</h3>
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="banner__body white">
+                    <div class="banner__body white" style="height: auto;">
                         <div class="banner__container">
                             <div class="banner__title">
                                 <h1>Garancia vr&#xE1;tenia pe&#x148;az&#xED;</h1>
