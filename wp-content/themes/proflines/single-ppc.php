@@ -62,7 +62,7 @@
                 </div>
                 <div class="banners__column">
                     <div class="banner__body gradient">
-                        <div class="banner__container left">
+                        <div class="banner__container left icon">
                             <div class="banner__title">
                                 <h3>Rie&#x161;enie</h3>
                             </div>
