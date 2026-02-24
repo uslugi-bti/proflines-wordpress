@@ -238,7 +238,7 @@ function proflines_json_ld() {
         $json_ld[] = $post_json;
     }
 
-    if (is_singular('post') && has_category('services')) {
+    if (is_singular('post') && has_category('services') && !has_category('ina-sluzba')) {
         $post_id = get_the_ID();
         
         // Get organization data from front page
