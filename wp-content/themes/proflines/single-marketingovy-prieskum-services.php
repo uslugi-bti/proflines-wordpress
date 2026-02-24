@@ -1093,7 +1093,7 @@
                 </div>
             </div>
             <div class="faq__button">
-                <button id="faq-show-all"><?php the_field('faq_button_text'); ?></button>
+                <button id="Zobraziť menej otázok"><?php the_field('faq_button_text'); ?></button>
             </div>
             <?php endif; ?>
         </div>
@@ -1111,7 +1111,7 @@
                         <h2><?php the_field('briff_left_title'); ?></h2>
                     </div>
                     <div class="briff-content__quote">
-                        <?php the_field('briff_left_quote'); ?>
+                        <blockquote><?php the_field('briff_left_quote'); ?></blockquote>
                     </div>
                 </div>
                 <div class="briff__form">
@@ -1130,7 +1130,7 @@
                         </div>
                         <div class="form-group">
                             <label>*E-mail:</label>
-                            <input type="email" name="email" id="email" placeholder="E-mail:" autocomplete="off" required>
+                            <input type="text" name="email" id="email" placeholder="E-mail:" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label>Telefón:</label>
@@ -1142,7 +1142,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="telefon" id="telefon" placeholder="+421" autocomplete="off">
+                            <input type="text" name="telefon" id="telefon" placeholder="+421" autocomplete="off">
                         </div>
 
                         <div class="form-group span-two">
@@ -1153,7 +1153,7 @@
                         <div class="form-group checkbox span-two">
                             <div class="form-group__body">
                                 <label>
-                                    <input type="checkbox" name="gdpr" id="gdpr" required>
+                                    <input type="checkbox" name="gdpr" id="gdpr">
                                     <span></span>
                                     <p><span>*Súhlasím so spracovaním <a href="/gdpr">osobných údajov</a></span></p>
                                 </label>
