@@ -223,7 +223,9 @@
                             </div>
                             <div class="packages-item__text line">
                                 <?php echo wp_kses_post(get_sub_field('package_text')); ?>
-                                <p><strong><?php echo esc_html(get_sub_field('price')); ?></strong></p>
+                                <?php if (get_sub_field('price')): ?>
+                                    <p><strong><?php echo esc_html(get_sub_field('price')); ?></strong></p>
+                                <?php endif; ?>
                             </div>
                             <div class="packages-item__button button">
                                 <a href><?php echo esc_html(get_sub_field('package_button_text')); ?></a>
