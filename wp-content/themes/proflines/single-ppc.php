@@ -147,7 +147,7 @@
                                                 echo '<span class="table__icon table__icon--partial"></span>';
                                             }
                                         } else {
-                                            echo esc_html($starter['custom_text']);
+                                            echo ($starter['custom_text']);
                                         }
                                         ?>
                                     </td>
@@ -165,7 +165,7 @@
                                                 echo '<span class="table__icon table__icon--partial"></span>';
                                             }
                                         } else {
-                                            echo esc_html($basic['custom_text']);
+                                            echo ($basic['custom_text']);
                                         }
                                         ?>
                                     </td>
@@ -183,7 +183,7 @@
                                                 echo '<span class="table__icon table__icon--partial"></span>';
                                             }
                                         } else {
-                                            echo esc_html($advanced['custom_text']);
+                                            echo ($advanced['custom_text']);
                                         }
                                         ?>
                                     </td>
