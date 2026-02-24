@@ -1,11 +1,11 @@
 [
     {
-        "key": "group_ppc_service_67bdb2a123456",
-        "title": "PPC (Správa reklamných kampaní)",
+        "key": "group_67d0a1b2c3d4e",
+        "title": "PPC Page Settings",
         "fields": [
             {
-                "key": "field_ppc_service_hero_tab_1",
-                "label": "Hero sekcia",
+                "key": "field_67d0a1b2c3d4f",
+                "label": "Hrdina sekcie",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -20,8 +20,8 @@
                 "endpoint": 0
             },
             {
-                "key": "field_ppc_service_hero_title",
-                "label": "Hero nadpis",
+                "key": "field_67d0a1b2c3d50",
+                "label": "Nadpis H1",
                 "name": "hero_title",
                 "type": "text",
                 "instructions": "",
@@ -32,11 +32,15 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Správa reklamných kampaní"
+                "default_value": "Správa reklamných kampaní",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
-                "key": "field_ppc_service_hero_subtitle",
-                "label": "Hero podnadpis",
+                "key": "field_67d0a1b2c3d51",
+                "label": "Podnadpis",
                 "name": "hero_subtitle",
                 "type": "text",
                 "instructions": "",
@@ -47,11 +51,15 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Presné nastavenie a optimalizácia reklám pre zisk"
+                "default_value": "Presné nastavenie a optimalizácia reklám pre zisk",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
-                "key": "field_ppc_service_hero_button_text",
-                "label": "Hero text tlačidla",
+                "key": "field_67d0a1b2c3d52",
+                "label": "Text na tlačidle",
                 "name": "hero_button_text",
                 "type": "text",
                 "instructions": "",
@@ -62,29 +70,15 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Získať bezplatnú konzultáciu"
+                "default_value": "Získať bezplatnú konzultáciu",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
-                "key": "field_ppc_service_hero_image",
-                "label": "Hero obrázok",
-                "name": "hero_image",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "preview_size": "medium",
-                "library": "all",
-                "mime_types": ""
-            },
-            {
-                "key": "field_ppc_service_banners_tab_2",
-                "label": "Bannery",
+                "key": "field_67d0a1b2c3d53",
+                "label": "Banner zoznam (Prečo bez webu prichádzate o zákazníkov)",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -99,8 +93,8 @@
                 "endpoint": 0
             },
             {
-                "key": "field_ppc_service_banners_section_title",
-                "label": "Nadpis sekcie bannerov",
+                "key": "field_67d0a1b2c3d54",
+                "label": "Nadpis sekcie",
                 "name": "banners_section_title",
                 "type": "text",
                 "instructions": "",
@@ -111,14 +105,18 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Prečo bez webu prichádzate o zákazníkov"
+                "default_value": "Prečo bez webu prichádzate o zákazníkov",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
-                "key": "field_ppc_service_banner_list",
-                "label": "Zoznam v bielom bannery (prvý stĺpec)",
-                "name": "banner_list",
+                "key": "field_67d0a1b2c3d55",
+                "label": "Zoznam bodov (Ľavý stĺpec)",
+                "name": "banners_list_items",
                 "type": "repeater",
-                "instructions": "Položky pre prvý biely banner.",
+                "instructions": "",
                 "required": 0,
                 "conditional_logic": [],
                 "wrapper": {
@@ -126,13 +124,16 @@
                     "class": "",
                     "id": ""
                 },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
                 "layout": "table",
-                "button_label": "Pridať položku do zoznamu",
+                "button_label": "Pridať bod",
                 "sub_fields": [
                     {
-                        "key": "field_ppc_service_banner_list_item",
-                        "label": "Text položky",
-                        "name": "text",
+                        "key": "field_67d0a1b2c3d56",
+                        "label": "Text",
+                        "name": "item_text",
                         "type": "textarea",
                         "instructions": "",
                         "required": 0,
@@ -142,28 +143,17 @@
                             "class": "",
                             "id": ""
                         },
-                        "rows": 3
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 3,
+                        "new_lines": ""
                     }
                 ]
             },
             {
-                "key": "field_ppc_service_banner_gradient_title",
-                "label": "Gradient banner - Nadpis",
-                "name": "banner_gradient_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Riešenie"
-            },
-            {
-                "key": "field_ppc_service_banner_gradient_text",
-                "label": "Gradient banner - Text",
+                "key": "field_67d0a1b2c3d57",
+                "label": "Text v gradient boxe (Riešenie)",
                 "name": "banner_gradient_text",
                 "type": "wysiwyg",
                 "instructions": "",
@@ -174,140 +164,15 @@
                     "class": "",
                     "id": ""
                 },
+                "default_value": "* AI potrebuje čas na učenie – približne 2–3 týždne trvá, kým sa kampaň prispôsobí publiku a začne dosahovať <strong>maximálnu efektivitu.</strong>",
                 "tabs": "all",
-                "toolbar": "basic",
+                "toolbar": "full",
                 "media_upload": 0,
-                "default_value": "<p>* AI potrebuje čas na učenie – približne 2–3 týždne trvá, kým sa kampaň prispôsobí publiku a začne dosahovať <strong>maximálnu efektivitu.</strong></p>"
+                "delay": 0
             },
             {
-                "key": "field_ppc_service_banner_white_refund_title",
-                "label": "Biely banner (Garancia) - Nadpis",
-                "name": "banner_white_refund_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Garancia vrátenia peňazí"
-            },
-            {
-                "key": "field_ppc_service_banner_white_refund_text",
-                "label": "Biely banner (Garancia) - Text",
-                "name": "banner_white_refund_text",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0,
-                "default_value": "<p>Ak prieskum neprinesie hodnotné dáta, <strong>peniaze vám vrátime 100%</strong></p>"
-            },
-            {
-                "key": "field_ppc_service_banner_second_section_title",
-                "label": "Nadpis pre druhú sekciu bannerov",
-                "name": "banners_second_section_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Prečo bez webu prichádzate o zákazníkov"
-            },
-            {
-                "key": "field_ppc_service_banner_second_list",
-                "label": "Zoznam v druhom bielom bannery",
-                "name": "banner_second_list",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "layout": "table",
-                "button_label": "Pridať položku",
-                "sub_fields": [
-                    {
-                        "key": "field_ppc_service_banner_second_list_item",
-                        "label": "Text položky",
-                        "name": "text",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": [],
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "rows": 3
-                    }
-                ]
-            },
-            {
-                "key": "field_ppc_service_banner_gradient_bottom_title",
-                "label": "Spodný gradient banner - Nadpis",
-                "name": "banner_gradient_bottom_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Zvýšime výkon vašich PPC reklamných kampaní a premeníme kliky na reálne konverzie"
-            },
-            {
-                "key": "field_ppc_service_banner_gradient_bottom_text",
-                "label": "Spodný gradient banner - Text",
-                "name": "banner_gradient_bottom_text",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Riadenie, optimalizácia a rast výkonu"
-            },
-            {
-                "key": "field_ppc_service_banner_gradient_bottom_button",
-                "label": "Spodný gradient banner - Text tlačidla",
-                "name": "banner_gradient_bottom_button",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Získať bezplatnú PPC konzultáciu"
-            },
-            {
-                "key": "field_ppc_service_packages_tab_3",
-                "label": "Balíky (karty)",
+                "key": "field_67d0a1b2c3d58",
+                "label": "Garancia vrátenia peňazí",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -322,8 +187,116 @@
                 "endpoint": 0
             },
             {
-                "key": "field_ppc_service_packages_section_title",
-                "label": "Nadpis sekcie balíkov",
+                "key": "field_67d0a1b2c3d59",
+                "label": "Nadpis (Garancia)",
+                "name": "refund_title",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Garancia vrátenia peňazí",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_67d0a1b2c3d60",
+                "label": "Text garancie",
+                "name": "refund_text",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Ak prieskum neprinesie hodnotné dáta, <strong>peniaze vám vrátime 100%</strong>",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 0,
+                "delay": 0
+            },
+            {
+                "key": "field_67d0a1b2c3d61",
+                "label": "Porovnanie balíčkov",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_67d0a1b2c3d62",
+                "label": "Nadpis sekcie",
+                "name": "table_section_title",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Porovnanie balíčkov správy reklám",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_67d0a1b2c3d63",
+                "label": "Text tlačidla (Zobraziť viac/menej)",
+                "name": "table_button_text",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Zobraziť viac",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_67d0a1b2c3d64",
+                "label": "Balíky služieb",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_67d0a1b2c3d65",
+                "label": "Nadpis sekcie",
                 "name": "packages_section_title",
                 "type": "text",
                 "instructions": "",
@@ -334,12 +307,16 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Balíky služieb pre odblokovanie Google Merchant Center"
+                "default_value": "Balíky služieb pre odblokovanie Google Merchant Center",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
-                "key": "field_ppc_service_packages_subtitle",
-                "label": "Podnadpis sekcie balíkov",
-                "name": "packages_subtitle",
+                "key": "field_67d0a1b2c3d66",
+                "label": "Podnadpis sekcie",
+                "name": "packages_section_subtitle",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -349,11 +326,15 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Sila AI v kombinácii s ľudskou odbornosťou"
+                "default_value": "Sila AI v kombinácii s ľudskou odbornosťou",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
-                "key": "field_ppc_service_packages_repeater",
-                "label": "Balíky",
+                "key": "field_67d0a1b2c3d67",
+                "label": "Balíčky (Starter, Basic, Advanced)",
                 "name": "packages_items",
                 "type": "repeater",
                 "instructions": "",
@@ -364,60 +345,54 @@
                     "class": "",
                     "id": ""
                 },
-                "layout": "block",
+                "collapsed": "field_67d0a1b2c3d68",
                 "min": 3,
                 "max": 3,
-                "button_label": "Pridať balík",
+                "layout": "block",
+                "button_label": "Pridať balíček",
                 "sub_fields": [
                     {
-                        "key": "field_ppc_service_package_name",
-                        "label": "Názov balíka",
-                        "name": "name",
+                        "key": "field_67d0a1b2c3d68",
+                        "label": "Názov balíčka",
+                        "name": "package_name",
                         "type": "text",
                         "instructions": "",
                         "required": 0,
                         "conditional_logic": [],
                         "wrapper": {
-                            "width": "",
+                            "width": "33",
                             "class": "",
                             "id": ""
                         },
-                        "default_value": ""
+                        "default_value": "",
+                        "placeholder": "Starter / Basic / Advanced",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
                     },
                     {
-                        "key": "field_ppc_service_package_sticker",
-                        "label": "Nálepka (napr. SK+EN verzia)",
-                        "name": "sticker",
+                        "key": "field_67d0a1b2c3d69",
+                        "label": "Text na nálepke",
+                        "name": "package_sticker",
                         "type": "text",
                         "instructions": "",
                         "required": 0,
                         "conditional_logic": [],
                         "wrapper": {
-                            "width": "",
+                            "width": "33",
                             "class": "",
                             "id": ""
                         },
-                        "default_value": "SK+EN verzia"
+                        "default_value": "SK+EN verzia",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
                     },
                     {
-                        "key": "field_ppc_service_package_plan",
-                        "label": "Plan (Starter/Basic/Advanced)",
-                        "name": "plan",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": [],
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": ""
-                    },
-                    {
-                        "key": "field_ppc_service_package_text",
-                        "label": "Popis balíka",
-                        "name": "description",
+                        "key": "field_67d0a1b2c3d70",
+                        "label": "Text balíčka",
+                        "name": "package_text",
                         "type": "wysiwyg",
                         "instructions": "",
                         "required": 0,
@@ -427,61 +402,55 @@
                             "class": "",
                             "id": ""
                         },
+                        "default_value": "",
                         "tabs": "all",
-                        "toolbar": "basic",
+                        "toolbar": "full",
                         "media_upload": 0,
-                        "default_value": ""
+                        "delay": 0
                     },
                     {
-                        "key": "field_ppc_service_package_price",
-                        "label": "Cena",
-                        "name": "price",
+                        "key": "field_67d0a1b2c3d71",
+                        "label": "Text na tlačidle",
+                        "name": "package_button_text",
                         "type": "text",
                         "instructions": "",
                         "required": 0,
                         "conditional_logic": [],
                         "wrapper": {
-                            "width": "",
+                            "width": "50",
                             "class": "",
                             "id": ""
                         },
-                        "default_value": ""
+                        "default_value": "Začať prieskum",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
                     },
                     {
-                        "key": "field_ppc_service_package_button_text",
-                        "label": "Text tlačidla",
-                        "name": "button_text",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": [],
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "Začať prieskum"
-                    },
-                    {
-                        "key": "field_ppc_service_package_caption",
+                        "key": "field_67d0a1b2c3d72",
                         "label": "Text pod tlačidlom",
-                        "name": "caption",
+                        "name": "package_inscription",
                         "type": "text",
                         "instructions": "",
                         "required": 0,
                         "conditional_logic": [],
                         "wrapper": {
-                            "width": "",
+                            "width": "50",
                             "class": "",
                             "id": ""
                         },
-                        "default_value": "Získať plán do 12 hodín"
+                        "default_value": "Získať plán do 12 hodín",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
                     }
                 ]
             },
             {
-                "key": "field_ppc_service_banner_yellow_tab_4",
-                "label": "Žltý banner",
+                "key": "field_67d0a1b2c3d73",
+                "label": "Žltý banner (Garancia spokojnosti)",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -496,9 +465,9 @@
                 "endpoint": 0
             },
             {
-                "key": "field_ppc_service_banner_yellow_title",
-                "label": "Žltý banner - Nadpis",
-                "name": "banner_yellow_title",
+                "key": "field_67d0a1b2c3d74",
+                "label": "Nadpis banneru",
+                "name": "yellow_banner_title",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -508,12 +477,16 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Naša dodatočná garancia spokojnosti"
+                "default_value": "Naša dodatočná garancia spokojnosti",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
-                "key": "field_ppc_service_banner_yellow_text",
-                "label": "Žltý banner - Text",
-                "name": "banner_yellow_text",
+                "key": "field_67d0a1b2c3d75",
+                "label": "Text banneru",
+                "name": "yellow_banner_text",
                 "type": "textarea",
                 "instructions": "",
                 "required": 0,
@@ -523,12 +496,15 @@
                     "class": "",
                     "id": ""
                 },
+                "default_value": "Garantujeme vám spokojnosť: ak náš prieskum neprinesie kvalitné dáta a jasnú hodnotu pre vaše rozhodovanie, vraciame 100 % ceny",
+                "placeholder": "",
+                "maxlength": "",
                 "rows": 3,
-                "default_value": "Garantujeme vám spokojnosť: ak náš prieskum neprinesie kvalitné dáta a jasnú hodnotu pre vaše rozhodovanie, vraciame 100 % ceny"
+                "new_lines": ""
             },
             {
-                "key": "field_ppc_service_process_tab_5",
-                "label": "Postup realizácie",
+                "key": "field_67d0a1b2c3d76",
+                "label": "Ako prebieha správa",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -543,8 +519,8 @@
                 "endpoint": 0
             },
             {
-                "key": "field_ppc_service_process_section_title",
-                "label": "Nadpis sekcie postupu",
+                "key": "field_67d0a1b2c3d77",
+                "label": "Nadpis sekcie",
                 "name": "process_section_title",
                 "type": "text",
                 "instructions": "",
@@ -555,11 +531,15 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Ako prebieha správa PPC kampaní"
+                "default_value": "Ako prebieha správa PPC kampaní",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
-                "key": "field_ppc_service_process_steps",
-                "label": "Kroky postupu",
+                "key": "field_67d0a1b2c3d78",
+                "label": "Kroky procesu",
                 "name": "process_steps",
                 "type": "repeater",
                 "instructions": "",
@@ -570,15 +550,16 @@
                     "class": "",
                     "id": ""
                 },
-                "layout": "block",
-                "min": 6,
-                "max": 6,
+                "collapsed": "field_67d0a1b2c3d79",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
                 "button_label": "Pridať krok",
                 "sub_fields": [
                     {
-                        "key": "field_ppc_service_process_step_number",
-                        "label": "Číslo kroku",
-                        "name": "number",
+                        "key": "field_67d0a1b2c3d79",
+                        "label": "Názov kroku",
+                        "name": "step_title",
                         "type": "text",
                         "instructions": "",
                         "required": 0,
@@ -588,27 +569,16 @@
                             "class": "",
                             "id": ""
                         },
-                        "default_value": "01"
+                        "default_value": "",
+                        "placeholder": "Vyberte balíček s fixnou cenou",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
                     },
                     {
-                        "key": "field_ppc_service_process_step_title",
-                        "label": "Nadpis",
-                        "name": "title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": [],
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": ""
-                    },
-                    {
-                        "key": "field_ppc_service_process_step_text",
-                        "label": "Text",
-                        "name": "text",
+                        "key": "field_67d0a1b2c3d80",
+                        "label": "Popis kroku",
+                        "name": "step_description",
                         "type": "textarea",
                         "instructions": "",
                         "required": 0,
@@ -618,13 +588,148 @@
                             "class": "",
                             "id": ""
                         },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
                         "rows": 3,
-                        "default_value": ""
+                        "new_lines": ""
                     }
                 ]
             },
             {
-                "key": "field_ppc_service_faq_tab_6",
+                "key": "field_67d0a1b2c3d81",
+                "label": "Druhý banner (Prečo bez webu...) + spodný gradient",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_67d0a1b2c3d82",
+                "label": "Nadpis sekcie",
+                "name": "second_banner_title",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Prečo bez webu prichádzate o zákazníkov",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_67d0a1b2c3d83",
+                "label": "Zoznam bodov (Pravý biely stĺpec)",
+                "name": "second_banner_list",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Pridať bod",
+                "sub_fields": [
+                    {
+                        "key": "field_67d0a1b2c3d84",
+                        "label": "Text",
+                        "name": "item_text",
+                        "type": "wysiwyg",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 0,
+                        "delay": 0
+                    }
+                ]
+            },
+            {
+                "key": "field_67d0a1b2c3d85",
+                "label": "Nadpis v spodnom gradiente",
+                "name": "bottom_gradient_title",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Zvýšime výkon vašich PPC reklamných kampaní a premeníme kliky na reálne konverzie",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_67d0a1b2c3d86",
+                "label": "Text v spodnom gradiente",
+                "name": "bottom_gradient_text",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Riadenie, optimalizácia a rast výkonu",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_67d0a1b2c3d87",
+                "label": "Text na tlačidle (spodný gradient)",
+                "name": "bottom_gradient_button_text",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Získať bezplatnú PPC konzultáciu",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_67d0a1b2c3d88",
                 "label": "FAQ",
                 "name": "",
                 "type": "tab",
@@ -640,9 +745,9 @@
                 "endpoint": 0
             },
             {
-                "key": "field_ppc_service_faq_title",
-                "label": "Nadpis FAQ",
-                "name": "faq_title",
+                "key": "field_67d0a1b2c3d89",
+                "label": "Nadpis sekcie",
+                "name": "faq_section_title",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -652,10 +757,14 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Najčastejšie otázky k správe online reklám"
+                "default_value": "Najčastejšie otázky k správe online reklám",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
-                "key": "field_ppc_service_faq_items",
+                "key": "field_67d0a1b2c3d90",
                 "label": "FAQ položky",
                 "name": "faq_items",
                 "type": "repeater",
@@ -667,13 +776,16 @@
                     "class": "",
                     "id": ""
                 },
-                "layout": "block",
+                "collapsed": "field_67d0a1b2c3d91",
+                "min": 0,
+                "max": 0,
+                "layout": "row",
                 "button_label": "Pridať otázku",
                 "sub_fields": [
                     {
-                        "key": "field_ppc_service_faq_question",
+                        "key": "field_67d0a1b2c3d91",
                         "label": "Otázka",
-                        "name": "question",
+                        "name": "faq_question",
                         "type": "text",
                         "instructions": "",
                         "required": 0,
@@ -683,12 +795,16 @@
                             "class": "",
                             "id": ""
                         },
-                        "default_value": ""
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
                     },
                     {
-                        "key": "field_ppc_service_faq_answer",
+                        "key": "field_67d0a1b2c3d92",
                         "label": "Odpoveď",
-                        "name": "answer",
+                        "name": "faq_answer",
                         "type": "wysiwyg",
                         "instructions": "",
                         "required": 0,
@@ -698,16 +814,17 @@
                             "class": "",
                             "id": ""
                         },
+                        "default_value": "",
                         "tabs": "all",
-                        "toolbar": "basic",
+                        "toolbar": "full",
                         "media_upload": 0,
-                        "default_value": ""
+                        "delay": 0
                     }
                 ]
             },
             {
-                "key": "field_ppc_service_faq_button_text",
-                "label": "Text tlačidla FAQ",
+                "key": "field_67d0a1b2c3d93",
+                "label": "Text tlačidla (Zobraziť všetky otázky)",
                 "name": "faq_button_text",
                 "type": "text",
                 "instructions": "",
@@ -718,109 +835,14 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Zobraziť všetky otázky"
+                "default_value": "Zobraziť všetky otázky",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
-                "key": "field_ppc_service_brif_tab_7",
-                "label": "Brif sekcia na hlavnej stránke",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_ppc_service_briff_left_top_text",
-                "label": "Text vľavo hore",
-                "name": "briff_left_top_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": false,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "ďakujeme za váš záujem o sociálnu iniciatívu marketingovej agentúry ProfLines."
-            },
-            {
-                "key": "field_ppc_service_briff_left_title",
-                "label": "Hlavný nadpis vľavo",
-                "name": "briff_left_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": false,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Bezplatný mini-audit vašej PPC stratégie"
-            },
-            {
-                "key": "field_ppc_service_briff_left_quote",
-                "label": "Citát vľavo",
-                "name": "briff_left_quote",
-                "aria-label": "",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": false,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0,
-                "default_value": "<strong>Dôležitá informácia:</strong> Program „Digitálny výťah“ je vlastnou iniciatívou našej agentúry. Nečerpáme žiadne financovanie od štátu, fondov EÚ ani externých sponzorov. Investujeme vlastný čas a zdroje s cieľom podporiť lokálnu ekonomiku Slovenska."
-            },
-            {
-                "key": "field_ppc_service_briff_submit_text",
-                "label": "Text tlačidla odoslať",
-                "name": "briff_submit_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": false,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Získať bezplatný miniaudít"
-            },
-            {
-                "key": "field_ppc_service_briff_caption",
-                "label": "Text pod tlačidlom",
-                "name": "briff_caption",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": false,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Ozveme sa do 24 hodín. Bez záväzkov."
-            },
-            {
-                "key": "field_ppc_service_brif_page_tab_8",
+                "key": "field_67bcb6014b618",
                 "label": "Samostatná stránka brífu",
                 "name": "",
                 "type": "tab",
@@ -836,7 +858,7 @@
                 "endpoint": 0
             },
             {
-                "key": "field_ppc_service_brif_page_title",
+                "key": "field_67bcb6114b619",
                 "label": "Nadpis stránky brífu",
                 "name": "brif_page_title",
                 "type": "text",
@@ -848,10 +870,14 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Optimalizácia PPC kampaní pre váš biznis"
+                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO / GEO)",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
             },
             {
-                "key": "field_ppc_service_brif_page_subtitle",
+                "key": "field_67bcb6214b620",
                 "label": "Podnadpis stránky brífu",
                 "name": "brif_page_subtitle",
                 "type": "textarea",
@@ -864,10 +890,13 @@
                     "id": ""
                 },
                 "rows": 2,
-                "default_value": "Služba, ktorá pomáha značkám získať maximálny výkon z reklamných rozpočtov."
+                "default_value": "Služba novej generácie, ktorá pomáha značkám zobrazovať sa v AI Overviews (Google) a vo výsledkoch vyhľadávania v ChatGPT.",
+                "new_lines": "",
+                "maxlength": "",
+                "placeholder": ""
             },
             {
-                "key": "field_ppc_service_brif_page_text",
+                "key": "field_67bcb6314b621",
                 "label": "Text stránky brífu",
                 "name": "brif_page_text",
                 "type": "wysiwyg",
@@ -882,10 +911,11 @@
                 "tabs": "all",
                 "toolbar": "full",
                 "media_upload": 1,
-                "default_value": "Nastavíme a spravujeme PPC kampane tak, aby prinášali merateľné výsledky. Využívame dáta na optimalizáciu a AI na presné cielenie.\n\nZameriame sa na vyhľadávanie, nákupné správanie a remarketing. Vaše kampane oslovia tých správnych ľudí v správny čas.\n\nPravidelné reporty a transparentná komunikácia. Vždy viete, za čo platíte a akú máte návratnosť.\n\nVyplňte krátky briefing a do 24 hodín vám pošleme odporúčanie + cenovú ponuku na mieru."
+                "default_value": "Optimalizujeme obsah pre odpovede umelej inteligencie. Upravíme vaše texty a dáta tak, aby vás ChatGPT, Gemini a nové Google vyhľadávanie odporúčali ako prvú voľbu.\n\nŠtruktúrujeme web tak, aby mu stroje rozumeli. Technicky prispôsobíme stránky, aby algoritmy vnímali vašu firmu ako autoritu a citovali ju ako overený zdroj.\n\nZabezpečíme viditeľnosť tam, kde bežné SEO nestačí. Dostaneme vašu značku priamo do generovaných odpovedí (AI Overviews), ktoré používatelia čítajú bez nutnosti klikania na odkazy.\n\nDáme vám technologický náskok pred konkurenciou. Kým ostatní ladia len kľúčové slová, my pripravíme váš biznis na budúcnosť vyhľadávania skôr, než sa stane štandardom.\n\nVyplňte krátky briefing a do 24 hodín vám pošleme odporúčanie + cenovú ponuku na mieru.",
+                "delay": 0
             },
             {
-                "key": "field_ppc_service_brif_page_form_fields",
+                "key": "field_67bcb6414b622",
                 "label": "Položky formulára pre brif stránku",
                 "name": "brif_page_form_fields",
                 "type": "repeater",
@@ -898,10 +928,14 @@
                     "id": ""
                 },
                 "layout": "block",
+                "min": 0,
+                "max": 0,
+                "rows_per_page": 20,
                 "button_label": "Pridať pole",
+                "collapsed": "field_67bcb6514b623",
                 "sub_fields": [
                     {
-                        "key": "field_ppc_service_brif_field_label",
+                        "key": "field_67bcb6514b623",
                         "label": "Názov poľa",
                         "name": "field_label",
                         "type": "text",
@@ -912,10 +946,15 @@
                             "width": "33",
                             "class": "",
                             "id": ""
-                        }
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
-                        "key": "field_ppc_service_brif_field_type",
+                        "key": "field_67bcb6614b624",
                         "label": "Typ poľa",
                         "name": "field_type",
                         "type": "select",
@@ -938,26 +977,34 @@
                             "heading": "Nadpis sekcie",
                             "badge": "Informačný odznak"
                         },
-                        "default_value": "text"
+                        "default_value": "text",
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 1,
+                        "return_format": "value",
+                        "ajax": 0,
+                        "placeholder": "",
+                        "create_options": 0,
+                        "save_options": 0
                     },
                     {
-                        "key": "field_ppc_service_brif_field_id",
+                        "key": "field_67bcb6714b625",
                         "label": "ID poľa",
                         "name": "field_id",
                         "type": "text",
-                        "instructions": "Unikátny identifikátor pre name atribút",
-                        "required": 0,
+                        "instructions": "Unikátny identifikátor pre name atribút (napr. meno, email)",
+                        "required": 1,
                         "conditional_logic": [
                             [
                                 {
-                                    "field": "field_ppc_service_brif_field_type",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "heading"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_ppc_service_brif_field_type",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "badge"
                                 }
@@ -967,10 +1014,15 @@
                             "width": "33",
                             "class": "",
                             "id": ""
-                        }
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
-                        "key": "field_ppc_service_brif_field_width",
+                        "key": "field_67bcb6814b626",
                         "label": "Šírka poľa",
                         "name": "field_width",
                         "type": "select",
@@ -986,10 +1038,18 @@
                             "normal": "Normal",
                             "span-two": "Span Two (celá šírka)"
                         },
-                        "default_value": "normal"
+                        "default_value": "normal",
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 1,
+                        "return_format": "value",
+                        "ajax": 0,
+                        "placeholder": "",
+                        "create_options": 0,
+                        "save_options": 0
                     },
                     {
-                        "key": "field_ppc_service_brif_field_required",
+                        "key": "field_67bcb6914b627",
                         "label": "Povinné",
                         "name": "required",
                         "type": "true_false",
@@ -998,14 +1058,14 @@
                         "conditional_logic": [
                             [
                                 {
-                                    "field": "field_ppc_service_brif_field_type",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "heading"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_ppc_service_brif_field_type",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "badge"
                                 }
@@ -1018,10 +1078,12 @@
                         },
                         "message": "Povinné pole?",
                         "default_value": 0,
-                        "ui": 1
+                        "ui": 1,
+                        "ui_on_text": "Áno",
+                        "ui_off_text": "Nie"
                     },
                     {
-                        "key": "field_ppc_service_brif_field_placeholder",
+                        "key": "field_67bcb6a14b628",
                         "label": "Placeholder",
                         "name": "placeholder",
                         "type": "text",
@@ -1030,28 +1092,28 @@
                         "conditional_logic": [
                             [
                                 {
-                                    "field": "field_ppc_service_brif_field_type",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "heading"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_ppc_service_brif_field_type",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "badge"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_ppc_service_brif_field_type",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "checkbox"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_ppc_service_brif_field_type",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "!=",
                                     "value": "radio"
                                 }
@@ -1061,10 +1123,15 @@
                             "width": "50",
                             "class": "",
                             "id": ""
-                        }
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
-                        "key": "field_ppc_service_brif_field_helper_text",
+                        "key": "field_67bcb6b14b629",
                         "label": "Pomocný text",
                         "name": "helper_text",
                         "type": "text",
@@ -1075,10 +1142,15 @@
                             "width": "50",
                             "class": "",
                             "id": ""
-                        }
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
-                        "key": "field_ppc_service_brif_field_options",
+                        "key": "field_67bcb6c14b630",
                         "label": "Možnosti",
                         "name": "options",
                         "type": "repeater",
@@ -1087,21 +1159,21 @@
                         "conditional_logic": [
                             [
                                 {
-                                    "field": "field_ppc_service_brif_field_type",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "==",
                                     "value": "select"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_ppc_service_brif_field_type",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "==",
                                     "value": "radio"
                                 }
                             ],
                             [
                                 {
-                                    "field": "field_ppc_service_brif_field_type",
+                                    "field": "field_67bcb6614b624",
                                     "operator": "==",
                                     "value": "checkbox"
                                 }
@@ -1113,10 +1185,14 @@
                             "id": ""
                         },
                         "layout": "table",
+                        "min": 0,
+                        "max": 0,
+                        "rows_per_page": 20,
                         "button_label": "Pridať možnosť",
+                        "collapsed": "",
                         "sub_fields": [
                             {
-                                "key": "field_ppc_service_brif_field_option_label",
+                                "key": "field_67bcb6e14b632",
                                 "label": "Text",
                                 "name": "label",
                                 "type": "text",
@@ -1124,17 +1200,22 @@
                                 "required": 0,
                                 "conditional_logic": [],
                                 "wrapper": {
-                                    "width": "",
+                                    "width": "50",
                                     "class": "",
                                     "id": ""
-                                }
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
                             }
                         ]
                     }
                 ]
             },
             {
-                "key": "field_ppc_service_brif_page_submit_text",
+                "key": "field_67bcb6f14b633",
                 "label": "Text tlačidla odoslať pre brif stránku",
                 "name": "brif_page_submit_text",
                 "type": "text",
@@ -1146,10 +1227,14 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Odoslať"
+                "default_value": "Odoslať",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
             },
             {
-                "key": "field_ppc_service_brif_page_caption",
+                "key": "field_67bcb7014b634",
                 "label": "Text pod tlačidlom pre brif stránku",
                 "name": "brif_page_caption",
                 "type": "text",
@@ -1161,10 +1246,14 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "P.S.: Ak e-mail neprišiel, pozrite aj Spam"
+                "default_value": "P.S.: Ak e-mail neprišiel, pozrite aj Spam",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
             },
             {
-                "key": "field_ppc_service_brif_page_badge",
+                "key": "field_67bcb7114b635",
                 "label": "Odznak pre formulár",
                 "name": "brif_page_badge",
                 "type": "textarea",
@@ -1177,15 +1266,18 @@
                     "id": ""
                 },
                 "rows": 2,
-                "default_value": "ak nevidíte našu odpoveď v doručenej pošte – skontrolujte priečinok \"Spam\". Pridajte si nás do \"Kontaktov\", aby ďalšie správy prichádzali priamo do doručenej pošty."
+                "default_value": "ak nevidíte našu odpoveď v doručenej pošte – skontrolujte priečinok \"Spam\". Pridajte si nás do \"Kontaktov\", aby ďalšie správy prichádzali priamo do doručenej pošty.",
+                "new_lines": "",
+                "maxlength": "",
+                "placeholder": ""
             }
         ],
         "location": [
             [
                 {
-                    "param": "post_category",
+                    "param": "page_template",
                     "operator": "==",
-                    "value": "category:ppc"
+                    "value": "single-ppc.php"
                 }
             ]
         ],
@@ -1197,6 +1289,6 @@
         "hide_on_screen": "",
         "active": true,
         "description": "",
-        "show_in_rest": 1
+        "show_in_rest": 0
     }
 ]
