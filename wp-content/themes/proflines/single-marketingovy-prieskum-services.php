@@ -552,7 +552,7 @@
                         <div class="quote__info">
                             <div class="quote-info__head">
                                 <div class="quote-info__icon">
-                                    <img src="<?php the_field('quote_author_photo'); ?>" loading="lazy" alt="icon">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/quote/icons/01.svg" loading="lazy" alt="icon">
                                 </div>
                                 <div class="quote-info__text">
                                     <p><?php the_field('quote_author'); ?></p>
@@ -699,7 +699,7 @@
                                     <p><?php echo $description; ?></p>
                                 </div>
                                 <div class="columns-item__text">
-                                    <p>📄 PDF • <?php echo $file_info; ?></p>
+                                    <p><?php echo $file_info; ?></p>
                                 </div>
                                 <div class="columns-item__description">
                                     <p>Rýchly náhľad (1 str.)</p>
