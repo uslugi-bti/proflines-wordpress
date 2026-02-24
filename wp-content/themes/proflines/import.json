@@ -22,81 +22,6 @@
                 "selected": 0
             },
             {
-                "key": "field_67bc9abf4a1b3",
-                "label": "JSON-LD dáta",
-                "name": "service_json_ld",
-                "aria-label": "",
-                "type": "group",
-                "instructions": "Nastavenia pre štruktúrované dáta",
-                "required": 0,
-                "conditional_logic": false,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "layout": "block",
-                "sub_fields": [
-                    {
-                        "key": "field_67bc9adf4a1b4",
-                        "label": "Názov služby",
-                        "name": "name",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": false,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "Prieskum trhu a marketingový prieskum",
-                        "maxlength": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": ""
-                    },
-                    {
-                        "key": "field_67bc9b0f4a1b5",
-                        "label": "URL",
-                        "name": "url",
-                        "aria-label": "",
-                        "type": "url",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": false,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "https:\/\/proflines.agency\/marketingovy-prieskum",
-                        "placeholder": ""
-                    },
-                    {
-                        "key": "field_67bc9b2f4a1b6",
-                        "label": "Popis",
-                        "name": "description",
-                        "aria-label": "",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": false,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "rows": 3,
-                        "default_value": "Hĺbková analýza trhu, konkurencie a zákazníkov s využitím AI a overených dát pre bezpečné strategické rozhodnutia.",
-                        "new_lines": "",
-                        "maxlength": "",
-                        "placeholder": ""
-                    }
-                ]
-            },
-            {
                 "key": "field_67bc9b4f4a1c1",
                 "label": "Hero sekcia",
                 "name": "",
@@ -947,6 +872,7 @@
                         "rows_per_page": 20,
                         "button_label": "Pridať riadok",
                         "collapsed": "",
+                        "parent_repeater": "field_67bca02f4a303",
                         "sub_fields": [
                             {
                                 "key": "field_67bca0af4a307",
@@ -969,8 +895,7 @@
                                 "placeholder": "",
                                 "parent_repeater": "field_67bca08f4a306"
                             }
-                        ],
-                        "parent_repeater": "field_67bca02f4a303"
+                        ]
                     }
                 ]
             },
@@ -1617,6 +1542,7 @@
                             "id": ""
                         },
                         "layout": "block",
+                        "parent_repeater": "field_67bca40f4a703",
                         "sub_fields": [
                             {
                                 "key": "field_699c263eb623f",
@@ -1697,8 +1623,7 @@
                                 "prepend": "",
                                 "append": ""
                             }
-                        ],
-                        "parent_repeater": "field_67bca40f4a703"
+                        ]
                     },
                     {
                         "key": "field_67bca4ef4a710",
@@ -1715,6 +1640,7 @@
                             "id": ""
                         },
                         "layout": "block",
+                        "parent_repeater": "field_67bca40f4a703",
                         "sub_fields": [
                             {
                                 "key": "field_699c26a3b6241",
@@ -1795,8 +1721,7 @@
                                 "prepend": "",
                                 "append": ""
                             }
-                        ],
-                        "parent_repeater": "field_67bca40f4a703"
+                        ]
                     },
                     {
                         "key": "field_67bca54f4a713",
@@ -1813,6 +1738,7 @@
                             "id": ""
                         },
                         "layout": "block",
+                        "parent_repeater": "field_67bca40f4a703",
                         "sub_fields": [
                             {
                                 "key": "field_699c26e0b6242",
@@ -1893,92 +1819,7 @@
                                 "prepend": "",
                                 "append": ""
                             }
-                        ],
-                        "parent_repeater": "field_67bca40f4a703"
-                    }
-                ]
-            },
-            {
-                "key": "field_67bca5af4a716",
-                "label": "Ceny",
-                "name": "table_prices",
-                "aria-label": "",
-                "type": "group",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": false,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "layout": "block",
-                "sub_fields": [
-                    {
-                        "key": "field_67bca5cf4a717",
-                        "label": "Starter cena",
-                        "name": "starter_price",
-                        "aria-label": "",
-                        "type": "number",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": false,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": 800,
-                        "min": 0,
-                        "max": "",
-                        "step": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": ""
-                    },
-                    {
-                        "key": "field_67bca5ef4a718",
-                        "label": "Basic cena",
-                        "name": "basic_price",
-                        "aria-label": "",
-                        "type": "number",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": false,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": 1200,
-                        "min": 0,
-                        "max": "",
-                        "step": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": ""
-                    },
-                    {
-                        "key": "field_67bca60f4a719",
-                        "label": "Advanced cena",
-                        "name": "advanced_price",
-                        "aria-label": "",
-                        "type": "number",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": false,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": 1800,
-                        "min": 0,
-                        "max": "",
-                        "step": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": ""
+                        ]
                     }
                 ]
             },
@@ -2402,6 +2243,7 @@
                         "rows_per_page": 20,
                         "button_label": "Pridať riadok",
                         "collapsed": "",
+                        "parent_repeater": "field_67bca82f4b004",
                         "sub_fields": [
                             {
                                 "key": "field_67bca8cf4b009",
@@ -2424,8 +2266,7 @@
                                 "append": "",
                                 "parent_repeater": "field_67bca8af4b008"
                             }
-                        ],
-                        "parent_repeater": "field_67bca82f4b004"
+                        ]
                     },
                     {
                         "key": "field_67bca8ef4b010",
@@ -4101,7 +3942,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO / GEO)",
+                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO \/ GEO)",
                 "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
@@ -4286,7 +4127,9 @@
                         "return_format": "value",
                         "ajax": 0,
                         "placeholder": "",
-                        "parent_repeater": "field_67bcb6414b622"
+                        "parent_repeater": "field_67bcb6414b622",
+                        "create_options": 0,
+                        "save_options": 0
                     },
                     {
                         "key": "field_67bcb6914b627",
@@ -4437,26 +4280,28 @@
                         "rows_per_page": 20,
                         "button_label": "Pridať možnosť",
                         "collapsed": "",
+                        "parent_repeater": "field_67bcb6414b622",
                         "sub_fields": [
                             {
-                                "key": "field_67bcb6d14b631",
-                                "label": "Hodnota",
-                                "name": "value",
+                                "key": "field_699d6fb6e6b66",
+                                "label": "Povinné",
+                                "name": "povinne",
                                 "aria-label": "",
-                                "type": "text",
+                                "type": "true_false",
                                 "instructions": "",
                                 "required": 0,
-                                "conditional_logic": false,
+                                "conditional_logic": 0,
                                 "wrapper": {
-                                    "width": "50",
+                                    "width": "",
                                     "class": "",
                                     "id": ""
                                 },
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
+                                "message": "Povinné pole?",
+                                "default_value": 0,
+                                "allow_in_bindings": 0,
+                                "ui_on_text": "",
+                                "ui_off_text": "",
+                                "ui": 1,
                                 "parent_repeater": "field_67bcb6c14b630"
                             },
                             {
@@ -4480,8 +4325,7 @@
                                 "append": "",
                                 "parent_repeater": "field_67bcb6c14b630"
                             }
-                        ],
-                        "parent_repeater": "field_67bcb6414b622"
+                        ]
                     }
                 ]
             },
@@ -4549,14 +4393,14 @@
         "location": [
             [
                 {
-                    "param": "post_type",
+                    "param": "post_category",
                     "operator": "==",
-                    "value": "page"
+                    "value": "category:services"
                 },
                 {
-                    "param": "page",
+                    "param": "post_category",
                     "operator": "==",
-                    "value": "225"
+                    "value": "category:marketingovy-prieskum-services"
                 }
             ]
         ],

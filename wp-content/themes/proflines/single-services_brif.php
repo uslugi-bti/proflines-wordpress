@@ -124,7 +124,7 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                                                            value="<?php echo esc_attr($option['value']); ?>"
                                                            <?php echo $required; ?>>
                                                     <span></span>
-                                                    <p><?php echo esc_html($option['label']); ?></p>
+                                                    <p><?php echo ($option['label']); ?></p>
                                                 </label>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
@@ -145,7 +145,7 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                                                     <input type="checkbox" 
                                                            name="<?php echo esc_attr($field_id); ?>[]">
                                                     <span></span>
-                                                    <p><?php echo esc_html($option['label']); ?></p>
+                                                    <p><?php echo ($option['label']); ?></p>
                                                 </label>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
