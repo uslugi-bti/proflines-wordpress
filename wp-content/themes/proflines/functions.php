@@ -278,16 +278,24 @@ function proflines_json_ld() {
                     if (empty($description) && isset($package['description'])) {
                         $description = $package['description'];
                     }
-                    
-                    // Добавляем предложение
-                    $offers[] = array(
+                    if ($package['price'] == "") {
+                        $offers[] = array(
                         "@type" => "Offer",
-                        "name" => $package['name'],
-                        "price" => strval($package['price']),
-                        "priceCurrency" => "EUR",
-                        "availability" => "https://schema.org/InStock",
-                        "description" => $description
-                    );
+                            "name" => $package['name'],
+                            "priceCurrency" => "EUR",
+                            "availability" => "https://schema.org/InStock",
+                            "description" => $description
+                        );
+                    } else {
+                        $offers[] = array(
+                        "@type" => "Offer",
+                            "name" => $package['name'],
+                            "price" => strval($package['price']),
+                            "priceCurrency" => "EUR",
+                            "availability" => "https://schema.org/InStock",
+                            "description" => $description
+                        );
+                    }
                 }
             }
         }
