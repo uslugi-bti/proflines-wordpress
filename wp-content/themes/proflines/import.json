@@ -442,7 +442,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_699c263eb623f",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "use_icon",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -540,7 +540,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_699c26a3b6241",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "use_icon",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -638,7 +638,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_699c26e0b6242",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "use_icon",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -815,7 +815,7 @@
                         "default_value": "",
                         "maxlength": "",
                         "allow_in_bindings": 1,
-                        "placeholder": "Starter / Basic / Advanced",
+                        "placeholder": "Starter \/ Basic \/ Advanced",
                         "prepend": "",
                         "append": "",
                         "parent_repeater": "field_67d0a1b2c3d64"
@@ -1270,39 +1270,41 @@
                     {
                         "key": "field_67d0a1b2c3d87",
                         "label": "Otázka",
-                        "name": "faq_question",
+                        "name": "question",
                         "aria-label": "",
                         "type": "text",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": [],
+                        "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
                         "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 1,
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
-                        "maxlength": "",
                         "parent_repeater": "field_67d0a1b2c3d86"
                     },
                     {
                         "key": "field_67d0a1b2c3d88",
                         "label": "Odpoveď",
-                        "name": "faq_answer",
+                        "name": "answer",
                         "aria-label": "",
                         "type": "wysiwyg",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": [],
+                        "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
                         "default_value": "",
+                        "allow_in_bindings": 1,
                         "tabs": "all",
                         "toolbar": "full",
                         "media_upload": 0,
@@ -1363,7 +1365,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO / GEO)",
+                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO \/ GEO)",
                 "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
@@ -1701,6 +1703,7 @@
                         "rows_per_page": 20,
                         "button_label": "Pridať možnosť",
                         "collapsed": "",
+                        "parent_repeater": "field_67bcb6414b622",
                         "sub_fields": [
                             {
                                 "key": "field_67bcb6e14b632",
@@ -1723,8 +1726,7 @@
                                 "append": "",
                                 "parent_repeater": "field_67bcb6c14b630"
                             }
-                        ],
-                        "parent_repeater": "field_67bcb6414b622"
+                        ]
                     }
                 ]
             },
