@@ -72,7 +72,7 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                                 $required_class = $required ? 'form-group--required' : '';
                                 $placeholder = isset($field['placeholder']) ? $field['placeholder'] : '';
                                 $helper_text = isset($field['helper_text']) ? $field['helper_text'] : '';
-                                $options = isset($field['options']) ? $field['options'] : array();
+                                $options = isset($field['options']) && is_array($field['options']) ? $field['options'] : array();
                             ?>
                             
                             <?php if ($field_type === 'heading'): ?>
@@ -99,16 +99,28 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                                 <div class="form-group <?php echo $field_width; ?> <?php echo $required_class; ?>">
                                     <label><?php echo $field_label; ?>:</label>
                                     <select name="<?php echo esc_attr($field_id); ?>">
-                                        <?php if (!empty($options) && is_array($options)): ?>
+                                        <?php if (!empty($options)): ?>
                                             <?php foreach ($options as $option): ?>
-                                                <option value="<?php echo esc_attr($option['value']); ?>">
-                                                    <?php echo esc_html($option['label']); ?>
+                                                <?php 
+                                                // Kontrola, či je $option pole a má kľúč 'label'
+                                                if (is_array($option) && isset($option['label'])) {
+                                                    $option_value = sanitize_title($option['label']);
+                                                    $option_label = $option['label'];
+                                                } elseif (is_string($option)) {
+                                                    $option_value = sanitize_title($option);
+                                                    $option_label = $option;
+                                                } else {
+                                                    continue;
+                                                }
+                                                ?>
+                                                <option value="<?php echo esc_attr($option_value); ?>">
+                                                    <?php echo esc_html($option_label); ?>
                                                 </option>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     </select>
                                     <?php if ($helper_text): ?>
-                                        <span><?php echo $helper_text; ?></span>
+                                        <span class="form-helper"><?php echo $helper_text; ?></span>
                                     <?php endif; ?>
                                 </div>
                             
@@ -117,21 +129,32 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                                 <div class="form-group radio <?php echo $field_width; ?> <?php echo $required_class; ?>">
                                     <h4><?php echo $field_label; ?>:</h4>
                                     <div class="form-group__body">
-                                        <?php if (!empty($options) && is_array($options)): ?>
+                                        <?php if (!empty($options)): ?>
                                             <?php foreach ($options as $option): ?>
+                                                <?php 
+                                                if (is_array($option) && isset($option['label'])) {
+                                                    $option_value = sanitize_title($option['label']);
+                                                    $option_label = $option['label'];
+                                                } elseif (is_string($option)) {
+                                                    $option_value = sanitize_title($option);
+                                                    $option_label = $option;
+                                                } else {
+                                                    continue;
+                                                }
+                                                ?>
                                                 <label>
                                                     <input type="radio" 
                                                         name="<?php echo esc_attr($field_id); ?>" 
-                                                        value="<?php echo esc_attr($option['value']); ?>"
+                                                        value="<?php echo esc_attr($option_value); ?>"
                                                     >
                                                     <span></span>
-                                                    <p><?php echo ($option['label']); ?></p>
+                                                    <p><?php echo $option_label; ?></p>
                                                 </label>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     </div>
                                     <?php if ($helper_text): ?>
-                                        <span><?php echo $helper_text; ?></span>
+                                        <span class="form-helper"><?php echo $helper_text; ?></span>
                                     <?php endif; ?>
                                 </div>
                             
@@ -140,19 +163,31 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                                 <div class="form-group checkbox <?php echo $field_width; ?> <?php echo $required_class; ?>">
                                     <h4><?php echo $field_label; ?>:</h4>
                                     <div class="form-group__body">
-                                        <?php if (!empty($options) && is_array($options)): ?>
+                                        <?php if (!empty($options)): ?>
                                             <?php foreach ($options as $option): ?>
+                                                <?php 
+                                                if (is_array($option) && isset($option['label'])) {
+                                                    $option_value = sanitize_title($option['label']);
+                                                    $option_label = $option['label'];
+                                                } elseif (is_string($option)) {
+                                                    $option_value = sanitize_title($option);
+                                                    $option_label = $option;
+                                                } else {
+                                                    continue;
+                                                }
+                                                ?>
                                                 <label>
                                                     <input type="checkbox" 
-                                                           name="<?php echo esc_attr($field_id); ?>[]">
+                                                           name="<?php echo esc_attr($field_id); ?>[]"
+                                                           value="<?php echo esc_attr($option_value); ?>">
                                                     <span></span>
-                                                    <p><?php echo ($option['label']); ?></p>
+                                                    <p><?php echo $option_label; ?></p>
                                                 </label>
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     </div>
                                     <?php if ($helper_text): ?>
-                                        <span><?php echo $helper_text; ?></span>
+                                        <span class="form-helper"><?php echo $helper_text; ?></span>
                                     <?php endif; ?>
                                 </div>
                             
@@ -163,7 +198,7 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                                     <textarea name="<?php echo esc_attr($field_id); ?>" 
                                               placeholder="<?php echo esc_attr($placeholder); ?>"></textarea>
                                     <?php if ($helper_text): ?>
-                                        <span><?php echo $helper_text; ?></span>
+                                        <span class="form-helper"><?php echo $helper_text; ?></span>
                                     <?php endif; ?>
                                 </div>
                             
@@ -176,7 +211,7 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                                            placeholder="<?php echo esc_attr($placeholder); ?>"
                                            autocomplete="off">
                                     <?php if ($helper_text): ?>
-                                        <span><?php echo $helper_text; ?></span>
+                                        <span class="form-helper"><?php echo $helper_text; ?></span>
                                     <?php endif; ?>
                                 </div>
                             
@@ -194,6 +229,12 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                         <?php if ($brif_page_caption): ?>
                         <div class="form-caption span-two">
                             <span><?php echo esc_html($brif_page_caption); ?></span>
+                        </div>
+                        <?php endif; ?>
+                        
+                        <?php if ($brif_page_badge): ?>
+                        <div class="form-badge span-two">
+                            <p><?php echo esc_html($brif_page_badge); ?></p>
                         </div>
                         <?php endif; ?>
                     </form>
