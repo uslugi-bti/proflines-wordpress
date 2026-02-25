@@ -356,10 +356,13 @@ $faq_button_text = get_field('faq_button_text');
                                 } elseif ($starter_use_icon) {
                                     if ($starter_type == 'true') {
                                         echo '<span class="table__icon table__icon--true"></span>';
+                                        echo ($basic_custom_text);
                                     } elseif ($starter_type == 'partial') {
                                         echo '<span class="table__icon table__icon--partial"></span>';
+                                        echo ($basic_custom_text);
                                     } elseif ($starter_type == 'false') {
                                         echo '<span class="table__icon table__icon--false"></span>';
+                                        echo ($basic_custom_text);
                                     }
                                 }
                                 ?>
@@ -371,10 +374,13 @@ $faq_button_text = get_field('faq_button_text');
                                 } elseif ($basic_use_icon) {
                                     if ($basic_type == 'true') {
                                         echo '<span class="table__icon table__icon--true"></span>';
+                                        echo ($basic_custom_text);
                                     } elseif ($basic_type == 'partial') {
                                         echo '<span class="table__icon table__icon--partial"></span>';
+                                        echo ($basic_custom_text);
                                     } elseif ($basic_type == 'false') {
                                         echo '<span class="table__icon table__icon--false"></span>';
+                                        echo ($basic_custom_text);
                                     }
                                 }
                                 ?>
