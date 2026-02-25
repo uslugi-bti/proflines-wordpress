@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $categories = get_the_category();
 if (!empty($categories)) {
     $category_slug = $categories[0]->slug;
