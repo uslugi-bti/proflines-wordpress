@@ -99,9 +99,11 @@ $faq_button_text = get_field('faq_button_text');
                 <?php if ($hero_image) : ?>
                 <div class="service-hero__img">
                     <img src="<?php echo esc_url($hero_image); ?>" alt="hero" loading="lazy">
+                    <?php if ($hero_image_item) : ?>
                     <div class="service-hero-img__img">
                         <img src="<?php echo esc_url($hero_image_item); ?>" alt="hero" loading="lazy">
                     </div>
+                    <?php endif; ?>
                 </div>
                 <?php endif; ?>
             </div>
@@ -184,11 +186,26 @@ $faq_button_text = get_field('faq_button_text');
 
             <?php if ($how_help_image || $how_help_list) : ?>
             <div class="banners__body">
-                <?php if ($how_help_image) : ?>
+                <?php 
+                // Najprv skúsime video z agencies_items, ak existuje
+                $video_url = '';
+                $fallback_image = $how_help_image;
+                
+                if ($agencies_items && !empty($agencies_items[0]['item_video'])) {
+                    $video_url = $agencies_items[0]['item_video'];
+                }
+                ?>
+                
                 <div class="banners__img">
-                    <img src="<?php echo esc_url($how_help_image); ?>" alt="banner" loading="lazy">
+                    <?php if ($video_url) : ?>
+                        <video controls loading="lazy" width="100%" height="auto">
+                            <source src="<?php echo esc_url($video_url); ?>" type="video/mp4">
+                            Váš prehliadač nepodporuje video tag.
+                        </video>
+                    <?php elseif ($fallback_image) : ?>
+                        <img src="<?php echo esc_url($fallback_image); ?>" alt="banner" loading="lazy">
+                    <?php endif; ?>
                 </div>
-                <?php endif; ?>
 
                 <?php if ($how_help_list) : ?>
                 <div class="banner__body white">
@@ -246,7 +263,14 @@ $faq_button_text = get_field('faq_button_text');
                         </div>
                         <?php endif; ?>
 
-                        <?php if ($item['item_image']) : ?>
+                        <?php if (!empty($item['item_video'])) : ?>
+                        <div class="forward-agencies-item__media">
+                            <video controls loading="lazy" width="100%" height="auto">
+                                <source src="<?php echo esc_url($item['item_video']); ?>" type="video/mp4">
+                                Váš prehliadač nepodporuje video tag.
+                            </video>
+                        </div>
+                        <?php elseif (!empty($item['item_image'])) : ?>
                         <div class="forward-agencies-item__media">
                             <img src="<?php echo esc_url($item['item_image']); ?>" alt="forward-agencies" loading="lazy">
                         </div>
@@ -289,12 +313,27 @@ $faq_button_text = get_field('faq_button_text');
                     </thead>
                     <tbody>
                         <?php foreach ($table_items as $item) : 
-                            $service_name = $item['service_name'];
-                            $has_info = $item['has_info'];
-                            $info_text = $item['info_text'];
-                            $starter = $item['starter'];
-                            $basic = $item['basic'];
-                            $advanced = $item['advanced'];
+                            $service_name = $item['service_name'] ?? '';
+                            $has_info = $item['has_info'] ?? false;
+                            $info_text = $item['info_text'] ?? '';
+                            
+                            // Spracovanie Starter
+                            $starter = $item['starter'] ?? [];
+                            $starter_custom_text = $starter['custom_text'] ?? '';
+                            $starter_use_icon = $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu'] ?? false;
+                            $starter_type = $starter['type'] ?? '';
+                            
+                            // Spracovanie Basic
+                            $basic = $item['basic'] ?? [];
+                            $basic_custom_text = $basic['custom_text'] ?? '';
+                            $basic_use_icon = $basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic'] ?? false;
+                            $basic_type = $basic['type'] ?? '';
+                            
+                            // Spracovanie Advanced
+                            $advanced = $item['advanced'] ?? [];
+                            $advanced_custom_text = $advanced['custom_text'] ?? '';
+                            $advanced_use_icon = $advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced'] ?? false;
+                            $advanced_type = $advanced['type'] ?? '';
                         ?>
                             <tr>
                                 <td>
@@ -312,30 +351,30 @@ $faq_button_text = get_field('faq_button_text');
                                 </td>
                                 <td>
                                     <?php 
-                                    if ($starter['custom_text']) {
-                                        echo esc_html($starter['custom_text']);
-                                    } elseif ($starter['umiestnit_ikonu_anonieciastocne_namiesto_textu'] && $starter['type']) {
-                                        $icon_class = ($starter['type'] == 'true') ? 'table__icon--true' : (($starter['type'] == 'partial') ? 'table__icon--partial' : 'table__icon--false');
+                                    if ($starter_custom_text) {
+                                        echo esc_html($starter_custom_text);
+                                    } elseif ($starter_use_icon && $starter_type) {
+                                        $icon_class = ($starter_type == 'true') ? 'table__icon--true' : (($starter_type == 'partial') ? 'table__icon--partial' : 'table__icon--false');
                                         echo '<span class="table__icon ' . $icon_class . '"></span>';
                                     }
                                     ?>
                                 </td>
                                 <td>
                                     <?php 
-                                    if ($basic['custom_text']) {
-                                        echo esc_html($basic['custom_text']);
-                                    } elseif ($basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic'] && $basic['type']) {
-                                        $icon_class = ($basic['type'] == 'true') ? 'table__icon--true' : (($basic['type'] == 'partial') ? 'table__icon--partial' : 'table__icon--false');
+                                    if ($basic_custom_text) {
+                                        echo esc_html($basic_custom_text);
+                                    } elseif ($basic_use_icon && $basic_type) {
+                                        $icon_class = ($basic_type == 'true') ? 'table__icon--true' : (($basic_type == 'partial') ? 'table__icon--partial' : 'table__icon--false');
                                         echo '<span class="table__icon ' . $icon_class . '"></span>';
                                     }
                                     ?>
                                 </td>
                                 <td>
                                     <?php 
-                                    if ($advanced['custom_text']) {
-                                        echo esc_html($advanced['custom_text']);
-                                    } elseif ($advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced'] && $advanced['type']) {
-                                        $icon_class = ($advanced['type'] == 'true') ? 'table__icon--true' : (($advanced['type'] == 'partial') ? 'table__icon--partial' : 'table__icon--false');
+                                    if ($advanced_custom_text) {
+                                        echo esc_html($advanced_custom_text);
+                                    } elseif ($advanced_use_icon && $advanced_type) {
+                                        $icon_class = ($advanced_type == 'true') ? 'table__icon--true' : (($advanced_type == 'partial') ? 'table__icon--partial' : 'table__icon--false');
                                         echo '<span class="table__icon ' . $icon_class . '"></span>';
                                     }
                                     ?>
