@@ -324,13 +324,13 @@ $faq_button_text = get_field('faq_button_text');
                             </td>
                             
                             <td>
-                                <?php if ($item['starter']['umiestnit_ikonu']): ?>
+                                <?php if ($item['starter']['umiestnit_ikonu_anonieciastocne_namiesto_textu']): ?>
                                     <?php if ($item['starter']['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
                                     <?php elseif ($item['starter']['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
                                     <?php elseif ($item['starter']['type'] == 'partial'): ?>
-                                        <span class="table__icon table__icon--true-false"></span>
+                                        <span class="table__icon table__icon--partial"></span>
                                     <?php endif; ?>
                                 <?php else: ?>
                                     <?php echo $item['starter']['custom_text']; ?>
@@ -338,13 +338,13 @@ $faq_button_text = get_field('faq_button_text');
                             </td>
                             
                             <td>
-                                <?php if ($item['basic']['umiestnit_ikonu_basic']): ?>
+                                <?php if ($item['basic']['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']): ?>
                                     <?php if ($item['basic']['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
                                     <?php elseif ($item['basic']['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
                                     <?php elseif ($item['basic']['type'] == 'partial'): ?>
-                                        <span class="table__icon table__icon--true-false"></span>
+                                        <span class="table__icon table__icon--partial"></span>
                                     <?php endif; ?>
                                 <?php else: ?>
                                     <?php echo $item['basic']['custom_text']; ?>
@@ -352,13 +352,13 @@ $faq_button_text = get_field('faq_button_text');
                             </td>
                             
                             <td>
-                                <?php if ($item['advanced']['umiestnit_ikonu_advanced']): ?>
+                                <?php if ($item['advanced']['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']): ?>
                                     <?php if ($item['advanced']['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
                                     <?php elseif ($item['advanced']['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
                                     <?php elseif ($item['advanced']['type'] == 'partial'): ?>
-                                        <span class="table__icon table__icon--true-false"></span>
+                                        <span class="table__icon table__icon--partial"></span>
                                     <?php endif; ?>
                                 <?php else: ?>
                                     <?php echo $item['advanced']['custom_text']; ?>
@@ -369,6 +369,7 @@ $faq_button_text = get_field('faq_button_text');
                     </tbody>
                 </table>
             </div>
+            <?php endif; ?> <?php // Toto chýbalo - ukončenie if ($table_items) ?>
 
             <?php if ($packages) : ?>
             <div class="packages__body">
