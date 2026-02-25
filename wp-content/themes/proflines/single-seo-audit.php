@@ -237,7 +237,7 @@ $faq_button_text = get_field('faq_button_text');
                         <span><?php echo esc_html($package['name']); ?></span>
                     </div>
                     <?php endif; ?>
-                    
+
                     <?php if ($package['description']): ?>
                     <div class="packages-item__description">
                         <p><?php echo esc_html($package['description']); ?></p>
@@ -246,6 +246,13 @@ $faq_button_text = get_field('faq_button_text');
                     
                     <?php if ($package['package_text']): ?>
                     <div class="packages-item__text line left">
+                        <?php 
+                        // Выводим цену первым параграфом, если она есть
+                        if (!empty($package['price'])): 
+                        ?>
+                            <p><strong><?php echo esc_html($package['price']); ?></strong></p>
+                        <?php endif; ?>
+                        
                         <?php echo $package['package_text']; ?>
                     </div>
                     <?php endif; ?>
