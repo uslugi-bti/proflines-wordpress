@@ -37,7 +37,7 @@ if (!empty($categories)) {
             get_template_part('single-blog');
             exit;
 
-        case 'tvorba-webu':
+        case 'web':
             get_template_part('single-web');
             exit;
     }
