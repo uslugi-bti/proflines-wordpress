@@ -169,98 +169,114 @@
             </div>
 
             <?php if(have_rows('table_items')): ?>
-                <div class="table__body table-container">
-                    <table class="table__table">
-                        <colgroup>
-                            <col style="width:40%">
-                            <col style="width:20%">
-                            <col style="width:20%">
-                            <col style="width:20%">
-                        </colgroup>
+            <div class="table__body table-container">
+                <table class="table__table">
+                    <colgroup>
+                        <col style="width:40%">
+                        <col style="width:20%">
+                        <col style="width:20%">
+                        <col style="width:20%">
+                    </colgroup>
 
-                        <thead class="table-header">
+                    <thead class="table-header">
+                        <tr>
+                            <th style="width:40%">Služba / Balík</th>
+                            <th style="width:20%">Starter</th>
+                            <th style="width:20%">Basic</th>
+                            <th style="width:20%">Advanced</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <?php while(have_rows('table_items')): the_row(); 
+                            $service_name = get_sub_field('service_name');
+                            $has_info = get_sub_field('has_info');
+                            $info_text = get_sub_field('info_text');
+                            $starter = get_sub_field('starter');
+                            $basic = get_sub_field('basic');
+                            $advanced = get_sub_field('advanced');
+                        ?>
                             <tr>
-                                <th style="width:40%">Služba / Balík</th>
-                                <th style="width:20%">Starter</th>
-                                <th style="width:20%">Basic</th>
-                                <th style="width:20%">Advanced</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <?php while(have_rows('table_items')): the_row(); 
-                                $service_name = get_sub_field('service_name');
-                                $has_info = get_sub_field('has_info');
-                                $info_text = get_sub_field('info_text');
-                                $starter = get_sub_field('starter');
-                                $basic = get_sub_field('basic');
-                                $advanced = get_sub_field('advanced');
-                            ?>
-                                <tr>
-                                    <td>
-                                        <?php echo $service_name; ?>
-                                        <?php if($has_info): ?>
-                                            <span id="info"></span>
-                                            <div class="table-info">
-                                                <div class="table-info__body">
-                                                    <div class="table-info__container">
-                                                        <?php echo $info_text; ?>
-                                                    </div>
+                                <td>
+                                    <?php echo $service_name; ?>
+                                    <?php if($has_info): ?>
+                                        <span id="info"></span>
+                                        <div class="table-info">
+                                            <div class="table-info__body">
+                                                <div class="table-info__container">
+                                                    <?php echo $info_text; ?>
                                                 </div>
                                             </div>
-                                        <?php endif; ?>
-                                    </td>
-                                    <td>
-                                        <?php 
-                                        if(isset($starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']) && $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']) {
-                                            if($starter['type'] == 'true') {
-                                                echo '<span class="table__icon table__icon--true"></span>';
-                                            } elseif($starter['type'] == 'false') {
-                                                echo '<span class="table__icon table__icon--false"></span>';
-                                            } elseif($starter['type'] == 'partial') {
-                                                echo '<span class="table__icon table__icon--true-false"></span>';
-                                            }
-                                        } else {
-                                            echo $starter['custom_text'];
+                                        </div>
+                                    <?php endif; ?>
+                                </td>
+                                <td>
+                                    <?php 
+                                    // Проверяем, нужно ли выводить иконку
+                                    if(isset($starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']) && $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']) {
+                                        // Выводим иконку в зависимости от типа
+                                        if($starter['type'] == 'true') {
+                                            echo '<span class="table__icon table__icon--true"></span>';
+                                        } elseif($starter['type'] == 'false') {
+                                            echo '<span class="table__icon table__icon--false"></span>';
+                                        } elseif($starter['type'] == 'partial') {
+                                            echo '<span class="table__icon table__icon--true-false"></span>';
                                         }
-                                        ?>
-                                    </td>
-                                    <td>
-                                        <?php 
-                                        if(isset($basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']) && $basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']) {
-                                            if($basic['type'] == 'true') {
-                                                echo '<span class="table__icon table__icon--true"></span>';
-                                            } elseif($basic['type'] == 'false') {
-                                                echo '<span class="table__icon table__icon--false"></span>';
-                                            } elseif($basic['type'] == 'partial') {
-                                                echo '<span class="table__icon table__icon--true-false"></span>';
-                                            }
-                                        } else {
-                                            echo $basic['custom_text'];
+                                    } 
+                                    // Если есть кастомный текст, выводим его
+                                    elseif(isset($starter['custom_text']) && !empty($starter['custom_text'])) {
+                                        echo $starter['custom_text'];
+                                    }
+                                    // Если ничего нет, выводим пусто
+                                    else {
+                                        echo '';
+                                    }
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php 
+                                    if(isset($basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']) && $basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']) {
+                                        if($basic['type'] == 'true') {
+                                            echo '<span class="table__icon table__icon--true"></span>';
+                                        } elseif($basic['type'] == 'false') {
+                                            echo '<span class="table__icon table__icon--false"></span>';
+                                        } elseif($basic['type'] == 'partial') {
+                                            echo '<span class="table__icon table__icon--true-false"></span>';
                                         }
-                                        ?>
-                                    </td>
-                                    <td>
-                                        <?php 
-                                        if(isset($advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']) && $advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']) {
-                                            if($advanced['type'] == 'true') {
-                                                echo '<span class="table__icon table__icon--true"></span>';
-                                            } elseif($advanced['type'] == 'false') {
-                                                echo '<span class="table__icon table__icon--false"></span>';
-                                            } elseif($advanced['type'] == 'partial') {
-                                                echo '<span class="table__icon table__icon--true-false"></span>';
-                                            }
-                                        } else {
-                                            echo $advanced['custom_text'];
+                                    }
+                                    elseif(isset($basic['custom_text']) && !empty($basic['custom_text'])) {
+                                        echo $basic['custom_text'];
+                                    }
+                                    else {
+                                        echo '';
+                                    }
+                                    ?>
+                                </td>
+                                <td>
+                                    <?php 
+                                    if(isset($advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']) && $advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']) {
+                                        if($advanced['type'] == 'true') {
+                                            echo '<span class="table__icon table__icon--true"></span>';
+                                        } elseif($advanced['type'] == 'false') {
+                                            echo '<span class="table__icon table__icon--false"></span>';
+                                        } elseif($advanced['type'] == 'partial') {
+                                            echo '<span class="table__icon table__icon--true-false"></span>';
                                         }
-                                        ?>
-                                    </td>
-                                </tr>
-                            <?php endwhile; ?>
-                        </tbody>
-                    </table>
-                </div>
-            <?php endif; ?>
+                                    }
+                                    elseif(isset($advanced['custom_text']) && !empty($advanced['custom_text'])) {
+                                        echo $advanced['custom_text'];
+                                    }
+                                    else {
+                                        echo '';
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
+                        <?php endwhile; ?>
+                    </tbody>
+                </table>
+            </div>
+        <?php endif; ?>
 
             <?php if(have_rows('packages')): ?>
                 <div class="packages__body">
