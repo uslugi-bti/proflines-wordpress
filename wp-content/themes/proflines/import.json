@@ -364,7 +364,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_67bd642c1a2ea",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "umiestnit_ikonu",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -463,7 +463,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_67bd64b41a2ee",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "umiestnit_ikonu_basic",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -562,7 +562,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_67bd65281a2f2",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "umiestnit_ikonu_advanced",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -691,38 +691,18 @@
                         "type": "text",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": [],
+                        "conditional_logic": 0,
                         "wrapper": {
-                            "width": "33",
+                            "width": "",
                             "class": "",
                             "id": ""
                         },
                         "default_value": "",
                         "maxlength": "",
+                        "allow_in_bindings": 1,
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
-                        "parent_repeater": "field_67bd65c81a2f6"
-                    },
-                    {
-                        "key": "field_67bd65ea1a2f8",
-                        "label": "Text balíčka",
-                        "name": "package_text",
-                        "aria-label": "",
-                        "type": "wysiwyg",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": [],
-                        "wrapper": {
-                            "width": "33",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "tabs": "all",
-                        "toolbar": "full",
-                        "media_upload": 1,
-                        "delay": 0,
                         "parent_repeater": "field_67bd65c81a2f6"
                     },
                     {
@@ -733,56 +713,15 @@
                         "type": "text",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": [],
+                        "conditional_logic": 0,
                         "wrapper": {
-                            "width": "33",
+                            "width": "",
                             "class": "",
                             "id": ""
                         },
                         "default_value": "",
                         "maxlength": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "parent_repeater": "field_67bd65c81a2f6"
-                    },
-                    {
-                        "key": "field_67bd66101a2fa",
-                        "label": "Text na tlačidle",
-                        "name": "package_button_text",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": [],
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "parent_repeater": "field_67bd65c81a2f6"
-                    },
-                    {
-                        "key": "field_67bd66221a2fb",
-                        "label": "Text pod tlačidlom",
-                        "name": "package_inscription",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": [],
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
+                        "allow_in_bindings": 1,
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
@@ -804,6 +743,50 @@
                         },
                         "default_value": "",
                         "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67bd65c81a2f6"
+                    },
+                    {
+                        "key": "field_67bd65ea1a2f8",
+                        "label": "Text balíčka",
+                        "name": "package_text",
+                        "aria-label": "",
+                        "type": "wysiwyg",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "allow_in_bindings": 1,
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0,
+                        "parent_repeater": "field_67bd65c81a2f6"
+                    },
+                    {
+                        "key": "field_67bd66101a2fa",
+                        "label": "Text na tlačidle",
+                        "name": "package_button_text",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 1,
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
@@ -1333,7 +1316,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO / GEO)",
+                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO \/ GEO)",
                 "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
@@ -1762,9 +1745,14 @@
         "location": [
             [
                 {
-                    "param": "page_template",
+                    "param": "post_category",
                     "operator": "==",
-                    "value": "single-seo-audit.php"
+                    "value": "category:services"
+                },
+                {
+                    "param": "post_category",
+                    "operator": "==",
+                    "value": "category:seo-audit"
                 }
             ]
         ],
