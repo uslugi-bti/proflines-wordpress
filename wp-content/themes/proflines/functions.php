@@ -322,11 +322,10 @@ function proflines_json_ld() {
             }
         }
         
-        // Основные данные услуги - используем новые поля для serviceType и category
+        // Основные данные услуги
         $service_data = array(
             "@type" => "Service",
             "serviceType" => $service_type ?: "Market Research", // Используем поле service_type или значение по умолчанию
-            "category" => $category ?: "Business Consulting & Market Analysis", // Используем поле category или значение по умолчанию
             "name" => get_the_title(),
             "url" => get_permalink(),
             "description" => wp_trim_words(strip_tags(get_the_content()), 30, '...'),
@@ -340,6 +339,11 @@ function proflines_json_ld() {
                 "url" => $site_url
             )
         );
+        
+        // Добавляем category только если она указана
+        if (!empty($category)) {
+            $service_data['category'] = $category;
+        }
         
         // Переопределяем значения из ACF если они есть
         if (is_array($service_json_ld)) {
