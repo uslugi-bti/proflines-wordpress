@@ -178,7 +178,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "My nie sme len \"kodéri\", čo poskladajú dizajn. <strong>Implementujeme pokročilé štruktúrované dáta Schema.org (JSON-LD)</strong> priamo do kódu vášho webu.",
+                "default_value": "My nie sme len \"kodéri\", čo poskladajú dizajn. <strong>Implementujeme pokročilé štruktúrované dáta Schema.org (JSON-LD)<\/strong> priamo do kódu vášho webu.",
                 "tabs": "all",
                 "toolbar": "basic",
                 "media_upload": 0,
@@ -325,6 +325,8 @@
                 "min": 0,
                 "max": 0,
                 "button_label": "Pridať položku",
+                "rows_per_page": 20,
+                "collapsed": "",
                 "sub_fields": [
                     {
                         "key": "field_67bd3b3b123461",
@@ -425,6 +427,8 @@
                 "min": 0,
                 "max": 0,
                 "button_label": "Pridať položku",
+                "rows_per_page": 20,
+                "collapsed": "",
                 "sub_fields": [
                     {
                         "key": "field_67bd3b90123466",
@@ -645,7 +649,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_699c263eb623f",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "umiestnit_ikonu_anonieciastocne_namiesto_textu",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -743,7 +747,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_699c26a3b6241",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "umiestnit_ikonu_anonieciastocne_namiesto_textu_basic",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -841,7 +845,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_699c26e0b6242",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -958,6 +962,8 @@
                 "min": 0,
                 "max": 0,
                 "button_label": "Pridať balíček",
+                "rows_per_page": 20,
+                "collapsed": "",
                 "sub_fields": [
                     {
                         "key": "field_67bd3be5123471",
@@ -1263,6 +1269,8 @@
                 "min": 0,
                 "max": 0,
                 "button_label": "Pridať krok",
+                "rows_per_page": 20,
+                "collapsed": "",
                 "sub_fields": [
                     {
                         "key": "field_67bd3ce4123486",
@@ -1351,6 +1359,391 @@
                 ]
             },
             {
+                "key": "field_67bd3d28123490",
+                "label": "Banner - Prečo bez webu",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_67bd3d39123491",
+                "label": "Nadpis sekcie",
+                "name": "why_without_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Prečo bez webu prichádzate o zákazníkov",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67bd3d4a123492",
+                "label": "Text červeného banneru",
+                "name": "why_without_red_text",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Začiatky podnikania sú prirodzene spojené s obavami Ak ste si položili jednu z nasledujúcich otázok, ste na správnom mieste.",
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 0
+            },
+            {
+                "key": "field_67bd3d5b123493",
+                "label": "Zoznam otázok (červený banner)",
+                "name": "why_without_questions",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "min": 0,
+                "max": 0,
+                "button_label": "Pridať otázku",
+                "rows_per_page": 20,
+                "collapsed": "",
+                "sub_fields": [
+                    {
+                        "key": "field_67bd3d6c123494",
+                        "label": "Text otázky",
+                        "name": "question_text",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "rows": 2,
+                        "placeholder": "",
+                        "new_lines": "",
+                        "parent_repeater": "field_67bd3d5b123493"
+                    }
+                ]
+            },
+            {
+                "key": "field_67bd3d7d123495",
+                "label": "Nadpis modrého banneru (Riešenie)",
+                "name": "why_without_solution_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Riešenie",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67bd3d8e123496",
+                "label": "Text modrého banneru",
+                "name": "why_without_solution_text",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Marketingový prieskum trhu pomáha tieto obavy prekonať – ukazuje reálny stav trhu, dostupné príležitosti a poskytuje pevný základ pre správne rozhodnutia, aby ste strach nahradili istotou vo svojich krokoch.",
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 0
+            },
+            {
+                "key": "field_67bd3d9f123497",
+                "label": "Nadpis bieleho banneru (Garancia)",
+                "name": "why_without_guarantee_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Garancia vrátenia peňazí",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67bd3db0123498",
+                "label": "Text bieleho banneru",
+                "name": "why_without_guarantee_text",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Ak prieskum neprinesie hodnotné dáta, <strong>peniaze vám vrátime 100%<\/strong>",
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 0
+            },
+            {
+                "key": "field_67bd3df4123502",
+                "label": "Banner - Výzva na akciu",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_67bd3e05123503",
+                "label": "Nadpis",
+                "name": "cta_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Vytvárame webové stránky na mieru, ktoré rastú spolu s vaším biznisom",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67bd3e16123504",
+                "label": "Text",
+                "name": "cta_text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Premyslený UX\/UI dizajn, výkon a konverzie v jednom riešení",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67bd3e27123505",
+                "label": "Text na tlačidle",
+                "name": "cta_button_text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Získať bezplatnú konzultáciu",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67bd3e38123506",
+                "label": "FAQ",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_67bd3e49123507",
+                "label": "Nadpis sekcie",
+                "name": "faq_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Najčastejšie otázky a odpovede",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67bd3e5a123508",
+                "label": "Položky FAQ",
+                "name": "faq_items",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "min": 0,
+                "max": 0,
+                "button_label": "Pridať otázku",
+                "rows_per_page": 20,
+                "collapsed": "",
+                "sub_fields": [
+                    {
+                        "key": "field_67bd3e6b123509",
+                        "label": "Otázka",
+                        "name": "question",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 1,
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67bd3e5a123508"
+                    },
+                    {
+                        "key": "field_67bd3e7c123510",
+                        "label": "Odpoveď",
+                        "name": "answer",
+                        "aria-label": "",
+                        "type": "wysiwyg",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "allow_in_bindings": 1,
+                        "tabs": "all",
+                        "toolbar": "basic",
+                        "media_upload": 0,
+                        "delay": 0,
+                        "parent_repeater": "field_67bd3e5a123508"
+                    }
+                ]
+            },
+            {
+                "key": "field_67bd3e8d123511",
+                "label": "Text na tlačidle FAQ",
+                "name": "faq_button_text",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Zobraziť všetky otázky",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
                 "key": "field_67bcb6014b618",
                 "label": "Samostatná stránka brífu",
                 "name": "",
@@ -1382,7 +1775,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO / GEO)",
+                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO \/ GEO)",
                 "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
@@ -1808,445 +2201,6 @@
                 "placeholder": ""
             },
             {
-                "key": "field_67bd3d28123490",
-                "label": "Banner - Prečo bez webu",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0,
-                "selected": 0
-            },
-            {
-                "key": "field_67bd3d39123491",
-                "label": "Nadpis sekcie",
-                "name": "why_without_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Prečo bez webu prichádzate o zákazníkov",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67bd3d4a123492",
-                "label": "Text červeného banneru",
-                "name": "why_without_red_text",
-                "aria-label": "",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Začiatky podnikania sú prirodzene spojené s obavami Ak ste si položili jednu z nasledujúcich otázok, ste na správnom mieste.",
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0,
-                "delay": 0
-            },
-            {
-                "key": "field_67bd3d5b123493",
-                "label": "Zoznam otázok (červený banner)",
-                "name": "why_without_questions",
-                "aria-label": "",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "button_label": "Pridať otázku",
-                "sub_fields": [
-                    {
-                        "key": "field_67bd3d6c123494",
-                        "label": "Text otázky",
-                        "name": "question_text",
-                        "aria-label": "",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "rows": 2,
-                        "placeholder": "",
-                        "new_lines": "",
-                        "parent_repeater": "field_67bd3d5b123493"
-                    }
-                ]
-            },
-            {
-                "key": "field_67bd3d7d123495",
-                "label": "Nadpis modrého banneru (Riešenie)",
-                "name": "why_without_solution_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Riešenie",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67bd3d8e123496",
-                "label": "Text modrého banneru",
-                "name": "why_without_solution_text",
-                "aria-label": "",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Marketingový prieskum trhu pomáha tieto obavy prekonať – ukazuje reálny stav trhu, dostupné príležitosti a poskytuje pevný základ pre správne rozhodnutia, aby ste strach nahradili istotou vo svojich krokoch.",
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0,
-                "delay": 0
-            },
-            {
-                "key": "field_67bd3d9f123497",
-                "label": "Nadpis bieleho banneru (Garancia)",
-                "name": "why_without_guarantee_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Garancia vrátenia peňazí",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67bd3db0123498",
-                "label": "Text bieleho banneru",
-                "name": "why_without_guarantee_text",
-                "aria-label": "",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Ak prieskum neprinesie hodnotné dáta, <strong>peniaze vám vrátime 100%</strong>",
-                "tabs": "all",
-                "toolbar": "basic",
-                "media_upload": 0,
-                "delay": 0
-            },
-            {
-                "key": "field_67bd3dc1123499",
-                "label": "Text v terminály (1. riadok)",
-                "name": "terminal_line_1",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "maxlength": "",
-                "placeholder": "napr. > analyzing market data...",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67bd3dd2123500",
-                "label": "Text v terminály (2. riadok)",
-                "name": "terminal_line_2",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "maxlength": "",
-                "placeholder": "napr. > 100% value guarantee active",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67bd3de3123501",
-                "label": "Text v terminály (3. riadok)",
-                "name": "terminal_line_3",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "maxlength": "",
-                "placeholder": "napr. > refund processed if criteria not met",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67bd3df4123502",
-                "label": "Banner - Výzva na akciu",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0,
-                "selected": 0
-            },
-            {
-                "key": "field_67bd3e05123503",
-                "label": "Nadpis",
-                "name": "cta_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Vytvárame webové stránky na mieru, ktoré rastú spolu s vaším biznisom",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67bd3e16123504",
-                "label": "Text",
-                "name": "cta_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Premyslený UX/UI dizajn, výkon a konverzie v jednom riešení",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67bd3e27123505",
-                "label": "Text na tlačidle",
-                "name": "cta_button_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Získať bezplatnú konzultáciu",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67bd3e38123506",
-                "label": "FAQ",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0,
-                "selected": 0
-            },
-            {
-                "key": "field_67bd3e49123507",
-                "label": "Nadpis sekcie",
-                "name": "faq_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Najčastejšie otázky a odpovede",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67bd3e5a123508",
-                "label": "Položky FAQ",
-                "name": "faq_items",
-                "aria-label": "",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "layout": "block",
-                "min": 0,
-                "max": 0,
-                "button_label": "Pridať otázku",
-                "sub_fields": [
-                    {
-                        "key": "field_67bd3e6b123509",
-                        "label": "Otázka",
-                        "name": "faq_question",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "parent_repeater": "field_67bd3e5a123508"
-                    },
-                    {
-                        "key": "field_67bd3e7c123510",
-                        "label": "Odpoveď",
-                        "name": "faq_answer",
-                        "aria-label": "",
-                        "type": "wysiwyg",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "tabs": "all",
-                        "toolbar": "basic",
-                        "media_upload": 0,
-                        "delay": 0,
-                        "parent_repeater": "field_67bd3e5a123508"
-                    }
-                ]
-            },
-            {
-                "key": "field_67bd3e8d123511",
-                "label": "Text na tlačidle FAQ",
-                "name": "faq_button_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Zobraziť všetky otázky",
-                "maxlength": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
                 "key": "field_699eab9328fb1",
                 "label": "Json-ld",
                 "name": "",
@@ -2331,9 +2285,14 @@
         "location": [
             [
                 {
-                    "param": "page_template",
+                    "param": "post_category",
                     "operator": "==",
-                    "value": "single-web.php"
+                    "value": "category:services"
+                },
+                {
+                    "param": "post_category",
+                    "operator": "==",
+                    "value": "category:tvorba-webu"
                 }
             ]
         ],
