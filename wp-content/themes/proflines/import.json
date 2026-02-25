@@ -107,6 +107,32 @@
                 "mime_types": ""
             },
             {
+                "key": "field_699f075a9f034",
+                "label": "Výsledky (fotografia vyššie)",
+                "name": "hero_image_item",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
+            },
+            {
                 "key": "field_67bd3a8012345",
                 "label": "Gradient blok",
                 "name": "",
@@ -473,8 +499,30 @@
                         "parent_repeater": "field_67bd3b7f123465"
                     },
                     {
+                        "key": "field_699f068f59b93",
+                        "label": "Video",
+                        "name": "item_video",
+                        "aria-label": "",
+                        "type": "file",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "library": "all",
+                        "min_size": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "allow_in_bindings": 0,
+                        "parent_repeater": "field_67bd3b7f123465"
+                    },
+                    {
                         "key": "field_67bd3bb2123468",
-                        "label": "Obrázok",
+                        "label": "Obrázok (ak namiesto videa)",
                         "name": "item_image",
                         "aria-label": "",
                         "type": "image",
@@ -487,7 +535,6 @@
                             "id": ""
                         },
                         "return_format": "url",
-                        "preview_size": "medium",
                         "library": "all",
                         "min_width": "",
                         "min_height": "",
@@ -496,6 +543,8 @@
                         "max_height": "",
                         "max_size": "",
                         "mime_types": "",
+                        "allow_in_bindings": 1,
+                        "preview_size": "medium",
                         "parent_repeater": "field_67bd3b7f123465"
                     }
                 ]

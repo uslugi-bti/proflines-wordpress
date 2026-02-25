@@ -6,6 +6,7 @@ $hero_title = get_field('hero_title');
 $hero_subtitle = get_field('hero_subtitle');
 $hero_button_text = get_field('hero_button_text');
 $hero_image = get_field('hero_image');
+$hero_image_item = get_field('hero_image_item');
 
 $gradient_badge = get_field('gradient_badge');
 $gradient_title = get_field('gradient_title');
@@ -98,7 +99,9 @@ $faq_button_text = get_field('faq_button_text');
                 <?php if ($hero_image) : ?>
                 <div class="service-hero__img">
                     <img src="<?php echo esc_url($hero_image); ?>" alt="hero" loading="lazy">
-                    <div class="service-hero-img__img"></div>
+                    <div class="service-hero-img__img">
+                        <img src="<?php echo esc_url($hero_image_item); ?>" alt="hero" loading="lazy">
+                    </div>
                 </div>
                 <?php endif; ?>
             </div>
@@ -671,7 +674,7 @@ $faq_button_text = get_field('faq_button_text');
 
             <?php if ($faq_button_text) : ?>
             <div class="faq__button">
-                <button><?php echo esc_html($faq_button_text); ?></button>
+                <button id="Zobraziť menej otázok"><?php echo esc_html($faq_button_text); ?></button>
             </div>
             <?php endif; ?>
         </div>
