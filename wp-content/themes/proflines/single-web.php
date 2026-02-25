@@ -324,45 +324,60 @@ $faq_button_text = get_field('faq_button_text');
                             </td>
                             
                             <td>
-                                <?php if ($item['starter']['umiestnit_ikonu_anonieciastocne_namiesto_textu']): ?>
-                                    <?php if ($item['starter']['type'] == 'true'): ?>
+                                <?php 
+                                $starter_use_icon = $item['starter']['umiestnit_ikonu_anonieciastocne_namiesto_textu'] ?? false;
+                                $starter_type = $item['starter']['type'] ?? '';
+                                $starter_custom_text = $item['starter']['custom_text'] ?? '';
+                                
+                                if ($starter_custom_text) {
+                                    echo $starter_custom_text;
+                                } elseif ($starter_use_icon) {
+                                    if ($starter_type == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
-                                    <?php elseif ($item['starter']['type'] == 'false'): ?>
+                                    <?php elseif ($starter_type == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
-                                    <?php elseif ($item['starter']['type'] == 'partial'): ?>
+                                    <?php elseif ($starter_type == 'partial'): ?>
                                         <span class="table__icon table__icon--partial"></span>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <?php echo $item['starter']['custom_text']; ?>
-                                <?php endif; ?>
+                                    <?php endif; 
+                                } ?>
                             </td>
-                            
+
                             <td>
-                                <?php if ($item['basic']['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']): ?>
-                                    <?php if ($item['basic']['type'] == 'true'): ?>
+                                <?php 
+                                $basic_use_icon = $item['basic']['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic'] ?? false;
+                                $basic_type = $item['basic']['type'] ?? '';
+                                $basic_custom_text = $item['basic']['custom_text'] ?? '';
+                                
+                                if ($basic_custom_text) {
+                                    echo $basic_custom_text;
+                                } elseif ($basic_use_icon) {
+                                    if ($basic_type == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
-                                    <?php elseif ($item['basic']['type'] == 'false'): ?>
+                                    <?php elseif ($basic_type == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
-                                    <?php elseif ($item['basic']['type'] == 'partial'): ?>
+                                    <?php elseif ($basic_type == 'partial'): ?>
                                         <span class="table__icon table__icon--partial"></span>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <?php echo $item['basic']['custom_text']; ?>
-                                <?php endif; ?>
+                                    <?php endif; 
+                                } ?>
                             </td>
-                            
+
                             <td>
-                                <?php if ($item['advanced']['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']): ?>
-                                    <?php if ($item['advanced']['type'] == 'true'): ?>
+                                <?php 
+                                $advanced_use_icon = $item['advanced']['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced'] ?? false;
+                                $advanced_type = $item['advanced']['type'] ?? '';
+                                $advanced_custom_text = $item['advanced']['custom_text'] ?? '';
+                                
+                                if ($advanced_custom_text) {
+                                    echo $advanced_custom_text;
+                                } elseif ($advanced_use_icon) {
+                                    if ($advanced_type == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
-                                    <?php elseif ($item['advanced']['type'] == 'false'): ?>
+                                    <?php elseif ($advanced_type == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
-                                    <?php elseif ($item['advanced']['type'] == 'partial'): ?>
+                                    <?php elseif ($advanced_type == 'partial'): ?>
                                         <span class="table__icon table__icon--partial"></span>
-                                    <?php endif; ?>
-                                <?php else: ?>
-                                    <?php echo $item['advanced']['custom_text']; ?>
-                                <?php endif; ?>
+                                    <?php endif; 
+                                } ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>
