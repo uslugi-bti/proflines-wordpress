@@ -98,6 +98,7 @@ $faq_button_text = get_field('faq_button_text');
                 <?php if ($hero_image) : ?>
                 <div class="service-hero__img">
                     <img src="<?php echo esc_url($hero_image); ?>" alt="hero" loading="lazy">
+                    <div class="service-hero-img__img"></div>
                 </div>
                 <?php endif; ?>
             </div>
