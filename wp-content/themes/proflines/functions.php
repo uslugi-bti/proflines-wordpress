@@ -250,6 +250,11 @@ function proflines_json_ld() {
         $service_json_ld = get_field('service_json_ld', $post_id);
         $faq_items = get_field('faq_items', $post_id);
         
+        // Get new ACF fields for service type, category and catalog name
+        $service_type = get_field('service_type', $post_id);
+        $category = get_field('category', $post_id);
+        $catalog_name = get_field('catalog_name', $post_id);
+        
         // Получаем пакеты из repeater поля packages_items
         $packages = get_field('packages_items', $post_id);
         
@@ -317,11 +322,11 @@ function proflines_json_ld() {
             }
         }
         
-        // Основные данные услуги
+        // Основные данные услуги - используем новые поля для serviceType и category
         $service_data = array(
             "@type" => "Service",
-            "serviceType" => "Market Research",
-            "category" => "Business Consulting & Market Analysis",
+            "serviceType" => $service_type ?: "Market Research", // Используем поле service_type или значение по умолчанию
+            "category" => $category ?: "Business Consulting & Market Analysis", // Используем поле category или значение по умолчанию
             "name" => get_the_title(),
             "url" => get_permalink(),
             "description" => wp_trim_words(strip_tags(get_the_content()), 30, '...'),
@@ -349,11 +354,11 @@ function proflines_json_ld() {
             }
         }
         
-        // ДОБАВЛЯЕМ КАТАЛОГ ПРЕДЛОЖЕНИЙ
+        // ДОБАВЛЯЕМ КАТАЛОГ ПРЕДЛОЖЕНИЙ - используем поле catalog_name для названия каталога
         if (!empty($offers)) {
             $service_data['hasOfferCatalog'] = array(
                 "@type" => "OfferCatalog",
-                "name" => "Balíky prieskumu trhu",
+                "name" => $catalog_name ?: "Balíky prieskumu trhu", // Используем поле catalog_name или значение по умолчанию
                 "itemListElement" => $offers
             );
         }
