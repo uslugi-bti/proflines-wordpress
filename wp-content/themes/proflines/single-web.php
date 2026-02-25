@@ -73,6 +73,9 @@
                     <div class="columns__body">
                         <div class="columns__item span-three">
                             <div class="columns-item__head">
+                                <div class="columns-item__icon">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/difference/icons/05.svg" alt="icon">
+                                </div>
                                 <div class="columns-item__title">
                                     <h2><?php the_field('gradient_column_title'); ?></h2>
                                 </div>
@@ -310,6 +313,9 @@
             <div class="banners__body">
                 <div class="banner__body white span-two">
                     <div class="banner__container" style="padding: 0 32px;">
+                        <div class="banner__icon">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/banners/08.svg" alt="icon">
+                        </div>
                         <div class="banner__title">
                             <h1><?php the_field('guarantee_title'); ?></h1>
                         </div>
