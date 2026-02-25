@@ -238,7 +238,7 @@
                                         <?php endif; ?>
                                     </td>
                                     <td>
-                                        <?php echo render_table_icon($starter, 'umiestnit_ikonu_anonieciastocne_namiesto_textu'); ?>
+                                        <?php echo render_table_icon($starter, 'umiestnit_ikonu_anonieciastocne_namiesto_textu_starter'); ?>
                                     </td>
                                     <td>
                                         <?php echo render_table_icon($basic, 'umiestnit_ikonu_anonieciastocne_namiesto_textu_basic'); ?>
