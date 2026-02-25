@@ -8,6 +8,10 @@ if (!empty($categories)) {
     $category_slug = $categories[0]->slug;
         
     switch ($category_slug) {
+        case 'tvorba-webu':
+            get_template_part('single-web');
+            exit;
+
         case 'marketingovy-prieskum-services':
             get_template_part('single-marketingovy-prieskum-services');
             exit;
@@ -22,10 +26,6 @@ if (!empty($categories)) {
             
         case 'seo-audit':
             get_template_part('single-seo-audit');
-            exit;
-            
-        case 'tvorba-webu':
-            get_template_part('single-tvorba-webu');
             exit;
             
         case 'ina-sluzba':
