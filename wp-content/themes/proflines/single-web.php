@@ -168,95 +168,90 @@
                 </div>
             </div>
 
-             <?php if(have_rows('table_items')): ?>
-            <div class="table__body table-container">
-                <table class="table__table">
-                    <colgroup>
-                        <col style="width:40%">
-                        <col style="width:20%">
-                        <col style="width:20%">
-                        <col style="width:20%">
-                    </colgroup>
+            <?php if(have_rows('table_items')): ?>
+                <div class="table__body table-container">
+                    <table class="table__table">
+                        <colgroup>
+                            <col style="width:40%">
+                            <col style="width:20%">
+                            <col style="width:20%">
+                            <col style="width:20%">
+                        </colgroup>
 
-                    <thead class="table-header">
-                        <tr>
-                            <th style="width:40%">Služba / Balík</th>
-                            <th style="width:20%">Starter</th>
-                            <th style="width:20%">Basic</th>
-                            <th style="width:20%">Advanced</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <?php while(have_rows('table_items')): the_row(); 
-                            $service_name = get_sub_field('service_name');
-                            $has_info = get_sub_field('has_info');
-                            $info_text = get_sub_field('info_text');
-                            $starter = get_sub_field('starter');
-                            $basic = get_sub_field('basic');
-                            $advanced = get_sub_field('advanced');
-                        ?>
+                        <thead class="table-header">
                             <tr>
-                                <td>
-                                    <?php echo $service_name; ?>
-                                    <?php if($has_info): ?>
-                                        <span id="info"></span>
-                                        <div class="table-info">
-                                            <div class="table-info__body">
-                                                <div class="table-info__container">
-                                                    <?php echo $info_text; ?>
+                                <th style="width:40%">Služba / Balík</th>
+                                <th style="width:20%">Starter</th>
+                                <th style="width:20%">Basic</th>
+                                <th style="width:20%">Advanced</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <?php 
+                            // Funkcia pre vykreslenie ikony
+                            function render_table_icon($field, $toggle_key) {
+                                if (!is_array($field)) {
+                                    return '';
+                                }
+                                
+                                $toggle_value = isset($field[$toggle_key]) ? $field[$toggle_key] : false;
+                                
+                                if (!$toggle_value) {
+                                    return isset($field['custom_text']) ? $field['custom_text'] : '';
+                                }
+                                
+                                $type = isset($field['type']) ? $field['type'] : '';
+                                
+                                switch($type) {
+                                    case 'true':
+                                        return '<span class="table__icon table__icon--true"></span>';
+                                    case 'false':
+                                        return '<span class="table__icon table__icon--false"></span>';
+                                    case 'partial':
+                                        return '<span class="table__icon table__icon--true-false"></span>';
+                                    default:
+                                        return isset($field['custom_text']) ? $field['custom_text'] : '';
+                                }
+                            }
+                            
+                            while(have_rows('table_items')): the_row(); 
+                                $service_name = get_sub_field('service_name');
+                                $has_info = get_sub_field('has_info');
+                                $info_text = get_sub_field('info_text');
+                                $starter = get_sub_field('starter');
+                                $basic = get_sub_field('basic');
+                                $advanced = get_sub_field('advanced');
+                            ?>
+                                <tr>
+                                    <td>
+                                        <?php echo $service_name; ?>
+                                        <?php if($has_info): ?>
+                                            <span id="info"></span>
+                                            <div class="table-info">
+                                                <div class="table-info__body">
+                                                    <div class="table-info__container">
+                                                        <?php echo $info_text; ?>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    <?php endif; ?>
-                                </td>
-                                <td>
-                                    <?php 
-                                    // Функция для рендера иконки
-                                    function render_table_icon($field, $toggle_key) {
-                                        // Проверяем включен ли toggle
-                                        if (empty($field[$toggle_key])) {
-                                            return isset($field['custom_text']) ? $field['custom_text'] : '';
-                                        }
-                                        
-                                        // Получаем тип иконки
-                                        $type = isset($field['type']) ? $field['type'] : '';
-                                        
-                                        // Маппинг типов на классы
-                                        switch($type) {
-                                            case 'true':
-                                                return '<span class="table__icon table__icon--true"></span>';
-                                            case 'false':
-                                                return '<span class="table__icon table__icon--false"></span>';
-                                            case 'partial':
-                                                return '<span class="table__icon table__icon--true-false"></span>';
-                                            default:
-                                                return isset($field['custom_text']) ? $field['custom_text'] : '';
-                                        }
-                                    }
-                                    
-                                    // Рендерим Starter
-                                    echo render_table_icon($starter, 'umiestnit_ikonu_anonieciastocne_namiesto_textu');
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php 
-                                    // Рендерим Basic
-                                    echo render_table_icon($basic, 'umiestnit_ikonu_anonieciastocne_namiesto_textu_basic');
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php 
-                                    // Рендерим Advanced
-                                    echo render_table_icon($advanced, 'umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced');
-                                    ?>
-                                </td>
-                            </tr>
-                        <?php endwhile; ?>
-                    </tbody>
-                </table>
-            </div>
-        <?php endif; ?>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo render_table_icon($starter, 'umiestnit_ikonu_anonieciastocne_namiesto_textu'); ?>
+                                    </td>
+                                    <td>
+                                        <?php echo render_table_icon($basic, 'umiestnit_ikonu_anonieciastocne_namiesto_textu_basic'); ?>
+                                    </td>
+                                    <td>
+                                        <?php echo render_table_icon($advanced, 'umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced'); ?>
+                                    </td>
+                                </tr>
+                            <?php endwhile; ?>
+                        </tbody>
+                    </table>
+                </div>
+            <?php endif; ?>
 
             <?php if(have_rows('packages')): ?>
                 <div class="packages__body">
