@@ -353,9 +353,14 @@ $faq_button_text = get_field('faq_button_text');
                                     <?php 
                                     if ($starter_custom_text) {
                                         echo esc_html($starter_custom_text);
-                                    } elseif ($starter_use_icon && $starter_type) {
-                                        $icon_class = ($starter_type == 'true') ? 'table__icon--true' : (($starter_type == 'partial') ? 'table__icon--partial' : 'table__icon--false');
-                                        echo '<span class="table__icon ' . $icon_class . '"></span>';
+                                    } elseif ($starter_use_icon) {
+                                        if ($starter_type == 'true') {
+                                            echo '<span class="table__icon table__icon--true"></span>';
+                                        } elseif ($starter_type == 'partial') {
+                                            echo '<span class="table__icon table__icon--partial"></span>';
+                                        } elseif ($starter_type == 'false') {
+                                            echo '<span class="table__icon table__icon--false"></span>';
+                                        }
                                     }
                                     ?>
                                 </td>
@@ -363,9 +368,14 @@ $faq_button_text = get_field('faq_button_text');
                                     <?php 
                                     if ($basic_custom_text) {
                                         echo esc_html($basic_custom_text);
-                                    } elseif ($basic_use_icon && $basic_type) {
-                                        $icon_class = ($basic_type == 'true') ? 'table__icon--true' : (($basic_type == 'partial') ? 'table__icon--partial' : 'table__icon--false');
-                                        echo '<span class="table__icon ' . $icon_class . '"></span>';
+                                    } elseif ($basic_use_icon) {
+                                        if ($basic_type == 'true') {
+                                            echo '<span class="table__icon table__icon--true"></span>';
+                                        } elseif ($basic_type == 'partial') {
+                                            echo '<span class="table__icon table__icon--partial"></span>';
+                                        } elseif ($basic_type == 'false') {
+                                            echo '<span class="table__icon table__icon--false"></span>';
+                                        }
                                     }
                                     ?>
                                 </td>
@@ -373,9 +383,14 @@ $faq_button_text = get_field('faq_button_text');
                                     <?php 
                                     if ($advanced_custom_text) {
                                         echo esc_html($advanced_custom_text);
-                                    } elseif ($advanced_use_icon && $advanced_type) {
-                                        $icon_class = ($advanced_type == 'true') ? 'table__icon--true' : (($advanced_type == 'partial') ? 'table__icon--partial' : 'table__icon--false');
-                                        echo '<span class="table__icon ' . $icon_class . '"></span>';
+                                    } elseif ($advanced_use_icon) {
+                                        if ($advanced_type == 'true') {
+                                            echo '<span class="table__icon table__icon--true"></span>';
+                                        } elseif ($advanced_type == 'partial') {
+                                            echo '<span class="table__icon table__icon--partial"></span>';
+                                        } elseif ($advanced_type == 'false') {
+                                            echo '<span class="table__icon table__icon--false"></span>';
+                                        }
                                     }
                                     ?>
                                 </td>
