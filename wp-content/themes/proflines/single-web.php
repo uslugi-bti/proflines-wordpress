@@ -294,7 +294,7 @@ $faq_button_text = get_field('faq_button_text');
             </div>
             <?php endif; ?>
 
-            <?php if ($table_items) : ?>
+            <?php if ($table_items): ?>
             <div class="table__body table-container">
                 <table class="table__table">
                     <colgroup>
@@ -303,109 +303,72 @@ $faq_button_text = get_field('faq_button_text');
                         <col style="width:20%">
                         <col style="width:20%">
                     </colgroup>
+
                     <thead class="table-header">
                         <tr>
-                            <th style="width:40%">Služba / Balík</th>
+                            <th style="width:40%">Služby / Možnosti</th>
                             <th style="width:20%">Starter</th>
                             <th style="width:20%">Basic</th>
                             <th style="width:20%">Advanced</th>
                         </tr>
                     </thead>
+
                     <tbody>
-                        <?php foreach ($table_items as $item) : 
-                            $service_name = $item['service_name'] ?? '';
-                            $has_info = $item['has_info'] ?? false;
-                            $info_text = $item['info_text'] ?? '';
+                        <?php foreach ($table_items as $item): ?>
+                        <tr>
+                            <td>
+                                <?php echo $item['service_name']; ?>
+                                <?php if ($item['has_info'] && $item['info_text']): ?>
+                                    <span class="info-icon" data-info="<?php echo esc_attr($item['info_text']); ?>">i</span>
+                                <?php endif; ?>
+                            </td>
                             
-                            // Spracovanie Starter
-                            $starter = $item['starter'] ?? [];
-                            $starter_custom_text = $starter['custom_text'] ?? '';
-                            $starter_use_icon = $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu'] ?? false;
-                            $starter_type = $starter['type'] ?? '';
-                            
-                            // Spracovanie Basic
-                            $basic = $item['basic'] ?? [];
-                            $basic_custom_text = $basic['custom_text'] ?? '';
-                            $basic_use_icon = $basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic'] ?? false;
-                            $basic_type = $basic['type'] ?? '';
-                            
-                            // Spracovanie Advanced
-                            $advanced = $item['advanced'] ?? [];
-                            $advanced_custom_text = $advanced['custom_text'] ?? '';
-                            $advanced_use_icon = $advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced'] ?? false;
-                            $advanced_type = $advanced['type'] ?? '';
-                        ?>
-                            <tr>
-                                <td>
-                                    <?php echo wp_kses_post($service_name); ?>
-                                    <?php if ($has_info && $info_text) : ?>
-                                        <span id="info"></span>
-                                        <div class="table-info">
-                                            <div class="table-info__body">
-                                                <div class="table-info__container">
-                                                    <?php echo wp_kses_post($info_text); ?>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <td>
+                                <?php if ($item['starter']['umiestnit_ikonu']): ?>
+                                    <?php if ($item['starter']['type'] == 'true'): ?>
+                                        <span class="table__icon table__icon--true"></span>
+                                    <?php elseif ($item['starter']['type'] == 'false'): ?>
+                                        <span class="table__icon table__icon--false"></span>
+                                    <?php elseif ($item['starter']['type'] == 'partial'): ?>
+                                        <span class="table__icon table__icon--true-false"></span>
                                     <?php endif; ?>
-                                </td>
-                                <td>
-                                <?php 
-                                if ($starter_custom_text) {
-                                    echo ($starter_custom_text);
-                                } elseif ($starter_use_icon) {
-                                    if ($starter_type == 'true') {
-                                        echo '<span class="table__icon table__icon--true"></span>';
-                                        echo ($basic_custom_text);
-                                    } elseif ($starter_type == 'partial') {
-                                        echo '<span class="table__icon table__icon--partial"></span>';
-                                        echo ($basic_custom_text);
-                                    } elseif ($starter_type == 'false') {
-                                        echo '<span class="table__icon table__icon--false"></span>';
-                                        echo ($basic_custom_text);
-                                    }
-                                }
-                                ?>
+                                <?php else: ?>
+                                    <?php echo $item['starter']['custom_text']; ?>
+                                <?php endif; ?>
                             </td>
+                            
                             <td>
-                                <?php 
-                                if ($basic_custom_text) {
-                                    echo ($basic_custom_text);
-                                } elseif ($basic_use_icon) {
-                                    if ($basic_type == 'true') {
-                                        echo '<span class="table__icon table__icon--true"></span>';
-                                        echo ($basic_custom_text);
-                                    } elseif ($basic_type == 'partial') {
-                                        echo '<span class="table__icon table__icon--partial"></span>';
-                                        echo ($basic_custom_text);
-                                    } elseif ($basic_type == 'false') {
-                                        echo '<span class="table__icon table__icon--false"></span>';
-                                        echo ($basic_custom_text);
-                                    }
-                                }
-                                ?>
+                                <?php if ($item['basic']['umiestnit_ikonu_basic']): ?>
+                                    <?php if ($item['basic']['type'] == 'true'): ?>
+                                        <span class="table__icon table__icon--true"></span>
+                                    <?php elseif ($item['basic']['type'] == 'false'): ?>
+                                        <span class="table__icon table__icon--false"></span>
+                                    <?php elseif ($item['basic']['type'] == 'partial'): ?>
+                                        <span class="table__icon table__icon--true-false"></span>
+                                    <?php endif; ?>
+                                <?php else: ?>
+                                    <?php echo $item['basic']['custom_text']; ?>
+                                <?php endif; ?>
                             </td>
+                            
                             <td>
-                                <?php 
-                                if ($advanced_custom_text) {
-                                    echo ($advanced_custom_text);
-                                } elseif ($advanced_use_icon) {
-                                    if ($advanced_type == 'true') {
-                                        echo '<span class="table__icon table__icon--true"></span>';
-                                    } elseif ($advanced_type == 'partial') {
-                                        echo '<span class="table__icon table__icon--partial"></span>';
-                                    } elseif ($advanced_type == 'false') {
-                                        echo '<span class="table__icon table__icon--false"></span>';
-                                    }
-                                }
-                                ?>
+                                <?php if ($item['advanced']['umiestnit_ikonu_advanced']): ?>
+                                    <?php if ($item['advanced']['type'] == 'true'): ?>
+                                        <span class="table__icon table__icon--true"></span>
+                                    <?php elseif ($item['advanced']['type'] == 'false'): ?>
+                                        <span class="table__icon table__icon--false"></span>
+                                    <?php elseif ($item['advanced']['type'] == 'partial'): ?>
+                                        <span class="table__icon table__icon--true-false"></span>
+                                    <?php endif; ?>
+                                <?php else: ?>
+                                    <?php echo $item['advanced']['custom_text']; ?>
+                                <?php endif; ?>
                             </td>
-                            </tr>
+                        </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
-            <?php endif; ?>
 
             <?php if ($packages) : ?>
             <div class="packages__body">
