@@ -278,7 +278,7 @@ function proflines_json_ld() {
                     if (empty($description) && isset($package['description'])) {
                         $description = $package['description'];
                     }
-                    if ($package['price'] == "") {
+                    if ($package['price'] == "Individuálna") {
                         $offers[] = array(
                         "@type" => "Offer",
                             "name" => $package['name'],
