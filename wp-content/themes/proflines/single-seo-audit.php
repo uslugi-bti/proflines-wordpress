@@ -455,7 +455,7 @@
                     </div>
                 </div>
                 <div class="banners__column">
-                    <div class="banner__body white">
+                    <div class="banner__body white" style="height: auto;">
                         <div class="banner__container">
                             <div class="banner__text">
                                 <p style="text-align: left;">Mnoh&#xE9; weby str&#xE1;caj&#xFA; n&#xE1;v&#x161;tevn&#xED;kov pre ch&#xFD;baj&#xFA;cu <strong>mobiln&#xFA; prisp&#xF4;sobivos&#x165;.</strong> Over&#xED;me, &#x10D;i je v&#xE1;&#x161; web pohodln&#xFD; na smartf&#xF3;noch, preto&#x17E;e v&#xE4;&#x10D;&#x161;ina pou&#x17E;&#xED;vate&#x13E;ov h&#x13E;ad&#xE1; pr&#xE1;ve z mobilu. Optimalizujeme <strong>obr&#xE1;zky</strong> a dopln&#xED;me ALT popisy, aby sa str&#xE1;nky na&#x10D;&#xED;tavali r&#xFD;chlej&#x161;ie a zobrazovali sa aj v Google Images. Analyzujeme <strong>intern&#xE9; a extern&#xE9; odkazy,</strong> oprav&#xED;me slab&#xE9; prelinkovanie a pom&#xF4;&#x17E;eme odhali&#x165; toxick&#xE9; sp&#xE4;tn&#xE9; odkazy. Urob&#xED;me anal&#xFD;zu <strong>konkurencie,</strong> aby sme vedeli, pre&#x10D;o s&#xFA; vo vyh&#x13E;ad&#xE1;van&#xED; pred vami a &#x10D;o zmeni&#x165;. Nastav&#xED;me spr&#xE1;vne jazykov&#xE9; verzie webu (hreflang), aby sa obsah zobrazoval v spr&#xE1;vnom jazyku. Audit uzavrieme tvorbou <strong>SEO strat&#xE9;gie</strong> a progn&#xF3;zy n&#xE1;v&#x161;tevnosti, aby ste mali jasn&#xFD; pl&#xE1;n rastu.</p>
