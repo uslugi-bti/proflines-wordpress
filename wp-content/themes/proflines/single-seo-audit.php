@@ -178,7 +178,7 @@ $faq_button_text = get_field('faq_button_text');
                                     <?php elseif ($item['starter']['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
                                     <?php elseif ($item['starter']['type'] == 'partial'): ?>
-                                        <span class="table__icon table__icon--partial"></span>
+                                        <span class="table__icon table__icon--true-false"></span>
                                     <?php endif; ?>
                                 <?php else: ?>
                                     <?php echo $item['starter']['custom_text']; ?>
@@ -192,7 +192,7 @@ $faq_button_text = get_field('faq_button_text');
                                     <?php elseif ($item['basic']['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
                                     <?php elseif ($item['basic']['type'] == 'partial'): ?>
-                                        <span class="table__icon table__icon--partial"></span>
+                                        <span class="table__icon table__icon--true-false"></span>
                                     <?php endif; ?>
                                 <?php else: ?>
                                     <?php echo $item['basic']['custom_text']; ?>
@@ -206,7 +206,7 @@ $faq_button_text = get_field('faq_button_text');
                                     <?php elseif ($item['advanced']['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
                                     <?php elseif ($item['advanced']['type'] == 'partial'): ?>
-                                        <span class="table__icon table__icon--partial"></span>
+                                        <span class="table__icon table__icon--true-false"></span>
                                     <?php endif; ?>
                                 <?php else: ?>
                                     <?php echo $item['advanced']['custom_text']; ?>

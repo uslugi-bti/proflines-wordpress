@@ -357,7 +357,7 @@ $faq_button_text = get_field('faq_button_text');
                                         if ($starter_type == 'true') {
                                             echo '<span class="table__icon table__icon--true"></span>';
                                         } elseif ($starter_type == 'partial') {
-                                            echo '<span class="table__icon table__icon--partial"></span>';
+                                            echo '<span class="table__icon table__icon--true-false"></span>';
                                         } elseif ($starter_type == 'false') {
                                             echo '<span class="table__icon table__icon--false"></span>';
                                         }
@@ -372,7 +372,7 @@ $faq_button_text = get_field('faq_button_text');
                                         if ($basic_type == 'true') {
                                             echo '<span class="table__icon table__icon--true"></span>';
                                         } elseif ($basic_type == 'partial') {
-                                            echo '<span class="table__icon table__icon--partial"></span>';
+                                            echo '<span class="table__icon table__icon--true-false"></span>';
                                         } elseif ($basic_type == 'false') {
                                             echo '<span class="table__icon table__icon--false"></span>';
                                         }
@@ -387,7 +387,7 @@ $faq_button_text = get_field('faq_button_text');
                                         if ($advanced_type == 'true') {
                                             echo '<span class="table__icon table__icon--true"></span>';
                                         } elseif ($advanced_type == 'partial') {
-                                            echo '<span class="table__icon table__icon--partial"></span>';
+                                            echo '<span class="table__icon table__icon--true-false"></span>';
                                         } elseif ($advanced_type == 'false') {
                                             echo '<span class="table__icon table__icon--false"></span>';
                                         }

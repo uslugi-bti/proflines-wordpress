@@ -144,7 +144,7 @@
                                             } elseif ($starter['type'] == 'false') {
                                                 echo '<span class="table__icon table__icon--false"></span>';
                                             } elseif ($starter['type'] == 'partial') {
-                                                echo '<span class="table__icon table__icon--partial"></span>';
+                                                echo '<span class="table__icon table__icon--true-false"></span>';
                                             }
                                         } else {
                                             echo ($starter['custom_text']);
@@ -162,7 +162,7 @@
                                             } elseif ($basic['type'] == 'false') {
                                                 echo '<span class="table__icon table__icon--false"></span>';
                                             } elseif ($basic['type'] == 'partial') {
-                                                echo '<span class="table__icon table__icon--partial"></span>';
+                                                echo '<span class="table__icon table__icon--true-false"></span>';
                                             }
                                         } else {
                                             echo ($basic['custom_text']);
@@ -180,7 +180,7 @@
                                             } elseif ($advanced['type'] == 'false') {
                                                 echo '<span class="table__icon table__icon--false"></span>';
                                             } elseif ($advanced['type'] == 'partial') {
-                                                echo '<span class="table__icon table__icon--partial"></span>';
+                                                echo '<span class="table__icon table__icon--true-false"></span>';
                                             }
                                         } else {
                                             echo ($advanced['custom_text']);
