@@ -465,5 +465,4 @@ $faq_button_text = get_field('faq_button_text');
     </section>
     <?php endif; ?>
 </main>
-
 <?php get_footer(); ?>

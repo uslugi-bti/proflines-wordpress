@@ -2,7 +2,7 @@
 $categories = get_the_category();
 if (!empty($categories)) {
     $category_slug = $categories[0]->slug;
-    
+        
     switch ($category_slug) {
         case 'marketingovy-prieskum-services':
             get_template_part('single-marketingovy-prieskum-services');
