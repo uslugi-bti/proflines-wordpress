@@ -168,7 +168,7 @@
                 </div>
             </div>
 
-            <?php if(have_rows('table_items')): ?>
+             <?php if(have_rows('table_items')): ?>
             <div class="table__body table-container">
                 <table class="table__table">
                     <colgroup>
@@ -212,63 +212,43 @@
                                 </td>
                                 <td>
                                     <?php 
-                                    // Проверяем, нужно ли выводить иконку
-                                    if(isset($starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']) && $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']) {
-                                        // Выводим иконку в зависимости от типа
-                                        if($starter['type'] == 'true') {
-                                            echo '<span class="table__icon table__icon--true"></span>';
-                                        } elseif($starter['type'] == 'false') {
-                                            echo '<span class="table__icon table__icon--false"></span>';
-                                        } elseif($starter['type'] == 'partial') {
-                                            echo '<span class="table__icon table__icon--true-false"></span>';
+                                    // Функция для рендера иконки
+                                    function render_table_icon($field, $toggle_key) {
+                                        // Проверяем включен ли toggle
+                                        if (empty($field[$toggle_key])) {
+                                            return isset($field['custom_text']) ? $field['custom_text'] : '';
                                         }
-                                    } 
-                                    // Если есть кастомный текст, выводим его
-                                    elseif(isset($starter['custom_text']) && !empty($starter['custom_text'])) {
-                                        echo $starter['custom_text'];
+                                        
+                                        // Получаем тип иконки
+                                        $type = isset($field['type']) ? $field['type'] : '';
+                                        
+                                        // Маппинг типов на классы
+                                        switch($type) {
+                                            case 'true':
+                                                return '<span class="table__icon table__icon--true"></span>';
+                                            case 'false':
+                                                return '<span class="table__icon table__icon--false"></span>';
+                                            case 'partial':
+                                                return '<span class="table__icon table__icon--true-false"></span>';
+                                            default:
+                                                return isset($field['custom_text']) ? $field['custom_text'] : '';
+                                        }
                                     }
-                                    // Если ничего нет, выводим пусто
-                                    else {
-                                        echo '';
-                                    }
+                                    
+                                    // Рендерим Starter
+                                    echo render_table_icon($starter, 'umiestnit_ikonu_anonieciastocne_namiesto_textu');
                                     ?>
                                 </td>
                                 <td>
                                     <?php 
-                                    if(isset($basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']) && $basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']) {
-                                        if($basic['type'] == 'true') {
-                                            echo '<span class="table__icon table__icon--true"></span>';
-                                        } elseif($basic['type'] == 'false') {
-                                            echo '<span class="table__icon table__icon--false"></span>';
-                                        } elseif($basic['type'] == 'partial') {
-                                            echo '<span class="table__icon table__icon--true-false"></span>';
-                                        }
-                                    }
-                                    elseif(isset($basic['custom_text']) && !empty($basic['custom_text'])) {
-                                        echo $basic['custom_text'];
-                                    }
-                                    else {
-                                        echo '';
-                                    }
+                                    // Рендерим Basic
+                                    echo render_table_icon($basic, 'umiestnit_ikonu_anonieciastocne_namiesto_textu_basic');
                                     ?>
                                 </td>
                                 <td>
                                     <?php 
-                                    if(isset($advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']) && $advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']) {
-                                        if($advanced['type'] == 'true') {
-                                            echo '<span class="table__icon table__icon--true"></span>';
-                                        } elseif($advanced['type'] == 'false') {
-                                            echo '<span class="table__icon table__icon--false"></span>';
-                                        } elseif($advanced['type'] == 'partial') {
-                                            echo '<span class="table__icon table__icon--true-false"></span>';
-                                        }
-                                    }
-                                    elseif(isset($advanced['custom_text']) && !empty($advanced['custom_text'])) {
-                                        echo $advanced['custom_text'];
-                                    }
-                                    else {
-                                        echo '';
-                                    }
+                                    // Рендерим Advanced
+                                    echo render_table_icon($advanced, 'umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced');
                                     ?>
                                 </td>
                             </tr>
