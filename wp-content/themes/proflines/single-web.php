@@ -212,7 +212,7 @@
                                     </td>
                                     <td>
                                         <?php 
-                                        if($starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']) {
+                                        if(isset($starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']) && $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']) {
                                             if($starter['type'] == 'true') {
                                                 echo '<span class="table__icon table__icon--true"></span>';
                                             } elseif($starter['type'] == 'false') {
@@ -227,7 +227,7 @@
                                     </td>
                                     <td>
                                         <?php 
-                                        if($basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']) {
+                                        if(isset($basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']) && $basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']) {
                                             if($basic['type'] == 'true') {
                                                 echo '<span class="table__icon table__icon--true"></span>';
                                             } elseif($basic['type'] == 'false') {
@@ -242,7 +242,7 @@
                                     </td>
                                     <td>
                                         <?php 
-                                        if($advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']) {
+                                        if(isset($advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']) && $advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']) {
                                             if($advanced['type'] == 'true') {
                                                 echo '<span class="table__icon table__icon--true"></span>';
                                             } elseif($advanced['type'] == 'false') {
