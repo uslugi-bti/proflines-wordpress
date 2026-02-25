@@ -318,124 +318,56 @@ $faq_button_text = get_field('faq_button_text');
                         <tr>
                             <td>
                                 <?php echo $item['service_name']; ?>
-                                <?php if ($item['has_info'] && $item['info_text']): ?>
+                                <?php if (!empty($item['has_info']) && !empty($item['info_text'])): ?>
                                     <span class="info-icon" data-info="<?php echo esc_attr($item['info_text']); ?>">i</span>
                                 <?php endif; ?>
                             </td>
                             
                             <td>
-                                <?php 
-                                $starter_use_icon = $item['starter']['umiestnit_ikonu_anonieciastocne_namiesto_textu'] ?? false;
-                                $starter_type = $item['starter']['type'] ?? '';
-                                $starter_custom_text = $item['starter']['custom_text'] ?? '';
-                                
-                                if ($starter_custom_text) {
-                                    echo $starter_custom_text;
-                                } elseif ($starter_use_icon) {
-                                    if ($starter_type == 'true'): ?>
+                                <?php if (!empty($item['starter']['umiestnit_ikonu'])): ?>
+                                    <?php if ($item['starter']['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
-                                    <?php elseif ($starter_type == 'false'): ?>
+                                    <?php elseif ($item['starter']['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
-                                    <?php elseif ($starter_type == 'partial'): ?>
+                                    <?php elseif ($item['starter']['type'] == 'partial'): ?>
                                         <span class="table__icon table__icon--partial"></span>
-                                    <?php endif; 
-                                } ?>
+                                    <?php endif; ?>
+                                <?php else: ?>
+                                    <?php echo !empty($item['starter']['custom_text']) ? $item['starter']['custom_text'] : ''; ?>
+                                <?php endif; ?>
                             </td>
-
+                            
                             <td>
-                                <?php 
-                                $basic_use_icon = $item['basic']['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic'] ?? false;
-                                $basic_type = $item['basic']['type'] ?? '';
-                                $basic_custom_text = $item['basic']['custom_text'] ?? '';
-                                
-                                if ($basic_custom_text) {
-                                    echo $basic_custom_text;
-                                } elseif ($basic_use_icon) {
-                                    if ($basic_type == 'true'): ?>
+                                <?php if (!empty($item['basic']['umiestnit_ikonu_basic'])): ?>
+                                    <?php if ($item['basic']['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
-                                    <?php elseif ($basic_type == 'false'): ?>
+                                    <?php elseif ($item['basic']['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
-                                    <?php elseif ($basic_type == 'partial'): ?>
+                                    <?php elseif ($item['basic']['type'] == 'partial'): ?>
                                         <span class="table__icon table__icon--partial"></span>
-                                    <?php endif; 
-                                } ?>
+                                    <?php endif; ?>
+                                <?php else: ?>
+                                    <?php echo !empty($item['basic']['custom_text']) ? $item['basic']['custom_text'] : ''; ?>
+                                <?php endif; ?>
                             </td>
-
+                            
                             <td>
-                                <?php 
-                                $advanced_use_icon = $item['advanced']['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced'] ?? false;
-                                $advanced_type = $item['advanced']['type'] ?? '';
-                                $advanced_custom_text = $item['advanced']['custom_text'] ?? '';
-                                
-                                if ($advanced_custom_text) {
-                                    echo $advanced_custom_text;
-                                } elseif ($advanced_use_icon) {
-                                    if ($advanced_type == 'true'): ?>
+                                <?php if (!empty($item['advanced']['umiestnit_ikonu_advanced'])): ?>
+                                    <?php if ($item['advanced']['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
-                                    <?php elseif ($advanced_type == 'false'): ?>
+                                    <?php elseif ($item['advanced']['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
-                                    <?php elseif ($advanced_type == 'partial'): ?>
+                                    <?php elseif ($item['advanced']['type'] == 'partial'): ?>
                                         <span class="table__icon table__icon--partial"></span>
-                                    <?php endif; 
-                                } ?>
+                                    <?php endif; ?>
+                                <?php else: ?>
+                                    <?php echo !empty($item['advanced']['custom_text']) ? $item['advanced']['custom_text'] : ''; ?>
+                                <?php endif; ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-            </div>
-            <?php endif; ?> <?php // Toto chýbalo - ukončenie if ($table_items) ?>
-
-            <?php if ($packages) : ?>
-            <div class="packages__body">
-                <?php foreach ($packages as $package) : ?>
-                    <div class="packages__item <?php echo ($package['package_dark_mode']) ? 'dark' : ''; ?>">
-                        <?php if ($package['package_sticker']) : ?>
-                            <div class="packages-item__sticker">
-                                <span><?php echo esc_html($package['package_sticker']); ?></span>
-                            </div>
-                        <?php endif; ?>
-
-                        <?php if ($package['package_name']) : ?>
-                        <div class="packages-item__plan">
-                            <span><?php echo esc_html($package['package_name']); ?></span>
-                        </div>
-                        <?php endif; ?>
-
-                        <?php if ($package['package_description']) : ?>
-                        <div class="packages-item__description">
-                            <p><?php echo esc_html($package['package_description']); ?></p>
-                        </div>
-                        <?php endif; ?>
-
-                        <?php if ($package['package_price']) : ?>
-                        <div class="packages-item__price">
-                            <div class="packages-item-price__number">
-                                <span>€</span>
-                                <p><?php echo esc_html($package['package_price']); ?></p>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-
-                        <?php if ($package['package_text']) : ?>
-                        <div class="packages-item__text">
-                            <?php echo wp_kses_post($package['package_text']); ?>
-                        </div>
-                        <?php endif; ?>
-
-                        <?php if ($package['package_button_text']) : ?>
-                        <div class="packages-item__button button">
-                            <a href="#"><?php echo esc_html($package['package_button_text']); ?></a>
-                        </div>
-                        <?php endif; ?>
-
-                        <?php if ($package['package_inscription']) : ?>
-                        <div class="packages-item__inscription">
-                            <span><?php echo esc_html($package['package_inscription']); ?></span>
-                        </div>
-                        <?php endif; ?>
-                    </div>
-                <?php endforeach; ?>
             </div>
             <?php endif; ?>
         </div>
