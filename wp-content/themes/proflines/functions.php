@@ -392,6 +392,57 @@ function proflines_json_ld() {
         }
     }
 
+    if (is_page_template('page-faq.php')) {
+        $post_id = get_the_ID();
+        $general_items = get_field('general_faq_items', $post_id);
+        
+        $service_ids = array(1763, 1388, 1932, 198, 2354);
+        $all_faq_entities = array();
+        
+        if ($general_items && is_array($general_items)) {
+            foreach ($general_items as $item) {
+                if (isset($item['question']) && isset($item['answer'])) {
+                    $all_faq_entities[] = array(
+                        "@type" => "Question",
+                        "name" => $item['question'],
+                        "acceptedAnswer" => array(
+                            "@type" => "Answer",
+                            "text" => wp_strip_all_tags($item['answer'])
+                        )
+                    );
+                }
+            }
+        }
+        
+        foreach ($service_ids as $service_id) {
+            $service_items = get_field('faq_items', $service_id);
+            if ($service_items && is_array($service_items)) {
+                foreach ($service_items as $item) {
+                    if (isset($item['question']) && isset($item['answer'])) {
+                        $all_faq_entities[] = array(
+                            "@type" => "Question",
+                            "name" => $item['question'],
+                            "acceptedAnswer" => array(
+                                "@type" => "Answer",
+                                "text" => wp_strip_all_tags($item['answer'])
+                            )
+                        );
+                    }
+                }
+            }
+        }
+        
+        if (!empty($all_faq_entities)) {
+            $faq_json = array(
+                "@context" => "https://schema.org",
+                "@type" => "FAQPage",
+                "mainEntity" => $all_faq_entities
+            );
+            
+            $json_ld[] = $faq_json;
+        }
+    }
+
     return $json_ld;
 }
 
