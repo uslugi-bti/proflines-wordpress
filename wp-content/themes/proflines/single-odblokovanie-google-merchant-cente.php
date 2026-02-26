@@ -509,6 +509,9 @@
             <div class="important-notes__body">
                 <div class="important-notes__item">
                     <div class="important-notes-item__text">
+                        <h3><?php the_field('important_notes_title_h3'); ?></h3>
+                    </div>
+                    <div class="important-notes-item__text">
                         <?php the_field('important_notes'); ?>
                     </div>
                 </div>
