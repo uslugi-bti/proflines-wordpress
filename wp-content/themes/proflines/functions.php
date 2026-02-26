@@ -348,7 +348,7 @@ function proflines_json_ld() {
         $json_ld[] = $service_json;
     }
     
-    if (is_page_template('page-mistakes.php')) {
+    if (is_page(2532)) {
         $post_id = get_the_ID();
         $mistake_categories = get_field('mistake_categories', $post_id);
         
@@ -392,7 +392,7 @@ function proflines_json_ld() {
         }
     }
 
-    if (is_page_template('page-faq.php')) {
+    if (is_page(2589)) {
         $post_id = get_the_ID();
         $general_items = get_field('general_faq_items', $post_id);
         
