@@ -538,22 +538,30 @@
                 </div>
             </div>
             <div class="faq__body">
-                <?php if (have_rows('faq_items')): ?>
-                    <?php while (have_rows('faq_items')): the_row(); 
-                        $question = get_sub_field('question');
-                        $answer = get_sub_field('answer');
+                <div class="faq__column">
+                    <?php 
+                    $faq_items = get_field('faq_items');
+                    if ($faq_items):
+                        $half = ceil(count($faq_items) / 2);
+                        $i = 0;
+                        foreach ($faq_items as $item):
+                            if ($i == $half) echo '</div><div class="faq__column">';
                     ?>
                         <div class="faq__item">
                             <div class="faq-item__title">
-                                <h2><?php echo $question; ?></h2>
+                                <h2><?php echo $item['question']; ?></h2>
                                 <button></button>
                             </div>
                             <div class="faq-item__text">
-                                <?php echo $answer; ?>
+                                <?php echo $item['answer']; ?>
                             </div>
                         </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
+                    <?php 
+                        $i++;
+                        endforeach;
+                    endif; 
+                    ?>
+                </div>
             </div>
             <div class="faq__button">
                 <button id="Zobraziť menej"><?php the_field('faq_button_text'); ?></button>
