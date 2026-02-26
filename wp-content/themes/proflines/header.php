@@ -35,7 +35,7 @@
                                 <a href>Bal&#xED;ky slu&#x17E;ieb</a>
                             </li>
                             <li class="header-bottom__item">
-                                <a href>Kontact</a>
+                                <a href>Kontakt</a>
                             </li>
                         </ul>
                     </div>
