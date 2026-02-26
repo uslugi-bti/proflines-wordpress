@@ -4,10 +4,10 @@
         <div class="container">
             <ul class="breadcrump__body">
                 <li class="breadcrump__item">
-                    <a href>Domov</a>
+                    <a href><?php echo esc_html(get_field('breadcrumb_home_text')); ?></a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href>O ProfLines</a>
+                    <a href><?php echo esc_html(get_field('breadcrumb_current_text')); ?></a>
                 </li>
             </ul>
         </div>
@@ -17,25 +17,34 @@
             <div class="mission-hero__body">
                 <div class="mission-hero__content">
                     <div class="mission-hero__title">
-                        <h1><span style="color: #CBCBCB;">O ProfLines</span> marketingovej agent&#xFA;re</h1>
+                        <h1><span style="color: #CBCBCB;"><?php echo esc_html(get_field('hero_title_part_1')); ?></span> <?php echo esc_html(get_field('hero_title_part_2')); ?></h1>
                     </div>
                     <div class="mission-hero__text">
-                        <p>ProfLines marketingov&#xE1; agent&#xFA;ra je digit&#xE1;lna agent&#xFA;ra novej gener&#xE1;cie, ktor&#xE1; sp&#xE1;ja hlbok&#xFA; marketingov&#xFA; analytiku, modern&#xE9; technol&#xF3;gie a umel&#xFA; inteligenciu. Pom&#xE1;hame firm&#xE1;m r&#xE1;s&#x165; na miestnej i medzin&#xE1;rodnej &#xFA;rovni, vyu&#x17E;&#xED;vaj&#xFA;c d&#xE1;ta, logiku a &#x13E;udsk&#xFA; kontrolu na ka&#x17E;dom kroku.<br><br>Z&#xE1;kladom na&#x161;ej pr&#xE1;ce s&#xFA; h&#x13A;bkov&#xE9; marketingov&#xE9; v&#xFD;skumy. Analyzujeme trhy, konkurentov a spr&#xE1;vanie z&#xE1;kazn&#xED;kov, aby sme vytv&#xE1;rali strat&#xE9;gie zalo&#x17E;en&#xE9; nie na domnienkach, ale na overen&#xFD;ch faktoch. V&#x10F;aka tomu na&#x161;i klienti dosahuj&#xFA; presn&#xE9; a merate&#x13E;n&#xE9; v&#xFD;sledky u&#x17E; po&#x10D;as prv&#xFD;ch mesiacov spolupr&#xE1;ce.</p>
+                        <?php echo get_field('hero_text'); ?>
                     </div>
                 </div>
                 <div class="mission-hero__img">
-                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/01.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/01.png" alt="mission"></picture>
+                    <?php $hero_main_image = get_field('hero_main_image'); ?>
+                    <img src="<?php echo esc_url($hero_main_image['url']); ?>" alt="<?php echo esc_attr($hero_main_image['alt'] ?: 'mission'); ?>" loading="lazy">
+                    
+                    <?php $hero_decor_1 = get_field('hero_decor_1'); ?>
                     <div class="mission-hero-img__img --1">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/02.svg" alt="mission"></picture>
+                        <img src="<?php echo esc_url($hero_decor_1['url']); ?>" alt="<?php echo esc_attr($hero_decor_1['alt'] ?: 'mission'); ?>" loading="lazy">
                     </div>
+                    
+                    <?php $hero_decor_2 = get_field('hero_decor_2'); ?>
                     <div class="mission-hero-img__img --2">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/03.svg" alt="mission"></picture>
+                        <img src="<?php echo esc_url($hero_decor_2['url']); ?>" alt="<?php echo esc_attr($hero_decor_2['alt'] ?: 'mission'); ?>" loading="lazy">
                     </div>
+                    
+                    <?php $hero_decor_3 = get_field('hero_decor_3'); ?>
                     <div class="mission-hero-img__img --3">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/04.svg" alt="mission"></picture>
+                        <img src="<?php echo esc_url($hero_decor_3['url']); ?>" alt="<?php echo esc_attr($hero_decor_3['alt'] ?: 'mission'); ?>" loading="lazy">
                     </div>
+                    
+                    <?php $hero_decor_4 = get_field('hero_decor_4'); ?>
                     <div class="mission-hero-img__img --4">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/05.svg" alt="mission"></picture>
+                        <img src="<?php echo esc_url($hero_decor_4['url']); ?>" alt="<?php echo esc_attr($hero_decor_4['alt'] ?: 'mission'); ?>" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -45,58 +54,59 @@
         <div class="container">
             <div class="block__head">
                 <div class="block-head__title">
-                    <h1>Na&#x161;a misia</h1>
+                    <h1><?php echo esc_html(get_field('mission_title')); ?></h1>
                 </div>
                 <div class="block-head__text">
-                    <p>Zjednodu&#x161;ujeme zlo&#x17E;it&#xFD; marketing a rob&#xED;me ho merate&#x13E;n&#xFD;m aj ziskov&#xFD;m.<br><br>Pom&#xE1;hame slovensk&#xFD;m firm&#xE1;m budova&#x165; siln&#xFA; online pr&#xED;tomnos&#x165; a s istotou expandova&#x165; na trhy Eur&#xF3;pskej &#xFA;nie.</p>
+                    <?php echo get_field('mission_text'); ?>
                 </div>
             </div>
             <div class="columns__body">
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/mission/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/mission/01.svg" alt="icon"></picture>
+                            <?php $mission_icons = get_field('mission_icons'); ?>
+                            <img src="<?php echo esc_url($mission_icons[0]['url']); ?>" alt="<?php echo esc_attr($mission_icons[0]['alt'] ?: 'icon'); ?>" loading="lazy">
                         </div>
                         <div class="columns-item__title">
-                            <h2>Partnerstvo, nie len slu&#x17E;by</h2>
+                            <h2><?php echo esc_html(get_field('mission_column_title_1')); ?></h2>
                         </div>
                     </div>
                     <div class="columns-item__text">
-                        <p>Sme v&#xE1;&#x161; strategick&#xFD; partner na ceste k rastu a &#xFA;spechu &#x2013; nie iba &#x10F;al&#x161;&#xED; dod&#xE1;vate&#x13E;
-                            slu&#x17E;ieb.</p>
+                        <p><?php echo esc_html(get_field('mission_column_text_1')); ?></p>
                     </div>
                 </div>
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/mission/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/mission/02.svg" alt="icon"></picture>
+                            <?php $mission_icons = get_field('mission_icons'); ?>
+                            <img src="<?php echo esc_url($mission_icons[1]['url']); ?>" alt="<?php echo esc_attr($mission_icons[1]['alt'] ?: 'icon'); ?>" loading="lazy">
                         </div>
                         <div class="columns-item__title">
-                            <h2>Efekt&#xED;vna AI podpora s &#x13E;udsk&#xFD;m pr&#xED;stupom</h2>
+                            <h2><?php echo esc_html(get_field('mission_column_title_2')); ?></h2>
                         </div>
                     </div>
                     <div class="columns-item__text">
-                        <p>Sp&#xE1;jame silu umelej inteligencie s osobn&#xFD;m pr&#xED;stupom, aby sme prin&#xE1;&#x161;ali re&#xE1;lne a
-                            merate&#x13E;n&#xE9; v&#xFD;sledky.</p>
+                        <p><?php echo esc_html(get_field('mission_column_text_2')); ?></p>
                     </div>
                 </div>
                 <div class="columns__item">
                     <div class="columns-item__head">
                         <div class="columns-item__icon">
-                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/mission/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/mission/03.svg" alt="icon"></picture>
+                            <?php $mission_icons = get_field('mission_icons'); ?>
+                            <img src="<?php echo esc_url($mission_icons[2]['url']); ?>" alt="<?php echo esc_attr($mission_icons[2]['alt'] ?: 'icon'); ?>" loading="lazy">
                         </div>
                         <div class="columns-item__title">
-                            <h2>&#x160;etr&#xED;me v&#xE1;&#x161; &#x10D;as, zvy&#x161;ujeme v&#xE1;&#x161; zisk</h2>
+                            <h2><?php echo esc_html(get_field('mission_column_title_3')); ?></h2>
                         </div>
                     </div>
                     <div class="columns-item__text">
-                        <p>Na&#x161;&#xED;m cie&#x13E;om je prin&#xE1;&#x161;a&#x165; skuto&#x10D;n&#xFA; hodnotu v&#xE1;&#x161;mu biznisu a pom&#xE1;ha&#x165; mu r&#xE1;s&#x165; r&#xFD;chlej&#x161;ie
-                            a efekt&#xED;vnej&#x161;ie.</p>
+                        <p><?php echo esc_html(get_field('mission_column_text_3')); ?></p>
                     </div>
                 </div>
             </div>
             <div class="mission__img">
-                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/mission/fullsize/01.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/mission/fullsize/01.png" alt="mission"></picture>
+                <?php $mission_bottom_image = get_field('mission_bottom_image'); ?>
+                <img src="<?php echo esc_url($mission_bottom_image['url']); ?>" alt="<?php echo esc_attr($mission_bottom_image['alt'] ?: 'mission'); ?>" loading="lazy">
             </div>
         </div>
     </section>
@@ -104,10 +114,10 @@
         <div class="container">
             <div class="block__head">
                 <div class="block-head__title">
-                    <h1>&#x10C;o rob&#xED;me</h1>
+                    <h1>Čo robíme</h1>
                 </div>
                 <div class="block-head__text">
-                    <p>Pon&#xFA;kame komplexn&#xFD; rozsah digit&#xE1;lnych slu&#x17E;ieb postaven&#xFD; na h&#x13A;bo&#x10D;ke anal&#xFD;ze</p>
+                    <p>Ponúkame komplexný rozsah digitálnych služieb postavený na hĺbokej analýze</p>
                 </div>
             </div>
             <div class="services__body" data-count="5">
@@ -119,11 +129,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/01.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>H&#x13A;bkov&#xFD; Marketingov&#xFD; Prieskum</h2>
+                                    <h2>Hĺbkový Marketingový Prieskum</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Anal&#xFD;za trhu, konkurencie, segmentov a spr&#xE1;vania spotrebite&#x13E;ov.</p>
+                                <p>-Analýza trhu, konkurencie, segmentov a správania spotrebiteľov.</p>
                             </div>
                         </a>
                     </div>
@@ -134,11 +144,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/02.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>SEO Audit Webov&#xFD;ch Str&#xE1;nok</h2>
+                                    <h2>SEO Audit Webových Stránok</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Technick&#xE1;, obsahov&#xE1; a psychologick&#xE1;/behavior&#xE1;lna optimaliz&#xE1;cia.</p>
+                                <p>-Technická, obsahová a psychologická/behaviorálna optimalizácia.</p>
                             </div>
                         </a>
                     </div>
@@ -149,11 +159,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/03.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Spr&#xE1;va Reklamn&#xFD;ch Kampan&#xED; (PPC)</h2>
+                                    <h2>Správa Reklamných Kampaní (PPC)</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Google Ads, Meta Ads. Orient&#xE1;cia na zisk, nie na kliknutia.</p>
+                                <p>-Google Ads, Meta Ads. Orientácia na zisk, nie na kliknutia.</p>
                             </div>
                         </a>
                     </div>
@@ -164,12 +174,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/04.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Expanzia na Zahrani&#x10D;n&#xE9; Trhy</h2>
+                                    <h2>Expanzia na Zahraničné Trhy</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Anal&#xFD;za trhovej strat&#xE9;gie, lokaliz&#xE1;cia, medzin&#xE1;rodn&#xE9; SEO a
-                                    poziocionovanie, konkurencie, segmentov a spr&#xE1;vania spotrebite&#x13E;ov.</p>
+                                <p>-Analýza trhovej stratégie, lokalizácia, medzinárodné SEO a poziocionovanie, konkurencie, segmentov a správania spotrebiteľov.</p>
                             </div>
                         </a>
                     </div>
@@ -180,11 +189,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/05.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Tvorba Webov&#xFD;ch Str&#xE1;nok</h2>
+                                    <h2>Tvorba Webových Stránok</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-UX/UI dizajn, &#x161;trukt&#xFA;ra, adapt&#xE1;cia na biznis ciele.</p>
+                                <p>-UX/UI dizajn, štruktúra, adaptácia na biznis ciele.</p>
                             </div>
                         </a>
                     </div>
@@ -195,11 +204,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/06.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/06.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Spr&#xE1;va Soci&#xE1;lnych Siet&#xED;</h2>
+                                    <h2>Správa Sociálnych Sietí</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Emocion&#xE1;lny targeting, obsah, strat&#xE9;gia.</p>
+                                <p>-Emocionálny targeting, obsah, stratégia.</p>
                             </div>
                         </a>
                     </div>
@@ -210,11 +219,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/07.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/07.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Odblokovanie Google Merchant Center a zamietnut&#xFD;ch produktov</h2>
+                                    <h2>Odblokovanie Google Merchant Center a zamietnutých produktov</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>Profesion&#xE1;lna oprava ch&#xFD;b a obnovenie predaja v Google Shopping</p>
+                                <p>Profesionálna oprava chýb a obnovenie predaja v Google Shopping</p>
                             </div>
                         </a>
                     </div>
@@ -225,12 +234,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/08.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/08.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Optimaliz&#xE1;cia pre vyh&#x13E;ad&#xE1;vanie v AI (AIO / GEO)</h2>
+                                    <h2>Optimalizácia pre vyhľadávanie v AI (AIO / GEO)</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Slu&#x17E;ba novej gener&#xE1;cie, ktor&#xE1; pom&#xE1;ha zna&#x10D;k&#xE1;m zobrazova&#x165; sa v AI
-                                    Overviews (Google) a vo v&#xFD;sledkoch vyh&#x13E;ad&#xE1;vania v ChatGPT.</p>
+                                <p>-Služba novej generácie, ktorá pomáha značkám zobrazovať sa v AI Overviews (Google) a vo výsledkoch vyhľadávania v ChatGPT.</p>
                             </div>
                         </a>
                     </div>
@@ -241,12 +249,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/09.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/09.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Tvorba e-commerce obsahu &#x201E;na k&#x13E;&#xFA;&#x10D;&#x201C;</h2>
+                                    <h2>Tvorba e-commerce obsahu „na kľúč“</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Automatizovan&#xE9; plnenie produktov&#xFD;ch kariet pre platformy Shopify a
-                                    Shoptet.</p>
+                                <p>-Automatizované plnenie produktových kariet pre platformy Shopify a Shoptet.</p>
                             </div>
                         </a>
                     </div>
@@ -257,12 +264,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/10.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/10.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Automatiz&#xE1;cia predaja pomocou chatbotov</h2>
+                                    <h2>Automatizácia predaja pomocou chatbotov</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-V&#xFD;voj inteligentn&#xFD;ch asistentov integrovan&#xFD;ch do webu alebo soci&#xE1;lnych
-                                    siet&#xED;.</p>
+                                <p>-Vývoj inteligentných asistentov integrovaných do webu alebo sociálnych sietí.</p>
                             </div>
                         </a>
                     </div>
@@ -273,12 +279,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/11.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/11.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Integr&#xE1;cia CRM a komplexnej analytiky</h2>
+                                    <h2>Integrácia CRM a komplexnej analytiky</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Prepojenie webovej str&#xE1;nky, reklamn&#xFD;ch syst&#xE9;mov a n&#xE1;strojov na spr&#xE1;vu
-                                    z&#xE1;kazn&#xED;kov.</p>
+                                <p>-Prepojenie webovej stránky, reklamných systémov a nástrojov na správu zákazníkov.</p>
                             </div>
                         </a>
                     </div>
@@ -289,12 +294,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/12.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/12.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>E-mail marketing a automatiz&#xE1;cia udr&#x17E;ania z&#xE1;kazn&#xED;kov</h2>
+                                    <h2>E-mail marketing a automatizácia udržania zákazníkov</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Systematick&#xE1; pr&#xE1;ca so z&#xE1;kazn&#xED;kmi, ktor&#xE1; premie&#x148;a jednorazov&#xE9; n&#xE1;kupy na
-                                    opakovan&#xE9; a odberate&#x13E;ov na loj&#xE1;lnych klientov.</p>
+                                <p>-Systematická práca so zákazníkmi, ktorá premieňa jednorazové nákupy na opakované a odberateľov na lojálnych klientov.</p>
                             </div>
                         </a>
                     </div>
@@ -305,12 +309,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/13.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/13.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Implement&#xE1;cia platobn&#xFD;ch syst&#xE9;mov (Fintech Support)</h2>
+                                    <h2>Implementácia platobných systémov (Fintech Support)</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Pomoc s napojen&#xED;m lok&#xE1;lnych (TatraPay, CardPay) aj medzin&#xE1;rodn&#xFD;ch
-                                    platobn&#xFD;ch br&#xE1;n (Stripe, PayPal).</p>
+                                <p>-Pomoc s napojením lokálnych (TatraPay, CardPay) aj medzinárodných platobných brán (Stripe, PayPal).</p>
                             </div>
                         </a>
                     </div>
@@ -321,11 +324,11 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/14.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/14.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Strategick&#xFD; linkbuilding a PR</h2>
+                                    <h2>Strategický linkbuilding a PR</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Budovanie autority webu prostredn&#xED;ctvom kvalitn&#xFD;ch sp&#xE4;tn&#xFD;ch odkazov.</p>
+                                <p>-Budovanie autority webu prostredníctvom kvalitných spätných odkazov.</p>
                             </div>
                         </a>
                     </div>
@@ -336,18 +339,17 @@
                                     <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/15.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/15.svg" alt="icon"></picture>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>H&#x13A;bkov&#xFD; monitoring konkurencie (Market Intelligence)</h2>
+                                    <h2>Hĺbkový monitoring konkurencie (Market Intelligence)</h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Pravideln&#xE1; anal&#xFD;za cien, reklamn&#xFD;ch v&#xFD;davkov, reklamn&#xFD;ch kreat&#xED;v a
-                                    jedine&#x10D;n&#xFD;ch predajn&#xFD;ch pon&#xFA;k konkurentov.</p>
+                                <p>-Pravidelná analýza cien, reklamných výdavkov, reklamných kreatív a jedinečných predajných ponúk konkurentov.</p>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="services__button">
-                    <button id="Zobrazi&#x165; menej">Zobrazi&#x165; viac</button>
+                    <button id="Zobraziť menej">Zobraziť viac</button>
                 </div>
             </div>
         </div>
@@ -356,10 +358,10 @@
         <div class="container">
             <div class="block__head">
                 <div class="block-head__title">
-                    <h1>Ako pracujeme</h1>
+                    <h1><?php echo esc_html(get_field('how_title')); ?></h1>
                 </div>
                 <div class="block-head__text">
-                    <p>Na&#x161;e pracovn&#xE9; procesy podporuje vlastn&#xFD; AI asistent Gem</p>
+                    <p><?php echo esc_html(get_field('how_subtitle')); ?></p>
                 </div>
             </div>
             <div class="how__body">
@@ -369,21 +371,21 @@
                             <h3>AI asistent Gem</h3>
                         </div>
                         <div class="how-item__text">
-                            <p>Na&#x161;e pracovn&#xE9; procesy podporuje vlastn&#xFD; AI asistent Gem.<br>Gem je intern&#xFD; inteligentn&#xFD; n&#xE1;stroj vyvinut&#xFD; t&#xED;mom ProfLines marketingovej agent&#xFA;ry, ktor&#xFD; automatizuje analytiku, zber d&#xE1;t a pr&#xED;pravu spr&#xE1;v a pom&#xE1;ha t&#xED;mu robi&#x165; presnej&#x161;ie marketingov&#xE9; rozhodnutia. V&#x10F;aka Gem &#x161;etr&#xED;me &#x10D;as na rutinn&#xE9; &#xFA;lohy, aby sme mali viac priestoru pre strategick&#xFA; a kreat&#xED;vnu pr&#xE1;cu.</p>
+                            <?php echo get_field('how_gem_text'); ?>
                         </div>
                     </div>
                 </div>
                 <div class="how__item">
                     <div class="how-item__body">
                         <div class="how-item__text">
-                            <p>Komunik&#xE1;cia s klientmi prebieha najm&#xE4; cez <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/02.svg" alt="email"></picture> - r&#xFD;chlo, pohodlne a bez zbyto&#x10D;n&#xFD;ch telefon&#xE1;tov.</p>
+                            <p><?php echo esc_html(get_field('how_email_text')); ?> <img src="<?php echo esc_url(get_field('how_email_icon')['url']); ?>" alt="email" loading="lazy"></p>
                         </div>
                     </div>
                 </div>
                 <div class="how__item">
                     <div class="how-item__body">
                         <div class="how-item__text">
-                            <p>Ka&#x17E;d&#xFD; projekt prech&#xE1;dza krokmi: <strong>anal&#xFD;za &#x2192; h&#x13A;bkov&#xFD; v&#xFD;skum &#x2192; realiz&#xE1;cia &#x2192; kontrola &#x2192; spr&#xE1;va.</strong></p>
+                            <p><?php echo get_field('how_steps_text'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -394,184 +396,43 @@
         <div class="container">
             <div class="block__head">
                 <div class="block-head__title">
-                    <h1>T&#xED;m ProfLines</h1>
+                    <h1><?php echo esc_html(get_field('team_title')); ?></h1>
                 </div>
                 <div class="block-head__text">
-                    <p>Na ka&#x17E;dom projekte pracuje t&#xED;m odborn&#xED;kov, ktor&#xFD; sp&#xE1;ja analytick&#xE9; myslenie, technol&#xF3;gie a kreativitu:</p>
+                    <p><?php echo esc_html(get_field('team_subtitle')); ?></p>
                 </div>
             </div>
             <div class="team__items">
-                <div class="team__item">
-                    <div class="team-item__img">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/team/02.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/team/02.png" alt="team"></picture>
-                    </div>
-                    <div class="team-item__haed">
-                        <div class="team-item__title">
-                            <h4>Ivan Rogovyi, PhD</h4>
+                <?php if( have_rows('team_members') ): ?>
+                    <?php while( have_rows('team_members') ) : the_row(); ?>
+                        <?php 
+                            $photo = get_sub_field('photo');
+                            $name = get_sub_field('name');
+                            $position = get_sub_field('position');
+                            $description = get_sub_field('description');
+                            $email = get_sub_field('email');
+                        ?>
+                        <div class="team__item">
+                            <div class="team-item__img">
+                                <img src="<?php echo esc_url($photo['url']); ?>" alt="<?php echo esc_attr($photo['alt'] ?: 'team'); ?>" loading="lazy">
+                            </div>
+                            <div class="team-item__haed">
+                                <div class="team-item__title">
+                                    <h4><?php echo esc_html($name); ?></h4>
+                                </div>
+                                <div class="team-item__job">
+                                    <span><?php echo esc_html($position); ?></span>
+                                </div>
+                            </div>
+                            <div class="team-item__text">
+                                <p><?php echo esc_html($description); ?></p>
+                            </div>
+                            <div class="team-item__email">
+                                <a href="mailto:<?php echo esc_attr($email); ?>"><?php echo esc_html($email); ?></a>
+                            </div>
                         </div>
-                        <div class="team-item__job">
-                            <span>Zakladate&#x13E; a riadite&#x13E; agent&#xFA;ry</span>
-                        </div>
-                    </div>
-                    <div class="team-item__text">
-                        <p>strategick&#xFD; doh&#x13E;ad nad v&#x161;etk&#xFD;mi projektmi a rozvojom agent&#xFA;ry</p>
-                    </div>
-                    <div class="team-item__email">
-                        <a href>info@proflines.agency</a>
-                    </div>
-                </div>
-                <div class="team__item">
-                    <div class="team-item__img">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/team/03.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/team/03.png" alt="team"></picture>
-                    </div>
-                    <div class="team-item__haed">
-                        <div class="team-item__title">
-                            <h4>Marek Kov&#xE1;&#x10D;</h4>
-                        </div>
-                        <div class="team-item__job">
-                            <span>Koordin&#xE1;tor</span>
-                        </div>
-                    </div>
-                    <div class="team-item__text">
-                        <p>riadenie procesov a projektov.</p>
-                    </div>
-                    <div class="team-item__email">
-                        <a href>marek@proflines.agency</a>
-                    </div>
-                </div>
-                <div class="team__item">
-                    <div class="team-item__img">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/team/04.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/team/04.png" alt="team"></picture>
-                    </div>
-                    <div class="team-item__haed">
-                        <div class="team-item__title">
-                            <h4>Michal Bal&#xE1;&#x17E;</h4>
-                        </div>
-                        <div class="team-item__job">
-                            <span>Marketingov&#xFD; v&#xFD;skumn&#xED;k</span>
-                        </div>
-                    </div>
-                    <div class="team-item__text">
-                        <p>marketingov&#xFD; v&#xFD;skumn&#xED;k, expert na h&#x13A;bkov&#xE9; marketingov&#xE9; &#x161;t&#xFA;die</p>
-                    </div>
-                    <div class="team-item__email">
-                        <a href>michal@proflines.agency</a>
-                    </div>
-                </div>
-                <div class="team__item">
-                    <div class="team-item__img">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/team/05.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/team/05.png" alt="team"></picture>
-                    </div>
-                    <div class="team-item__haed">
-                        <div class="team-item__title">
-                            <h4>Filip Morav&#x10D;&#xED;k</h4>
-                        </div>
-                        <div class="team-item__job">
-                            <span>SEO analytik</span>
-                        </div>
-                    </div>
-                    <div class="team-item__text">
-                        <p>SEO analytik, kombinuj&#xFA;ci technick&#xFD; a behavior&#xE1;lny pr&#xED;stup</p>
-                    </div>
-                    <div class="team-item__email">
-                        <a href>filip@proflines.agency</a>
-                    </div>
-                </div>
-                <div class="team__item">
-                    <div class="team-item__img">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/team/06.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/team/06.png" alt="team"></picture>
-                    </div>
-                    <div class="team-item__haed">
-                        <div class="team-item__title">
-                            <h4>Petra Nov&#xE1;kov&#xE1;</h4>
-                        </div>
-                        <div class="team-item__job">
-                            <span>UX/UI dizajn&#xE9;rka</span>
-                        </div>
-                    </div>
-                    <div class="team-item__text">
-                        <p>UX/UI dizajn&#xE9;rka, zodpovedn&#xE1; za logiku a &#x161;trukt&#xFA;ru webov</p>
-                    </div>
-                    <div class="team-item__email">
-                        <a href>petra@proflines.agency</a>
-                    </div>
-                </div>
-                <div class="team__item">
-                    <div class="team-item__img">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/team/07.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/team/07.png" alt="team"></picture>
-                    </div>
-                    <div class="team-item__haed">
-                        <div class="team-item__title">
-                            <h4>Tom&#xE1;&#x161; Hud&#xE1;k</h4>
-                        </div>
-                        <div class="team-item__job">
-                            <span>&#x161;pecialista na reklamu</span>
-                        </div>
-                    </div>
-                    <div class="team-item__text">
-                        <p>zameran&#xFD; na zisk klienta</p>
-                    </div>
-                    <div class="team-item__email">
-                        <a href>tomas@proflines.agency</a>
-                    </div>
-                </div>
-                <div class="team__item">
-                    <div class="team-item__img">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/team/08.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/team/08.png" alt="team"></picture>
-                    </div>
-                    <div class="team-item__haed">
-                        <div class="team-item__title">
-                            <h4>Katar&#xED;na Svobodov&#xE1;</h4>
-                        </div>
-                        <div class="team-item__job">
-                            <span>expertka na SMM</span>
-                        </div>
-                    </div>
-                    <div class="team-item__text">
-                        <p>expertka na SMM, tvor&#xED; obsah, ktor&#xFD; oslovuje publikum</p>
-                    </div>
-                    <div class="team-item__email">
-                        <a href>katarina@proflines.agency</a>
-                    </div>
-                </div>
-                <div class="team__item">
-                    <div class="team-item__img">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/team/09.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/team/09.png" alt="team"></picture>
-                    </div>
-                    <div class="team-item__haed">
-                        <div class="team-item__title">
-                            <h4>Lian Chen</h4>
-                        </div>
-                        <div class="team-item__job">
-                            <span>program&#xE1;tor</span>
-                        </div>
-                    </div>
-                    <div class="team-item__text">
-                        <p>program&#xE1;tor, technick&#xE1; realiz&#xE1;cia a podpora</p>
-                    </div>
-                    <div class="team-item__email">
-                        <a href>lian@proflines.agency</a>
-                    </div>
-                </div>
-                <div class="team__item">
-                    <div class="team-item__img">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/team/10.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/team/10.png" alt="team"></picture>
-                    </div>
-                    <div class="team-item__haed">
-                        <div class="team-item__title">
-                            <h4>Zuzana Horv&#xE1;tov&#xE1;</h4>
-                        </div>
-                        <div class="team-item__job">
-                            <span>copywriterka</span>
-                        </div>
-                    </div>
-                    <div class="team-item__text">
-                        <p>copywriterka, zodpovedn&#xE1; za obsah a email marketing</p>
-                    </div>
-                    <div class="team-item__email">
-                        <a href>zuzana@proflines.agency</a>
-                    </div>
-                </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
     </section>
@@ -579,26 +440,35 @@
         <div class="container">
             <div class="mission-hero__body">
                 <div class="mission-hero__img">
-                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/01.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/mission-hero/01.png" alt="mission"></picture>
+                    <?php $initiative_main_image = get_field('initiative_main_image'); ?>
+                    <img src="<?php echo esc_url($initiative_main_image['url']); ?>" alt="<?php echo esc_attr($initiative_main_image['alt'] ?: 'mission'); ?>" loading="lazy">
+                    
+                    <?php $initiative_decor_1 = get_field('initiative_decor_1'); ?>
                     <div class="mission-hero-img__img --1">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/initiative/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/initiative/05.svg" alt="mission"></picture>
+                        <img src="<?php echo esc_url($initiative_decor_1['url']); ?>" alt="<?php echo esc_attr($initiative_decor_1['alt'] ?: 'mission'); ?>" loading="lazy">
                     </div>
+                    
+                    <?php $initiative_decor_2 = get_field('initiative_decor_2'); ?>
                     <div class="mission-hero-img__img --2">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/initiative/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/initiative/02.svg" alt="mission"></picture>
+                        <img src="<?php echo esc_url($initiative_decor_2['url']); ?>" alt="<?php echo esc_attr($initiative_decor_2['alt'] ?: 'mission'); ?>" loading="lazy">
                     </div>
+                    
+                    <?php $initiative_decor_3 = get_field('initiative_decor_3'); ?>
                     <div class="mission-hero-img__img --3">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/initiative/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/initiative/03.svg" alt="mission"></picture>
+                        <img src="<?php echo esc_url($initiative_decor_3['url']); ?>" alt="<?php echo esc_attr($initiative_decor_3['alt'] ?: 'mission'); ?>" loading="lazy">
                     </div>
+                    
+                    <?php $initiative_decor_4 = get_field('initiative_decor_4'); ?>
                     <div class="mission-hero-img__img --4">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/initiative/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/initiative/04.svg" alt="mission"></picture>
+                        <img src="<?php echo esc_url($initiative_decor_4['url']); ?>" alt="<?php echo esc_attr($initiative_decor_4['alt'] ?: 'mission'); ?>" loading="lazy">
                     </div>
                 </div>
                 <div class="mission-hero__content">
                     <div class="mission-hero__title">
-                        <h2>Soci&#xE1;lna iniciat&#xED;va</h2>
+                        <h2><?php echo esc_html(get_field('initiative_title')); ?></h2>
                     </div>
                     <div class="mission-hero__text">
-                        <p>ProfLines marketingov&#xE1; agent&#xFA;ra podporuje digitaliz&#xE1;ciu mal&#xFD;ch firiem na Slovensku. Mesa&#x10D;ne otv&#xE1;rame nieko&#x13E;ko bezplatn&#xFD;ch miest pre lok&#xE1;lnych v&#xFD;robcov a podnikate&#x13E;ov, ktor&#xFD;m pom&#xE1;hame presun&#xFA;&#x165; sa do online sveta &#x2013; vytvori&#x165; web, nastavi&#x165; reklamu alebo spusti&#x165; prv&#xFA; marketingov&#xFA; kampa&#x148;.<br>Cie&#x13E;om iniciat&#xED;vy je poskytn&#xFA;&#x165; mal&#xFD;m firm&#xE1;m re&#xE1;lnu &#x161;ancu rozv&#xED;ja&#x165; sa v digit&#xE1;lnom prostred&#xED; bez za&#x10D;iato&#x10D;n&#xFD;ch n&#xE1;kladov.</p>
+                        <?php echo get_field('initiative_text'); ?>
                     </div>
                 </div>
             </div>
@@ -607,25 +477,29 @@
     <section class="companys">
         <div class="container">
             <div class="companys__title">
-                <h1>Profesion&#xE1;lne n&#xE1;stroje, ktor&#xE9; pou&#x17E;&#xED;vame:</h1>
+                <h1><?php echo esc_html(get_field('tools_title')); ?></h1>
             </div>
             <div class="companys__body">
                 <div class="companys__marquee">
                     <div class="companys__track">
                         <div class="companys__items">
-                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/01.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/02.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/03.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/04.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/05.svg"></picture></div>
+                            <?php $tools_logos = get_field('tools_logos'); ?>
+                            <?php if( $tools_logos ): ?>
+                                <?php foreach( $tools_logos as $logo ): ?>
+                                    <div class="companys__item">
+                                        <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" loading="lazy">
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
-
                         <div class="companys__items">
-                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/01.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/02.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/03.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/04.svg"></picture></div>
-                            <div class="companys__item"><picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/companys/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/companys/05.svg"></picture></div>
+                            <?php if( $tools_logos ): ?>
+                                <?php foreach( $tools_logos as $logo ): ?>
+                                    <div class="companys__item">
+                                        <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo['alt']); ?>" loading="lazy">
+                                    </div>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -635,31 +509,40 @@
     <section class="principles">
         <div class="container">
             <div class="principles__body">
-                <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/footer/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/footer/01.svg" alt="logo"></picture>
+                <?php $principles_logo = get_field('principles_logo'); ?>
+                <img src="<?php echo esc_url($principles_logo['url']); ?>" alt="<?php echo esc_attr($principles_logo['alt'] ?: 'logo'); ?>" loading="lazy">
+                
+                <?php $principle_1_icon = get_field('principle_1_icon'); ?>
                 <div class="principles__badge --1">
-                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/principles/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/principles/01.svg" alt="principles"></picture>
-                    <span>Technol&#xF3;gie</span>
+                    <img src="<?php echo esc_url($principle_1_icon['url']); ?>" alt="<?php echo esc_attr($principle_1_icon['alt'] ?: 'principles'); ?>" loading="lazy">
+                    <span><?php echo esc_html(get_field('principle_1_text')); ?></span>
                 </div>
+                
+                <?php $principle_2_icon = get_field('principle_2_icon'); ?>
                 <div class="principles__badge --2">
-                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/principles/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/principles/02.svg" alt="principles"></picture>
-                    <span>Transparentnos&#x165;</span>
+                    <img src="<?php echo esc_url($principle_2_icon['url']); ?>" alt="<?php echo esc_attr($principle_2_icon['alt'] ?: 'principles'); ?>" loading="lazy">
+                    <span><?php echo esc_html(get_field('principle_2_text')); ?></span>
                 </div>
+                
+                <?php $principle_3_icon = get_field('principle_3_icon'); ?>
                 <div class="principles__badge --3">
-                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/principles/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/principles/03.svg" alt="principles"></picture>
-                    <span>R&#xFD;chlos&#x165;</span>
+                    <img src="<?php echo esc_url($principle_3_icon['url']); ?>" alt="<?php echo esc_attr($principle_3_icon['alt'] ?: 'principles'); ?>" loading="lazy">
+                    <span><?php echo esc_html(get_field('principle_3_text')); ?></span>
                 </div>
+                
+                <?php $principle_4_icon = get_field('principle_4_icon'); ?>
                 <div class="principles__badge --4">
-                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/principles/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/principles/04.svg" alt="principles"></picture>
-                    <span>V&#xFD;sledok</span>
+                    <img src="<?php echo esc_url($principle_4_icon['url']); ?>" alt="<?php echo esc_attr($principle_4_icon['alt'] ?: 'principles'); ?>" loading="lazy">
+                    <span><?php echo esc_html(get_field('principle_4_text')); ?></span>
                 </div>
 
                 <div class="principles__content">
                     <div class="principles__container">
                         <div class="principles__title">
-                            <h2>Principles Title</h2>
+                            <h2><?php echo esc_html(get_field('principles_content_title')); ?></h2>
                         </div>
                         <div class="principles__text">
-                            <p>Nes&#x13E;ubujeme, ukazujeme &#x10D;&#xED;sla. ProfLines marketingov&#xE1; agent&#xFA;ra je synergiou automatiz&#xE1;cie, &#x13E;udsk&#xFD;ch sk&#xFA;senost&#xED; a poctivosti v ka&#x17E;dom projekte.</p>
+                            <p><?php echo esc_html(get_field('principles_content_text')); ?></p>
                         </div>
                     </div>
                 </div>
