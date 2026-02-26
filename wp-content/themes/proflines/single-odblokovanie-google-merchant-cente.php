@@ -374,6 +374,11 @@
                                     <p style="color: #242A36; font-weight: 500;"><?php echo $banners_white['text']; ?></p>
                                 </div>
                             <?php endif; ?>
+                            <?php if (!empty($banners_white['button'])): ?>
+                                <div class="banner__button button">
+                                    <a href=""><?php echo $banners_white['button']; ?></a>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endif; ?>
