@@ -188,11 +188,23 @@
                         </thead>
 
                         <tbody>
-                            <?php 
-                            // Funkcia pre vykreslenie ikony
-                            function render_table_icon($field, $toggle_key) {
+                            <?php
+                            function render_table_icon($field, $package_type) {
                                 if (!is_array($field)) {
                                     return '';
+                                }
+                                
+                                $toggle_key = '';
+                                switch($package_type) {
+                                    case 'starter':
+                                        $toggle_key = 'umiestnit_ikonu';
+                                        break;
+                                    case 'basic':
+                                        $toggle_key = 'umiestnit_ikonu_basic';
+                                        break;
+                                    case 'advanced':
+                                        $toggle_key = 'umiestnit_ikonu_advanced';
+                                        break;
                                 }
                                 
                                 $toggle_value = isset($field[$toggle_key]) ? $field[$toggle_key] : false;
@@ -209,7 +221,7 @@
                                     case 'false':
                                         return '<span class="table__icon table__icon--false"></span>';
                                     case 'partial':
-                                        return '<span class="table__icon table__icon--true-false"></span>';
+                                        return '<span class="table__icon table__icon--partial"></span>';
                                     default:
                                         return isset($field['custom_text']) ? $field['custom_text'] : '';
                                 }
@@ -226,9 +238,9 @@
                                 <tr>
                                     <td>
                                         <?php echo $service_name; ?>
-                                        <?php if($has_info): ?>
-                                            <span id="info"></span>
-                                            <div class="table-info">
+                                        <?php if($has_info && $info_text): ?>
+                                            <span class="table-info-trigger" id="info-<?php echo get_row_index(); ?>">ⓘ</span>
+                                            <div class="table-info" data-info="<?php echo get_row_index(); ?>">
                                                 <div class="table-info__body">
                                                     <div class="table-info__container">
                                                         <?php echo $info_text; ?>
@@ -238,13 +250,13 @@
                                         <?php endif; ?>
                                     </td>
                                     <td>
-                                        <?php echo render_table_icon($starter, 'umiestnit_ikonu_anonieciastocne_namiesto_textu_starter'); ?>
+                                        <?php echo render_table_icon($starter, 'starter'); ?>
                                     </td>
                                     <td>
-                                        <?php echo render_table_icon($basic, 'umiestnit_ikonu_anonieciastocne_namiesto_textu_basic'); ?>
+                                        <?php echo render_table_icon($basic, 'basic'); ?>
                                     </td>
                                     <td>
-                                        <?php echo render_table_icon($advanced, 'umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced'); ?>
+                                        <?php echo render_table_icon($advanced, 'advanced'); ?>
                                     </td>
                                 </tr>
                             <?php endwhile; ?>
