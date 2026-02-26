@@ -377,9 +377,7 @@
                 </div>
                 <div class="how__item">
                     <div class="how-item__body">
-                        <div class="how-item__text">
-                            <p><?php echo esc_html(get_field('how_email_text')); ?> <img src="<?php echo esc_url(get_field('how_email_icon')['url']); ?>" alt="email" loading="lazy"></p>
-                        </div>
+                        <div class="how-item__text"><?php echo (get_field('how_email_text')); ?></div>
                     </div>
                 </div>
                 <div class="how__item">
