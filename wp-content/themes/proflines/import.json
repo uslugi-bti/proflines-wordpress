@@ -403,7 +403,9 @@
                         "ui": 1,
                         "ajax": 0,
                         "placeholder": "",
-                        "parent_repeater": "field_67bd6fc62f5d0"
+                        "parent_repeater": "field_67bd6fc62f5d0",
+                        "create_options": 0,
+                        "save_options": 0
                     }
                 ]
             },
@@ -994,7 +996,7 @@
                 "sub_fields": [
                     {
                         "key": "field_67bd729a2f5f1",
-                        "label": "Číslo / Hodnota",
+                        "label": "Číslo \/ Hodnota",
                         "name": "number",
                         "aria-label": "",
                         "type": "text",
@@ -1170,23 +1172,24 @@
             {
                 "key": "field_67bd73372f5f9",
                 "label": "Balíky",
-                "name": "packages",
+                "name": "packages_items",
                 "aria-label": "",
                 "type": "repeater",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": [],
+                "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",
                     "id": ""
                 },
                 "layout": "block",
+                "pagination": 0,
                 "min": 0,
                 "max": 0,
-                "rows_per_page": 20,
-                "button_label": "Pridať balík",
                 "collapsed": "field_67bd73622f5fa",
+                "button_label": "Pridať balík",
+                "rows_per_page": 20,
                 "sub_fields": [
                     {
                         "key": "field_67bd73622f5fa",
@@ -1212,12 +1215,12 @@
                     {
                         "key": "field_67bd73702f5fb",
                         "label": "Popis balíka",
-                        "name": "description",
+                        "name": "caption",
                         "aria-label": "",
                         "type": "text",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": [],
+                        "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
                             "class": "",
@@ -1225,6 +1228,7 @@
                         },
                         "default_value": "",
                         "maxlength": "",
+                        "allow_in_bindings": 1,
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
@@ -1235,45 +1239,22 @@
                         "label": "Zoznam vlastností",
                         "name": "features",
                         "aria-label": "",
-                        "type": "repeater",
+                        "type": "wysiwyg",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": [],
+                        "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
-                        "layout": "table",
-                        "min": 0,
-                        "max": 0,
-                        "rows_per_page": 20,
-                        "button_label": "Pridať vlastnosť",
-                        "collapsed": "",
-                        "parent_repeater": "field_67bd73372f5f9",
-                        "sub_fields": [
-                            {
-                                "key": "field_67bd73a52f5fd",
-                                "label": "Text vlastnosti",
-                                "name": "feature_text",
-                                "aria-label": "",
-                                "type": "text",
-                                "instructions": "Pre zvýraznenie použite <strong>",
-                                "required": 0,
-                                "conditional_logic": [],
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "default_value": "",
-                                "maxlength": "",
-                                "placeholder": "",
-                                "prepend": "",
-                                "append": "",
-                                "parent_repeater": "field_67bd73802f5fc"
-                            }
-                        ]
+                        "default_value": "",
+                        "allow_in_bindings": 0,
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "delay": 0,
+                        "parent_repeater": "field_67bd73372f5f9"
                     },
                     {
                         "key": "field_67bd73bb2f5fe",
@@ -1358,6 +1339,28 @@
                         "prepend": "",
                         "append": "",
                         "parent_repeater": "field_67bd73372f5f9"
+                    },
+                    {
+                        "key": "field_699ffb940da3c",
+                        "label": "Description (JSON-LD)",
+                        "name": "description",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67bd73372f5f9"
                     }
                 ]
             },
@@ -1404,43 +1407,21 @@
                 "label": "Červený banner - zoznam",
                 "name": "banners_red_list",
                 "aria-label": "",
-                "type": "repeater",
+                "type": "wysiwyg",
                 "instructions": "Položky pre červený banner",
                 "required": 0,
-                "conditional_logic": [],
+                "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",
                     "id": ""
                 },
-                "layout": "table",
-                "min": 0,
-                "max": 0,
-                "rows_per_page": 20,
-                "button_label": "Pridať položku",
-                "collapsed": "",
-                "sub_fields": [
-                    {
-                        "key": "field_67bd74732f605",
-                        "label": "Text položky",
-                        "name": "item_text",
-                        "aria-label": "",
-                        "type": "wysiwyg",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": [],
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "tabs": "all",
-                        "toolbar": "basic",
-                        "media_upload": 0,
-                        "default_value": "",
-                        "delay": 0
-                    }
-                ]
+                "default_value": "",
+                "allow_in_bindings": 0,
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
             },
             {
                 "key": "field_67bd74b02f606",
@@ -1578,7 +1559,7 @@
                         "tabs": "all",
                         "toolbar": "basic",
                         "media_upload": 0,
-                        "default_value": "<strong>Zvýšime dôveryhodnosť vášho e-shopu.</strong> Bezplatne vám nastavíme zber overených recenzií prostredníctvom služby Google, čo patrí medzi najúčinnejšie spôsoby prevencie budúcich blokácií.",
+                        "default_value": "<strong>Zvýšime dôveryhodnosť vášho e-shopu.<\/strong> Bezplatne vám nastavíme zber overených recenzií prostredníctvom služby Google, čo patrí medzi najúčinnejšie spôsoby prevencie budúcich blokácií.",
                         "delay": 0
                     },
                     {
@@ -1757,7 +1738,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_67bd642c1a2ea",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "umiestnit_ikonu",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -1856,7 +1837,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_67bd64b41a2ee",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "umiestnit_ikonu_basic",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -1955,7 +1936,7 @@
                         "sub_fields": [
                             {
                                 "key": "field_67bd65281a2f2",
-                                "label": "Umiestniť ikonu (áno/nie/čiastočne) namiesto textu?",
+                                "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
                                 "name": "umiestnit_ikonu_advanced",
                                 "aria-label": "",
                                 "type": "true_false",
@@ -2132,7 +2113,7 @@
                 "tabs": "all",
                 "toolbar": "full",
                 "media_upload": 0,
-                "default_value": "<h3>Podmienky garancie:</h3>\n<p>V balíkoch <strong>Basic</strong> a <strong>Advanced</strong> platí garancia vrátenia peňazí za prácu na odblokovaní v prípade, že Google našu žiadosť definitívne zamietne. Poplatok za úvodný audit (v hodnote <strong>290 €</strong>) je nevratný, keďže pokrýva náklady na diagnostiku a expertnú analýzu, ktorú získate v každom prípade.</p>",
+                "default_value": "<h3>Podmienky garancie:<\/h3>\n<p>V balíkoch <strong>Basic<\/strong> a <strong>Advanced<\/strong> platí garancia vrátenia peňazí za prácu na odblokovaní v prípade, že Google našu žiadosť definitívne zamietne. Poplatok za úvodný audit (v hodnote <strong>290 €<\/strong>) je nevratný, keďže pokrýva náklady na diagnostiku a expertnú analýzu, ktorú získate v každom prípade.<\/p>",
                 "delay": 0
             },
             {
@@ -2290,7 +2271,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO / GEO)",
+                "default_value": "Optimalizácia pre vyhľadávanie v AI (AIO \/ GEO)",
                 "maxlength": "",
                 "placeholder": "",
                 "prepend": "",
@@ -2797,9 +2778,14 @@
         "location": [
             [
                 {
-                    "param": "page_template",
+                    "param": "post_category",
                     "operator": "==",
-                    "value": "page-templates/single-odblokovanie-google-merchant-cente.php"
+                    "value": "category:services"
+                },
+                {
+                    "param": "post_category",
+                    "operator": "==",
+                    "value": "category:odblokovanie-google-merchant-cente"
                 }
             ]
         ],
@@ -2811,7 +2797,6 @@
         "hide_on_screen": "",
         "active": true,
         "description": "",
-        "show_in_rest": 0,
-        "modified": 0
+        "show_in_rest": 0
     }
 ]
