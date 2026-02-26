@@ -1,11 +1,11 @@
 [
     {
-        "key": "group_67f090c0e35a0",
-        "title": "Nastavenia stránky (O nás)",
+        "key": "group_67f2a1b8c3d4e",
+        "title": "Nastavenia technickej stránky",
         "fields": [
             {
-                "key": "field_67f09126d7b4f",
-                "label": "Hero blok (Úvod)",
+                "key": "field_67f2a1c9e5f6g",
+                "label": "Hlavný nadpis (H1)",
                 "name": "",
                 "aria-label": "",
                 "type": "tab",
@@ -18,58 +18,15 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0,
-                "selected": 0
+                "endpoint": 0
             },
             {
-                "key": "field_67f0914ad7b50",
-                "label": "Nadpis H1 (časť 1 - sivá)",
-                "name": "hero_title_part_1",
+                "key": "field_67f2a1d7h8i9j",
+                "label": "Hlavný nadpis stránky",
+                "name": "technical_page_title",
                 "aria-label": "",
                 "type": "text",
-                "instructions": "Text 'O ProfLines' (sivá farba).",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "O ProfLines",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f09162d7b51",
-                "label": "Nadpis H1 (časť 2 - biela)",
-                "name": "hero_title_part_2",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Text 'marketingovej agentúre' (biela farba).",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "marketingovej agentúre",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f0917bd7b52",
-                "label": "Text v Hero bloku",
-                "name": "hero_text",
-                "aria-label": "",
-                "type": "wysiwyg",
-                "instructions": "Hlavný text v Hero bloku.",
+                "instructions": "Zadajte hlavný nadpis H1 pre túto stránku.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -77,16 +34,37 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "<p>ProfLines marketingová agentúra je digitálna agentúra novej generácie, ktorá spája hlbokú marketingovú analytiku, moderné technológie a umelú inteligenciu. Pomáhame firmám rásť na miestnej i medzinárodnej úrovni, využívajúc dáta, logiku a ľudskú kontrolu na každom kroku.<br><br>Základom našej práce sú hĺbkové marketingové výskumy. Analyzujeme trhy, konkurentov a správanie zákazníkov, aby sme vytvárali stratégie založené nie na domnienkach, ale na overených faktoch. Vďaka tomu naši klienti dosahujú presné a merateľné výsledky už počas prvých mesiacov spolupráce.<\/p>",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 1,
+                "default_value": "Zásady ochrany osobných údajov (GDPR)",
+                "maxlength": "",
                 "allow_in_bindings": 0,
-                "delay": 0
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
             },
             {
-                "key": "field_67f091d1d7b53",
-                "label": "Obrázky Hero",
+                "key": "field_67f2a1e9k0l1m",
+                "label": "Dátum aktualizácie",
+                "name": "technical_page_date",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Zadajte dátum aktualizácie (napr. 7-Nov-25).",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "aktualizované/updated: 7-Nov-25",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67f2a1f2n2o3p",
+                "label": "Obsahové bloky",
                 "name": "",
                 "aria-label": "",
                 "type": "tab",
@@ -99,208 +77,209 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0,
-                "selected": 0
+                "endpoint": 0
             },
             {
-                "key": "field_67f091dfd7b54",
-                "label": "Hlavný obrázok",
-                "name": "hero_main_image",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Hlavná fotka (01.png \/ 01.webp)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "jpg, jpeg, png, webp, svg",
-                "allow_in_bindings": 0,
-                "preview_size": "medium"
-            },
-            {
-                "key": "field_67f09223d7b55",
-                "label": "Dekoratívny SVG 1",
-                "name": "hero_decor_1",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Súbor 02.svg",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "allow_in_bindings": 0,
-                "preview_size": "medium"
-            },
-            {
-                "key": "field_67f09238d7b56",
-                "label": "Dekoratívny SVG 2",
-                "name": "hero_decor_2",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Súbor 03.svg",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "allow_in_bindings": 0,
-                "preview_size": "medium"
-            },
-            {
-                "key": "field_67f0924cd7b57",
-                "label": "Dekoratívny SVG 3",
-                "name": "hero_decor_3",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Súbor 04.svg",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "allow_in_bindings": 0,
-                "preview_size": "medium"
-            },
-            {
-                "key": "field_67f09258d7b58",
-                "label": "Dekoratívny SVG 4",
-                "name": "hero_decor_4",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Súbor 05.svg",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "allow_in_bindings": 0,
-                "preview_size": "medium"
-            },
-            {
-                "key": "field_67f0929fd7b59",
-                "label": "Blok Naša misia",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0,
-                "selected": 0
-            },
-            {
-                "key": "field_67f092b6d7b5a",
-                "label": "Nadpis misie",
-                "name": "mission_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Naša misia",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f092d0d7b5b",
-                "label": "Text misie",
-                "name": "mission_text",
-                "aria-label": "",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "<p>Zjednodušujeme zložitý marketing a robíme ho merateľným aj ziskovým.<br><br>Pomáhame slovenským firmám budovať silnú online prítomnosť a s istotou expandovať na trhy Európskej únie.<\/p>",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 1,
-                "allow_in_bindings": 0,
-                "delay": 0
-            },
-            {
-                "key": "field_67f09301d7b5c",
-                "label": "Stĺpce misie",
-                "name": "mission_columns",
+                "key": "field_67f2a1f8q4r5s",
+                "label": "Obsahové sekcie",
+                "name": "technical_content_sections",
                 "aria-label": "",
                 "type": "repeater",
-                "instructions": "Pridajte stĺpce pre blok misie.",
+                "instructions": "Pridajte jednotlivé obsahové sekcie (napr. GDPR, Privacy Policy, atď.)",
                 "required": 0,
                 "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "pagination": 0,
+                "min": 1,
+                "max": 10,
+                "collapsed": "field_67f2a205t6u7v",
+                "button_label": "Pridať sekciu",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_67f2a205t6u7v",
+                        "label": "ID sekcie (kotva)",
+                        "name": "section_id",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Zadajte ID pre kotvu (napr. gdpr, policy, cookies). Bez medzier, len malé písmená.",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "napr. gdpr",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67f2a1f8q4r5s"
+                    },
+                    {
+                        "key": "field_67f2a218w8x9y",
+                        "label": "Nadpis sekcie",
+                        "name": "section_title",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "Zadajte nadpis sekcie (napr. Zásady ochrany osobných údajov (GDPR))",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "allow_in_bindings": 0,
+                        "placeholder": "Nadpis sekcie",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67f2a1f8q4r5s"
+                    },
+                    {
+                        "key": "field_67f2a223z0a1b",
+                        "label": "Jazyk sekcie",
+                        "name": "section_language",
+                        "aria-label": "",
+                        "type": "select",
+                        "instructions": "Vyberte jazyk sekcie",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "sk": "Slovenčina",
+                            "en": "Angličtina",
+                            "cz": "Čeština"
+                        },
+                        "default_value": "sk",
+                        "return_format": "value",
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "ui": 0,
+                        "ajax": 0,
+                        "placeholder": "",
+                        "parent_repeater": "field_67f2a1f8q4r5s"
+                    },
+                    {
+                        "key": "field_67f2a22fc2d3e",
+                        "label": "Obsah sekcie",
+                        "name": "section_content",
+                        "aria-label": "",
+                        "type": "wysiwyg",
+                        "instructions": "Vložte obsah sekcie. Môžete použiť HTML formátovanie.",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "all",
+                        "toolbar": "full",
+                        "media_upload": 1,
+                        "allow_in_bindings": 0,
+                        "delay": 0,
+                        "parent_repeater": "field_67f2a1f8q4r5s"
+                    }
+                ]
+            },
+            {
+                "key": "field_67f2a23df4g5h",
+                "label": "Banner",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_67f2a247i6j7k",
+                "label": "Zobraziť banner",
+                "name": "show_technical_banner",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "Zaškrtnite, ak chcete zobraziť banner v spodnej časti stránky.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Áno, zobraziť banner",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "Zobraziť",
+                "ui_off_text": "Skryť"
+            },
+            {
+                "key": "field_67f2a253l8m9n",
+                "label": "Nadpis banneru",
+                "name": "banner_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Zadajte nadpis pre banner.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_67f2a247i6j7k",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Právny základ spracúvania",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67f2a25fo0p1q",
+                "label": "Tlačidlá v banneri",
+                "name": "banner_buttons",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Pridajte tlačidlá pre banner.",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_67f2a247i6j7k",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -310,92 +289,96 @@
                 "pagination": 0,
                 "min": 0,
                 "max": 3,
-                "collapsed": "",
-                "button_label": "Pridať stĺpec",
+                "collapsed": "field_67f2a268r2s3t",
+                "button_label": "Pridať tlačidlo",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
-                        "key": "field_67f09333d7b5d",
-                        "label": "Ikona",
-                        "name": "icon",
-                        "aria-label": "",
-                        "type": "image",
-                        "instructions": "Ikona pre stĺpec",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "33",
-                            "class": "",
-                            "id": ""
-                        },
-                        "return_format": "array",
-                        "library": "all",
-                        "min_width": "",
-                        "min_height": "",
-                        "min_size": "",
-                        "max_width": "",
-                        "max_height": "",
-                        "max_size": "",
-                        "mime_types": "svg",
-                        "preview_size": "medium",
-                        "allow_in_bindings": 0,
-                        "parent_repeater": "field_67f09301d7b5c"
-                    },
-                    {
-                        "key": "field_67f09371d7b5f",
-                        "label": "Nadpis",
-                        "name": "title",
+                        "key": "field_67f2a268r2s3t",
+                        "label": "Text tlačidla",
+                        "name": "button_text",
                         "aria-label": "",
                         "type": "text",
-                        "instructions": "",
+                        "instructions": "Zadajte text tlačidla.",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "33",
+                            "width": "50",
                             "class": "",
                             "id": ""
                         },
                         "default_value": "",
                         "maxlength": "",
                         "allow_in_bindings": 0,
-                        "placeholder": "",
+                        "placeholder": "napr. Získať bezplatnú konzultáciu",
                         "prepend": "",
                         "append": "",
-                        "parent_repeater": "field_67f09301d7b5c"
+                        "parent_repeater": "field_67f2a25fo0p1q"
                     },
                     {
-                        "key": "field_67f093aad7b62",
-                        "label": "Text",
-                        "name": "text",
+                        "key": "field_67f2a273u4v5w",
+                        "label": "Odkaz tlačidla",
+                        "name": "button_link",
                         "aria-label": "",
-                        "type": "textarea",
-                        "instructions": "",
+                        "type": "url",
+                        "instructions": "Zadajte URL odkaz pre tlačidlo.",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "33",
+                            "width": "50",
                             "class": "",
                             "id": ""
                         },
                         "default_value": "",
-                        "maxlength": "",
-                        "allow_in_bindings": 0,
-                        "rows": 4,
+                        "placeholder": "https://...",
+                        "parent_repeater": "field_67f2a25fo0p1q"
+                    },
+                    {
+                        "key": "field_67f2a27cx6y7z",
+                        "label": "Štýl tlačidla",
+                        "name": "button_style",
+                        "aria-label": "",
+                        "type": "select",
+                        "instructions": "Vyberte štýl tlačidla.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "primary": "Primárne (zvýraznené)",
+                            "secondary": "Sekundárne (obyčajné)"
+                        },
+                        "default_value": "secondary",
+                        "return_format": "value",
+                        "multiple": 0,
+                        "allow_null": 0,
+                        "ui": 0,
+                        "ajax": 0,
                         "placeholder": "",
-                        "new_lines": "br",
-                        "parent_repeater": "field_67f09301d7b5c"
+                        "parent_repeater": "field_67f2a25fo0p1q"
                     }
                 ]
             },
             {
-                "key": "field_67f093c4d7b63",
-                "label": "Obrázok v spodnej časti misie",
-                "name": "mission_bottom_image",
+                "key": "field_67f2a288a8b9c",
+                "label": "Logo v banneri",
+                "name": "banner_logo",
                 "aria-label": "",
                 "type": "image",
-                "instructions": "Nahrajte obrázok (fullsize\/01.png \/ 01.webp)",
+                "instructions": "Nahrajte logo pre banner.",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_67f2a247i6j7k",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -409,13 +392,13 @@
                 "max_width": "",
                 "max_height": "",
                 "max_size": "",
-                "mime_types": "jpg, jpeg, png, webp",
+                "mime_types": "svg, png, jpg, jpeg, webp",
                 "preview_size": "medium",
                 "allow_in_bindings": 0
             },
             {
-                "key": "field_67f09405d7b64",
-                "label": "Blok Ako pracujeme",
+                "key": "field_67f2a293d0e1f",
+                "label": "Navigačný panel",
                 "name": "",
                 "aria-label": "",
                 "type": "tab",
@@ -428,181 +411,15 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0,
-                "selected": 0
+                "endpoint": 0
             },
             {
-                "key": "field_67f0941bd7b65",
-                "label": "Nadpis",
-                "name": "how_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Ako pracujeme",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f09438d7b66",
-                "label": "Podnadpis",
-                "name": "how_subtitle",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Naše pracovné procesy podporuje vlastný AI asistent Gem",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f09447d7b67",
-                "label": "Text o Gem (veľký blok)",
-                "name": "how_gem_text",
-                "aria-label": "",
-                "type": "wysiwyg",
-                "instructions": "Text pre prvý veľký blok.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "<p>Naše pracovné procesy podporuje vlastný AI asistent Gem.<br>Gem je interný inteligentný nástroj vyvinutý tímom ProfLines marketingovej agentúry, ktorý automatizuje analytiku, zber dát a prípravu správ a pomáha tímu robiť presnejšie marketingové rozhodnutia. Vďaka Gem šetríme čas na rutinné úlohy, aby sme mali viac priestoru pre strategickú a kreatívnu prácu.<\/p>",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 1,
-                "allow_in_bindings": 0,
-                "delay": 0
-            },
-            {
-                "key": "field_67f0946bd7b68",
-                "label": "Text o emaili (malý blok)",
-                "name": "how_email_text",
-                "aria-label": "",
-                "type": "wysiwyg",
-                "instructions": "Text pre blok o emaili. Ikona emailu sa nahráva samostatne.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "allow_in_bindings": 0,
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 1,
-                "delay": 0
-            },
-            {
-                "key": "field_67f094d1d7b6a",
-                "label": "Text o krokoch (malý blok)",
-                "name": "how_steps_text",
-                "aria-label": "",
-                "type": "textarea",
-                "instructions": "Text pre blok o krokoch práce.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Každý projekt prechádza krokmi: analýza → hĺbkový výskum → realizácia → kontrola → správa.",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "rows": 3,
-                "placeholder": "",
-                "new_lines": "br"
-            },
-            {
-                "key": "field_67f09500d7b6b",
-                "label": "Blok Tím ProfLines",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0,
-                "selected": 0
-            },
-            {
-                "key": "field_67f0950dd7b6c",
-                "label": "Nadpis tímu",
-                "name": "team_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Tím ProfLines",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f09522d7b6d",
-                "label": "Text pod nadpisom tímu",
-                "name": "team_subtitle",
-                "aria-label": "",
-                "type": "textarea",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Na každom projekte pracuje tím odborníkov, ktorý spája analytické myslenie, technológie a kreativitu:",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "rows": 3,
-                "placeholder": "",
-                "new_lines": "br"
-            },
-            {
-                "key": "field_67f0953bd7b6e",
-                "label": "Členovia tímu",
-                "name": "team_members",
+                "key": "field_67f2a29cg2h3i",
+                "label": "Položky navigácie",
+                "name": "navigation_items",
                 "aria-label": "",
                 "type": "repeater",
-                "instructions": "Pridajte členov tímu. Maximálne 9.",
+                "instructions": "Pridajte položky pre pravý navigačný panel. Automaticky sa prepoja s ID sekcií.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -613,19 +430,19 @@
                 "layout": "row",
                 "pagination": 0,
                 "min": 0,
-                "max": 9,
-                "collapsed": "",
-                "button_label": "Pridať člena tímu",
+                "max": 10,
+                "collapsed": "field_67f2a2a5j4k5l",
+                "button_label": "Pridať položku navigácie",
                 "rows_per_page": 20,
                 "sub_fields": [
                     {
-                        "key": "field_67f09563d7b6f",
-                        "label": "Meno a priezvisko",
-                        "name": "name",
+                        "key": "field_67f2a2a5j4k5l",
+                        "label": "Text odkazu",
+                        "name": "nav_text",
                         "aria-label": "",
                         "type": "text",
-                        "instructions": "",
-                        "required": 0,
+                        "instructions": "Zadajte text pre navigačný odkaz.",
+                        "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "50",
@@ -635,19 +452,19 @@
                         "default_value": "",
                         "maxlength": "",
                         "allow_in_bindings": 0,
-                        "placeholder": "",
+                        "placeholder": "napr. Zásady ochrany osobných údajov",
                         "prepend": "",
                         "append": "",
-                        "parent_repeater": "field_67f0953bd7b6e"
+                        "parent_repeater": "field_67f2a29cg2h3i"
                     },
                     {
-                        "key": "field_67f09574d7b70",
-                        "label": "Pozícia",
-                        "name": "position",
+                        "key": "field_67f2a2b0m6n7o",
+                        "label": "ID cieľa (kotva)",
+                        "name": "nav_target",
                         "aria-label": "",
                         "type": "text",
-                        "instructions": "",
-                        "required": 0,
+                        "instructions": "Zadajte ID sekcie (bez #), na ktorú odkaz smeruje.",
+                        "required": 1,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "50",
@@ -657,640 +474,34 @@
                         "default_value": "",
                         "maxlength": "",
                         "allow_in_bindings": 0,
-                        "placeholder": "",
+                        "placeholder": "napr. gdpr",
                         "prepend": "",
                         "append": "",
-                        "parent_repeater": "field_67f0953bd7b6e"
-                    },
-                    {
-                        "key": "field_67f09582d7b71",
-                        "label": "Fotografia",
-                        "name": "photo",
-                        "aria-label": "",
-                        "type": "image",
-                        "instructions": "Nahrajte fotografiu člena tímu",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "33",
-                            "class": "",
-                            "id": ""
-                        },
-                        "return_format": "array",
-                        "library": "all",
-                        "min_width": "",
-                        "min_height": "",
-                        "min_size": "",
-                        "max_width": "",
-                        "max_height": "",
-                        "max_size": "",
-                        "mime_types": "jpg, jpeg, png, webp",
-                        "preview_size": "thumbnail",
-                        "allow_in_bindings": 0,
-                        "parent_repeater": "field_67f0953bd7b6e"
-                    },
-                    {
-                        "key": "field_67f095a7d7b72",
-                        "label": "Popis",
-                        "name": "description",
-                        "aria-label": "",
-                        "type": "textarea",
-                        "instructions": "Krátky popis člena tímu",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "33",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "allow_in_bindings": 0,
-                        "rows": 3,
-                        "placeholder": "",
-                        "new_lines": "br",
-                        "parent_repeater": "field_67f0953bd7b6e"
-                    },
-                    {
-                        "key": "field_67f095b7d7b73",
-                        "label": "Email",
-                        "name": "email",
-                        "aria-label": "",
-                        "type": "email",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "33",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": "meno@proflines.agency",
-                        "allow_in_bindings": 0,
-                        "prepend": "",
-                        "append": "",
-                        "parent_repeater": "field_67f0953bd7b6e"
+                        "parent_repeater": "field_67f2a29cg2h3i"
                     }
                 ]
-            },
-            {
-                "key": "field_67f09600d7b74",
-                "label": "Blok Sociálna iniciatíva",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0,
-                "selected": 0
-            },
-            {
-                "key": "field_67f0960fd7b75",
-                "label": "Nadpis iniciatívy",
-                "name": "initiative_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Sociálna iniciatíva",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f09628d7b76",
-                "label": "Text iniciatívy",
-                "name": "initiative_text",
-                "aria-label": "",
-                "type": "wysiwyg",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "<p>ProfLines marketingová agentúra podporuje digitalizáciu malých firiem na Slovensku. Mesačne otvárame niekoľko bezplatných miest pre lokálnych výrobcov a podnikateľov, ktorým pomáhame presunúť sa do online sveta – vytvoriť web, nastaviť reklamu alebo spustiť prvú marketingovú kampaň.<br>Cieľom iniciatívy je poskytnúť malým firmám reálnu šancu rozvíjať sa v digitálnom prostredí bez začiatočných nákladov.<\/p>",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 1,
-                "allow_in_bindings": 0,
-                "delay": 0
-            },
-            {
-                "key": "field_67f09662d7b77",
-                "label": "Obrázky iniciatívy",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0,
-                "selected": 0
-            },
-            {
-                "key": "field_67f0967ed7b78",
-                "label": "Hlavný obrázok iniciatívy",
-                "name": "initiative_main_image",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Hlavný obrázok (rovnaký ako v Hero bloku)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "jpg, jpeg, png, webp",
-                "allow_in_bindings": 0,
-                "preview_size": "medium"
-            },
-            {
-                "key": "field_67f0969dd7b79",
-                "label": "Dekoratívny SVG iniciatívy 1",
-                "name": "initiative_decor_1",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Súbor 05.svg",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "allow_in_bindings": 0,
-                "preview_size": "medium"
-            },
-            {
-                "key": "field_67f096b0d7b7a",
-                "label": "Dekoratívny SVG iniciatívy 2",
-                "name": "initiative_decor_2",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Súbor 02.svg",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "allow_in_bindings": 0,
-                "preview_size": "medium"
-            },
-            {
-                "key": "field_67f096c2d7b7b",
-                "label": "Dekoratívny SVG iniciatívy 3",
-                "name": "initiative_decor_3",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Súbor 03.svg",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "allow_in_bindings": 0,
-                "preview_size": "medium"
-            },
-            {
-                "key": "field_67f096d2d7b7c",
-                "label": "Dekoratívny SVG iniciatívy 4",
-                "name": "initiative_decor_4",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Súbor 04.svg",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "allow_in_bindings": 0,
-                "preview_size": "medium"
-            },
-            {
-                "key": "field_67f09702d7b7d",
-                "label": "Blok Nástroje (Companys)",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0,
-                "selected": 0
-            },
-            {
-                "key": "field_67f09712d7b7e",
-                "label": "Nadpis nástrojov",
-                "name": "tools_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Profesionálne nástroje, ktoré používame:",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f0972bd7b7f",
-                "label": "Logá nástrojov",
-                "name": "tools_logos",
-                "aria-label": "",
-                "type": "gallery",
-                "instructions": "Nahrajte logá nástrojov (01.svg - 05.svg). Pre nekonečný posuv ich duplikujeme.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min": "",
-                "max": "",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "insert": "append",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
-            },
-            {
-                "key": "field_67f09750d7b80",
-                "label": "Blok Princípy",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0,
-                "selected": 0
-            },
-            {
-                "key": "field_67f09760d7b81",
-                "label": "Logo v strede",
-                "name": "principles_logo",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Logo v strede (footer\/01.svg)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
-            },
-            {
-                "key": "field_67f0977fd7b82",
-                "label": "Princíp 1 (Technológie)",
-                "name": "principle_1_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Text pre odznak Technológie",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "25",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Technológie",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f09798d7b83",
-                "label": "Ikona princípu 1",
-                "name": "principle_1_icon",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Ikona pre Technológie (principles\/01.svg)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "25",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
-            },
-            {
-                "key": "field_67f097b6d7b84",
-                "label": "Princíp 2 (Transparentnosť)",
-                "name": "principle_2_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Text pre odznak Transparentnosť",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "25",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Transparentnosť",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f097c8d7b85",
-                "label": "Ikona princípu 2",
-                "name": "principle_2_icon",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Ikona pre Transparentnosť (principles\/02.svg)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "25",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
-            },
-            {
-                "key": "field_67f097ded7b86",
-                "label": "Princíp 3 (Rýchlosť)",
-                "name": "principle_3_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Text pre odznak Rýchlosť",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "25",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Rýchlosť",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f097f0d7b87",
-                "label": "Ikona princípu 3",
-                "name": "principle_3_icon",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Ikona pre Rýchlosť (principles\/03.svg)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "25",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
-            },
-            {
-                "key": "field_67f09804d7b88",
-                "label": "Princíp 4 (Výsledok)",
-                "name": "principle_4_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Text pre odznak Výsledok",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "25",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Výsledok",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f09815d7b89",
-                "label": "Ikona princípu 4",
-                "name": "principle_4_icon",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Ikona pre Výsledok (principles\/04.svg)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "25",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
-            },
-            {
-                "key": "field_67f0982ed7b8a",
-                "label": "Nadpis princípov",
-                "name": "principles_content_title",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Principles Title",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f09845d7b8b",
-                "label": "Text princípov",
-                "name": "principles_content_text",
-                "aria-label": "",
-                "type": "textarea",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Nesľubujeme, ukazujeme čísla. ProfLines marketingová agentúra je synergie automatizácie, ľudských skúseností a poctivosti v každom projekte.",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "rows": 4,
-                "placeholder": "",
-                "new_lines": "br"
             }
         ],
         "location": [
             [
                 {
-                    "param": "page",
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "page-technical.php"
+                }
+            ],
+            [
+                {
+                    "param": "page_id",
                     "operator": "==",
                     "value": "2604"
+                }
+            ],
+            [
+                {
+                    "param": "page_id",
+                    "operator": "==",
+                    "value": "2589"
                 }
             ]
         ],
@@ -1301,7 +512,7 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
+        "description": "Univerzálne polia pre technické stránky (GDPR, Privacy Policy, atď.)",
         "show_in_rest": 0
     }
 ]
