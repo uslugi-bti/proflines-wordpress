@@ -24,10 +24,10 @@ get_header();
                 <div class="technical__content">
                     <div class="technical-content__head">
                         <div class="technical-content__title">
-                            <h1><?php echo esc_html(get_field('technical_page_title') ?: 'Zásady ochrany osobných údajov (GDPR)'); ?></h1>
+                            <h1><?php the_title(); ?></h1>
                         </div>
                         <div class="technical-content__text">
-                            <p><?php echo esc_html(get_field('technical_page_date') ?: 'aktualizované/updated: 7-Nov-25'); ?></p>
+                            <p><?php echo get_the_date(); ?></p>
                         </div>
                     </div>
 
