@@ -152,7 +152,6 @@ function proflines_json_ld() {
         $json_ld[] = $front_page_json;
     }
     
-    // JSON-LD for blog archive page (using specific page ID)
     if (is_page(242)) {
         $blog_page_id = get_option('page_for_posts');
         $front_page_id = get_option('page_on_front');
