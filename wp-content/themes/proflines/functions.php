@@ -50,17 +50,12 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 function proflines_json_ld() {
     $json_ld = array();
     
-    // JSON-LD for front page
     if (is_front_page()) {
-        // Get site URL and name from WordPress settings
         $site_url = get_site_url();
         $site_name = get_bloginfo('name');
         $admin_email = get_bloginfo('admin_email');
-
-        // Get ACF fields from front page
         $front_page_id = get_option('page_on_front');
         
-        // Get all necessary fields
         $legal_name = get_field('legal_name', $front_page_id);
         $telephone = get_field('telephone', $front_page_id);
         $description = get_field('description', $front_page_id);
@@ -76,13 +71,11 @@ function proflines_json_ld() {
         $instagram = get_field('link_to_instagram', $front_page_id);
         $linkedin = get_field('link_to_linkedin', $front_page_id);
 
-        // Build sameAs array (only add if URLs exist)
         $same_as = array();
         if ($facebook) $same_as[] = $facebook;
         if ($instagram) $same_as[] = $instagram;
         if ($linkedin) $same_as[] = $linkedin;
 
-        // Get FAQ items
         $faq_items = get_field('faq_items', $front_page_id);
         $faq_entities = array();
         
@@ -101,11 +94,9 @@ function proflines_json_ld() {
             }
         }
 
-        // Construct the front page JSON-LD
         $front_page_json = array(
             "@context" => "https://schema.org",
             "@graph" => array(
-                // Organization data
                 array(
                     "@type" => "ProfessionalService",
                     "@id" => $site_url . "/#organization",
@@ -133,7 +124,6 @@ function proflines_json_ld() {
                     "vatID" => $vat_id,
                     "taxID" => $tax_id,
                 ),
-                // FAQ data (only if there are FAQ items)
                 !empty($faq_entities) ? array(
                     "@type" => "FAQPage",
                     "mainEntity" => $faq_entities
@@ -141,10 +131,8 @@ function proflines_json_ld() {
             )
         );
 
-        // Filter out null values
         $front_page_json['@graph'] = array_filter($front_page_json['@graph']);
 
-        // Add sameAs only if not empty
         if (!empty($same_as)) {
             $front_page_json['@graph'][0]['sameAs'] = $same_as;
         }
@@ -156,11 +144,9 @@ function proflines_json_ld() {
         $blog_page_id = get_option('page_for_posts');
         $front_page_id = get_option('page_on_front');
         
-        // Get blog-specific fields
         $blog_json_ld_name = get_field('blog_json_ld_name', $blog_page_id);
         $blog_json_ld_description = get_field('blog_json_ld_description', $blog_page_id);
         
-        // Get organization data from front page
         $legal_name = get_field('legal_name', $front_page_id);
         $logo = get_field('logo', $front_page_id);
         
@@ -180,30 +166,23 @@ function proflines_json_ld() {
         $json_ld[] = $blog_json;
     }
     
-    // JSON-LD for single blog posts
     if (is_singular('post') && has_category('blog')) {
         $front_page_id = get_option('page_on_front');
         
-        // Get post data
         $post_id = get_the_ID();
         $headline = get_the_title($post_id);
         
-        // Get content and strip tags for description, limit to ~160 characters
         $content = get_the_content($post_id);
         $description = wp_trim_words(strip_tags($content), 25, '...');
         
-        // Get featured image
         $image = get_the_post_thumbnail_url($post_id, 'full');
         
-        // Get author data (using default team info)
         $author_name = 'ProfLines Team';
         $author_url = home_url('/o-nas');
         
-        // Get organization data from front page
         $legal_name = get_field('legal_name', $front_page_id);
         $logo = get_field('logo', $front_page_id);
         
-        // Get post dates
         $date_published = get_the_date('Y-m-d', $post_id);
         $date_modified = get_the_modified_date('Y-m-d', $post_id);
         
@@ -240,33 +219,25 @@ function proflines_json_ld() {
     if (is_singular('post') && has_category('services') && !has_category('ina-sluzba')) {
         $post_id = get_the_ID();
         
-        // Get organization data from front page
         $front_page_id = get_option('page_on_front');
         $legal_name = get_field('legal_name', $front_page_id) ?: get_bloginfo('name');
         $site_url = get_site_url();
         
-        // Get service data - with proper checks
         $service_json_ld = get_field('service_json_ld', $post_id);
         $faq_items = get_field('faq_items', $post_id);
         
-        // Get new ACF fields for service type, category and catalog name
         $service_type = get_field('service_type', $post_id);
         $category = get_field('category', $post_id);
         $catalog_name = get_field('catalog_name', $post_id);
         
-        // Получаем пакеты из repeater поля packages_items
         $packages = get_field('packages_items', $post_id);
         
-        // Собираем предложения (offers)
         $offers = array();
         
-        // Проходим по всем пакетам
         if (is_array($packages) && !empty($packages)) {
             foreach ($packages as $package) {
-                // Проверяем, что у пакета есть название и цена
                 if (isset($package['name'])) {
                     
-                    // Собираем описание из функций пакета
                     $description = '';
                     if (isset($package['features']) && is_array($package['features'])) {
                         $features = array();
@@ -278,7 +249,6 @@ function proflines_json_ld() {
                         $description = implode(', ', $features);
                     }
                     
-                    // Если нет функций, используем описание пакета
                     if (empty($description) && isset($package['description'])) {
                         $description = $package['description'];
                     }
@@ -304,7 +274,6 @@ function proflines_json_ld() {
             }
         }
         
-        // Собираем FAQ
         $faq_entities = array();
         if ($faq_items && is_array($faq_items)) {
             foreach ($faq_items as $item) {
@@ -321,10 +290,9 @@ function proflines_json_ld() {
             }
         }
         
-        // Основные данные услуги
         $service_data = array(
             "@type" => "Service",
-            "serviceType" => $service_type ?: "Market Research", // Используем поле service_type или значение по умолчанию
+            "serviceType" => $service_type ?: "Market Research",
             "name" => get_the_title(),
             "url" => get_permalink(),
             "description" => wp_trim_words(strip_tags(get_the_content()), 30, '...'),
@@ -339,12 +307,10 @@ function proflines_json_ld() {
             )
         );
         
-        // Добавляем category только если она указана
         if (!empty($category)) {
             $service_data['category'] = $category;
         }
         
-        // Переопределяем значения из ACF если они есть
         if (is_array($service_json_ld)) {
             if (isset($service_json_ld['name']) && !empty($service_json_ld['name'])) {
                 $service_data['name'] = $service_json_ld['name'];
@@ -357,19 +323,16 @@ function proflines_json_ld() {
             }
         }
         
-        // ДОБАВЛЯЕМ КАТАЛОГ ПРЕДЛОЖЕНИЙ - используем поле catalog_name для названия каталога
         if (!empty($offers)) {
             $service_data['hasOfferCatalog'] = array(
                 "@type" => "OfferCatalog",
-                "name" => $catalog_name ?: "Balíky prieskumu trhu", // Используем поле catalog_name или значение по умолчанию
+                "name" => $catalog_name ?: "Balíky prieskumu trhu",
                 "itemListElement" => $offers
             );
         }
         
-        // Формируем граф
         $graph = array($service_data);
         
-        // Добавляем FAQ если есть
         if (!empty($faq_entities)) {
             $graph[] = array(
                 "@type" => "FAQPage",
@@ -383,6 +346,50 @@ function proflines_json_ld() {
         );
         
         $json_ld[] = $service_json;
+    }
+    
+    if (is_page_template('page-mistakes.php')) {
+        $post_id = get_the_ID();
+        $mistake_categories = get_field('mistake_categories', $post_id);
+        
+        if ($mistake_categories && is_array($mistake_categories)) {
+            $faq_entities = array();
+            
+            $counter = 1;
+            foreach ($mistake_categories as $category) {
+                if (isset($category['mistakes_list']) && is_array($category['mistakes_list'])) {
+                    foreach ($category['mistakes_list'] as $mistake) {
+                        if (isset($mistake['mistake_name']) && isset($mistake['mistake_description_error']['error_text']) && isset($mistake['mistake_description_solution']['solution_text'])) {
+                            
+                            $question = "Chyba č. " . $counter . ": " . $mistake['mistake_name'];
+                            
+                            $answer = "<strong>Chyba:</strong> " . $mistake['mistake_description_error']['error_text'] . " <strong>Riešenie:</strong> " . $mistake['mistake_description_solution']['solution_text'];
+                            
+                            $faq_entities[] = array(
+                                "@type" => "Question",
+                                "name" => $question,
+                                "acceptedAnswer" => array(
+                                    "@type" => "Answer",
+                                    "text" => wp_strip_all_tags($answer)
+                                )
+                            );
+                            
+                            $counter++;
+                        }
+                    }
+                }
+            }
+            
+            if (!empty($faq_entities)) {
+                $mistakes_json = array(
+                    "@context" => "https://schema.org",
+                    "@type" => "FAQPage",
+                    "mainEntity" => $faq_entities
+                );
+                
+                $json_ld[] = $mistakes_json;
+            }
+        }
     }
 
     return $json_ld;

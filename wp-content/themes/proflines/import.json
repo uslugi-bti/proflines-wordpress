@@ -18,7 +18,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67d8f9b1b2c3f",
@@ -120,7 +121,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67d8fa01b2c44",
@@ -327,7 +329,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67d8faa1b2c54",
@@ -364,7 +367,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67d8fac1b2c56",
@@ -390,9 +394,9 @@
         "location": [
             [
                 {
-                    "param": "page_template",
+                    "param": "page",
                     "operator": "==",
-                    "value": "page-mistakes.php"
+                    "value": "2532"
                 }
             ]
         ],
