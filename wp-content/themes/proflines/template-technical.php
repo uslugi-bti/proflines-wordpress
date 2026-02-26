@@ -56,9 +56,12 @@ get_header();
                                     $button_link = get_sub_field('button_link');
                                     $button_style = get_sub_field('button_style');
                                 ?>
-                                    <?php if( $button_text && $button_link ): ?>
+                                    <?php if( $button_text && $button_link ):
+                                        $link_url = is_array($button_link) ? $button_link['url'] : $button_link;
+                                        $link_target = is_array($button_link) && !empty($button_link['target']) ? $button_link['target'] : '_self';
+                                    ?>
                                         <div class="technical-content-banner__button <?php echo $button_style === 'primary' ? 'button' : ''; ?>">
-                                            <a href="<?php echo esc_url($button_link); ?>"><?php echo esc_html($button_text); ?></a>
+                                            <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($button_text); ?></a>
                                         </div>
                                     <?php endif; ?>
                                 <?php endwhile; ?>
