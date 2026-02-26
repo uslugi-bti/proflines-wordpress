@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: Technical Page
+*/
+
+get_header();
+?>
 <main class="technical-page">
     <div class="breadcrump">
         <div class="container">
