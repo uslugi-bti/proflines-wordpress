@@ -728,6 +728,10 @@
                 </table>
             </div>
 
+            <div class="table__button">
+                <button id="Zobraziť menej">Zobraziť viac</button>
+            </div>
+
         </div>
     </section>
     <section class="important-notes">
