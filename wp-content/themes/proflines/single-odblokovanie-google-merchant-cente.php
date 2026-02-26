@@ -252,11 +252,15 @@
             <div class="expertise-nums__body">
                 <?php if (have_rows('expertise_stats')): ?>
                     <?php while (have_rows('expertise_stats')): the_row(); 
-                        $number = get_sub_field('number');
+                        $number_raw = get_sub_field('number');
                         $description = get_sub_field('description');
                         $icon = get_sub_field('icon');
                         $badge = get_sub_field('badge');
                         $cover_image = get_sub_field('cover_image');
+
+                        preg_match('/^([0-9]+)(.*)$/', $number_raw, $matches);
+                        $number_value = $matches[1] ?? $number_raw;
+                        $number_symbol = $matches[2] ?? '';
                     ?>
                         <div class="expertise-nums__item">
                             <div class="expertise-nums-item__icon">
@@ -265,7 +269,9 @@
                                 <?php endif; ?>
                             </div>
                             <div class="expertise-nums-item__title">
-                                <h2><?php echo $number; ?></h2>
+                                <h2>
+                                    <span id="<?php echo $number_value; ?>">0</span><?php echo $number_symbol; ?>
+                                </h2>
                             </div>
                             <div class="expertise-nums-item__text">
                                 <p><?php echo $description; ?></p>
