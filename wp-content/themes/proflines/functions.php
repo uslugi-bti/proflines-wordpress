@@ -140,6 +140,56 @@ function proflines_json_ld() {
         $json_ld[] = $front_page_json;
     }
     
+    if (is_page(2604)) {
+        $front_page_id = get_option('page_on_front');
+        $current_url = get_permalink();
+        $site_url = get_site_url();
+        $site_name = get_bloginfo('name');
+        
+        $legal_name = get_field('legal_name', $front_page_id) ?: 'ProfLines s.r.o.';
+        $logo = get_field('logo', $front_page_id) ?: $site_url . '/logo.png';
+        $street_address = get_field('street_address', $front_page_id);
+        $address_locality = get_field('address_locality', $front_page_id) ?: 'Bratislava';
+        $postal_code = get_field('postal_code', $front_page_id);
+        $address_country = get_field('address_country', $front_page_id) ?: 'SK';
+        $facebook = get_field('link_to_facebook', $front_page_id);
+        $instagram = get_field('link_to_instagram', $front_page_id);
+        $linkedin = get_field('link_to_linkedin', $front_page_id);
+
+        $same_as = array();
+        if ($facebook) $same_as[] = $facebook;
+        if ($instagram) $same_as[] = $instagram;
+        if ($linkedin) $same_as[] = $linkedin;
+
+        $about_page_json = array(
+            "@context" => "https://schema.org",
+            "@type" => "AboutPage",
+            "name" => "O nás | " . $site_name,
+            "url" => $current_url,
+            "description" => "Digitálna marketingová agentúra " . $site_name . ". Spájame hĺbkovú analytiku a AI pre váš rast.",
+            "mainEntity" => array(
+                "@type" => "ProfessionalService",
+                "name" => $site_name,
+                "legalName" => $legal_name,
+                "logo" => $logo,
+                "url" => $site_url,
+                "address" => array(
+                    "@type" => "PostalAddress",
+                    "streetAddress" => $street_address,
+                    "addressLocality" => $address_locality,
+                    "postalCode" => $postal_code,
+                    "addressCountry" => $address_country
+                )
+            )
+        );
+
+        if (!empty($same_as)) {
+            $about_page_json['mainEntity']['sameAs'] = $same_as;
+        }
+
+        $json_ld[] = $about_page_json;
+    }
+    
     if (is_page(242)) {
         $blog_page_id = get_option('page_for_posts');
         $front_page_id = get_option('page_on_front');
