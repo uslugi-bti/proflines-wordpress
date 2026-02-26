@@ -88,7 +88,7 @@
                         </div>
                         <div class="form-group">
                             <label>*E-mail:</label>
-                            <input type="email" name="email" id="email" placeholder="E-mail:" autocomplete="off" required>
+                            <input type="email" name="email" id="email" placeholder="E-mail:" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label>Telefón:</label>
@@ -107,7 +107,7 @@
                             
                             <div class="form-group__body">
                                 <label>
-                                    <input type="checkbox" name="gdpr_consent" id="gdpr_consent" required>
+                                    <input type="checkbox" name="gdpr_consent" id="gdpr_consent">
                                     <span></span>
                                     <p><span>*Súhlasím s podmienkami spracovávania osobných údajov podľa GDPR</span></p>
                                 </label>
@@ -133,11 +133,13 @@
         </div>
     </section>
     <section class="mission">
-        <div class="mission__img">
-            <?php $mission_bottom_image = get_field('mission_bottom_image', 2604); ?>
-            <?php if ($mission_bottom_image): ?>
-            <img src="<?php echo esc_url($mission_bottom_image['url']); ?>" alt="<?php echo esc_attr($mission_bottom_image['alt'] ?: 'mission'); ?>" loading="lazy">
-            <?php endif; ?>
+        <div class='container'>
+            <div class="mission__img">
+                <?php $mission_bottom_image = get_field('mission_bottom_image', 2604); ?>
+                <?php if ($mission_bottom_image): ?>
+                <img src="<?php echo esc_url($mission_bottom_image['url']); ?>" alt="<?php echo esc_attr($mission_bottom_image['alt'] ?: 'mission'); ?>" loading="lazy">
+                <?php endif; ?>
+            </div>
         </div>
     </section>
 </main>
