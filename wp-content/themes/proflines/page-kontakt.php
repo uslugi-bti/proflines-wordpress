@@ -4,10 +4,10 @@
         <div class="container">
             <ul class="breadcrump__body">
                 <li class="breadcrump__item">
-                    <a href>Domov</a>
+                    <a href="<?php echo home_url(); ?>">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href>Bal&#xED;ky slu&#x17E;ieb</a>
+                    <a href="<?php echo get_permalink(); ?>">Kontakt</a>
                 </li>
             </ul>
         </div>
@@ -20,79 +20,112 @@
                         <h1>Kontakt</h1>
                     </div>
                     <ul class="contact-content__list">
+                        <?php $front_page_id = get_option('page_on_front'); ?>
+                        <?php $telephone = get_field('telephone', $front_page_id); ?>
+                        <?php if ($telephone): ?>
                         <li class="contact-content__item">
-                            <a href>+421 944 457 515</a>
+                            <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', $telephone)); ?>"><?php echo esc_html($telephone); ?></a>
                         </li>
+                        <?php endif; ?>
+                        
+                        <?php $admin_email = get_bloginfo('admin_email'); ?>
                         <li class="contact-content__item">
-                            <a href>info@proflines.agency</a>
+                            <a href="mailto:<?php echo esc_attr($admin_email); ?>"><?php echo esc_html($admin_email); ?></a>
                         </li>
+                        
+                        <?php $street_address = get_field('street_address', $front_page_id); ?>
+                        <?php $address_locality = get_field('address_locality', $front_page_id); ?>
+                        <?php $postal_code = get_field('postal_code', $front_page_id); ?>
+                        <?php if ($street_address && $address_locality && $postal_code): ?>
                         <li class="contact-content__item">
-                            <a href>S&#xED;dlo spolo&#x10D;nosti: Lermontovova 911/3, 811 05 Bratislava</a>
+                            <a href="https://maps.google.com/?q=<?php echo urlencode($street_address . ', ' . $postal_code . ' ' . $address_locality); ?>" target="_blank" rel="noopener noreferrer">
+                                Sídlo spoločnosti: <?php echo esc_html($street_address . ', ' . $postal_code . ' ' . $address_locality); ?>
+                            </a>
                         </li>
+                        <?php endif; ?>
+                        
+                        <?php $operation_address = get_field('operation_address', $front_page_id); ?>
+                        <?php if ($operation_address): ?>
                         <li class="contact-content__item">
-                            <a href>Prev&#xE1;dzka: Legion&#xE1;rska, 1/1 831 04 Bratislava</a>
+                            <a href="https://maps.google.com/?q=<?php echo urlencode($operation_address); ?>" target="_blank" rel="noopener noreferrer">
+                                Prevádzka: <?php echo esc_html($operation_address); ?>
+                            </a>
                         </li>
+                        <?php endif; ?>
                     </ul>
                     <div class="contact-content__text">
-                        <p>ProfLines s.r.o.<br>I&#x10C;O:53398467, DI&#x10C;(VAT):SK2121411105<br>Obchodn&#xFD; register Mestsk&#xE9;ho s&#xFA;du Bratislava III, oddiel: Sro, vlo&#x17E;ka &#x10D;. 150347/B</p>
-                        <p>Predmety &#x10D;innosti (SK NACE):<br>73.20 &#x2013; Reklamn&#xE9; a marketingov&#xE9; slu&#x17E;by, prieskum trhu a verejnej mienky.</p>
-                        <p>70.22 &#x2013; &#x10C;innos&#x165; podnikate&#x13E;sk&#xFD;ch, organiza&#x10D;n&#xFD;ch a ekonomick&#xFD;ch poradcov.</p>
+                        <?php $legal_name = get_field('legal_name', $front_page_id); ?>
+                        <?php $vat_id = get_field('vat_id', $front_page_id); ?>
+                        <?php $tax_id = get_field('tax_id', $front_page_id); ?>
+                        <?php $company_registration = get_field('company_registration', $front_page_id); ?>
+                        
+                        <?php if ($legal_name || $vat_id || $tax_id): ?>
+                        <p>
+                            <?php if ($legal_name): echo esc_html($legal_name) . '<br>'; endif; ?>
+                            <?php if ($vat_id): echo 'IČO: ' . esc_html($vat_id); endif; ?>
+                            <?php if ($tax_id): echo ', DIČ(VAT): ' . esc_html($tax_id); endif; ?>
+                            <?php if ($company_registration): echo '<br>' . esc_html($company_registration); endif; ?>
+                        </p>
+                        <?php endif; ?>
+                        
+                        <p>Predmety činnosti (SK NACE):<br>73.20 – Reklamné a marketingové služby, prieskum trhu a verejnej mienky.</p>
+                        <p>70.22 – Činnosť podnikateľských, organizačných a ekonomických poradcov.</p>
                     </div>
                 </div>
                 <div class="contact__form">
                     <form action="#" method="post">
                         <div class="form-head span-two">
                             <div class="form-head__title">
-                                <h2>Kontaktujte n&#xE1;s</h2>
+                                <h2>Kontaktujte nás</h2>
                             </div>
                             <div class="form-head__text">
-                                <p>M&#xE1;te ot&#xE1;zky alebo z&#xE1;ujem o spolupr&#xE1;cu? Vypl&#x148;te formul&#xE1;r a my sa v&#xE1;m ozveme &#x10D;o najsk&#xF4;r</p>
+                                <p>Máte otázky alebo záujem o spoluprácu? Vyplňte formulár a my sa vám ozveme čo najskôr</p>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Va&#x161;e meno:</label>
-                            <input type="text" name id placeholder="Meno a priezvisko" autocomplete="off">
+                            <label>Vaše meno:</label>
+                            <input type="text" name="name" id="name" placeholder="Meno a priezvisko" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label>*E-mail:</label>
-                            <input type="text" name id placeholder="E-mail:" autocomplete="off">
+                            <input type="email" name="email" id="email" placeholder="E-mail:" autocomplete="off" required>
                         </div>
                         <div class="form-group">
-                            <label>Telef&#xF3;n:</label>
-                            <select name id>
-                                <option value="Slovakia (Slovensko)">Slovakia (Slovensko)</option>
-                                <option value="Slovakia (Slovensko)">Slovakia (Slovensko)</option>
-                                <option value="Slovakia (Slovensko)">Slovakia (Slovensko)</option>
-                                <option value="Slovakia (Slovensko)">Slovakia (Slovensko)</option>
+                            <label>Telefón:</label>
+                            <select name="country_code" id="country_code">
+                                <option value="SK">Slovakia (Slovensko) +421</option>
+                                <option value="CZ">Czech Republic (Česko) +420</option>
+                                <option value="PL">Poland (Polsko) +48</option>
+                                <option value="HU">Hungary (Maďarsko) +36</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <input type="text" name id placeholder="+421" autocomplete="off">
+                            <input type="tel" name="phone" id="phone" placeholder="Telefónne číslo" autocomplete="off">
                         </div>
                         <div class="form-group checkbox span-two">
-                            <h4>Spracovanie osobn&#xFD;ch &#xFA;dajov (GDPR)</h4>
+                            <h4>Spracovanie osobných údajov (GDPR)</h4>
                             
                             <div class="form-group__body">
                                 <label>
-                                    <input type="checkbox" name="gdpr" id="gdpr">
+                                    <input type="checkbox" name="gdpr_consent" id="gdpr_consent" required>
                                     <span></span>
-                                    <p><span>*S&#xFA;hlas&#xED;m s podmienkami spracov&#xE1;vania osobn&#xFD;ch &#xFA;dajov pod&#x13E;a GDPR</span></p>
+                                    <p><span>*Súhlasím s podmienkami spracovávania osobných údajov podľa GDPR</span></p>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="gdpr" id="gdpr">
+                                    <input type="checkbox" name="newsletter_consent" id="newsletter_consent">
                                     <span></span>
-                                    <p>S&#xFA;hlas&#xED;m so zasielan&#xED;m u&#x17E;ito&#x10D;n&#xE9;ho obsahu (case &#x161;t&#xFA;die, tipy, e-booky), maxim&#xE1;lne 1&#xD7; t&#xFD;&#x17E;denne. M&#xF4;&#x17E;em sa kedyko&#x13E;vek odhl&#xE1;si&#x165;.S&#xFA;hlas&#xED;m so zasielan&#xED;m u&#x17E;ito&#x10D;n&#xE9;ho obsahu (case &#x161;t&#xFA;die, tipy, e-booky), maxim&#xE1;lne 1&#xD7; t&#xFD;&#x17E;denne. M&#xF4;&#x17E;em sa kedyko&#x13E;vek odhl&#xE1;si&#x165;.</p>
+                                    <p>Súhlasím so zasielaním užitočného obsahu (case štúdie, tipy, e-booky), maximálne 1× týždenne. Môžem sa kedykoľvek odhlásiť.</p>
                                 </label>
                             </div>
                         </div>
 
                         <div class="form-button button span-two">
-                            <button type="submit">Odosla&#x165; spr&#xE1;vu</button>
+                            <button type="submit">Odoslať správu</button>
                         </div>
 
                         <div class="form-caption span-two">
-                            <span>Ozveme sa v&#xE1;m do 24 hod&#xED;n</span>
-                            <span>Ak e-mail nepri&#x161;iel, pozrite aj Spam</span>
+                            <span>Ozveme sa vám do 24 hodín</span>
+                            <span>Ak e-mail neprišiel, pozrite aj Spam</span>
                         </div>
                     </form>
                 </div>
@@ -102,7 +135,9 @@
     <section class="mission">
         <div class="mission__img">
             <?php $mission_bottom_image = get_field('mission_bottom_image', 2604); ?>
+            <?php if ($mission_bottom_image): ?>
             <img src="<?php echo esc_url($mission_bottom_image['url']); ?>" alt="<?php echo esc_attr($mission_bottom_image['alt'] ?: 'mission'); ?>" loading="lazy">
+            <?php endif; ?>
         </div>
     </section>
 </main>

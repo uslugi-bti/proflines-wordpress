@@ -140,18 +140,25 @@ function proflines_json_ld() {
         $json_ld[] = $front_page_json;
     }
     
-    if (is_page(2604)) {
+    // JSON-LD pre stránku "Kontakt"
+    if (is_page(2979)) {
         $front_page_id = get_option('page_on_front');
         $current_url = get_permalink();
         $site_url = get_site_url();
         $site_name = get_bloginfo('name');
+        $admin_email = get_bloginfo('admin_email');
         
         $legal_name = get_field('legal_name', $front_page_id) ?: 'ProfLines s.r.o.';
+        $telephone = get_field('telephone', $front_page_id);
         $logo = get_field('logo', $front_page_id) ?: $site_url . '/logo.png';
         $street_address = get_field('street_address', $front_page_id);
         $address_locality = get_field('address_locality', $front_page_id) ?: 'Bratislava';
         $postal_code = get_field('postal_code', $front_page_id);
         $address_country = get_field('address_country', $front_page_id) ?: 'SK';
+        $operation_address = get_field('operation_address', $front_page_id);
+        $vat_id = get_field('vat_id', $front_page_id);
+        $tax_id = get_field('tax_id', $front_page_id);
+        $company_registration = get_field('company_registration', $front_page_id);
         $facebook = get_field('link_to_facebook', $front_page_id);
         $instagram = get_field('link_to_instagram', $front_page_id);
         $linkedin = get_field('link_to_linkedin', $front_page_id);
@@ -161,33 +168,59 @@ function proflines_json_ld() {
         if ($instagram) $same_as[] = $instagram;
         if ($linkedin) $same_as[] = $linkedin;
 
-        $about_page_json = array(
+        $contact_page_json = array(
             "@context" => "https://schema.org",
-            "@type" => "AboutPage",
-            "name" => "O nás | " . $site_name,
+            "@type" => "ContactPage",
+            "name" => "Kontakt | " . $site_name,
             "url" => $current_url,
-            "description" => "Digitálna marketingová agentúra " . $site_name . ". Spájame hĺbkovú analytiku a AI pre váš rast.",
+            "description" => "Kontaktujte " . $site_name . ". Sme tu pre vás.",
             "mainEntity" => array(
                 "@type" => "ProfessionalService",
                 "name" => $site_name,
                 "legalName" => $legal_name,
                 "logo" => $logo,
                 "url" => $site_url,
+                "email" => $admin_email,
+                "telephone" => $telephone,
+                "vatID" => $vat_id,
+                "taxID" => $tax_id,
                 "address" => array(
                     "@type" => "PostalAddress",
                     "streetAddress" => $street_address,
                     "addressLocality" => $address_locality,
                     "postalCode" => $postal_code,
                     "addressCountry" => $address_country
+                ),
+                "contactPoint" => array(
+                    "@type" => "ContactPoint",
+                    "telephone" => $telephone,
+                    "contactType" => "customer service",
+                    "email" => $admin_email
                 )
             )
         );
 
         if (!empty($same_as)) {
-            $about_page_json['mainEntity']['sameAs'] = $same_as;
+            $contact_page_json['mainEntity']['sameAs'] = $same_as;
         }
 
-        $json_ld[] = $about_page_json;
+        if ($operation_address) {
+            $contact_page_json['mainEntity']['location'] = array(
+                "@type" => "Place",
+                "address" => array(
+                    "@type" => "PostalAddress",
+                    "streetAddress" => $operation_address,
+                    "addressLocality" => $address_locality,
+                    "addressCountry" => $address_country
+                )
+            );
+        }
+
+        if ($company_registration) {
+            $contact_page_json['mainEntity']['description'] = $company_registration;
+        }
+
+        $json_ld[] = $contact_page_json;
     }
     
     if (is_page(242)) {
