@@ -101,7 +101,8 @@
     </section>
     <section class="mission">
         <div class="mission__img">
-            <img src="" alt="mission" loading="lazy">
+            <?php $mission_bottom_image = get_field('mission_bottom_image', 2604); ?>
+            <img src="<?php echo esc_url($mission_bottom_image['url']); ?>" alt="<?php echo esc_attr($mission_bottom_image['alt'] ?: 'mission'); ?>" loading="lazy">
         </div>
     </section>
 </main>
