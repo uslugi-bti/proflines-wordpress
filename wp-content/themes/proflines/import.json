@@ -18,7 +18,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f2a1d7h8i9j",
@@ -55,7 +56,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "aktualizované/updated: 7-Nov-25",
+                "default_value": "aktualizované\/updated: 7-Nov-25",
                 "maxlength": "",
                 "allow_in_bindings": 0,
                 "placeholder": "",
@@ -77,7 +78,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f2a1f8q4r5s",
@@ -171,7 +173,9 @@
                         "ui": 0,
                         "ajax": 0,
                         "placeholder": "",
-                        "parent_repeater": "field_67f2a1f8q4r5s"
+                        "parent_repeater": "field_67f2a1f8q4r5s",
+                        "create_options": 0,
+                        "save_options": 0
                     },
                     {
                         "key": "field_67f2a22fc2d3e",
@@ -212,7 +216,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f2a247i6j7k",
@@ -320,7 +325,7 @@
                         "label": "Odkaz tlačidla",
                         "name": "button_link",
                         "aria-label": "",
-                        "type": "url",
+                        "type": "link",
                         "instructions": "Zadajte URL odkaz pre tlačidlo.",
                         "required": 0,
                         "conditional_logic": 0,
@@ -329,8 +334,8 @@
                             "class": "",
                             "id": ""
                         },
-                        "default_value": "",
-                        "placeholder": "https://...",
+                        "return_format": "url",
+                        "allow_in_bindings": 0,
                         "parent_repeater": "field_67f2a25fo0p1q"
                     },
                     {
@@ -358,7 +363,9 @@
                         "ui": 0,
                         "ajax": 0,
                         "placeholder": "",
-                        "parent_repeater": "field_67f2a25fo0p1q"
+                        "parent_repeater": "field_67f2a25fo0p1q",
+                        "create_options": 0,
+                        "save_options": 0
                     }
                 ]
             },
@@ -395,91 +402,6 @@
                 "mime_types": "svg, png, jpg, jpeg, webp",
                 "preview_size": "medium",
                 "allow_in_bindings": 0
-            },
-            {
-                "key": "field_67f2a293d0e1f",
-                "label": "Navigačný panel",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67f2a29cg2h3i",
-                "label": "Položky navigácie",
-                "name": "navigation_items",
-                "aria-label": "",
-                "type": "repeater",
-                "instructions": "Pridajte položky pre pravý navigačný panel. Automaticky sa prepoja s ID sekcií.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "layout": "row",
-                "pagination": 0,
-                "min": 0,
-                "max": 10,
-                "collapsed": "field_67f2a2a5j4k5l",
-                "button_label": "Pridať položku navigácie",
-                "rows_per_page": 20,
-                "sub_fields": [
-                    {
-                        "key": "field_67f2a2a5j4k5l",
-                        "label": "Text odkazu",
-                        "name": "nav_text",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "Zadajte text pre navigačný odkaz.",
-                        "required": 1,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "allow_in_bindings": 0,
-                        "placeholder": "napr. Zásady ochrany osobných údajov",
-                        "prepend": "",
-                        "append": "",
-                        "parent_repeater": "field_67f2a29cg2h3i"
-                    },
-                    {
-                        "key": "field_67f2a2b0m6n7o",
-                        "label": "ID cieľa (kotva)",
-                        "name": "nav_target",
-                        "aria-label": "",
-                        "type": "text",
-                        "instructions": "Zadajte ID sekcie (bez #), na ktorú odkaz smeruje.",
-                        "required": 1,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "50",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "maxlength": "",
-                        "allow_in_bindings": 0,
-                        "placeholder": "napr. gdpr",
-                        "prepend": "",
-                        "append": "",
-                        "parent_repeater": "field_67f2a29cg2h3i"
-                    }
-                ]
             }
         ],
         "location": [
@@ -487,21 +409,7 @@
                 {
                     "param": "page_template",
                     "operator": "==",
-                    "value": "page-technical.php"
-                }
-            ],
-            [
-                {
-                    "param": "page_id",
-                    "operator": "==",
-                    "value": "2604"
-                }
-            ],
-            [
-                {
-                    "param": "page_id",
-                    "operator": "==",
-                    "value": "2589"
+                    "value": "template-technical.php"
                 }
             ]
         ],
