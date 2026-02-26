@@ -113,36 +113,11 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "<p><strong>Vidíme reálnu situáciu na trhu:</strong> v roku 2023 bol na Slovensku zaznamenaný rekordný počet zaniknutých podnikateľských subjektov — 57 544, pričom až 82 % z nich tvorili živnostníci. Mnohí podnikatelia neprežijú prvých 3 – 5 rokov najmä pre nedostatok moderných nástrojov na získavanie zákazníkov a slabú online viditeľnosť.</p>\n<p>Marketingová agentúra ProfLines spúšťa iniciatívu „Digitálny výťah“, ktorej cieľom je dať malým firmám skutočnú šancu na rast a dlhodobú stabilitu.</p>\n<blockquote><strong>Dôležité:</strong> Ide o náš osobný postoj a záväzok. Nečerpáme žiadne granty, dotácie ani finančné prostriedky od štátu, Európskej únie či externých sponzorov. Program je 100 % financovaný z vlastných zdrojov a zisku našej agentúry. Je to náš spôsob, ako sprístupniť moderný marketing tým, ktorí na Slovensku vytvárajú skutočnú hodnotu.</blockquote>\n<h3>Čo zahŕňa bezplatný balík podpory?</h3>\n<p>Poskytujeme kompletný balík služieb, ktoré sú nevyhnutné pre vstup podnikania do online prostredia:</p>\n<p><strong>Tvorba webovej stránky</strong> Moderný dizajn prispôsobený vašim obchodným cieľom.</p>\n<p><strong>Nastavenie reklamy</strong> Spustenie prvých reklamných kampaní (PPC, Google Ads) zameraných na získavanie dopytov a kontaktov.</p>\n<p><strong>AI automatizácia:</strong> Implementácia nástrojov umelej inteligencie na zvýšenie efektivity tvorby obsahu a marketingových procesov.</p>\n<p><strong>Stratégia a analytika:</strong> Profesionálny, dátami riadený prístup — nie dohady, ale merateľné rozhodnutia.</p>\n<p><strong>Pre koho je tento program určený?</strong> Iniciatíva je zameraná na podnikateľov, ktorí reálne potrebujú digitalizáciu, najmä:</p>\n<ul>\n<li><strong>mikro a malé slovenské výrobné podniky,</strong></li>\n<li><strong>malé podniky v rurálnych a vidieckych oblastiach,</strong></li>\n<li><strong>lokálne značky, ktoré chcú rásť a presadiť sa aj na trhu EÚ.</strong></li>\n</ul>",
+                "default_value": "<p><strong>Vidíme reálnu situáciu na trhu:<\/strong> v roku 2023 bol na Slovensku zaznamenaný rekordný počet zaniknutých podnikateľských subjektov — 57 544, pričom až 82 % z nich tvorili živnostníci. Mnohí podnikatelia neprežijú prvých 3 – 5 rokov najmä pre nedostatok moderných nástrojov na získavanie zákazníkov a slabú online viditeľnosť.<\/p>\n<p>Marketingová agentúra ProfLines spúšťa iniciatívu „Digitálny výťah“, ktorej cieľom je dať malým firmám skutočnú šancu na rast a dlhodobú stabilitu.<\/p>\n<blockquote><strong>Dôležité:<\/strong> Ide o náš osobný postoj a záväzok. Nečerpáme žiadne granty, dotácie ani finančné prostriedky od štátu, Európskej únie či externých sponzorov. Program je 100 % financovaný z vlastných zdrojov a zisku našej agentúry. Je to náš spôsob, ako sprístupniť moderný marketing tým, ktorí na Slovensku vytvárajú skutočnú hodnotu.<\/blockquote>\n<h3>Čo zahŕňa bezplatný balík podpory?<\/h3>\n<p>Poskytujeme kompletný balík služieb, ktoré sú nevyhnutné pre vstup podnikania do online prostredia:<\/p>\n<p><strong>Tvorba webovej stránky<\/strong> Moderný dizajn prispôsobený vašim obchodným cieľom.<\/p>\n<p><strong>Nastavenie reklamy<\/strong> Spustenie prvých reklamných kampaní (PPC, Google Ads) zameraných na získavanie dopytov a kontaktov.<\/p>\n<p><strong>AI automatizácia:<\/strong> Implementácia nástrojov umelej inteligencie na zvýšenie efektivity tvorby obsahu a marketingových procesov.<\/p>\n<p><strong>Stratégia a analytika:<\/strong> Profesionálny, dátami riadený prístup — nie dohady, ale merateľné rozhodnutia.<\/p>\n<p><strong>Pre koho je tento program určený?<\/strong> Iniciatíva je zameraná na podnikateľov, ktorí reálne potrebujú digitalizáciu, najmä:<\/p>\n<ul>\n<li><strong>mikro a malé slovenské výrobné podniky,<\/strong><\/li>\n<li><strong>malé podniky v rurálnych a vidieckych oblastiach,<\/strong><\/li>\n<li><strong>lokálne značky, ktoré chcú rásť a presadiť sa aj na trhu EÚ.<\/strong><\/li>\n<\/ul>",
                 "tabs": "all",
                 "toolbar": "full",
                 "media_upload": 1,
                 "delay": 0
-            },
-            {
-                "key": "field_67da8f7a2b3d1",
-                "label": "Obrázok v sekcii",
-                "name": "why_we_do_image",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "preview_size": "medium",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
             },
             {
                 "key": "field_67da8f8a2b3d2",
@@ -397,7 +372,7 @@
                 "name": "",
                 "aria-label": "",
                 "type": "tab",
-                "instructions": "Formulár sa nedá editovať",
+                "instructions": "",
                 "required": 0,
                 "conditional_logic": [],
                 "wrapper": {
@@ -531,9 +506,9 @@
         "location": [
             [
                 {
-                    "param": "page_template",
+                    "param": "page",
                     "operator": "==",
-                    "value": "page-social-initiative.php"
+                    "value": "2557"
                 }
             ]
         ],
