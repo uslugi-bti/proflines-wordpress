@@ -137,50 +137,50 @@
                     </div>
                 </div>
                 <div class="briff__form">
-                    <form action>
+                    <form action="#" method="post">
                         <div class="form-head span-two">
                             <div class="form-head__title">
                                 <h3>Kontaktné informácie</h3>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group form-group--required">
                             <label>*Meno a priezvisko:</label>
-                            <input type="text" name id placeholder="Meno a priezvisko" autocomplete="off">
+                            <input type="text" name="full_name" id="full_name" placeholder="Meno a priezvisko" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label>Názov spoločnosti (ak existuje):</label>
-                            <input type="text" name id placeholder="Názov spoločnosti" autocomplete="off">
+                            <input type="text" name="company_name" id="company_name" placeholder="Názov spoločnosti" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label>Telefón:</label>
-                            <input type="text" name id placeholder="+421" autocomplete="off">
+                            <input type="tel" name="phone" id="phone" placeholder="+421" autocomplete="off">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group form-group--required">
                             <label>*E-mail:</label>
-                            <input type="text" name id placeholder="E-mail:" autocomplete="off">
+                            <input type="email" name="email" id="email" placeholder="E-mail:" autocomplete="off">
                         </div>
 
-                        <div class="form-group radio span-two">
+                        <div class="form-group radio span-two form-group--required">
                             <h4>*Preferovaný spôsob kontaktu:</h4>
                             
                             <div class="form-group__body">
                                 <label>
-                                    <input type="radio" name="contact-method" id="contact-method">
+                                    <input type="radio" name="contact_method" id="contact_method_phone" value="phone">
                                     <span></span>
                                     <p>Telefón</p>
                                 </label>
                                 <label>
-                                    <input type="radio" name="contact-method" id="contact-method">
+                                    <input type="radio" name="contact_method" id="contact_method_email" value="email">
                                     <span></span>
                                     <p>E-mail</p>
                                 </label>
                                 <label>
-                                    <input type="radio" name="contact-method" id="contact-method">
+                                    <input type="radio" name="contact_method" id="contact_method_whatsapp" value="whatsapp">
                                     <span></span>
                                     <p>WhatsApp</p>
                                 </label>
                                 <label>
-                                    <input type="radio" name="contact-method" id="contact-method">
+                                    <input type="radio" name="contact_method" id="contact_method_telegram" value="telegram">
                                     <span></span>
                                     <p>Telegram</p>
                                 </label>
@@ -205,12 +205,12 @@
                             
                             <div class="form-group__body">
                                 <label>
-                                    <input type="radio" name="need-consultation" id="need-consultation">
+                                    <input type="radio" name="need_consultation" id="need_consultation_yes" value="yes">
                                     <span></span>
                                     <p>Áno</p>
                                 </label>
                                 <label>
-                                    <input type="radio" name="need-consultation" id="need-consultation">
+                                    <input type="radio" name="need_consultation" id="need_consultation_no" value="no">
                                     <span></span>
                                     <p>Nie</p>
                                 </label>
@@ -219,62 +219,62 @@
 
                         <div class="form-group span-two">
                             <h4>Koľkokrát ste už podali odvolanie?</h4>
-                            <input type="text" name id placeholder="0, 1, 2, 3+..." autocomplete="off">
+                            <input type="text" name="appeal_count" id="appeal_count" placeholder="0, 1, 2, 3+..." autocomplete="off">
                         </div>
 
                         <div class="form-group span-two">
                             <h4>Približný rozpočet:</h4>
-                            <input type="text" name id placeholder="Napr. 500-1000 EUR" autocomplete="off">
+                            <input type="text" name="budget" id="budget" placeholder="Napr. 500-1000 EUR" autocomplete="off">
                         </div>
 
                         <div class="form-group span-two">
                             <h4>Čo predávate? Kto je vaša cieľová skupina (B2B/B2C)?</h4>
-                            <textarea name id placeholder="Opíšte váš biznis..." autocomplete="off"></textarea>
+                            <textarea name="business_description" id="business_description" placeholder="Opíšte váš biznis..." autocomplete="off"></textarea>
                         </div>
 
-                        <div class="form-group checkbox span-two">
+                        <div class="form-group checkbox span-two form-group--required">
                             <h4>*Hlavný cieľ marketingového prieskumu:</h4>
                             
                             <div class="form-group__body">
                                 <label>
-                                    <input type="checkbox" name="marketing-goal" id="marketing-goal">
+                                    <input type="checkbox" name="marketing_goal_idea" id="marketing_goal_idea" value="overit_napad">
                                     <span></span>
                                     <p>Overiť nápad pred spustením</p>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="marketing-goal" id="marketing-goal">
+                                    <input type="checkbox" name="marketing_goal_customer" id="marketing_goal_customer" value="porozumiet_zakaznikovi">
                                     <span></span>
                                     <p>Lepšie porozumieť svojmu zákazníkovi</p>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="marketing-goal" id="marketing-goal">
+                                    <input type="checkbox" name="marketing_goal_competition" id="marketing_goal_competition" value="analyzovat_konkurenciu">
                                     <span></span>
                                     <p>Analyzovať konkurenciu</p>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="marketing-goal" id="marketing-goal">
+                                    <input type="checkbox" name="marketing_goal_niche" id="marketing_goal_niche" value="najst_niku">
                                     <span></span>
                                     <p>Nájsť najvhodnejšiu niku alebo región</p>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="marketing-goal" id="marketing-goal">
+                                    <input type="checkbox" name="marketing_goal_price" id="marketing_goal_price" value="optimalizovat_cenu">
                                     <span></span>
                                     <p>Optimalizovať cenu alebo pozicionovanie</p>
                                 </label>
                             </div>
                         </div>
 
-                        <div class="form-group checkbox span-two">
+                        <div class="form-group checkbox span-two form-group--required">
                             <h4>Spracovanie osobných údajov (GDPR)</h4>
                             
                             <div class="form-group__body">
                                 <label>
-                                    <input type="checkbox" name="gdpr" id="gdpr">
+                                    <input type="checkbox" name="gdpr_consent" id="gdpr_consent" value="suhlasim">
                                     <span></span>
                                     <p><span>*Súhlasím s podmienkami spracovania osobných údajov podľa GDPR</span></p>
                                 </label>
                                 <label>
-                                    <input type="checkbox" name="gdpr" id="gdpr">
+                                    <input type="checkbox" name="newsletter_consent" id="newsletter_consent" value="suhlasim">
                                     <span></span>
                                     <p>Súhlasím so zasielaním užitočného obsahu (case štúdie, tipy, e-booky), maximálne 1× týždenne. Môžem sa kedykoľvek odhlásiť.</p>
                                 </label>
