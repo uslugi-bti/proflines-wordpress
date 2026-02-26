@@ -61,48 +61,28 @@
                 </div>
             </div>
             <div class="columns__body">
-                <div class="columns__item">
-                    <div class="columns-item__head">
-                        <div class="columns-item__icon">
-                            <?php $mission_icons = get_field('mission_icons'); ?>
-                            <img src="<?php echo esc_url($mission_icons[0]['url']); ?>" alt="<?php echo esc_attr($mission_icons[0]['alt'] ?: 'icon'); ?>" loading="lazy">
+                <?php if( have_rows('mission_columns') ): ?>
+                    <?php while( have_rows('mission_columns') ) : the_row(); ?>
+                        <?php 
+                            $icon = get_sub_field('icon');
+                            $title = get_sub_field('title');
+                            $text = get_sub_field('text');
+                        ?>
+                        <div class="columns__item">
+                            <div class="columns-item__head">
+                                <div class="columns-item__icon">
+                                    <img src="<?php echo esc_url($icon['url']); ?>" alt="<?php echo esc_attr($icon['alt'] ?: 'icon'); ?>" loading="lazy">
+                                </div>
+                                <div class="columns-item__title">
+                                    <h2><?php echo esc_html($title); ?></h2>
+                                </div>
+                            </div>
+                            <div class="columns-item__text">
+                                <p><?php echo esc_html($text); ?></p>
+                            </div>
                         </div>
-                        <div class="columns-item__title">
-                            <h2><?php echo esc_html(get_field('mission_column_title_1')); ?></h2>
-                        </div>
-                    </div>
-                    <div class="columns-item__text">
-                        <p><?php echo esc_html(get_field('mission_column_text_1')); ?></p>
-                    </div>
-                </div>
-                <div class="columns__item">
-                    <div class="columns-item__head">
-                        <div class="columns-item__icon">
-                            <?php $mission_icons = get_field('mission_icons'); ?>
-                            <img src="<?php echo esc_url($mission_icons[1]['url']); ?>" alt="<?php echo esc_attr($mission_icons[1]['alt'] ?: 'icon'); ?>" loading="lazy">
-                        </div>
-                        <div class="columns-item__title">
-                            <h2><?php echo esc_html(get_field('mission_column_title_2')); ?></h2>
-                        </div>
-                    </div>
-                    <div class="columns-item__text">
-                        <p><?php echo esc_html(get_field('mission_column_text_2')); ?></p>
-                    </div>
-                </div>
-                <div class="columns__item">
-                    <div class="columns-item__head">
-                        <div class="columns-item__icon">
-                            <?php $mission_icons = get_field('mission_icons'); ?>
-                            <img src="<?php echo esc_url($mission_icons[2]['url']); ?>" alt="<?php echo esc_attr($mission_icons[2]['alt'] ?: 'icon'); ?>" loading="lazy">
-                        </div>
-                        <div class="columns-item__title">
-                            <h2><?php echo esc_html(get_field('mission_column_title_3')); ?></h2>
-                        </div>
-                    </div>
-                    <div class="columns-item__text">
-                        <p><?php echo esc_html(get_field('mission_column_text_3')); ?></p>
-                    </div>
-                </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </div>
             <div class="mission__img">
                 <?php $mission_bottom_image = get_field('mission_bottom_image'); ?>
@@ -126,7 +106,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/01.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/01.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Hĺbkový Marketingový Prieskum</h2>
@@ -141,7 +121,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/02.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/02.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>SEO Audit Webových Stránok</h2>
@@ -156,7 +136,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/03.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/03.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Správa Reklamných Kampaní (PPC)</h2>
@@ -171,7 +151,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/04.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/04.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Expanzia na Zahraničné Trhy</h2>
@@ -186,7 +166,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/05.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/05.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Tvorba Webových Stránok</h2>
@@ -201,7 +181,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/06.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/06.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/06.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Správa Sociálnych Sietí</h2>
@@ -216,7 +196,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/07.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/07.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/07.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Odblokovanie Google Merchant Center a zamietnutých produktov</h2>
@@ -231,7 +211,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/08.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/08.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/08.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Optimalizácia pre vyhľadávanie v AI (AIO / GEO)</h2>
@@ -246,7 +226,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/09.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/09.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/09.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Tvorba e-commerce obsahu „na kľúč“</h2>
@@ -261,7 +241,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/10.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/10.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/10.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Automatizácia predaja pomocou chatbotov</h2>
@@ -276,7 +256,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/11.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/11.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/11.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Integrácia CRM a komplexnej analytiky</h2>
@@ -291,7 +271,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/12.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/12.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/12.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>E-mail marketing a automatizácia udržania zákazníkov</h2>
@@ -306,7 +286,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/13.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/13.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/13.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Implementácia platobných systémov (Fintech Support)</h2>
@@ -321,7 +301,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/14.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/14.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/14.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Strategický linkbuilding a PR</h2>
@@ -336,7 +316,7 @@
                         <a href>
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/services/icons/15.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/15.svg" alt="icon"></picture>
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/15.svg" alt="icon" loading="lazy">
                                 </div>
                                 <div class="columns-item__title">
                                     <h2>Hĺbkový monitoring konkurencie (Market Intelligence)</h2>

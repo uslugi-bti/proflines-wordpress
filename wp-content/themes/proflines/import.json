@@ -4,65 +4,6 @@
         "title": "Nastavenia stránky (O nás)",
         "fields": [
             {
-                "key": "field_67f090d1d7b4c",
-                "label": "Strúhanka (Breadcrumb)",
-                "name": "",
-                "aria-label": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_67f090edd7b4d",
-                "label": "Text odkazu 'Domov'",
-                "name": "breadcrumb_home_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Text pre odkaz 'Domov'.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Domov",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
-                "key": "field_67f0910fd7b4e",
-                "label": "Text aktuálnej stránky",
-                "name": "breadcrumb_current_text",
-                "aria-label": "",
-                "type": "text",
-                "instructions": "Text pre aktuálnu stránku (O ProfLines).",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "O ProfLines",
-                "maxlength": "",
-                "allow_in_bindings": 0,
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
                 "key": "field_67f09126d7b4f",
                 "label": "Hero blok (Úvod)",
                 "name": "",
@@ -77,7 +18,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f0914ad7b50",
@@ -135,7 +77,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "<p>ProfLines marketingová agentúra je digitálna agentúra novej generácie, ktorá spája hlbokú marketingovú analytiku, moderné technológie a umelú inteligenciu. Pomáhame firmám rásť na miestnej i medzinárodnej úrovni, využívajúc dáta, logiku a ľudskú kontrolu na každom kroku.<br><br>Základom našej práce sú hĺbkové marketingové výskumy. Analyzujeme trhy, konkurentov a správanie zákazníkov, aby sme vytvárali stratégie založené nie na domnienkach, ale na overených faktoch. Vďaka tomu naši klienti dosahujú presné a merateľné výsledky už počas prvých mesiacov spolupráce.</p>",
+                "default_value": "<p>ProfLines marketingová agentúra je digitálna agentúra novej generácie, ktorá spája hlbokú marketingovú analytiku, moderné technológie a umelú inteligenciu. Pomáhame firmám rásť na miestnej i medzinárodnej úrovni, využívajúc dáta, logiku a ľudskú kontrolu na každom kroku.<br><br>Základom našej práce sú hĺbkové marketingové výskumy. Analyzujeme trhy, konkurentov a správanie zákazníkov, aby sme vytvárali stratégie založené nie na domnienkach, ale na overených faktoch. Vďaka tomu naši klienti dosahujú presné a merateľné výsledky už počas prvých mesiacov spolupráce.<\/p>",
                 "tabs": "all",
                 "toolbar": "full",
                 "media_upload": 1,
@@ -157,7 +99,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f091dfd7b54",
@@ -165,11 +108,11 @@
                 "name": "hero_main_image",
                 "aria-label": "",
                 "type": "image",
-                "instructions": "Hlavná fotka (01.png / 01.webp)",
+                "instructions": "Hlavná fotka (01.png \/ 01.webp)",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "50",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -182,8 +125,8 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": "jpg, jpeg, png, webp, svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
             },
             {
                 "key": "field_67f09223d7b55",
@@ -195,7 +138,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "25",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -208,8 +151,8 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
             },
             {
                 "key": "field_67f09238d7b56",
@@ -221,7 +164,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "25",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -234,8 +177,8 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
             },
             {
                 "key": "field_67f0924cd7b57",
@@ -247,7 +190,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "25",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -260,8 +203,8 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
             },
             {
                 "key": "field_67f09258d7b58",
@@ -273,7 +216,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "25",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -286,8 +229,8 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
             },
             {
                 "key": "field_67f0929fd7b59",
@@ -304,7 +247,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f092b6d7b5a",
@@ -341,7 +285,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "<p>Zjednodušujeme zložitý marketing a robíme ho merateľným aj ziskovým.<br><br>Pomáhame slovenským firmám budovať silnú online prítomnosť a s istotou expandovať na trhy Európskej únie.</p>",
+                "default_value": "<p>Zjednodušujeme zložitý marketing a robíme ho merateľným aj ziskovým.<br><br>Pomáhame slovenským firmám budovať silnú online prítomnosť a s istotou expandovať na trhy Európskej únie.<\/p>",
                 "tabs": "all",
                 "toolbar": "full",
                 "media_upload": 1,
@@ -394,7 +338,8 @@
                         "max_size": "",
                         "mime_types": "svg",
                         "preview_size": "medium",
-                        "allow_in_bindings": 0
+                        "allow_in_bindings": 0,
+                        "parent_repeater": "field_67f09301d7b5c"
                     },
                     {
                         "key": "field_67f09371d7b5f",
@@ -415,7 +360,8 @@
                         "allow_in_bindings": 0,
                         "placeholder": "",
                         "prepend": "",
-                        "append": ""
+                        "append": "",
+                        "parent_repeater": "field_67f09301d7b5c"
                     },
                     {
                         "key": "field_67f093aad7b62",
@@ -436,7 +382,8 @@
                         "allow_in_bindings": 0,
                         "rows": 4,
                         "placeholder": "",
-                        "new_lines": "br"
+                        "new_lines": "br",
+                        "parent_repeater": "field_67f09301d7b5c"
                     }
                 ]
             },
@@ -446,7 +393,7 @@
                 "name": "mission_bottom_image",
                 "aria-label": "",
                 "type": "image",
-                "instructions": "Nahrajte obrázok (fullsize/01.png / 01.webp)",
+                "instructions": "Nahrajte obrázok (fullsize\/01.png \/ 01.webp)",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -481,7 +428,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f0941bd7b65",
@@ -539,7 +487,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "<p>Naše pracovné procesy podporuje vlastný AI asistent Gem.<br>Gem je interný inteligentný nástroj vyvinutý tímom ProfLines marketingovej agentúry, ktorý automatizuje analytiku, zber dát a prípravu správ a pomáha tímu robiť presnejšie marketingové rozhodnutia. Vďaka Gem šetríme čas na rutinné úlohy, aby sme mali viac priestoru pre strategickú a kreatívnu prácu.</p>",
+                "default_value": "<p>Naše pracovné procesy podporuje vlastný AI asistent Gem.<br>Gem je interný inteligentný nástroj vyvinutý tímom ProfLines marketingovej agentúry, ktorý automatizuje analytiku, zber dát a prípravu správ a pomáha tímu robiť presnejšie marketingové rozhodnutia. Vďaka Gem šetríme čas na rutinné úlohy, aby sme mali viac priestoru pre strategickú a kreatívnu prácu.<\/p>",
                 "tabs": "all",
                 "toolbar": "full",
                 "media_upload": 1,
@@ -551,47 +499,21 @@
                 "label": "Text o emaili (malý blok)",
                 "name": "how_email_text",
                 "aria-label": "",
-                "type": "textarea",
+                "type": "wysiwyg",
                 "instructions": "Text pre blok o emaili. Ikona emailu sa nahráva samostatne.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "50",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
-                "default_value": "Komunikácia s klientmi prebieha najmä cez email - rýchlo, pohodlne a bez zbytočných telefonátov.",
-                "maxlength": "",
+                "default_value": "",
                 "allow_in_bindings": 0,
-                "rows": 4,
-                "placeholder": "",
-                "new_lines": "br"
-            },
-            {
-                "key": "field_67f094b3d7b69",
-                "label": "Ikona emailu",
-                "name": "how_email_icon",
-                "aria-label": "",
-                "type": "image",
-                "instructions": "Nahrajte ikonu emailu (header/02.svg)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
             },
             {
                 "key": "field_67f094d1d7b6a",
@@ -629,7 +551,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f0950dd7b6c",
@@ -714,7 +637,8 @@
                         "allow_in_bindings": 0,
                         "placeholder": "",
                         "prepend": "",
-                        "append": ""
+                        "append": "",
+                        "parent_repeater": "field_67f0953bd7b6e"
                     },
                     {
                         "key": "field_67f09574d7b70",
@@ -735,7 +659,8 @@
                         "allow_in_bindings": 0,
                         "placeholder": "",
                         "prepend": "",
-                        "append": ""
+                        "append": "",
+                        "parent_repeater": "field_67f0953bd7b6e"
                     },
                     {
                         "key": "field_67f09582d7b71",
@@ -761,7 +686,8 @@
                         "max_size": "",
                         "mime_types": "jpg, jpeg, png, webp",
                         "preview_size": "thumbnail",
-                        "allow_in_bindings": 0
+                        "allow_in_bindings": 0,
+                        "parent_repeater": "field_67f0953bd7b6e"
                     },
                     {
                         "key": "field_67f095a7d7b72",
@@ -782,7 +708,8 @@
                         "allow_in_bindings": 0,
                         "rows": 3,
                         "placeholder": "",
-                        "new_lines": "br"
+                        "new_lines": "br",
+                        "parent_repeater": "field_67f0953bd7b6e"
                     },
                     {
                         "key": "field_67f095b7d7b73",
@@ -800,7 +727,10 @@
                         },
                         "default_value": "",
                         "placeholder": "meno@proflines.agency",
-                        "allow_in_bindings": 0
+                        "allow_in_bindings": 0,
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_67f0953bd7b6e"
                     }
                 ]
             },
@@ -819,7 +749,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f0960fd7b75",
@@ -856,7 +787,7 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "<p>ProfLines marketingová agentúra podporuje digitalizáciu malých firiem na Slovensku. Mesačne otvárame niekoľko bezplatných miest pre lokálnych výrobcov a podnikateľov, ktorým pomáhame presunúť sa do online sveta – vytvoriť web, nastaviť reklamu alebo spustiť prvú marketingovú kampaň.<br>Cieľom iniciatívy je poskytnúť malým firmám reálnu šancu rozvíjať sa v digitálnom prostredí bez začiatočných nákladov.</p>",
+                "default_value": "<p>ProfLines marketingová agentúra podporuje digitalizáciu malých firiem na Slovensku. Mesačne otvárame niekoľko bezplatných miest pre lokálnych výrobcov a podnikateľov, ktorým pomáhame presunúť sa do online sveta – vytvoriť web, nastaviť reklamu alebo spustiť prvú marketingovú kampaň.<br>Cieľom iniciatívy je poskytnúť malým firmám reálnu šancu rozvíjať sa v digitálnom prostredí bez začiatočných nákladov.<\/p>",
                 "tabs": "all",
                 "toolbar": "full",
                 "media_upload": 1,
@@ -878,7 +809,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f0967ed7b78",
@@ -890,7 +822,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "50",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -903,8 +835,8 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": "jpg, jpeg, png, webp",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
             },
             {
                 "key": "field_67f0969dd7b79",
@@ -916,7 +848,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "25",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -929,8 +861,8 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
             },
             {
                 "key": "field_67f096b0d7b7a",
@@ -942,7 +874,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "25",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -955,8 +887,8 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
             },
             {
                 "key": "field_67f096c2d7b7b",
@@ -968,7 +900,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "25",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -981,8 +913,8 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
             },
             {
                 "key": "field_67f096d2d7b7c",
@@ -994,7 +926,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "25",
+                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -1007,8 +939,8 @@
                 "max_height": "",
                 "max_size": "",
                 "mime_types": "svg",
-                "preview_size": "medium",
-                "allow_in_bindings": 0
+                "allow_in_bindings": 0,
+                "preview_size": "medium"
             },
             {
                 "key": "field_67f09702d7b7d",
@@ -1025,7 +957,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f09712d7b7e",
@@ -1092,7 +1025,8 @@
                     "id": ""
                 },
                 "placement": "top",
-                "endpoint": 0
+                "endpoint": 0,
+                "selected": 0
             },
             {
                 "key": "field_67f09760d7b81",
@@ -1100,7 +1034,7 @@
                 "name": "principles_logo",
                 "aria-label": "",
                 "type": "image",
-                "instructions": "Logo v strede (footer/01.svg)",
+                "instructions": "Logo v strede (footer\/01.svg)",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -1147,7 +1081,7 @@
                 "name": "principle_1_icon",
                 "aria-label": "",
                 "type": "image",
-                "instructions": "Ikona pre Technológie (principles/01.svg)",
+                "instructions": "Ikona pre Technológie (principles\/01.svg)",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -1194,7 +1128,7 @@
                 "name": "principle_2_icon",
                 "aria-label": "",
                 "type": "image",
-                "instructions": "Ikona pre Transparentnosť (principles/02.svg)",
+                "instructions": "Ikona pre Transparentnosť (principles\/02.svg)",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -1241,7 +1175,7 @@
                 "name": "principle_3_icon",
                 "aria-label": "",
                 "type": "image",
-                "instructions": "Ikona pre Rýchlosť (principles/03.svg)",
+                "instructions": "Ikona pre Rýchlosť (principles\/03.svg)",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -1288,7 +1222,7 @@
                 "name": "principle_4_icon",
                 "aria-label": "",
                 "type": "image",
-                "instructions": "Ikona pre Výsledok (principles/04.svg)",
+                "instructions": "Ikona pre Výsledok (principles\/04.svg)",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -1354,9 +1288,9 @@
         "location": [
             [
                 {
-                    "param": "page_template",
+                    "param": "page",
                     "operator": "==",
-                    "value": "page-o-nas.php"
+                    "value": "2604"
                 }
             ]
         ],
