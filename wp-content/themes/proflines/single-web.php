@@ -194,6 +194,9 @@
                                     return '';
                                 }
                                 
+                                $output = '';
+                                
+                                // Определяем правильный ключ в зависимости от типа пакета
                                 $toggle_key = '';
                                 switch($package_type) {
                                     case 'starter':
@@ -209,22 +212,47 @@
                                 
                                 $toggle_value = isset($field[$toggle_key]) ? $field[$toggle_key] : false;
                                 
-                                if (!$toggle_value) {
-                                    return isset($field['custom_text']) ? $field['custom_text'] : '';
+                                // Если есть custom_text, выводим его отдельно
+                                $custom_text = isset($field['custom_text']) ? $field['custom_text'] : '';
+                                
+                                // Если включена иконка
+                                if ($toggle_value) {
+                                    $type = isset($field['type']) ? $field['type'] : '';
+                                    
+                                    switch($type) {
+                                        case 'true':
+                                            $output .= '<span class="table__icon-wrapper">';
+                                            $output .= '<span class="table__icon table__icon--true"></span>';
+                                            if ($custom_text) {
+                                                $output .= '<span class="table__icon-text">' . ($custom_text) . '</span>';
+                                            }
+                                            $output .= '</span>';
+                                            break;
+                                        case 'false':
+                                            $output .= '<span class="table__icon-wrapper">';
+                                            $output .= '<span class="table__icon table__icon--false"></span>';
+                                            if ($custom_text) {
+                                                $output .= '<span class="table__icon-text">' . ($custom_text) . '</span>';
+                                            }
+                                            $output .= '</span>';
+                                            break;
+                                        case 'partial':
+                                            $output .= '<span class="table__icon-wrapper">';
+                                            $output .= '<span class="table__icon table__icon--partial"></span>';
+                                            if ($custom_text) {
+                                                $output .= '<span class="table__icon-text">' . ($custom_text) . '</span>';
+                                            }
+                                            $output .= '</span>';
+                                            break;
+                                        default:
+                                            $output .= $custom_text ? ($custom_text) : '';
+                                    }
+                                } else {
+                                    // Если иконка не включена, выводим только текст
+                                    $output .= $custom_text ? ($custom_text) : '';
                                 }
                                 
-                                $type = isset($field['type']) ? $field['type'] : '';
-                                
-                                switch($type) {
-                                    case 'true':
-                                        return '<span class="table__icon table__icon--true"></span>';
-                                    case 'false':
-                                        return '<span class="table__icon table__icon--false"></span>';
-                                    case 'partial':
-                                        return '<span class="table__icon table__icon--partial"></span>';
-                                    default:
-                                        return isset($field['custom_text']) ? $field['custom_text'] : '';
-                                }
+                                return $output;
                             }
                             
                             while(have_rows('table_items')): the_row(); 

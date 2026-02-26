@@ -1759,6 +1759,7 @@ main {
   -ms-grid-columns: 2fr 1fr;
   grid-template-columns: 2fr 1fr;
   gap: 32px;
+  margin: 0px 0px 23px 0px;
 }
 
 .technical__content {
@@ -5540,6 +5541,41 @@ main {
   line-height: 174%;
 }
 
+.service-hero__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 24px;
+}
+
+.service-hero__button a#whatsapp {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.0392156863);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #242A36 !important;
+}
+
+.service-hero__button a#whatsapp span {
+  position: relative;
+  padding: 0px 0px 0px 32px;
+}
+
+.service-hero__button a#whatsapp span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 24px;
+  height: 24px;
+  background: url("../img/google-hero/icons/01.svg") center/contain no-repeat;
+}
+
 .service-hero__img {
   position: relative;
   overflow: hidden;
@@ -5556,6 +5592,12 @@ main {
   border-radius: 10px;
   display: block;
   width: 100%;
+}
+
+.service-hero__caption p {
+  font-size: 16px;
+  line-height: 157%;
+  color: #717580;
 }
 
 .service-hero-img__img {
@@ -9461,6 +9503,13 @@ main {
 
   .header-top__text span {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .button a,
+  .button button {
+    font-size: 15px;
   }
 }
 
