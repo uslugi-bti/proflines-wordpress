@@ -58,10 +58,10 @@
                                     <a href>info@proflines.agency</a>
                                 </li>
                                 <li class="footer-top__item">
-                                    <a href>S&#xED;dlo spolo&#x10D;nosti: Lermontovova, 911/3, 81105, Bratislava</a>
+                                    <span>S&#xED;dlo spolo&#x10D;nosti: Lermontovova, 911/3, 81105, Bratislava</span>
                                 </li>
                                 <li class="footer-top__item">
-                                    <a href>Prev&#xE1;dzkov&#xE1; adresa: Legion&#xE1;rska, 1/1, 83104, Bratislava</a>
+                                    <span>Prev&#xE1;dzkov&#xE1; adresa: Legion&#xE1;rska, 1/1, 83104, Bratislava</span>
                                 </li>
                             </ul>
                             <div class="footer-top__list">
