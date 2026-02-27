@@ -99,12 +99,6 @@
                                         'field' => 'slug',
                                         'terms' => 'services'
                                     ),
-                                    array(
-                                        'taxonomy' => 'category',
-                                        'field' => 'slug',
-                                        'terms' => 'ina-sluzba',
-                                        'operator' => 'NOT IN'
-                                    )
                                 )
                             );
                             $services = get_posts($services_args);
@@ -134,26 +128,6 @@
                             <?php
                                     $icon_counter++;
                                 endforeach;
-                            else:
-                                // Fallback pre prípad, že nie sú žiadne služby
-                                $fallback_services = array(
-                                    'Hĺbkový Marketingový Prieskum',
-                                    'SEO Audit Webových Stránok',
-                                    'Správa Reklamných Kampaní (PPC)',
-                                    'Expanzia na Zahraničné Trhy',
-                                    'Tvorba Webových Stránok',
-                                    'Správa Sociálnych Sietí',
-                                    'Odblokovanie Google Merchant Center a zamietnutých produktov',
-                                    'Optimalizácia pre vyhľadávanie v AI (AIO / GEO)',
-                                    'Tvorba e-commerce obsahu "na kľúč"',
-                                    'Automatizácia predaja pomocou chatbotov',
-                                    'Integrácia CRM a komplexnej analytiky',
-                                    'E-mail marketing a automatizácia udržania zákazníkov',
-                                    'Implementácia platobných systémov (Fintech Support)',
-                                    'Strategický linkbuilding a PR',
-                                    'Hĺbkový monitoring konkurencie (Market Intelligence)'
-                                );
-                                foreach ($fallback_services as $index => $service_name):
                             ?>
                             <div class="header-bottom-services__item">
                                 <div class="header-bottom-services-item__img">
