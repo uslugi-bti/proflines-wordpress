@@ -28,11 +28,11 @@
                                 <a href="<?php echo home_url('/o-nas'); ?>">O nás</a>
                             </li>
                             <li class="header-bottom__item">
-                                <a href="#">Služby</a>
+                                <a>Služby</a>
                                 <span></span>
                             </li>
                             <li class="header-bottom__item">
-                                <a href="<?php echo home_url('/baliky-sluzieb'); ?>">Balíky služieb</a>
+                                <a href="<?php echo home_url(); ?>#packages">Balíky služieb</a>
                             </li>
                             <li class="header-bottom__item">
                                 <a href="<?php echo home_url('/kontakt'); ?>">Kontakt</a>
@@ -191,10 +191,10 @@
                     <a href="<?php echo home_url('/faq'); ?>">FAQ</a>
                 </li>
                 <li class="header-sidebar__item">
-                    <a href="<?php echo home_url('/socialna-iniciativa'); ?>">Sociálna iniciatíva</a>
+                    <a href="<?php echo home_url('/social-initiative'); ?>">Sociálna iniciatíva</a>
                 </li>
                 <li class="header-sidebar__item">
-                    <a href="<?php echo home_url('/21-chyb'); ?>">21 chýb</a>
+                    <a href="<?php echo home_url('/mistakes'); ?>">21 chýb</a>
                 </li>
             </ul>
         </div>

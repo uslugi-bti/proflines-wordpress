@@ -128,7 +128,7 @@
     </section>
 
     <!-- Packages Section -->
-    <section class="packages">
+    <section class="packages" id="packages">
         <div class="container">
             <div class="block__head">
                 <div class="block-head__title">
