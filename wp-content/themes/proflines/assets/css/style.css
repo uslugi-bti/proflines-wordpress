@@ -1760,13 +1760,15 @@ main {
   grid-template-columns: 2fr 1fr;
   gap: 32px;
   margin: 0px 0px 23px 0px;
+  position: relative;
 }
 
 .technical__content {
   background-color: #FFFFFF;
   border: 1px solid #E4E4E4;
   border-radius: 10px;
-  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .technical-content__head {
@@ -1962,6 +1964,7 @@ main {
 }
 
 .technical-content__body .wp-block-table {
+  width: 100%;
   overflow-x: auto;
   margin: 0 0 24px 0;
 }
@@ -2017,16 +2020,15 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 24px;
-  position: relative;
 }
 
 .technical-content-banner__logo {
   position: absolute;
-  top: 0;
-  -webkit-transform: translate(0, -100%) rotate(7deg);
-      -ms-transform: translate(0, -100%) rotate(7deg);
-          transform: translate(0, -100%) rotate(7deg);
-  right: -50px;
+  bottom: 250px;
+  -webkit-transform: rotate(7deg);
+      -ms-transform: rotate(7deg);
+          transform: rotate(7deg);
+  left: 50%;
   width: 194px;
   height: 68px;
 }
@@ -4533,6 +4535,7 @@ main {
   border: 1px solid #E4E4E4;
   border-radius: 10px;
   overflow: hidden;
+  width: 100%;
 }
 
 .single__side {
@@ -4759,6 +4762,8 @@ main {
 }
 
 .single-content__body .wp-block-table {
+  display: none;
+  width: 100%;
   overflow-x: auto;
   margin: 0 0 24px 0;
 }
