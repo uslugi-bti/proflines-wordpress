@@ -13,37 +13,37 @@
             <div class="container">
                 <div class="header-top">
                     <div class="header-top__text">
-                        <span>Nieko&#x13E;ko <u>bezplatn&#xFD;ch miest</u> pre mal&#xFD;ch v&#xFD;robcov, ktor&#xFD;m pom&#xE1;hame prejs&#x165; do online prostredia</span>
+                        <span>Niekoľko <u>bezplatných miest</u> pre malých výrobcov, ktorým pomáhame prejsť do online prostredia</span>
                     </div>
                 </div>
                 <div class="header-bottom">
                     <div class="header-bottom__logo">
-                        <a href>
-                            <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/logo/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/logo/01.svg" alt="logo"></picture>
+                        <a href="<?php echo home_url(); ?>">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/logo/01.svg" alt="logo" loading="lazy">
                         </a>
                     </div>
                     <div class="header-bottom__list">
                         <ul class="header-bottom__items">
                             <li class="header-bottom__item">
-                                <a href>O n&#xE1;s</a>
+                                <a href="<?php echo home_url('/o-nas'); ?>">O nás</a>
                             </li>
                             <li class="header-bottom__item">
-                                <a href>Slu&#x17E;by</a>
+                                <a href="#">Služby</a>
                                 <span></span>
                             </li>
                             <li class="header-bottom__item">
-                                <a href>Bal&#xED;ky slu&#x17E;ieb</a>
+                                <a href="<?php echo home_url('/baliky-sluzieb'); ?>">Balíky služieb</a>
                             </li>
                             <li class="header-bottom__item">
-                                <a href>Kontakt</a>
+                                <a href="<?php echo home_url('/kontakt'); ?>">Kontakt</a>
                             </li>
                         </ul>
                     </div>
                     <div class="header-bottom__body">
                         <div class="header-bottom__link">
                             <div class="header-bottom-link__icon">
-                                <a href>
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/01.svg" alt="phone"></picture>
+                                <a href="tel:+421944457515">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/header/01.svg" alt="phone" loading="lazy">
                                 </a>
                             </div>
                             <div class="header-bottom-link__text">
@@ -52,8 +52,8 @@
                         </div>
                         <div class="header-bottom__link">
                             <div class="header-bottom-link__icon">
-                                <a href>
-                                    <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/02.svg" alt="phone"></picture>
+                                <a href="mailto:info@proflines.agency">
+                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/header/02.svg" alt="email" loading="lazy">
                                 </a>
                             </div>
                             <div class="header-bottom-link__text">
@@ -64,17 +64,17 @@
                             <button></button>
                             <form class="header-bottom-search__body">
                                 <button type="submit"></button>
-                                <input type="text" placeholder="&#x10C;o h&#x13E;ad&#xE1;te?" autocomplete="off">
+                                <input type="text" placeholder="Čo hľadáte?" autocomplete="off">
 
                                 <ul class="header-bottom-search__tips">
                                     <li class="header-bottom-search__tip">
-                                        <a href>H&#x13A;bkov&#xFD; <strong>Marketi</strong>ngov&#xFD; Prieskum</a>
+                                        <a href="#">Hĺbkový <strong>Marketi</strong>ngový Prieskum</a>
                                     </li>
                                     <li class="header-bottom-search__tip">
-                                        <a href><strong>Marketi</strong>ngov&#xFD; Prieskum</a>
+                                        <a href="#"><strong>Marketi</strong>ngový Prieskum</a>
                                     </li>
                                     <li class="header-bottom-search__tip">
-                                        <a href>H&#x13A;bkov&#xFD; <strong>Marketi</strong>ngov&#xFD; Prieskum</a>
+                                        <a href="#">Hĺbkový <strong>Marketi</strong>ngový Prieskum</a>
                                     </li>
                                 </ul>
                             </form>
@@ -87,200 +87,159 @@
 
                     <div class="header-bottom__services">
                         <div class="header-bottom-services__items">
+                            <?php
+                            // Získanie všetkých služieb (posts s kategóriou services a bez ina-sluzba)
+                            $services_args = array(
+                                'post_type' => 'post',
+                                'posts_per_page' => -1,
+                                'tax_query' => array(
+                                    'relation' => 'AND',
+                                    array(
+                                        'taxonomy' => 'category',
+                                        'field' => 'slug',
+                                        'terms' => 'services'
+                                    ),
+                                    array(
+                                        'taxonomy' => 'category',
+                                        'field' => 'slug',
+                                        'terms' => 'ina-sluzba',
+                                        'operator' => 'NOT IN'
+                                    )
+                                )
+                            );
+                            $services = get_posts($services_args);
+                            
+                            if (!empty($services)):
+                                $icon_counter = 1;
+                                foreach ($services as $service):
+                                    $thumbnail_id = get_post_thumbnail_id($service->ID);
+                                    $thumbnail_url = wp_get_attachment_image_url($thumbnail_id, 'full');
+                            ?>
                             <div class="header-bottom-services__item">
                                 <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/01.svg" alt="service"></picture>
+                                    <a href="<?php echo get_permalink($service->ID); ?>">
+                                        <?php if ($thumbnail_url): ?>
+                                            <img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php echo esc_attr(get_the_title($service->ID)); ?>" loading="lazy">
+                                        <?php else: ?>
+                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/<?php echo str_pad($icon_counter, 2, '0', STR_PAD_LEFT); ?>.svg" alt="<?php echo esc_attr(get_the_title($service->ID)); ?>" loading="lazy">
+                                        <?php endif; ?>
                                     </a>
                                 </div>
                                 <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>H&#x13A;bkov&#xFD; Marketingov&#xFD; Prieskum</p>
+                                    <a href="<?php echo get_permalink($service->ID); ?>">
+                                        <p><?php echo get_the_title($service->ID); ?></p>
                                     </a>
                                 </div>
                             </div>
+                            <?php
+                                    $icon_counter++;
+                                endforeach;
+                            else:
+                                // Fallback pre prípad, že nie sú žiadne služby
+                                $fallback_services = array(
+                                    'Hĺbkový Marketingový Prieskum',
+                                    'SEO Audit Webových Stránok',
+                                    'Správa Reklamných Kampaní (PPC)',
+                                    'Expanzia na Zahraničné Trhy',
+                                    'Tvorba Webových Stránok',
+                                    'Správa Sociálnych Sietí',
+                                    'Odblokovanie Google Merchant Center a zamietnutých produktov',
+                                    'Optimalizácia pre vyhľadávanie v AI (AIO / GEO)',
+                                    'Tvorba e-commerce obsahu "na kľúč"',
+                                    'Automatizácia predaja pomocou chatbotov',
+                                    'Integrácia CRM a komplexnej analytiky',
+                                    'E-mail marketing a automatizácia udržania zákazníkov',
+                                    'Implementácia platobných systémov (Fintech Support)',
+                                    'Strategický linkbuilding a PR',
+                                    'Hĺbkový monitoring konkurencie (Market Intelligence)'
+                                );
+                                foreach ($fallback_services as $index => $service_name):
+                            ?>
                             <div class="header-bottom-services__item">
                                 <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/02.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/02.svg" alt="service"></picture>
+                                    <a href="#">
+                                        <img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/<?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?>.svg" alt="<?php echo esc_attr($service_name); ?>" loading="lazy">
                                     </a>
                                 </div>
                                 <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>SEO Audit Webov&#xFD;ch Str&#xE1;nok</p>
+                                    <a href="#">
+                                        <p><?php echo $service_name; ?></p>
                                     </a>
                                 </div>
                             </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/03.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/03.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>Spr&#xE1;va Reklamn&#xFD;ch Kampan&#xED; (PPC)</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/04.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/04.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>Expanzia na Zahrani&#x10D;n&#xE9; Trhy</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/05.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/05.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>Tvorba Webov&#xFD;ch Str&#xE1;nok</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/06.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/06.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>Spr&#xE1;va Soci&#xE1;lnych Siet&#xED;</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/07.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/07.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>Odblokovanie Google Merchant Center a zamietnut&#xFD;ch produktov</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/08.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/08.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>Optimaliz&#xE1;cia pre vyh&#x13E;ad&#xE1;vanie v AI (AIO / GEO)</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/09.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/09.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>Tvorba e-commerce obsahu &#x201E;na k&#x13E;&#xFA;&#x10D;&#x201C;</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/10.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/10.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>Automatiz&#xE1;cia predaja pomocou chatbotov</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/11.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/11.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p> Integr&#xE1;cia CRM a komplexnej analytiky</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/12.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/12.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>E-mail marketing a automatiz&#xE1;cia udr&#x17E;ania z&#xE1;kazn&#xED;kov</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/13.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/13.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>Implement&#xE1;cia platobn&#xFD;ch syst&#xE9;mov (Fintech Support)</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/14.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/14.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>Strategick&#xFD; linkbuilding a PR</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/services/15.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/15.svg" alt="service"></picture>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href>
-                                        <p>H&#x13A;bkov&#xFD; monitoring konkurencie (Market Intelligence)</p>
-                                    </a>
-                                </div>
-                            </div>
+                            <?php
+                                endforeach;
+                            endif;
+                            ?>
                         </div>
                         <div class="header-bottom-services__info">
+                            <?php
+                            // Získanie najnovšieho blog postu
+                            $blog_args = array(
+                                'post_type' => 'post',
+                                'posts_per_page' => 1,
+                                'category_name' => 'blog'
+                            );
+                            $blog_query = new WP_Query($blog_args);
+                            
+                            if ($blog_query->have_posts()):
+                                while ($blog_query->have_posts()): $blog_query->the_post();
+                                    $categories = get_the_category();
+                                    $blog_category = '';
+                                    foreach ($categories as $cat) {
+                                        if ($cat->parent != 0) {
+                                            $parent = get_category($cat->parent);
+                                            if ($parent->slug === 'blog') {
+                                                $blog_category = $cat->name;
+                                                break;
+                                            }
+                                        }
+                                    }
+                            ?>
                             <div class="header-bottom-services__blog">
                                 <div class="header-bottom-services-blog__img">
-                                    <a href>
-                                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/header/blog/01.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/header/blog/01.jpg" alt="blog"></picture>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php if (has_post_thumbnail()): ?>
+                                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>" loading="lazy">
+                                        <?php else: ?>
+                                            <img src="<?php bloginfo('template_url'); ?>/assets/img/header/blog/01.jpg" alt="blog" loading="lazy">
+                                        <?php endif; ?>
                                     </a>
                                 </div>
                                 <div class="header-bottom-services-blog__badge">
-                                    <span>Marketingov&#xFD; prieskum</span>
+                                    <span><?php echo $blog_category ?: 'Marketingový prieskum'; ?></span>
                                 </div>
                                 <div class="header-bottom-services-blog__title">
-                                    <a href>
-                                        <h2>5 k&#x13E;&#xFA;&#x10D;ov&#xFD;ch ch&#xFD;b pri marketingovom prieskume na Slovensku</h2>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <h2><?php the_title(); ?></h2>
+                                    </a>
+                                </div>
+                                <div class="header-bottom-services-blog__bottom">
+                                    <div class="header-bottom-services-blog__date">
+                                        <span><?php echo get_the_date('d. F Y'); ?></span>
+                                    </div>
+                                    <div class="header-bottom-services-blog__button">
+                                        <a href="<?php the_permalink(); ?>">→</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                                endwhile;
+                                wp_reset_postdata();
+                            else:
+                            ?>
+                            <div class="header-bottom-services__blog">
+                                <div class="header-bottom-services-blog__img">
+                                    <a href="#">
+                                        <img src="<?php bloginfo('template_url'); ?>/assets/img/header/blog/01.jpg" alt="blog" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="header-bottom-services-blog__badge">
+                                    <span>Marketingový prieskum</span>
+                                </div>
+                                <div class="header-bottom-services-blog__title">
+                                    <a href="#">
+                                        <h2>5 kľúčových chýb pri marketingovom prieskume na Slovensku</h2>
                                     </a>
                                 </div>
                                 <div class="header-bottom-services-blog__bottom">
@@ -288,19 +247,21 @@
                                         <span>15. december 2024</span>
                                     </div>
                                     <div class="header-bottom-services-blog__button">
-                                        <a href>&#x2192;</a>
+                                        <a href="#">→</a>
                                     </div>
                                 </div>
                             </div>
+                            <?php endif; ?>
+                            
                             <div class="header-bottom-services__badge">
                                 <div class="header-bottom-services-badge__title">
-                                    <h2>Nenechajte marketing na n&#xE1;hodu</h2>
+                                    <h2>Nenechajte marketing na náhodu</h2>
                                 </div>
                                 <div class="header-bottom-services-badge__text">
-                                    <p>Nenechajte marketing na n&#xE1;hodu</p>
+                                    <p>Nenechajte marketing na náhodu</p>
                                 </div>
                                 <div class="header-bottom-services-badge__button button">
-                                    <a href>Z&#xED;ska&#x165; konzult&#xE1;ciu</a>
+                                    <a href="<?php echo home_url('/kontakt'); ?>">Získať konzultáciu</a>
                                 </div>
                             </div>
                         </div>
@@ -312,16 +273,16 @@
         <div class="header-sidebar">
             <ul class="header-sidebar__body">
                 <li class="header-sidebar__item">
-                    <a href>Blog</a>
+                    <a href="<?php echo home_url('/blog'); ?>">Blog</a>
                 </li>
                 <li class="header-sidebar__item">
-                    <a href>FAQ</a>
+                    <a href="<?php echo home_url('/faq'); ?>">FAQ</a>
                 </li>
                 <li class="header-sidebar__item">
-                    <a href>Sociálna iniciatíva</a>
+                    <a href="<?php echo home_url('/socialna-iniciativa'); ?>">Sociálna iniciatíva</a>
                 </li>
                 <li class="header-sidebar__item">
-                    <a href>21 chýb</a>
+                    <a href="<?php echo home_url('/21-chyb'); ?>">21 chýb</a>
                 </li>
             </ul>
         </div>
