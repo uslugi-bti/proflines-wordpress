@@ -16,7 +16,7 @@
                         <div class="footer-top__column">
                             <ul class="footer-top__list">
                                 <li class="footer-top__item">
-                                    <a href>Slu&#x17E;by</a>
+                                    <span>Slu&#x17E;by</span>
                                 </li>
                                 <li class="footer-top__item">
                                     <a href>Marketingov&#xFD; v&#xFD;skum</a>
