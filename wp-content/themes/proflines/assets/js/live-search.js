@@ -4,14 +4,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const tipsList = document.querySelector('.header-bottom-search__tips');
     let searchTimeout;
 
-    if (!searchForm || !searchInput) return;
+    if (!searchForm || !searchInput || !tipsList) return;
+
+    function showTips() {
+        tipsList.classList.add('open');
+    }
+
+    function hideTips() {
+        tipsList.classList.remove('open');
+        tipsList.innerHTML = '';
+    }
 
     searchInput.addEventListener('input', function(e) {
         clearTimeout(searchTimeout);
         const searchTerm = e.target.value.trim();
 
         if (searchTerm.length < 2) {
-            tipsList.innerHTML = '';
+            hideTips();
             return;
         }
 
@@ -32,8 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             <a href="${item.url}">${item.highlight}</a>
                         </li>`
                     ).join('');
+                    showTips();
                 } else {
-                    tipsList.innerHTML = '';
+                    hideTips();
                 }
             });
         }, 300);
@@ -63,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('click', function(e) {
         if (!searchForm.contains(e.target)) {
-            tipsList.innerHTML = '';
+            hideTips();
         }
     });
 });
