@@ -9075,6 +9075,9 @@ main {
   .header-bottom-search__tips {
     left: 0;
     width: 100%;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 
   .hero__title h1 {
