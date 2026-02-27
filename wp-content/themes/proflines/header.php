@@ -65,7 +65,6 @@
                             <form class="header-bottom-search__body">
                                 <button type="submit"></button>
                                 <input type="text" placeholder="Čo hľadáte?" autocomplete="off">
-
                                 <ul class="header-bottom-search__tips">
                                     <li class="header-bottom-search__tip">
                                         <a href="#">Hĺbkový <strong>Marketi</strong>ngový Prieskum</a>
@@ -88,26 +87,22 @@
                     <div class="header-bottom__services">
                         <div class="header-bottom-services__items">
                             <?php
-                            // Získanie všetkých služieb (posts s kategóriou services a bez ina-sluzba)
                             $services_args = array(
                                 'post_type' => 'post',
                                 'posts_per_page' => -1,
                                 'tax_query' => array(
-                                    'relation' => 'AND',
                                     array(
                                         'taxonomy' => 'category',
                                         'field' => 'slug',
                                         'terms' => 'services'
-                                    ),
+                                    )
                                 )
                             );
                             $services = get_posts($services_args);
-                            
-                            if (!empty($services)):
-                                $icon_counter = 1;
-                                foreach ($services as $service):
-                                    $thumbnail_id = get_post_thumbnail_id($service->ID);
-                                    $thumbnail_url = wp_get_attachment_image_url($thumbnail_id, 'full');
+                            $icon_counter = 1;
+                            foreach ($services as $service):
+                                $thumbnail_id = get_post_thumbnail_id($service->ID);
+                                $thumbnail_url = wp_get_attachment_image_url($thumbnail_id, 'full');
                             ?>
                             <div class="header-bottom-services__item">
                                 <div class="header-bottom-services-item__img">
@@ -126,49 +121,30 @@
                                 </div>
                             </div>
                             <?php
-                                    $icon_counter++;
-                                endforeach;
-                            ?>
-                            <div class="header-bottom-services__item">
-                                <div class="header-bottom-services-item__img">
-                                    <a href="#">
-                                        <img src="<?php bloginfo('template_url'); ?>/assets/img/header/services/<?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?>.svg" alt="<?php echo esc_attr($service_name); ?>" loading="lazy">
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-item__text">
-                                    <a href="#">
-                                        <p><?php echo $service_name; ?></p>
-                                    </a>
-                                </div>
-                            </div>
-                            <?php
-                                endforeach;
-                            endif;
+                                $icon_counter++;
+                            endforeach;
                             ?>
                         </div>
                         <div class="header-bottom-services__info">
                             <?php
-                            // Získanie najnovšieho blog postu
                             $blog_args = array(
                                 'post_type' => 'post',
                                 'posts_per_page' => 1,
                                 'category_name' => 'blog'
                             );
                             $blog_query = new WP_Query($blog_args);
-                            
-                            if ($blog_query->have_posts()):
-                                while ($blog_query->have_posts()): $blog_query->the_post();
-                                    $categories = get_the_category();
-                                    $blog_category = '';
-                                    foreach ($categories as $cat) {
-                                        if ($cat->parent != 0) {
-                                            $parent = get_category($cat->parent);
-                                            if ($parent->slug === 'blog') {
-                                                $blog_category = $cat->name;
-                                                break;
-                                            }
-                                        }
+                            $blog_query->the_post();
+                            $categories = get_the_category();
+                            $blog_category = '';
+                            foreach ($categories as $cat) {
+                                if ($cat->parent != 0) {
+                                    $parent = get_category($cat->parent);
+                                    if ($parent->slug === 'blog') {
+                                        $blog_category = $cat->name;
+                                        break;
                                     }
+                                }
+                            }
                             ?>
                             <div class="header-bottom-services__blog">
                                 <div class="header-bottom-services-blog__img">
@@ -181,7 +157,7 @@
                                     </a>
                                 </div>
                                 <div class="header-bottom-services-blog__badge">
-                                    <span><?php echo $blog_category ?: 'Marketingový prieskum'; ?></span>
+                                    <span><?php echo $blog_category; ?></span>
                                 </div>
                                 <div class="header-bottom-services-blog__title">
                                     <a href="<?php the_permalink(); ?>">
@@ -197,35 +173,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php
-                                endwhile;
-                                wp_reset_postdata();
-                            else:
-                            ?>
-                            <div class="header-bottom-services__blog">
-                                <div class="header-bottom-services-blog__img">
-                                    <a href="#">
-                                        <img src="<?php bloginfo('template_url'); ?>/assets/img/header/blog/01.jpg" alt="blog" loading="lazy">
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-blog__badge">
-                                    <span>Marketingový prieskum</span>
-                                </div>
-                                <div class="header-bottom-services-blog__title">
-                                    <a href="#">
-                                        <h2>5 kľúčových chýb pri marketingovom prieskume na Slovensku</h2>
-                                    </a>
-                                </div>
-                                <div class="header-bottom-services-blog__bottom">
-                                    <div class="header-bottom-services-blog__date">
-                                        <span>15. december 2024</span>
-                                    </div>
-                                    <div class="header-bottom-services-blog__button">
-                                        <a href="#">→</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php endif; ?>
+                            <?php wp_reset_postdata(); ?>
                             
                             <div class="header-bottom-services__badge">
                                 <div class="header-bottom-services-badge__title">
