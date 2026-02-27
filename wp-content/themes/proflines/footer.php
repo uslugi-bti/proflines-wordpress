@@ -140,7 +140,7 @@
                 <?php endif; ?>
             </div>
             <div class="footer-bottom__policy">
-                <p>© 2026 ProfLines. Všetky práva vyhradené.</p>
+                <p>© <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>. Všetky práva vyhradené.</p>
             </div>
             <div class="footer-bottom__links">
                 <p>
