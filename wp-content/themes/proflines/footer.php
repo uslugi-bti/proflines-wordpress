@@ -70,19 +70,6 @@
                                 <a href="<?php echo get_permalink($service->ID); ?>"><?php echo get_the_title($service->ID); ?></a>
                             </li>
                             <?php endforeach; ?>
-                        <?php else: ?>
-                            <li class="footer-top__item">
-                                <a href="/sluzby/marketingovy-vyskum">Marketingový výskum</a>
-                            </li>
-                            <li class="footer-top__item">
-                                <a href="/sluzby/seo-ppc">SEO & PPC</a>
-                            </li>
-                            <li class="footer-top__item">
-                                <a href="/sluzby/web-ux">Web & UX</a>
-                            </li>
-                            <li class="footer-top__item">
-                                <a href="/sluzby/ai-riesenia">AI riešenia</a>
-                            </li>
                         <?php endif; ?>
                         <li class="footer-top__item">
                             <a href="<?php echo home_url('/o-nas'); ?>">O nás</a>
@@ -96,18 +83,10 @@
                         <li class="footer-top__item">
                             <a href="<?php echo esc_url($linkedin); ?>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                         </li>
-                        <?php else: ?>
-                        <li class="footer-top__item">
-                            <a href="#">LinkedIn</a>
-                        </li>
                         <?php endif; ?>
                         <?php if ($instagram): ?>
                         <li class="footer-top__item">
                             <a href="<?php echo esc_url($instagram); ?>" target="_blank" rel="noopener noreferrer">Instagram</a>
-                        </li>
-                        <?php else: ?>
-                        <li class="footer-top__item">
-                            <a href="https://www.instagram.com/proflines_marketing/">Instagram</a>
                         </li>
                         <?php endif; ?>
                     </ul>
@@ -121,10 +100,6 @@
                         <li class="footer-top__item">
                             <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', $telephone)); ?>"><?php echo esc_html($telephone); ?></a>
                         </li>
-                        <?php else: ?>
-                        <li class="footer-top__item">
-                            <a href="tel:+421944457515">+421 944 457 515</a>
-                        </li>
                         <?php endif; ?>
                         <li class="footer-top__item">
                             <a href="mailto:<?php echo esc_attr($admin_email); ?>"><?php echo esc_html($admin_email); ?></a>
@@ -133,18 +108,10 @@
                         <li class="footer-top__item">
                             <span><?php echo esc_html($address_office); ?></span>
                         </li>
-                        <?php else: ?>
-                        <li class="footer-top__item">
-                            <span>Sídlo spoločnosti: Lermontovova, 911/3, 81105, Bratislava</span>
-                        </li>
                         <?php endif; ?>
                         <?php if ($operation_address): ?>
                         <li class="footer-top__item">
                             <span>Prevádzková adresa: <?php echo esc_html($operation_address); ?></span>
-                        </li>
-                        <?php else: ?>
-                        <li class="footer-top__item">
-                            <span>Prevádzková adresa: Legionárska, 1/1, 83104, Bratislava</span>
                         </li>
                         <?php endif; ?>
                     </ul>
@@ -161,9 +128,7 @@
         <div class="footer-bottom">
             <div class="footer-bottom__text">
                 <?php if ($footer_policy): ?>
-                    <?php echo $footer_policy; ?>
-                <?php else: ?>
-                <p>© ProfLines s.r.o. je marketingová a analytická agentúra, nie finančná, právna ani investičná inštitúcia. Všetky materiály prezentované na tejto webovej stránke, vrátane analytických správ, marketingových prieskumov, prognóz, prípadových štúdií, ukážok výsledkov a iných údajov, majú výlučne informatívny charakter a nepredstavujú finančné, investičné, právne ani daňové poradenstvo.<br><br>© Všetky výsledky, ukazovatele výkonnosti, percentá rastu, údaje o návštevnosti, konverziách, predajoch alebo iných obchodných metrikách vychádzajú zo skutočných projektov, interných analytických dát alebo modelových výpočtov, avšak nezaručujú dosiahnutie rovnakých výsledkov v budúcnosti. Skutočné výsledky sa môžu výrazne líšiť v závislosti od trhu, segmentu, rozpočtu, konkurencie, sezónnosti, stavu produktu a vonkajších faktorov.<br><br>© Akékoľvek príklady prípadových štúdií, projektov alebo dosiahnutých výsledkov sú uvedené výlučne za účelom prezentácie prístupu, metodológie a odbornosti spoločnosti ProfLines s.r.o.. Nepredstavujú verejnú ponuku a nezakladajú právne záväzky týkajúce sa konkrétnych výsledkov spolupráce.<br><br>© ProfLines s.r.o. nenesie zodpovednosť za rozhodnutia prijaté používateľmi alebo klientmi na základe informácií zverejnených na webovej stránke, v správach, prezentáciách alebo iných materiáloch. Všetky obchodné rozhodnutia prijíma klient samostatne a na vlastné riziko.<br><br>© Údaje získané od klientov v priebehu spolupráce, vrátane obchodných informácií, finančných ukazovateľov, interných správ, prístupov a výsledkov výskumov, sú spracúvané v súlade s platnou legislatívou a používané výlučne na účely plnenia marketingových, analytických a strategických úloh.<br><br>© ProfLines s.r.o. dodržiava zásady dôvernosti a neposkytuje informácie tretím stranám bez predchádzajúceho súhlasu klienta, s výnimkou prípadov stanovených zákonom alebo zmluvnými podmienkami.<br><br>© Všetky materiály tejto webovej stránky, vrátane textov, grafiky, dizajnu, štruktúry stránok, analytických modelov a vizualizácií, sú duševným vlastníctvom spoločnosti ProfLines s.r.o. a sú chránené autorským právom. Akékoľvek kopírovanie, šírenie alebo použitie materiálov bez písomného súhlasu je zakázané.<br><br>© ProfLines s.r.o. si vyhradzuje právo meniť, aktualizovať alebo dopĺňať informácie na webovej stránke bez predchádzajúceho upozornenia.</p>
+                    <p><?php echo $footer_policy; ?></p>
                 <?php endif; ?>
             </div>
             <div class="footer-bottom__button">
@@ -172,8 +137,6 @@
             <div class="footer-bottom__img">
                 <?php if ($logo_footer): ?>
                     <img src="<?php echo esc_url($logo_footer); ?>" alt="logo" loading="lazy">
-                <?php else: ?>
-                    <img src="<?php bloginfo('template_url'); ?>/assets/img/footer/01.svg" alt="logo" loading="lazy">
                 <?php endif; ?>
             </div>
             <div class="footer-bottom__policy">
@@ -196,15 +159,6 @@
                         }
                         echo implode(' / ', $links);
                         ?>
-                    <?php else: ?>
-                        <a href="/obchodne-podmienky">Obchodné podmienky</a> / 
-                        <a href="/terms-conditions">Terms & Conditions</a> / 
-                        <a href="/pravne-informacie">Právne informácie</a> / 
-                        <a href="/impressum">Impressum</a> / 
-                        <a href="/gdpr">Zásady ochrany osobných údajov (GDPR)</a> / 
-                        <a href="/privacy-policy">Privacy Policy</a> / 
-                        <a href="/cookies">Zásady používania súborov cookies</a> / 
-                        <a href="/cookies-policy">Cookies Policy</a>
                     <?php endif; ?>
                 </p>
             </div>
