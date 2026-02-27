@@ -139,8 +139,57 @@ function proflines_json_ld() {
 
         $json_ld[] = $front_page_json;
     }
+
+    if (is_singular('post') && has_category('services') && has_category('ina-sluzba')) {
+        $post_id = get_the_ID();
+        
+        $front_page_id = get_option('page_on_front');
+        $legal_name = get_field('legal_name', $front_page_id) ?: get_bloginfo('name');
+        $site_url = get_site_url();
+        
+        $service_type = get_field('service_type', $post_id);
+        $category = get_field('category', $post_id);
+        
+        $service_json = array(
+            "@context" => "https://schema.org",
+            "@type" => "Service",
+            "name" => get_the_title(),
+            "serviceType" => $service_type ?: "SEO & AI Optimization",
+            "category" => $category ?: "Digital Marketing Services",
+            "url" => get_permalink(),
+            "description" => wp_trim_words(strip_tags(get_the_content()), 30, '...'),
+            "provider" => array(
+                "@type" => "Organization",
+                "name" => $legal_name,
+                "url" => $site_url
+            ),
+            "areaServed" => array(
+                "@type" => "Country",
+                "name" => "Slovakia",
+                "identifier" => "SK"
+            ),
+            "offers" => array(
+                "@type" => "Offer",
+                "availability" => "https://schema.org/InStock",
+                "priceCurrency" => "EUR",
+                "priceSpecification" => array(
+                    "@type" => "PriceSpecification",
+                    "priceCurrency" => "EUR",
+                    "name" => "Cena na vyžiadanie"
+                )
+            ),
+            "potentialAction" => array(
+                "@type" => "QuoteAction",
+                "target" => array(
+                    "@type" => "EntryPoint",
+                    "urlTemplate" => get_permalink()
+                )
+            )
+        );
+        
+        $json_ld[] = $service_json;
+    }
     
-    // JSON-LD pre stránku "Kontakt"
     if (is_page(2979)) {
         $front_page_id = get_option('page_on_front');
         $current_url = get_permalink();
