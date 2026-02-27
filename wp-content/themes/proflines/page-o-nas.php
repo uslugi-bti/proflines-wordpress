@@ -102,231 +102,35 @@
             </div>
             <div class="services__body" data-count="5">
                 <div class="columns__body">
-                    <div class="columns__item">
-                        <a href>
+                    <?php
+                    $services_query = new WP_Query(array(
+                        'post_type' => 'post',
+                        'category_name' => 'services',
+                        'posts_per_page' => -1,
+                        'order' => 'ASC'
+                    ));
+                    
+                    $counter = 0;
+                    while($services_query->have_posts()) : $services_query->the_post();
+                    $counter++;
+                    $span_class = ($counter == 5) ? 'span-two' : '';
+                    ?>
+                    <div class="columns__item <?php echo $span_class; ?>">
+                        <a href="<?php the_permalink(); ?>">
                             <div class="columns-item__head">
                                 <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/01.svg" alt="icon" loading="lazy">
+                                    <?php echo get_the_post_thumbnail(); ?>
                                 </div>
                                 <div class="columns-item__title">
-                                    <h2>Hĺbkový Marketingový Prieskum</h2>
+                                    <h2><?php the_title(); ?></h2>
                                 </div>
                             </div>
                             <div class="columns-item__text">
-                                <p>-Analýza trhu, konkurencie, segmentov a správania spotrebiteľov.</p>
+                                <p><?php the_excerpt(); ?></p>
                             </div>
                         </a>
                     </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/02.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>SEO Audit Webových Stránok</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Technická, obsahová a psychologická/behaviorálna optimalizácia.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/03.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Správa Reklamných Kampaní (PPC)</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Google Ads, Meta Ads. Orientácia na zisk, nie na kliknutia.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/04.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Expanzia na Zahraničné Trhy</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Analýza trhovej stratégie, lokalizácia, medzinárodné SEO a poziocionovanie, konkurencie, segmentov a správania spotrebiteľov.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item span-two">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/05.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Tvorba Webových Stránok</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-UX/UI dizajn, štruktúra, adaptácia na biznis ciele.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/06.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Správa Sociálnych Sietí</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Emocionálny targeting, obsah, stratégia.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/07.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Odblokovanie Google Merchant Center a zamietnutých produktov</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>Profesionálna oprava chýb a obnovenie predaja v Google Shopping</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/08.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Optimalizácia pre vyhľadávanie v AI (AIO / GEO)</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Služba novej generácie, ktorá pomáha značkám zobrazovať sa v AI Overviews (Google) a vo výsledkoch vyhľadávania v ChatGPT.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/09.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Tvorba e-commerce obsahu „na kľúč“</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Automatizované plnenie produktových kariet pre platformy Shopify a Shoptet.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/10.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Automatizácia predaja pomocou chatbotov</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Vývoj inteligentných asistentov integrovaných do webu alebo sociálnych sietí.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/11.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Integrácia CRM a komplexnej analytiky</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Prepojenie webovej stránky, reklamných systémov a nástrojov na správu zákazníkov.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/12.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>E-mail marketing a automatizácia udržania zákazníkov</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Systematická práca so zákazníkmi, ktorá premieňa jednorazové nákupy na opakované a odberateľov na lojálnych klientov.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/13.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Implementácia platobných systémov (Fintech Support)</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Pomoc s napojením lokálnych (TatraPay, CardPay) aj medzinárodných platobných brán (Stripe, PayPal).</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/14.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Strategický linkbuilding a PR</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Budovanie autority webu prostredníctvom kvalitných spätných odkazov.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columns__item">
-                        <a href>
-                            <div class="columns-item__head">
-                                <div class="columns-item__icon">
-                                    <img src="<?php bloginfo('template_url'); ?>/assets/img/services/icons/15.svg" alt="icon" loading="lazy">
-                                </div>
-                                <div class="columns-item__title">
-                                    <h2>Hĺbkový monitoring konkurencie (Market Intelligence)</h2>
-                                </div>
-                            </div>
-                            <div class="columns-item__text">
-                                <p>-Pravidelná analýza cien, reklamných výdavkov, reklamných kreatív a jedinečných predajných ponúk konkurentov.</p>
-                            </div>
-                        </a>
-                    </div>
+                    <?php endwhile; wp_reset_postdata(); ?>
                 </div>
                 <div class="services__button">
                     <button id="Zobraziť menej">Zobraziť viac</button>
