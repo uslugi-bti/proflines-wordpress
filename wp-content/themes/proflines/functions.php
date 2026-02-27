@@ -633,3 +633,57 @@ function redirect_services_archive_to_home() {
     }
 }
 add_action('template_redirect', 'redirect_services_archive_to_home');
+
+add_action('wp_enqueue_scripts', 'theme_live_search_scripts');
+function theme_live_search_scripts() {
+
+    wp_enqueue_script(
+        'live-search',
+        get_template_directory_uri() . '/assets/js/live-search.js',
+        [],
+        null,
+        true
+    );
+
+    wp_localize_script('live-search', 'liveSearchData', [
+        'ajax_url' => admin_url('admin-ajax.php')
+    ]);
+}
+
+add_action('wp_ajax_live_search', 'theme_live_search_handler');
+
+add_action('wp_ajax_nopriv_live_search', 'theme_live_search_handler');
+
+function theme_live_search_handler() {
+
+    $query = isset($_GET['s']) ? sanitize_text_field($_GET['s']) : '';
+
+    if (empty($query)) {
+        wp_send_json([]);
+    }
+
+    $args = [
+        'post_type' => ['post', 'page'],
+        'posts_per_page' => 5,
+        's' => $query
+    ];
+
+    $search_query = new WP_Query($args);
+
+    $results = [];
+
+    if ($search_query->have_posts()) {
+        while ($search_query->have_posts()) {
+            $search_query->the_post();
+
+            $results[] = [
+                'title' => get_the_title(),
+                'link'  => get_permalink(),
+            ];
+        }
+    }
+
+    wp_reset_postdata();
+
+    wp_send_json($results);
+}
