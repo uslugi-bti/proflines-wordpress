@@ -61,22 +61,11 @@
                             </div>
                         </div>
                         <div class="header-bottom__search">
-                            <button class="search-toggle"></button> <!-- Кнопка открытия поиска (если нужна) -->
-                            
-                            <form class="header-bottom-search__body" id="ajax-search-form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+                            <button></button>
+                            <form class="header-bottom-search__body">
                                 <button type="submit"></button>
-                                
-                                <input type="text" 
-                                    name="s" <!-- Важно! Стандартный параметр WP -->
-                                    id="search-input"
-                                    placeholder="Čo hľadáte?" 
-                                    autocomplete="off"
-                                    value="<?php echo get_search_query(); ?>"> <!-- Сохраняет введенное при перезагрузке -->
-                                
-                                <!-- Контейнер для подсказок -->
-                                <ul class="header-bottom-search__tips" id="search-suggestions" style="display: none;">
-                                    <!-- Сюда будут подгружаться результаты через AJAX -->
-                                </ul>
+                                <input type="text" placeholder="Čo hľadáte?" autocomplete="off">
+                                <ul class="header-bottom-search__tips"></ul>
                             </form>
                         </div>
                         <div class="header-bottom__menu">

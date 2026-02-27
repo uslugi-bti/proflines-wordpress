@@ -634,56 +634,41 @@ function redirect_services_archive_to_home() {
 }
 add_action('template_redirect', 'redirect_services_archive_to_home');
 
-add_action('wp_enqueue_scripts', 'theme_live_search_scripts');
-function theme_live_search_scripts() {
+add_action('wp_ajax_nopriv_ajax_search', 'ajax_search_callback');
+add_action('wp_ajax_ajax_search', 'ajax_search_callback');
 
-    wp_enqueue_script(
-        'live-search',
-        get_template_directory_uri() . '/assets/js/live-search.js',
-        [],
-        null,
-        true
+function ajax_search_callback() {
+    $search_term = sanitize_text_field($_POST['search']);
+    
+    $args = array(
+        'post_type' => array('post', 'page'),
+        'post_status' => 'publish',
+        'posts_per_page' => 10,
+        's' => $search_term,
+        'title_like' => $search_term
     );
-
-    wp_localize_script('live-search', 'liveSearchData', [
-        'ajax_url' => admin_url('admin-ajax.php')
-    ]);
+    
+    $query = new WP_Query($args);
+    $results = array();
+    
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $title = get_the_title();
+            $results[] = array(
+                'title' => $title,
+                'url' => get_permalink(),
+                'highlight' => str_ireplace($search_term, '<strong>' . $search_term . '</strong>', $title)
+            );
+        }
+        wp_reset_postdata();
+    }
+    
+    wp_send_json($results);
 }
 
-add_action('wp_ajax_live_search', 'theme_live_search_handler');
-
-add_action('wp_ajax_nopriv_live_search', 'theme_live_search_handler');
-
-function theme_live_search_handler() {
-
-    $query = isset($_GET['s']) ? sanitize_text_field($_GET['s']) : '';
-
-    if (empty($query)) {
-        wp_send_json([]);
-    }
-
-    $args = [
-        'post_type' => ['post', 'page'],
-        'posts_per_page' => 5,
-        's' => $query
-    ];
-
-    $search_query = new WP_Query($args);
-
-    $results = [];
-
-    if ($search_query->have_posts()) {
-        while ($search_query->have_posts()) {
-            $search_query->the_post();
-
-            $results[] = [
-                'title' => get_the_title(),
-                'link'  => get_permalink(),
-            ];
-        }
-    }
-
-    wp_reset_postdata();
-
-    wp_send_json($results);
+add_action('wp_enqueue_scripts', 'enqueue_search_scripts');
+function enqueue_search_scripts() {
+    wp_enqueue_script('search-js', get_template_directory_uri() . '/assets/js/live-search.js', array(), '1.0', true);
+    wp_localize_script('search-js', 'search_ajax', array('url' => admin_url('admin-ajax.php')));
 }

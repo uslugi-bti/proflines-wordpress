@@ -1,64 +1,69 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    const searchForm = document.querySelector('.header-bottom-search__body');
+    const searchInput = document.querySelector('.header-bottom-search__body input');
+    const tipsList = document.querySelector('.header-bottom-search__tips');
+    let searchTimeout;
 
-    const searchBlock = document.querySelector('.header-bottom__search');
-    const input = searchBlock.querySelector('input[name="s"]');
-    const tips = searchBlock.querySelector('.header-bottom-search__tips');
+    if (!searchForm || !searchInput) return;
 
-    let timer = null;
+    searchInput.addEventListener('input', function(e) {
+        clearTimeout(searchTimeout);
+        const searchTerm = e.target.value.trim();
 
-    function highlight(text, query) {
-        const regex = new RegExp(`(${query})`, 'gi');
-        return text.replace(regex, '<strong>$1</strong>');
-    }
-
-    input.addEventListener('input', () => {
-
-        clearTimeout(timer);
-
-        const query = input.value.trim();
-
-        if (query.length < 2) {
-            tips.innerHTML = '';
-            tips.style.display = 'none';
+        if (searchTerm.length < 2) {
+            tipsList.innerHTML = '';
             return;
         }
 
-        timer = setTimeout(() => {
+        searchTimeout = setTimeout(() => {
+            const formData = new FormData();
+            formData.append('action', 'ajax_search');
+            formData.append('search', searchTerm);
 
-            fetch(`${liveSearchData.ajax_url}?action=live_search&s=${encodeURIComponent(query)}`)
-                .then(response => response.json())
-                .then(data => {
-
-                    if (!data.length) {
-                        tips.innerHTML = `
-                            <li class="header-bottom-search__tip no-results">
-                                Nič sa nenašlo
-                            </li>
-                        `;
-                        tips.style.display = 'block';
-                        return;
-                    }
-
-                    tips.innerHTML = data.map(item => `
-                        <li class="header-bottom-search__tip">
-                            <a href="${item.link}">
-                                ${highlight(item.title, query)}
-                            </a>
-                        </li>
-                    `).join('');
-
-                    tips.style.display = 'block';
-                });
-
+            fetch(search_ajax.url, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    tipsList.innerHTML = data.map(item => 
+                        `<li class="header-bottom-search__tip">
+                            <a href="${item.url}">${item.highlight}</a>
+                        </li>`
+                    ).join('');
+                } else {
+                    tipsList.innerHTML = '';
+                }
+            });
         }, 300);
     });
 
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const searchTerm = searchInput.value.trim();
+        
+        if (searchTerm.length === 0) return;
 
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.header-bottom__search')) {
-            tips.innerHTML = '';
-            tips.style.display = 'none';
-        }
+        const formData = new FormData();
+        formData.append('action', 'ajax_search');
+        formData.append('search', searchTerm);
+
+        fetch(search_ajax.url, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.length > 0) {
+                window.location.href = data[0].url;
+            }
+        });
     });
 
+    document.addEventListener('click', function(e) {
+        if (!searchForm.contains(e.target)) {
+            tipsList.innerHTML = '';
+        }
+    });
 });
