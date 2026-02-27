@@ -1,106 +1,218 @@
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-top">
-                    <div class="footer-top__body">
-                        <div class="footer-top__title">
-                            <h1><span>Rozumieme v&#xE1;m</span> - a vieme pom&#xF4;c&#x165;.</h1>
-                        </div>
-                        <div class="footer-top__button button">
-                            <a href>Nap&#xED;&#x161;te n&#xE1;m o va&#x161;om projekte</a>
-                        </div>
-                        <div class="footer-top__text">
-                            <p>Z&#xED;ska&#x165; pl&#xE1;n do 12 hod&#xED;n</p>
-                        </div>
-                    </div>
-                    <div class="footer-top__columns">
-                        <div class="footer-top__column">
-                            <ul class="footer-top__list">
-                                <li class="footer-top__item">
-                                    <span>Slu&#x17E;by</span>
-                                </li>
-                                <li class="footer-top__item">
-                                    <a href>Marketingov&#xFD; v&#xFD;skum</a>
-                                </li>
-                                <li class="footer-top__item">
-                                    <a href>SEO &amp; PPC</a>
-                                </li>
-                                <li class="footer-top__item">
-                                    <a href>Web &amp; UX</a>
-                                </li>
-                                <li class="footer-top__item">
-                                    <a href>AI rie&#x161;enia</a>
-                                </li>
-                                <li class="footer-top__item">
-                                    <a href>O n&#xE1;s</a>
-                                </li>
-                                <li class="footer-top__item">
-                                    <a href>Bal&#xED;ky slu&#x17E;ieb</a>
-                                </li>
-                            </ul>
-                            <ul class="footer-top__list grey">
-                                <li class="footer-top__item">
-                                    <a href>LinkedIn</a>
-                                </li>
-                                <li class="footer-top__item">
-                                    <a href="https://www.instagram.com/proflines_marketing/">Instagram</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer-top__column">
-                            <ul class="footer-top__list">
-                                <li class="footer-top__item">
-                                    <span>Kontakt:</span>
-                                </li>
-                                <li class="footer-top__item">
-                                    <a href>+421 944 457 515</a>
-                                </li>
-                                <li class="footer-top__item">
-                                    <a href>info@proflines.agency</a>
-                                </li>
-                                <li class="footer-top__item">
-                                    <span>S&#xED;dlo spolo&#x10D;nosti: Lermontovova, 911/3, 81105, Bratislava</span>
-                                </li>
-                                <li class="footer-top__item">
-                                    <span>Prev&#xE1;dzkov&#xE1; adresa: Legion&#xE1;rska, 1/1, 83104, Bratislava</span>
-                                </li>
-                            </ul>
-                            <div class="footer-top__list">
-                                <ul class="footer-top__list grey">
-                                    <li class="footer-top__item">
-                                        <span><span style="color: #242A36;">Slovensko</span> / EU</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<footer class="footer">
+    <?php 
+    $front_page_id = get_option('page_on_front');
+    $logo_footer = get_field('logo_footer', $front_page_id);
+    $legal_name = get_field('legal_name', $front_page_id);
+    $vat_id = get_field('vat_id', $front_page_id);
+    $tax_id = get_field('tax_id', $front_page_id);
+    $street_address = get_field('street_address', $front_page_id);
+    $address_locality = get_field('address_locality', $front_page_id);
+    $postal_code = get_field('postal_code', $front_page_id);
+    $address_office = get_field('address_office', $front_page_id);
+    $operation_address = get_field('operation_address', $front_page_id);
+    $telephone = get_field('telephone', $front_page_id);
+    $admin_email = get_bloginfo('admin_email');
+    $facebook = get_field('link_to_facebook', $front_page_id);
+    $instagram = get_field('link_to_instagram', $front_page_id);
+    $linkedin = get_field('link_to_linkedin', $front_page_id);
+    $footer_policy = get_field('footer_policy', $front_page_id);
+    
+    // Získanie všetkých stránok so šablónou Technical Page
+    $technical_pages = get_pages(array(
+        'meta_key' => '_wp_page_template',
+        'meta_value' => 'template-technical.php'
+    ));
+    
+    // Získanie všetkých služieb (posts s kategóriou services a bez ina-sluzba)
+    $services_args = array(
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+            'relation' => 'AND',
+            array(
+                'taxonomy' => 'category',
+                'field' => 'slug',
+                'terms' => 'services'
+            ),
+            array(
+                'taxonomy' => 'category',
+                'field' => 'slug',
+                'terms' => 'ina-sluzba',
+                'operator' => 'NOT IN'
+            )
+        )
+    );
+    $services = get_posts($services_args);
+    ?>
+    
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-top__body">
+                <div class="footer-top__title">
+                    <h1><span>Rozumieme vám</span> - a vieme pomôcť.</h1>
                 </div>
-                <div class="footer-bottom">
-                    <div class="footer-bottom__text">
-                        <p>&#xB9; ProfLines s.r.o. je marketingov&#xE1; a analytick&#xE1; agent&#xFA;ra, nie finan&#x10D;n&#xE1;, pr&#xE1;vna ani investi&#x10D;n&#xE1; in&#x161;tit&#xFA;cia. V&#x161;etky materi&#xE1;ly prezentovan&#xE9; na tejto webovej str&#xE1;nke, vr&#xE1;tane analytick&#xFD;ch spr&#xE1;v, marketingov&#xFD;ch prieskumov, progn&#xF3;z, pr&#xED;padov&#xFD;ch &#x161;t&#xFA;di&#xED;, uk&#xE1;&#x17E;ok v&#xFD;sledkov a in&#xFD;ch &#xFA;dajov, maj&#xFA; v&#xFD;lu&#x10D;ne informat&#xED;vny charakter a nepredstavuj&#xFA; finan&#x10D;n&#xE9;, investi&#x10D;n&#xE9;, pr&#xE1;vne ani da&#x148;ov&#xE9; poradenstvo.<br><br>&#xB2; V&#x161;etky v&#xFD;sledky, ukazovatele v&#xFD;konnosti, percent&#xE1; rastu, &#xFA;daje o n&#xE1;v&#x161;tevnosti, konverzi&#xE1;ch, predajoch alebo in&#xFD;ch obchodn&#xFD;ch metrik&#xE1;ch vych&#xE1;dzaj&#xFA; zo skuto&#x10D;n&#xFD;ch projektov, intern&#xFD;ch analytick&#xFD;ch d&#xE1;t alebo modelov&#xFD;ch v&#xFD;po&#x10D;tov, av&#x161;ak nezaru&#x10D;uj&#xFA; dosiahnutie rovnak&#xFD;ch v&#xFD;sledkov v bud&#xFA;cnosti. Skuto&#x10D;n&#xE9; v&#xFD;sledky sa m&#xF4;&#x17E;u v&#xFD;razne l&#xED;&#x161;i&#x165; v z&#xE1;vislosti od trhu, segmentu, rozpo&#x10D;tu, konkurencie, sez&#xF3;nnosti, stavu produktu a vonkaj&#x161;&#xED;ch faktorov.<br><br>&#xB3; Ak&#xE9;ko&#x13E;vek pr&#xED;klady pr&#xED;padov&#xFD;ch &#x161;t&#xFA;di&#xED;, projektov alebo dosiahnut&#xFD;ch v&#xFD;sledkov s&#xFA; uveden&#xE9; v&#xFD;lu&#x10D;ne za &#xFA;&#x10D;elom prezent&#xE1;cie pr&#xED;stupu, metodol&#xF3;gie a odbornosti spolo&#x10D;nosti ProfLines s.r.o.. Nepredstavuj&#xFA; verejn&#xFA; ponuku a nezakladaj&#xFA; pr&#xE1;vne z&#xE1;v&#xE4;zky t&#xFD;kaj&#xFA;ce sa konkr&#xE9;tnych v&#xFD;sledkov spolupr&#xE1;ce.<br><br>&#x2074; ProfLines s.r.o. nenesie zodpovednos&#x165; za rozhodnutia prijat&#xE9; pou&#x17E;&#xED;vate&#x13E;mi alebo klientmi na z&#xE1;klade inform&#xE1;ci&#xED; zverejnen&#xFD;ch na webovej str&#xE1;nke, v spr&#xE1;vach, prezent&#xE1;ci&#xE1;ch alebo in&#xFD;ch materi&#xE1;loch. V&#x161;etky obchodn&#xE9; rozhodnutia prij&#xED;ma klient samostatne a na vlastn&#xE9; riziko.<br><br>&#x2075; &#xDA;daje z&#xED;skan&#xE9; od klientov v priebehu spolupr&#xE1;ce, vr&#xE1;tane obchodn&#xFD;ch inform&#xE1;ci&#xED;, finan&#x10D;n&#xFD;ch ukazovate&#x13E;ov, intern&#xFD;ch spr&#xE1;v, pr&#xED;stupov a v&#xFD;sledkov v&#xFD;skumov, s&#xFA; sprac&#xFA;van&#xE9; v s&#xFA;lade s platnou legislat&#xED;vou a pou&#x17E;&#xED;van&#xE9; v&#xFD;lu&#x10D;ne na &#xFA;&#x10D;ely plnenia marketingov&#xFD;ch, analytick&#xFD;ch a strategick&#xFD;ch &#xFA;loh.<br><br>&#x2076; ProfLines s.r.o. dodr&#x17E;iava z&#xE1;sady d&#xF4;vernosti a neposkytuje inform&#xE1;cie tret&#xED;m stran&#xE1;m bez predch&#xE1;dzaj&#xFA;ceho s&#xFA;hlasu klienta, s v&#xFD;nimkou pr&#xED;padov stanoven&#xFD;ch z&#xE1;konom alebo zmluvn&#xFD;mi podmienkami.<br><br>&#x2077; V&#x161;etky materi&#xE1;ly tejto webovej str&#xE1;nky, vr&#xE1;tane textov, grafiky, dizajnu, &#x161;trukt&#xFA;ry str&#xE1;nok, analytick&#xFD;ch modelov a vizualiz&#xE1;ci&#xED;, s&#xFA; du&#x161;evn&#xFD;m vlastn&#xED;ctvom spolo&#x10D;nosti ProfLines s.r.o. a s&#xFA; chr&#xE1;nen&#xE9; autorsk&#xFD;m pr&#xE1;vom. Ak&#xE9;ko&#x13E;vek kop&#xED;rovanie, &#x161;&#xED;renie alebo pou&#x17E;itie materi&#xE1;lov bez p&#xED;somn&#xE9;ho s&#xFA;hlasu je zak&#xE1;zan&#xE9;.<br><br>&#x2078; ProfLines s.r.o. si vyhradzuje pr&#xE1;vo meni&#x165;, aktualizova&#x165; alebo dop&#x13A;&#x148;a&#x165; inform&#xE1;cie na webovej str&#xE1;nke bez predch&#xE1;dzaj&#xFA;ceho upozornenia.</p>
-                    </div>
-                    <div class="footer-bottom__button">
-                        <button id="Skry&#x165; pr&#xE1;vne inform&#xE1;cie">Zobrazi&#x165; pr&#xE1;vne inform&#xE1;cie</button>
-                    </div>
-                    <div class="footer-bottom__img">
-                        <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/footer/01.svg" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/footer/01.svg" alt="logo"></picture>
-                    </div>
-                    <div class="footer-bottom__policy">
-                        <p>&#xA9; 2026 ProfLines. &#x423;&#x441;&#x456; &#x43F;&#x440;&#x430;&#x432;&#x430; &#x437;&#x430;&#x445;&#x438;&#x449;&#x435;&#x43D;&#x43E;.</p>
-                    </div>
-                    <div class="footer-bottom__links">
-                        <p>ProfLines s.r.o.<br>I&#x10C;O:53398467, DI&#x10C;(VAT):SK2121411105<br>Obchodn&#xFD; register Mestsk&#xE9;ho s&#xFA;du Bratislava III, oddiel: Sro, vlo&#x17E;ka &#x10D;. 150347/B</p>
-                        <p>Predmety &#x10D;innosti (SK NACE):<br>73.20 &#x2013; Reklamn&#xE9; a marketingov&#xE9; slu&#x17E;by, prieskum trhu a verejnej mienky.</p>
-                        <p>70.22 &#x2013; &#x10C;innos&#x165; podnikate&#x13E;sk&#xFD;ch, organiza&#x10D;n&#xFD;ch a ekonomick&#xFD;ch poradcov.</p>
-                        <p>
-                            <a href>Obchodn&#xE9; podmienky</a> / <a href>Terms &amp; Conditions</a> / <a href>Pr&#xE1;vne inform&#xE1;cie</a> / <a href>Impressum</a> / <a href>Z&#xE1;sady ochrany osobn&#xFD;ch &#xFA;dajov (GDPR)</a> / <a href>Privacy Policy</a> / <a href>Z&#xE1;sady pou&#x17E;&#xED;vania s&#xFA;borov cookies</a> / <a href>Cookies Policy</a>
-                        </p>
+                <div class="footer-top__button button">
+                    <a href="/kontakt">Napíšte nám o vašom projekte</a>
+                </div>
+                <div class="footer-top__text">
+                    <p>Získať plán do 12 hodín</p>
+                </div>
+            </div>
+            <div class="footer-top__columns">
+                <div class="footer-top__column">
+                    <ul class="footer-top__list">
+                        <li class="footer-top__item">
+                            <span>Služby</span>
+                        </li>
+                        <?php if (!empty($services)): ?>
+                            <?php foreach ($services as $service): ?>
+                            <li class="footer-top__item">
+                                <a href="<?php echo get_permalink($service->ID); ?>"><?php echo get_the_title($service->ID); ?></a>
+                            </li>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <li class="footer-top__item">
+                                <a href="/sluzby/marketingovy-vyskum">Marketingový výskum</a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a href="/sluzby/seo-ppc">SEO & PPC</a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a href="/sluzby/web-ux">Web & UX</a>
+                            </li>
+                            <li class="footer-top__item">
+                                <a href="/sluzby/ai-riesenia">AI riešenia</a>
+                            </li>
+                        <?php endif; ?>
+                        <li class="footer-top__item">
+                            <a href="<?php echo home_url('/o-nas'); ?>">O nás</a>
+                        </li>
+                        <li class="footer-top__item">
+                            <a href="<?php echo home_url('/baliky-sluzieb'); ?>">Balíky služieb</a>
+                        </li>
+                    </ul>
+                    <ul class="footer-top__list grey">
+                        <?php if ($linkedin): ?>
+                        <li class="footer-top__item">
+                            <a href="<?php echo esc_url($linkedin); ?>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </li>
+                        <?php else: ?>
+                        <li class="footer-top__item">
+                            <a href="#">LinkedIn</a>
+                        </li>
+                        <?php endif; ?>
+                        <?php if ($instagram): ?>
+                        <li class="footer-top__item">
+                            <a href="<?php echo esc_url($instagram); ?>" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        </li>
+                        <?php else: ?>
+                        <li class="footer-top__item">
+                            <a href="https://www.instagram.com/proflines_marketing/">Instagram</a>
+                        </li>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+                <div class="footer-top__column">
+                    <ul class="footer-top__list">
+                        <li class="footer-top__item">
+                            <span>Kontakt:</span>
+                        </li>
+                        <?php if ($telephone): ?>
+                        <li class="footer-top__item">
+                            <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', $telephone)); ?>"><?php echo esc_html($telephone); ?></a>
+                        </li>
+                        <?php else: ?>
+                        <li class="footer-top__item">
+                            <a href="tel:+421944457515">+421 944 457 515</a>
+                        </li>
+                        <?php endif; ?>
+                        <li class="footer-top__item">
+                            <a href="mailto:<?php echo esc_attr($admin_email); ?>"><?php echo esc_html($admin_email); ?></a>
+                        </li>
+                        <?php if ($address_office): ?>
+                        <li class="footer-top__item">
+                            <span><?php echo esc_html($address_office); ?></span>
+                        </li>
+                        <?php else: ?>
+                        <li class="footer-top__item">
+                            <span>Sídlo spoločnosti: Lermontovova, 911/3, 81105, Bratislava</span>
+                        </li>
+                        <?php endif; ?>
+                        <?php if ($operation_address): ?>
+                        <li class="footer-top__item">
+                            <span>Prevádzková adresa: <?php echo esc_html($operation_address); ?></span>
+                        </li>
+                        <?php else: ?>
+                        <li class="footer-top__item">
+                            <span>Prevádzková adresa: Legionárska, 1/1, 83104, Bratislava</span>
+                        </li>
+                        <?php endif; ?>
+                    </ul>
+                    <div class="footer-top__list">
+                        <ul class="footer-top__list grey">
+                            <li class="footer-top__item">
+                                <span><span style="color: #242A36;">Slovensko</span> / EU</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom__text">
+                <?php if ($footer_policy): ?>
+                    <?php echo $footer_policy; ?>
+                <?php else: ?>
+                <p>© ProfLines s.r.o. je marketingová a analytická agentúra, nie finančná, právna ani investičná inštitúcia. Všetky materiály prezentované na tejto webovej stránke, vrátane analytických správ, marketingových prieskumov, prognóz, prípadových štúdií, ukážok výsledkov a iných údajov, majú výlučne informatívny charakter a nepredstavujú finančné, investičné, právne ani daňové poradenstvo.<br><br>© Všetky výsledky, ukazovatele výkonnosti, percentá rastu, údaje o návštevnosti, konverziách, predajoch alebo iných obchodných metrikách vychádzajú zo skutočných projektov, interných analytických dát alebo modelových výpočtov, avšak nezaručujú dosiahnutie rovnakých výsledkov v budúcnosti. Skutočné výsledky sa môžu výrazne líšiť v závislosti od trhu, segmentu, rozpočtu, konkurencie, sezónnosti, stavu produktu a vonkajších faktorov.<br><br>© Akékoľvek príklady prípadových štúdií, projektov alebo dosiahnutých výsledkov sú uvedené výlučne za účelom prezentácie prístupu, metodológie a odbornosti spoločnosti ProfLines s.r.o.. Nepredstavujú verejnú ponuku a nezakladajú právne záväzky týkajúce sa konkrétnych výsledkov spolupráce.<br><br>© ProfLines s.r.o. nenesie zodpovednosť za rozhodnutia prijaté používateľmi alebo klientmi na základe informácií zverejnených na webovej stránke, v správach, prezentáciách alebo iných materiáloch. Všetky obchodné rozhodnutia prijíma klient samostatne a na vlastné riziko.<br><br>© Údaje získané od klientov v priebehu spolupráce, vrátane obchodných informácií, finančných ukazovateľov, interných správ, prístupov a výsledkov výskumov, sú spracúvané v súlade s platnou legislatívou a používané výlučne na účely plnenia marketingových, analytických a strategických úloh.<br><br>© ProfLines s.r.o. dodržiava zásady dôvernosti a neposkytuje informácie tretím stranám bez predchádzajúceho súhlasu klienta, s výnimkou prípadov stanovených zákonom alebo zmluvnými podmienkami.<br><br>© Všetky materiály tejto webovej stránky, vrátane textov, grafiky, dizajnu, štruktúry stránok, analytických modelov a vizualizácií, sú duševným vlastníctvom spoločnosti ProfLines s.r.o. a sú chránené autorským právom. Akékoľvek kopírovanie, šírenie alebo použitie materiálov bez písomného súhlasu je zakázané.<br><br>© ProfLines s.r.o. si vyhradzuje právo meniť, aktualizovať alebo dopĺňať informácie na webovej stránke bez predchádzajúceho upozornenia.</p>
+                <?php endif; ?>
+            </div>
+            <div class="footer-bottom__button">
+                <button id="Skryť právne informácie">Zobraziť právne informácie</button>
+            </div>
+            <div class="footer-bottom__img">
+                <?php if ($logo_footer): ?>
+                    <img src="<?php echo esc_url($logo_footer); ?>" alt="logo" loading="lazy">
+                <?php else: ?>
+                    <img src="<?php bloginfo('template_url'); ?>/assets/img/footer/01.svg" alt="logo" loading="lazy">
+                <?php endif; ?>
+            </div>
+            <div class="footer-bottom__policy">
+                <p>© 2026 ProfLines. Všetky práva vyhradené.</p>
+            </div>
+            <div class="footer-bottom__links">
+                <p>
+                    <?php if ($legal_name): echo esc_html($legal_name) . '<br>'; endif; ?>
+                    <?php if ($tax_id): echo 'IČO:' . esc_html($tax_id); endif; ?>
+                    <?php if ($vat_id): echo ', DIČ(VAT):' . esc_html($vat_id); endif; ?>
+                </p>
+                <p>Predmety činnosti (SK NACE):<br>73.20 – Reklamné a marketingové služby, prieskum trhu a verejnej mienky.</p>
+                <p>70.22 – Činnosť podnikateľských, organizačných a ekonomických poradcov.</p>
+                <p>
+                    <?php if (!empty($technical_pages)): ?>
+                        <?php 
+                        $links = array();
+                        foreach ($technical_pages as $page) {
+                            $links[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
+                        }
+                        echo implode(' / ', $links);
+                        ?>
+                    <?php else: ?>
+                        <a href="/obchodne-podmienky">Obchodné podmienky</a> / 
+                        <a href="/terms-conditions">Terms & Conditions</a> / 
+                        <a href="/pravne-informacie">Právne informácie</a> / 
+                        <a href="/impressum">Impressum</a> / 
+                        <a href="/gdpr">Zásady ochrany osobných údajov (GDPR)</a> / 
+                        <a href="/privacy-policy">Privacy Policy</a> / 
+                        <a href="/cookies">Zásady používania súborov cookies</a> / 
+                        <a href="/cookies-policy">Cookies Policy</a>
+                    <?php endif; ?>
+                </p>
+            </div>
+        </div>
     </div>
+</footer>
+</div>
 
-    <?php wp_footer(); ?>
+<?php wp_footer(); ?>
 </body>
-
 </html>

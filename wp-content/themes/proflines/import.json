@@ -2679,6 +2679,27 @@
                 "append": ""
             },
             {
+                "key": "field_69a17944f9d87",
+                "label": "Sídlo spoločnosti:",
+                "name": "address_office",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
                 "key": "field_699337ff8ec09",
                 "label": "Link to Facebook",
                 "name": "link_to_facebook",
