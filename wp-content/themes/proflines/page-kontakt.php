@@ -88,7 +88,7 @@
                         </div>
                         <div class="form-group form-group--required">
                             <label>*E-mail:</label>
-                            <input type="email" name="email" id="email" placeholder="E-mail:" autocomplete="off">
+                            <input type="text" name="email" id="email" placeholder="E-mail:" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label>Telefón:</label>
@@ -100,7 +100,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="phone" id="phone" placeholder="Telefónne číslo" autocomplete="off">
+                            <input type="text" name="phone" id="phone" placeholder="Telefónne číslo" autocomplete="off">
                         </div>
                         <div class="form-group checkbox span-two form-group--required">
                             <h4>Spracovanie osobných údajov (GDPR)</h4>
