@@ -312,22 +312,16 @@
         <div class="header-sidebar">
             <ul class="header-sidebar__body">
                 <li class="header-sidebar__item">
-                    <a href>Page 1</a>
+                    <a href>Blog</a>
                 </li>
                 <li class="header-sidebar__item">
-                    <a href>Page 2</a>
+                    <a href>FAQ</a>
                 </li>
                 <li class="header-sidebar__item">
-                    <a href>Page 3</a>
+                    <a href>Sociálna iniciatíva</a>
                 </li>
                 <li class="header-sidebar__item">
-                    <a href>Page 4</a>
-                </li>
-                <li class="header-sidebar__item">
-                    <a href>Page 5</a>
-                </li>
-                <li class="header-sidebar__item">
-                    <a href>Page 6</a>
+                    <a href>21 chýb</a>
                 </li>
             </ul>
         </div>

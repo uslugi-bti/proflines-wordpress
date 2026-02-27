@@ -74,9 +74,6 @@
                         <li class="footer-top__item">
                             <a href="<?php echo home_url('/o-nas'); ?>">O nás</a>
                         </li>
-                        <li class="footer-top__item">
-                            <a href="<?php echo home_url('/baliky-sluzieb'); ?>">Balíky služieb</a>
-                        </li>
                     </ul>
                     <ul class="footer-top__list grey">
                         <?php if ($linkedin): ?>
