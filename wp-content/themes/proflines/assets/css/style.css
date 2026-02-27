@@ -3205,7 +3205,7 @@ main {
 .portfolio-item__description p {
   font-size: 16px;
   color: #717580;
-  letter-spacing: 157%;
+  line-height: 157%;
 }
 
 .portfolio-item__button a {
