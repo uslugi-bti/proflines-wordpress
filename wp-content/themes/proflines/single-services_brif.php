@@ -161,7 +161,7 @@ $brif_page_badge = get_field('brif_page_badge', $post_id);
                             <?php elseif ($field_type === 'checkbox'): ?>
                                 <!-- Чекбоксы -->
                                 <div class="form-group checkbox <?php echo $field_width; ?> <?php echo $required_class; ?>">
-                                    <h4><?php echo $field_label; ?>:</h4>
+                                    <h4><?php echo $field_label; ?></h4>
                                     <div class="form-group__body">
                                         <?php if (!empty($options)): ?>
                                             <?php foreach ($options as $option): ?>
