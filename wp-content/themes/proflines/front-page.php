@@ -452,6 +452,7 @@
                         $short_text = get_sub_field('short_text');
                         $description = get_sub_field('description');
                         $button_text = get_sub_field('button_text');
+                        $url = get_sub_field('link');
                     ?>
                     <div class="portfolio__item swiper-slide">
                         <div class="portfolio-item__img">
@@ -496,7 +497,7 @@
                                 <p><?php echo $description; ?></p>
                             </div>
                             <div class="portfolio-item__button">
-                                <a href>
+                                <a href="<?php echo $url; ?>">
                                     <span><?php echo $button_text; ?></span>
                                 </a>
                             </div>
