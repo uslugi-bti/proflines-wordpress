@@ -148,7 +148,7 @@
                         <?php endif; ?>
                     </ul>
                     <div class="qa-menu__button button">
-                        <a href><?php the_field('faq_nav_button_text'); ?></a>
+                        <a href="<?php echo home_url('/'); ?>social-initiative"><?php the_field('faq_nav_button_text'); ?></a>
                     </div>
                 </div>
             </div>
