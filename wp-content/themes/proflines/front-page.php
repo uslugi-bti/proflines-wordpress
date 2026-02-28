@@ -385,7 +385,7 @@
                 <?php endwhile; ?>
                 <div class="testimonials__cover">
                     <div class="testimonials-cover__button button">
-                        <a href><?php the_field('testimonials_button_text'); ?></a>
+                        <a href="<?php echo home_url('/'); ?>kontakt"><?php the_field('testimonials_button_text'); ?></a>
                     </div>
                 </div>
             </div>
