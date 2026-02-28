@@ -470,25 +470,25 @@
                                 <?php endif; ?>
                             </td>
                             
-                            <!-- Starter Column -->
                             <td>
-                                <?php 
-                                // Проверяем, нужно ли показывать иконку
-                                if (!empty($starter['umiestnit_ikonu_anonieciastocne_namiesto_textu'])): 
-                                    // Показываем иконку в зависимости от типа
-                                    if ($starter['type'] == 'true'): ?>
-                                        <span class="table__icon table__icon--true"></span>
-                                    <?php elseif ($starter['type'] == 'false'): ?>
-                                        <span class="table__icon table__icon--false"></span>
-                                    <?php elseif ($starter['type'] == 'partial'): ?>
-                                        <span class="table__icon table__icon--true-false"></span>
-                                    <?php endif; ?>
-                                <?php else: 
-                                    // Если иконка не нужна, показываем текст (если он есть)
-                                    if (!empty($starter['custom_text'])): ?>
-                                        <span><?php echo $starter['custom_text']; ?></span>
-                                <?php endif; 
-                                endif; ?>
+                            <?php 
+                            $use_icon = $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu'] ?? false;
+                            $type = $starter['type'] ?? '';
+
+                            if ($use_icon == 1) {
+
+                                if ($type === 'true') {
+                                    echo '<span class="table__icon table__icon--true"></span>';
+                                } elseif ($type === 'false') {
+                                    echo '<span class="table__icon table__icon--false"></span>';
+                                } elseif ($type === 'partial') {
+                                    echo '<span class="table__icon table__icon--true-false"></span>';
+                                }
+
+                            } elseif (!empty($starter['custom_text'])) {
+                                echo '<span>' . ($starter['custom_text']) . '</span>';
+                            }
+                            ?>
                             </td>
                             
                             <!-- Basic Column -->
