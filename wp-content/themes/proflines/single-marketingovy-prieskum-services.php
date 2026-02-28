@@ -470,56 +470,62 @@
                                 </div>
                                 <?php endif; ?>
                             </td>
+                            
+                            <!-- Starter Column -->
                             <td>
                                 <?php 
-                                if (isset($starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']) && $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']): 
-                                ?>
-                                    <?php if ($starter['type'] == 'true'): ?>
+                                // Проверяем, нужно ли показывать иконку
+                                if (!empty($starter['umiestnit_ikonu_anonieciastocne_namiesto_textu'])): 
+                                    // Показываем иконку в зависимости от типа
+                                    if ($starter['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
                                     <?php elseif ($starter['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
                                     <?php elseif ($starter['type'] == 'partial'): ?>
                                         <span class="table__icon table__icon--true-false"></span>
                                     <?php endif; ?>
-                                <?php else: ?>
-                                    <?php if (isset($starter['custom_text']) && $starter['custom_text']): ?>
+                                <?php else: 
+                                    // Если иконка не нужна, показываем текст (если он есть)
+                                    if (!empty($starter['custom_text'])): ?>
                                         <span><?php echo $starter['custom_text']; ?></span>
-                                    <?php endif; ?>
-                                <?php endif; ?>
+                                <?php endif; 
+                                endif; ?>
                             </td>
+                            
+                            <!-- Basic Column -->
                             <td>
                                 <?php 
-                                if (isset($basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']) && $basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']): 
-                                ?>
-                                    <?php if ($basic['type'] == 'true'): ?>
+                                if (!empty($basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic'])): 
+                                    if ($basic['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
                                     <?php elseif ($basic['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
                                     <?php elseif ($basic['type'] == 'partial'): ?>
                                         <span class="table__icon table__icon--true-false"></span>
                                     <?php endif; ?>
-                                <?php else: ?>
-                                    <?php if (isset($basic['custom_text']) && $basic['custom_text']): ?>
+                                <?php else: 
+                                    if (!empty($basic['custom_text'])): ?>
                                         <span><?php echo $basic['custom_text']; ?></span>
-                                    <?php endif; ?>
-                                <?php endif; ?>
+                                <?php endif; 
+                                endif; ?>
                             </td>
+                            
+                            <!-- Advanced Column -->
                             <td>
                                 <?php 
-                                if (isset($advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']) && $advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']): 
-                                ?>
-                                    <?php if ($advanced['type'] == 'true'): ?>
+                                if (!empty($advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced'])): 
+                                    if ($advanced['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
                                     <?php elseif ($advanced['type'] == 'false'): ?>
                                         <span class="table__icon table__icon--false"></span>
                                     <?php elseif ($advanced['type'] == 'partial'): ?>
                                         <span class="table__icon table__icon--true-false"></span>
                                     <?php endif; ?>
-                                <?php else: ?>
-                                    <?php if (isset($advanced['custom_text']) && $advanced['custom_text']): ?>
+                                <?php else: 
+                                    if (!empty($advanced['custom_text'])): ?>
                                         <span><?php echo $advanced['custom_text']; ?></span>
-                                    <?php endif; ?>
-                                <?php endif; ?>
+                                <?php endif; 
+                                endif; ?>
                             </td>
                         </tr>
                         <?php endwhile; ?>
