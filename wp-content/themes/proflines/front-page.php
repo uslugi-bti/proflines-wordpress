@@ -213,7 +213,7 @@
                         while($services_query->have_posts()) : $services_query->the_post();
                         ?>
                         <div class="columns__item">
-                            <a href="<?php the_permalink(); ?>">
+                            <a href="<?php the_permalink(); ?>brif">
                                 <div class="columns-item__head">
                                     <div class="columns-item__icon">
                                         <?php echo get_the_post_thumbnail(); ?>
