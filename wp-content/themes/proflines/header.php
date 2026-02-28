@@ -42,22 +42,22 @@
                     <div class="header-bottom__body">
                         <div class="header-bottom__link">
                             <div class="header-bottom-link__icon">
-                                <a href="tel:+421944457515">
+                                <a href="tel:<?php echo get_field("telephone", get_option("page_on_front")) ?>">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/header/01.svg" alt="phone" loading="lazy">
                                 </a>
                             </div>
                             <div class="header-bottom-link__text">
-                                <a href="tel:+421944457515">+421 944 457 515</a>
+                                <a href="tel:<?php echo get_field("telephone", get_option("page_on_front")) ?>"><?php echo get_field("telephone", get_option("page_on_front")) ?></a>
                             </div>
                         </div>
                         <div class="header-bottom__link">
                             <div class="header-bottom-link__icon">
-                                <a href="mailto:info@proflines.agency">
+                                <a href="mailto:<?php echo get_option('admin_email'); ?>">
                                     <img src="<?php bloginfo('template_url'); ?>/assets/img/header/02.svg" alt="email" loading="lazy">
                                 </a>
                             </div>
                             <div class="header-bottom-link__text">
-                                <a href="mailto:info@proflines.agency">info@proflines.agency</a>
+                                <a href="mailto:<?php echo get_option('admin_email'); ?>"><?php echo get_option('admin_email'); ?></a>
                             </div>
                         </div>
                         <div class="header-bottom__search">

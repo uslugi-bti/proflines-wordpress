@@ -4,13 +4,10 @@
         <div class="container">
             <ul class="breadcrump__body">
                 <li class="breadcrump__item">
-                    <a href>Domov</a>
+                    <a href="<?php echo home_url(); ?>">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href>Balíky služieb</a>
-                </li>
-                <li class="breadcrump__item">
-                    <a href>Balíky služieb</a>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </li>
             </ul>
         </div>
@@ -27,8 +24,12 @@
                         <p><?php the_field('hero_subtitle'); ?></p>
                     </div>
                     <div class="service-hero__button button">
-                        <a href><?php the_field('hero_button_text'); ?></a>
-                        <a href id="whatsapp">
+                        <a href="<?php echo home_url('/kontakt'); ?>"><?php the_field('hero_button_text'); ?></a>
+                        <?php 
+                        $phone = get_field("telephone", get_option("page_on_front"));
+                        $phone_clean = preg_replace('/\D+/', '', $phone);
+                        ?>
+                        <a href="https://wa.me/<?php echo $phone_clean; ?>" id="whatsapp" about="_blank">
                             <span><?php the_field('hero_secondary_button_text'); ?></span>
                         </a>
                     </div>
@@ -63,7 +64,7 @@
                         <p><?php the_field('assessment_text'); ?></p>
                     </div>
                     <div class="banner__button button">
-                        <a href><?php the_field('assessment_button_text'); ?></a>
+                        <a href="<?php the_permalink(); ?>brif/"><?php the_field('assessment_button_text'); ?></a>
                     </div>
                 </div>
             </div>
@@ -332,7 +333,7 @@
                                 <?php echo $features; ?>
                             </div>
                             <div class="packages-item__button button">
-                                <a href><?php echo $button_text; ?></a>
+                                <a href="<?php the_permalink(); ?>brif/"><?php echo $button_text; ?></a>
                             </div>
                             <?php if ($button_caption): ?>
                                 <div class="packages-item__inscription">
