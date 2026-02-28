@@ -118,7 +118,7 @@
                                 <p><?php the_field('banner_merchant_text'); ?></p>
                             </div>
                             <div class="banner__button button">
-                                <a href=""><?php the_field('banner_merchant_button_text'); ?></a>
+                                <a href="<?php echo home_url('/'); ?>kontakt/"><?php the_field('banner_merchant_button_text'); ?></a>
                             </div>
                         </div>
                     </div>
@@ -420,7 +420,7 @@
     </section>
 
     <!-- Porovnávacia tabuľka -->
-    <section class="table">
+    <section class="table" id="table">
         <div class="container">
             <div class="block__head">
                 <div class="block-head__title">
@@ -526,7 +526,7 @@
             <div class="table__buttons">
                 <?php foreach ($buttons as $button): ?>
                 <div class="table-button__item button">
-                    <a href="<?php the_permalink(); ?>brief/"><?php echo $button['button_text']; ?></a>
+                    <a href="<?php the_permalink(); ?>brif/"><?php echo $button['button_text']; ?></a>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -643,7 +643,7 @@
                     </div>
                     <?php endif; ?>
                     <div class="packages-item__button button">
-                        <a href="<?php echo home_url('/'); ?>brief/"><?php echo $button_text; ?></a>
+                        <a href="<?php the_permalink(); ?>brif/"><?php echo $button_text; ?></a>
                     </div>
                     <div class="packages-item__inscription">
                         <span>Získať plán do 12 hodín</span>
