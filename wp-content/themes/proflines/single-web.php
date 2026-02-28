@@ -303,17 +303,17 @@
                                 </div>
                             <?php endif; ?>
                             <div class="packages-item__plan">
-                                <span><?php the_sub_field('package_name'); ?></span>
+                                <span><?php the_sub_field('name'); ?></span>
                             </div>
-                            <?php if(get_sub_field('package_description')): ?>
+                            <?php if(get_sub_field('description')): ?>
                                 <div class="packages-item__description">
-                                    <p><?php the_sub_field('package_description'); ?></p>
+                                    <p><?php the_sub_field('description'); ?></p>
                                 </div>
                             <?php endif; ?>
                             <div class="packages-item__price">
                                 <div class="packages-item-price__number">
                                     <span>€</span>
-                                    <p><?php the_sub_field('package_price'); ?></p>
+                                    <p><?php the_sub_field('price'); ?></p>
                                 </div>
                             </div>
                             <?php if(get_sub_field('package_text')): ?>
