@@ -167,7 +167,7 @@
                         <?php echo $main_text; ?>
                     </div>
                     <div class="packages-item__button button">
-                        <a href><?php echo $button_text; ?></a>
+                        <a href="<?php echo home_url('/'); ?>#services"><?php echo $button_text; ?></a>
                     </div>
                     <div class="packages-item__inscription">
                         <span><?php echo $inscription; ?></span>
