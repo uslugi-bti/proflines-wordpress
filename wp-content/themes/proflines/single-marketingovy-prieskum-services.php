@@ -471,7 +471,9 @@
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <?php if ($starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']): ?>
+                                <?php 
+                                if (isset($starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']) && $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu']): 
+                                ?>
                                     <?php if ($starter['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
                                     <?php elseif ($starter['type'] == 'false'): ?>
@@ -480,13 +482,15 @@
                                         <span class="table__icon table__icon--true-false"></span>
                                     <?php endif; ?>
                                 <?php else: ?>
-                                    <?php if ($starter['custom_text']): ?>
+                                    <?php if (isset($starter['custom_text']) && $starter['custom_text']): ?>
                                         <span><?php echo $starter['custom_text']; ?></span>
                                     <?php endif; ?>
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <?php if ($basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']): ?>
+                                <?php 
+                                if (isset($basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']) && $basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic']): 
+                                ?>
                                     <?php if ($basic['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
                                     <?php elseif ($basic['type'] == 'false'): ?>
@@ -495,13 +499,15 @@
                                         <span class="table__icon table__icon--true-false"></span>
                                     <?php endif; ?>
                                 <?php else: ?>
-                                    <?php if ($basic['custom_text']): ?>
+                                    <?php if (isset($basic['custom_text']) && $basic['custom_text']): ?>
                                         <span><?php echo $basic['custom_text']; ?></span>
                                     <?php endif; ?>
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <?php if ($advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']): ?>
+                                <?php 
+                                if (isset($advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']) && $advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced']): 
+                                ?>
                                     <?php if ($advanced['type'] == 'true'): ?>
                                         <span class="table__icon table__icon--true"></span>
                                     <?php elseif ($advanced['type'] == 'false'): ?>
@@ -510,7 +516,7 @@
                                         <span class="table__icon table__icon--true-false"></span>
                                     <?php endif; ?>
                                 <?php else: ?>
-                                    <?php if ($advanced['custom_text']): ?>
+                                    <?php if (isset($advanced['custom_text']) && $advanced['custom_text']): ?>
                                         <span><?php echo $advanced['custom_text']; ?></span>
                                     <?php endif; ?>
                                 <?php endif; ?>
