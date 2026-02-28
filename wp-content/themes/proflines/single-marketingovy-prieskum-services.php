@@ -473,6 +473,7 @@
                             <td>
                             <?php 
                             $use_icon = $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu'] ?? false;
+                            echo $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu'];
                             $type = $starter['type'] ?? '';
 
                             if ($use_icon == 1) {
