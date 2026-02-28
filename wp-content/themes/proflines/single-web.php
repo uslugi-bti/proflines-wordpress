@@ -4,13 +4,10 @@
         <div class="container">
             <ul class="breadcrump__body">
                 <li class="breadcrump__item">
-                    <a href="/">Domov</a>
+                    <a href="<?php echo home_url(); ?>">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href="/sluzby">Balíky služieb</a>
-                </li>
-                <li class="breadcrump__item">
-                    <a href="/sluzby/tvorba-webu">Tvorba webu</a>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </li>
             </ul>
         </div>
@@ -27,7 +24,7 @@
                         <p><?php the_field('hero_subtitle'); ?></p>
                     </div>
                     <div class="service-hero__button button">
-                        <a href="#contact"><?php the_field('hero_button_text'); ?></a>
+                        <a href="<?php echo home_url("/kontakt"); ?>"><?php the_field('hero_button_text'); ?></a>
                     </div>
                 </div>
                 <div class="service-hero__img">
