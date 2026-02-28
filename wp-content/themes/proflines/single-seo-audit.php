@@ -43,13 +43,10 @@ $faq_button_text = get_field('faq_button_text');
         <div class="container">
             <ul class="breadcrump__body">
                 <li class="breadcrump__item">
-                    <a href>Domov</a>
+                    <a href="<?php echo home_url(); ?>">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href>Balíky služieb</a>
-                </li>
-                <li class="breadcrump__item">
-                    <a href>SEO</a>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </li>
             </ul>
         </div>
@@ -74,7 +71,7 @@ $faq_button_text = get_field('faq_button_text');
                     
                     <?php if ($hero_button_text): ?>
                     <div class="service-hero__button button">
-                        <a href><?php echo esc_html($hero_button_text); ?></a>
+                        <a href="<?php echo home_url('/kontakt'); ?>"><?php echo esc_html($hero_button_text); ?></a>
                     </div>
                     <?php endif; ?>
                 </div>
@@ -259,7 +256,7 @@ $faq_button_text = get_field('faq_button_text');
                     
                     <?php if ($package['package_button_text']): ?>
                     <div class="packages-item__button button">
-                        <a href><?php echo esc_html($package['package_button_text']); ?></a>
+                        <a href="<?php the_permalink() ?>brif/"><?php echo esc_html($package['package_button_text']); ?></a>
                     </div>
                     <?php endif; ?>
                 </div>
@@ -398,7 +395,7 @@ $faq_button_text = get_field('faq_button_text');
                     
                     <?php if ($ppc_banner_button_text): ?>
                     <div class="banner__button button">
-                        <a href><?php echo esc_html($ppc_banner_button_text); ?></a>
+                        <a href="<?php echo home_url(); ?>/kontakt"><?php echo esc_html($ppc_banner_button_text); ?></a>
                     </div>
                     <?php endif; ?>
                 </div>

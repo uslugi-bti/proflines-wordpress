@@ -4,13 +4,10 @@
         <div class="container">
             <ul class="breadcrump__body">
                 <li class="breadcrump__item">
-                    <a href>Domov</a>
+                    <a href="<?php echo home_url(); ?>">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href>Balíky služieb</a>
-                </li>
-                <li class="breadcrump__item">
-                    <a href>PPC</a>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </li>
             </ul>
         </div>
@@ -28,7 +25,7 @@
                         <p><?php echo esc_html(get_field('hero_subtitle')); ?></p>
                     </div>
                     <div class="service-hero__button button">
-                        <a href><?php echo esc_html(get_field('hero_button_text')); ?></a>
+                        <a href="<?php echo home_url('/kontakt'); ?>"><?php echo esc_html(get_field('hero_button_text')); ?></a>
                     </div>
                 </div>
                 <div class="service-hero__img">
@@ -228,7 +225,7 @@
                                 <?php endif; ?>
                             </div>
                             <div class="packages-item__button button">
-                                <a href><?php echo esc_html(get_sub_field('package_button_text')); ?></a>
+                                <a href="<?php the_permalink(); ?>brif/"><?php echo esc_html(get_sub_field('package_button_text')); ?></a>
                             </div>
                             <div class="packages-item__inscription">
                                 <span><?php echo esc_html(get_sub_field('package_inscription')); ?></span>
@@ -322,7 +319,7 @@
                         </div>
                     </div>
                     <div class="banner__button button">
-                        <a href><?php echo esc_html(get_field('bottom_gradient_button_text')); ?></a>
+                        <a href="<?php echo home_url('/kontakt'); ?>"><?php echo esc_html(get_field('bottom_gradient_button_text')); ?></a>
                     </div>
                 </div>
             </div>
