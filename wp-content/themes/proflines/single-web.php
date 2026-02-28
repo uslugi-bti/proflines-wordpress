@@ -322,7 +322,7 @@
                                 </div>
                             <?php endif; ?>
                             <div class="packages-item__button button">
-                                <a href="#contact"><?php the_sub_field('package_button_text'); ?></a>
+                                <a href="<?php the_permalink() ?>brif/"><?php the_sub_field('package_button_text'); ?></a>
                             </div>
                             <?php if(get_sub_field('package_inscription')): ?>
                                 <div class="packages-item__inscription">
@@ -469,7 +469,7 @@
                         </div>
                     </div>
                     <div class="banner__button button">
-                        <a href="#contact"><?php the_field('cta_button_text'); ?></a>
+                        <a href="<?php echo home_url('/kontakt'); ?>"><?php the_field('cta_button_text'); ?></a>
                     </div>
                 </div>
             </div>
