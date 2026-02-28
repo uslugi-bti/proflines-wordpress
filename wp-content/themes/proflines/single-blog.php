@@ -105,7 +105,7 @@
                             </div>
                             <?php endif; ?>
                             <div class="single-content-banner__button">
-                                <a href></a>
+                                <a href="<?php echo home_url('/'); ?>social-initiative/#brief"></a>
                             </div>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                         </ul>
                         <?php endif; ?>
                         <div class="single-side__button button">
-                            <a href><?php the_field('single_side_offer_button_text'); ?></a>
+                            <a href="<?php echo home_url('/'); ?>kontakt/"><?php the_field('single_side_offer_button_text'); ?></a>
                         </div>
                     </div>
 
@@ -141,7 +141,7 @@
                             <p><?php the_field('single_side_cta_text'); ?></p>
                         </div>
                         <div class="single-side__button">
-                            <a href><?php the_field('single_side_cta_button_text'); ?></a>
+                            <a href="<?php echo home_url('/'); ?>kontakt/"><?php the_field('single_side_cta_button_text'); ?></a>
                         </div>
                     </div>
                 </div>

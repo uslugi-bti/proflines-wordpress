@@ -5,13 +5,10 @@
         <div class="container">
             <ul class="breadcrump__body">
                 <li class="breadcrump__item">
-                    <a href="https://proflines.agency">Domov</a>
+                    <a href="<?php echo home_url('/'); ?>">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href="https://proflines.agency/sluzby">Balíky služieb</a>
-                </li>
-                <li class="breadcrump__item">
-                    <a href="https://proflines.agency/marketingovy-prieskum">Prieskum trhu a marketingový prieskum</a>
+                    <a href="<?php the_permalink(); ?>">Prieskum trhu a marketingový prieskum</a>
                 </li>
             </ul>
         </div>
@@ -29,7 +26,7 @@
                         <p><?php the_field('hero_subtitle'); ?></p>
                     </div>
                     <div class="service-hero__button button">
-                        <a href="https://proflines.agency/kontakt"><?php the_field('hero_button_text'); ?></a>
+                        <a href="<?php echo home_url('/'); ?>kontakt/"><?php the_field('hero_button_text'); ?></a>
                     </div>
                 </div>
                 <div class="service-hero__img">
@@ -121,7 +118,7 @@
                                 <p><?php the_field('banner_merchant_text'); ?></p>
                             </div>
                             <div class="banner__button button">
-                                <a href="https://proflines.agency/kontakt"><?php the_field('banner_merchant_button_text'); ?></a>
+                                <a href=""><?php the_field('banner_merchant_button_text'); ?></a>
                             </div>
                         </div>
                     </div>
@@ -335,7 +332,7 @@
                         <h1><?php the_field('yellow_banner_title'); ?></h1>
                     </div>
                     <div class="banner__button button">
-                        <a href="https://proflines.agency/21-chyb"><?php the_field('yellow_banner_button_text'); ?></a>
+                        <a href="<?php echo home_url('/'); ?>mistakes/"><?php the_field('yellow_banner_button_text'); ?></a>
                     </div>
                 </div>
             </div>
@@ -529,7 +526,7 @@
             <div class="table__buttons">
                 <?php foreach ($buttons as $button): ?>
                 <div class="table-button__item button">
-                    <a href="https://proflines.agency/brif"><?php echo $button['button_text']; ?></a>
+                    <a href="<?php the_permalink(); ?>brief/"><?php echo $button['button_text']; ?></a>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -646,7 +643,7 @@
                     </div>
                     <?php endif; ?>
                     <div class="packages-item__button button">
-                        <a href="https://proflines.agency/brif"><?php echo $button_text; ?></a>
+                        <a href="<?php echo home_url('/'); ?>brief/"><?php echo $button_text; ?></a>
                     </div>
                     <div class="packages-item__inscription">
                         <span>Získať plán do 12 hodín</span>
@@ -733,7 +730,7 @@
                                         <label>
                                             <input type="checkbox" name="gdpr" id="gdpr">
                                             <span></span>
-                                            <p><span>*Súhlasím so spracovaním <a href="/gdpr">osobných údajov</a></span></p>
+                                            <p><span>*Súhlasím so spracovaním <a href="<?php echo home_url('/'); ?>zasady-ochrany-osobnych-udajov-gdpr/">osobných údajov</a></span></p>
                                         </label>
                                         <label>
                                             <input type="checkbox" name="newsletter" id="newsletter">
@@ -823,7 +820,7 @@
                 </div>
 
                 <div class="analysis__button button">
-                    <a href="https://proflines.agency/kontakt"><?php the_field('analysis_button_text'); ?></a>
+                    <a href="<?php echo home_url('/'); ?>kontakt/"><?php the_field('analysis_button_text'); ?></a>
                 </div>
 
                 <div class="block__head">
@@ -898,7 +895,7 @@
                 <?php endif; ?>
 
                 <div class="analysis__button button">
-                    <a href="https://proflines.agency/kontakt"><?php the_field('analysis_button_text'); ?></a>
+                    <a href="<?php echo home_url('/'); ?>kontakt/"><?php the_field('analysis_button_text'); ?></a>
                 </div>
 
                 <div class="analysis__quote">
@@ -967,7 +964,7 @@
                             <p><?php echo $banner_third['text']; ?></p>
                         </div>
                         <div class="banner__button button">
-                            <a href="https://proflines.agency/kontakt"><?php echo $banner_third['button_text']; ?></a>
+                            <a href="<?php echo home_url('/'); ?>kontakt/"><?php echo $banner_third['button_text']; ?></a>
                         </div>
                     </div>
                 </div>
@@ -1028,7 +1025,7 @@
                 <div class="banner__body grey span-two">
                     <div class="banner__container">
                         <div class="banner__text">
-                            <p><a href="/checklist.pdf" download><?php the_field('errors_download_text'); ?></a></p>
+                            <p><a href="" download><?php the_field('errors_download_text'); ?></a></p>
                             <p><?php the_field('errors_additional_text'); ?></p>
                         </div>
                     </div>
@@ -1062,7 +1059,7 @@
                             <?php echo $item['answer']; ?>
                             <?php if ($item['has_button'] && $item['button_text']): ?>
                             <div class="faq-item__button">
-                                <a href="https://proflines.agency/vzorky">
+                                <a href="">
                                     <span><?php echo $item['button_text']; ?></span>
                                 </a>
                             </div>
@@ -1082,7 +1079,7 @@
                             <?php echo $item['answer']; ?>
                             <?php if ($item['has_button'] && $item['button_text']): ?>
                             <div class="faq-item__button">
-                                <a href="https://proflines.agency/vzorky">
+                                <a href="">
                                     <span><?php echo $item['button_text']; ?></span>
                                 </a>
                             </div>
@@ -1155,7 +1152,7 @@
                                 <label>
                                     <input type="checkbox" name="gdpr" id="gdpr">
                                     <span></span>
-                                    <p><span>*Súhlasím so spracovaním <a href="/gdpr">osobných údajov</a></span></p>
+                                    <p><span>*Súhlasím so spracovaním <a href="<?php echo home_url('/'); ?>zasady-ochrany-osobnych-udajov-gdpr/">osobných údajov</a></span></p>
                                 </label>
                                 <label>
                                     <input type="checkbox" name="newsletter" id="newsletter">
