@@ -419,7 +419,6 @@
         </div>
     </section>
 
-    <!-- Porovnávacia tabuľka -->
     <section class="table" id="table">
         <div class="container">
             <div class="block__head">
