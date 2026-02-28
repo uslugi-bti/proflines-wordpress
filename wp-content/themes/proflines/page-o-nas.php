@@ -4,10 +4,10 @@
         <div class="container">
             <ul class="breadcrump__body">
                 <li class="breadcrump__item">
-                    <a href><?php echo esc_html(get_field('breadcrumb_home_text')); ?></a>
+                    <a href="<?php echo home_url('/'); ?>"><?php echo esc_html(get_field('breadcrumb_home_text')); ?></a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href><?php echo esc_html(get_field('breadcrumb_current_text')); ?></a>
+                    <a href="<?php echo home_url('/'); ?>o-nas/"><?php echo esc_html(get_field('breadcrumb_current_text')); ?></a>
                 </li>
             </ul>
         </div>
