@@ -611,7 +611,7 @@
                         <p><?php the_field('banner_gradient_text'); ?></p>
                     </div>
                     <div class="banner__button button">
-                        <a href><?php the_field('banner_gradient_button_text'); ?></a>
+                        <a href="<?php echo home_url('/'); ?>social-initiative"><?php the_field('banner_gradient_button_text'); ?></a>
                     </div>
                     <div class="banner__text">
                         <p><?php the_field('banner_gradient_footer_text'); ?></p>
@@ -665,7 +665,7 @@
                                 <p><?php the_field('banner_yellow_text'); ?></p>
                             </div>
                             <div class="banner__button button">
-                                <a href><?php the_field('banner_yellow_button_text'); ?></a>
+                                <a href="<?php echo home_url('/'); ?>kontakt"><?php the_field('banner_yellow_button_text'); ?></a>
                             </div>
                         </div>
                     </div>
@@ -778,7 +778,7 @@
                                 <p>Páčia sa vám tieto výsledky?</p>
                             </div>
                             <div class="stat__button button">
-                                <a href>Začnite ešte dnes</a>
+                                <a href="<?php echo home_url('/'); ?>social-initiative">Začnite ešte dnes</a>
                             </div>
                         </div>
                         <div class="note">
@@ -802,7 +802,7 @@
                         <p><?php the_field('banner_capacity_text'); ?></p>
                     </div>
                     <div class="banner__button button">
-                        <a href><?php the_field('banner_capacity_button_text'); ?></a>
+                        <a href="<?php echo home_url('/'); ?>kontakt"><?php the_field('banner_capacity_button_text'); ?></a>
                     </div>
                 </div>
             </div>

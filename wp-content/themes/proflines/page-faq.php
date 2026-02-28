@@ -4,10 +4,10 @@
         <div class="container">
             <ul class="breadcrump__body">
                 <li class="breadcrump__item">
-                    <a href>Domov</a>
+                    <a href="<?php echo home_url('/'); ?>social-initiative">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href>Q&amp;A</a>
+                    <a href="<?php echo home_url('/'); ?>faq">Q&amp;A</a>
                 </li>
             </ul>
         </div>
