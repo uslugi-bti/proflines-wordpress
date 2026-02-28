@@ -290,9 +290,9 @@
                 </div>
             <?php endif; ?>
 
-            <?php if(have_rows('packages')): ?>
+            <?php if(have_rows('packages_items')): ?>
                 <div class="packages__body">
-                    <?php while(have_rows('packages')): the_row(); 
+                    <?php while(have_rows('packages_items')): the_row(); 
                         $dark_mode = get_sub_field('package_dark_mode');
                         $dark_class = $dark_mode ? ' dark' : '';
                     ?>
