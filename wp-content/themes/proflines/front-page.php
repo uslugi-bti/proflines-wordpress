@@ -6,9 +6,6 @@
                 <li class="breadcrump__item">
                     <a href="<?php echo home_url('/'); ?>">Domov</a>
                 </li>
-                <li class="breadcrump__item">
-                    <a href>Balíky služieb</a>
-                </li>
             </ul>
         </div>
     </div>
@@ -38,8 +35,8 @@
                     <p><?php the_field('hero_subtitle'); ?></p>
                 </div>
                 <div class="hero__buttons">
-                    <a href><?php the_field('hero_button_1_text'); ?></a>
-                    <a href><?php the_field('hero_button_2_text'); ?></a>
+                    <a href="<?php echo home_url('/'); ?>#packages"><?php the_field('hero_button_1_text'); ?></a>
+                    <a href="<?php echo home_url('/'); ?>#services"><?php the_field('hero_button_2_text'); ?></a>
                 </div>
                 <div class="hero__inscription">
                     <p><?php the_field('hero_inscription'); ?></p>
@@ -119,7 +116,7 @@
                 <?php endwhile; ?>
                 <div class="columns__item choose">
                     <div class="columns-item__button button">
-                        <a href><?php the_field('expertise_button_text'); ?></a>
+                        <a href="<?php echo home_url('/'); ?>#services"><?php the_field('expertise_button_text'); ?></a>
                     </div>
                 </div>
             </div>
@@ -182,7 +179,7 @@
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <div class="services__columns">
                 <div class="services__title">
