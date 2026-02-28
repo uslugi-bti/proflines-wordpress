@@ -75,7 +75,7 @@
                     </li>
 
                     <div class="technical-list__button button">
-                        <a href><?php the_field('initiative_nav_button_text'); ?></a>
+                        <a href="#brief"><?php the_field('initiative_nav_button_text'); ?></a>
                     </div>
                 </ul>
             </div>
