@@ -451,6 +451,8 @@
                             $service_name = get_sub_field('service_name');
                             $has_info = get_sub_field('has_info');
                             $info_text = get_sub_field('info_text');
+                            
+                            // Получаем группы полей
                             $starter = get_sub_field('starter');
                             $basic = get_sub_field('basic');
                             $advanced = get_sub_field('advanced');
@@ -458,8 +460,8 @@
                         <tr>
                             <td>
                                 <?php echo $service_name; ?>
-                                <?php if ($has_info): ?>
-                                <span id="info"></span>
+                                <?php if ($has_info && !empty($info_text)): ?>
+                                <span class="info-icon" id="info"></span>
                                 <div class="table-info">
                                     <div class="table-info__body">
                                         <div class="table-info__container">
@@ -470,61 +472,72 @@
                                 <?php endif; ?>
                             </td>
                             
+                            <!-- Starter Column -->
                             <td>
-                            <?php 
-                            $use_icon = $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu'] ?? false;
-                            echo $starter['umiestnit_ikonu_anonieciastocne_namiesto_textu'];
-                            $type = $starter['type'] ?? '';
-
-                            if ($use_icon == 1) {
-
-                                if ($type === 'true') {
-                                    echo '<span class="table__icon table__icon--true"></span>';
-                                } elseif ($type === 'false') {
-                                    echo '<span class="table__icon table__icon--false"></span>';
-                                } elseif ($type === 'partial') {
-                                    echo '<span class="table__icon table__icon--true-false"></span>';
-                                }
-
-                            } elseif (!empty($starter['custom_text'])) {
-                                echo '<span>' . ($starter['custom_text']) . '</span>';
-                            }
-                            ?>
+                                <?php 
+                                if (!empty($starter)) :
+                                    $use_icon = $starter['umiestnit_ikonu'] ?? false;
+                                    
+                                    if ($use_icon == 1) :
+                                        $type = $starter['type'] ?? '';
+                                        
+                                        if ($type === 'true') : ?>
+                                            <span class="table__icon table__icon--true"></span>
+                                        <?php elseif ($type === 'false') : ?>
+                                            <span class="table__icon table__icon--false"></span>
+                                        <?php elseif ($type === 'partial') : ?>
+                                            <span class="table__icon table__icon--true-false"></span>
+                                        <?php endif; ?>
+                                        
+                                    <?php elseif (!empty($starter['custom_text'])) : ?>
+                                        <span><?php echo ($starter['custom_text']); ?></span>
+                                    <?php endif; 
+                                endif; ?>
                             </td>
                             
                             <!-- Basic Column -->
                             <td>
                                 <?php 
-                                if (!empty($basic['umiestnit_ikonu_anonieciastocne_namiesto_textu_basic'])): 
-                                    if ($basic['type'] == 'true'): ?>
-                                        <span class="table__icon table__icon--true"></span>
-                                    <?php elseif ($basic['type'] == 'false'): ?>
-                                        <span class="table__icon table__icon--false"></span>
-                                    <?php elseif ($basic['type'] == 'partial'): ?>
-                                        <span class="table__icon table__icon--true-false"></span>
-                                    <?php endif; ?>
-                                <?php else: 
-                                    if (!empty($basic['custom_text'])): ?>
-                                        <span><?php echo $basic['custom_text']; ?></span>
-                                <?php endif; 
+                                if (!empty($basic)) :
+                                    $use_icon = $basic['umiestnit_ikonu_basic'] ?? false;
+                                    
+                                    if ($use_icon == 1) :
+                                        $type = $basic['type'] ?? '';
+                                        
+                                        if ($type === 'true') : ?>
+                                            <span class="table__icon table__icon--true"></span>
+                                        <?php elseif ($type === 'false') : ?>
+                                            <span class="table__icon table__icon--false"></span>
+                                        <?php elseif ($type === 'partial') : ?>
+                                            <span class="table__icon table__icon--true-false"></span>
+                                        <?php endif; ?>
+                                        
+                                    <?php elseif (!empty($basic['custom_text'])) : ?>
+                                        <span><?php echo ($basic['custom_text']); ?></span>
+                                    <?php endif; 
                                 endif; ?>
                             </td>
                             
                             <!-- Advanced Column -->
                             <td>
                                 <?php 
-                                if (!empty($advanced['umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced'])): 
-                                    if ($advanced['type'] == 'true'): ?>
-                                        <span class="table__icon table__icon--true"></span>
-                                    <?php elseif ($advanced['type'] == 'false'): ?>
-                                        <span class="table__icon table__icon--false"></span>
-                                    <?php elseif ($advanced['type'] == 'partial'): ?>
-                                        <span class="table__icon table__icon--true-false"></span>
-                                    <?php endif; ?>
-                                <?php else: 
-                                    if (!empty($advanced['custom_text'])): ?>
-                                        <span><?php echo $advanced['custom_text']; ?></span>
-                                <?php endif; 
+                                if (!empty($advanced)) :
+                                    $use_icon = $advanced['umiestnit_ikonu_advanced'] ?? false;
+                                    
+                                    if ($use_icon == 1) :
+                                        $type = $advanced['type'] ?? '';
+                                        
+                                        if ($type === 'true') : ?>
+                                            <span class="table__icon table__icon--true"></span>
+                                        <?php elseif ($type === 'false') : ?>
+                                            <span class="table__icon table__icon--false"></span>
+                                        <?php elseif ($type === 'partial') : ?>
+                                            <span class="table__icon table__icon--true-false"></span>
+                                        <?php endif; ?>
+                                        
+                                    <?php elseif (!empty($advanced['custom_text'])) : ?>
+                                        <span><?php echo ($advanced['custom_text']); ?></span>
+                                    <?php endif; 
                                 endif; ?>
                             </td>
                         </tr>
@@ -534,13 +547,12 @@
             </div>
 
             <?php if (have_rows('table_buttons_text')): ?>
-            <?php $buttons = get_field('table_buttons_text'); ?>
             <div class="table__buttons">
-                <?php foreach ($buttons as $button): ?>
+                <?php while (have_rows('table_buttons_text')): the_row(); ?>
                 <div class="table-button__item button">
-                    <a href="<?php the_permalink(); ?>brif/"><?php echo $button['button_text']; ?></a>
+                    <a href="<?php the_permalink(); ?>brif/"><?php the_sub_field('button_text'); ?></a>
                 </div>
-                <?php endforeach; ?>
+                <?php endwhile; ?>
             </div>
             <?php endif; ?>
             <?php endif; ?>
