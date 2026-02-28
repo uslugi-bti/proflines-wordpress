@@ -1418,14 +1418,14 @@
                 "append": ""
             },
             {
-                "key": "field_67bca40f4a703",
+                "key": "field_67bd637f1a2e5",
                 "label": "Položky tabuľky",
                 "name": "table_items",
                 "aria-label": "",
                 "type": "repeater",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": false,
+                "conditional_logic": [],
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -1439,14 +1439,14 @@
                 "collapsed": "",
                 "sub_fields": [
                     {
-                        "key": "field_67bca42f4a704",
+                        "key": "field_67bd63a21a2e6",
                         "label": "Názov služby",
                         "name": "service_name",
                         "aria-label": "",
                         "type": "text",
                         "instructions": "Použite <strong> pre zvýraznenie",
                         "required": 0,
-                        "conditional_logic": false,
+                        "conditional_logic": [],
                         "wrapper": {
                             "width": "",
                             "class": "",
@@ -1457,17 +1457,17 @@
                         "placeholder": "",
                         "prepend": "",
                         "append": "",
-                        "parent_repeater": "field_67bca40f4a703"
+                        "parent_repeater": "field_67bd637f1a2e5"
                     },
                     {
-                        "key": "field_67bca44f4a705",
+                        "key": "field_67bd63c51a2e7",
                         "label": "Info ikona",
                         "name": "has_info",
                         "aria-label": "",
                         "type": "true_false",
                         "instructions": "Zobraziť info ikonu?",
                         "required": 0,
-                        "conditional_logic": false,
+                        "conditional_logic": [],
                         "wrapper": {
                             "width": "",
                             "class": "",
@@ -1478,10 +1478,10 @@
                         "ui": 1,
                         "ui_on_text": "Áno",
                         "ui_off_text": "Nie",
-                        "parent_repeater": "field_67bca40f4a703"
+                        "parent_repeater": "field_67bd637f1a2e5"
                     },
                     {
-                        "key": "field_67bca46f4a706",
+                        "key": "field_67bd63e61a2e8",
                         "label": "Info text",
                         "name": "info_text",
                         "aria-label": "",
@@ -1491,7 +1491,7 @@
                         "conditional_logic": [
                             [
                                 {
-                                    "field": "field_67bca44f4a705",
+                                    "field": "field_67bd63c51a2e7",
                                     "operator": "==",
                                     "value": "1"
                                 }
@@ -1507,34 +1507,34 @@
                         "media_upload": 0,
                         "default_value": "",
                         "delay": 0,
-                        "parent_repeater": "field_67bca40f4a703"
+                        "parent_repeater": "field_67bd637f1a2e5"
                     },
                     {
-                        "key": "field_67bca48f4a707",
+                        "key": "field_67bd640b1a2e9",
                         "label": "Starter",
                         "name": "starter",
                         "aria-label": "",
                         "type": "group",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": false,
+                        "conditional_logic": [],
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
                         "layout": "block",
-                        "parent_repeater": "field_67bca40f4a703",
+                        "parent_repeater": "field_67bd637f1a2e5",
                         "sub_fields": [
                             {
-                                "key": "field_699c263eb623f",
+                                "key": "field_67bd642c1a2ea",
                                 "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
-                                "name": "umiestnit_ikonu_anonieciastocne_namiesto_textu",
+                                "name": "umiestnit_ikonu",
                                 "aria-label": "",
                                 "type": "true_false",
                                 "instructions": "",
                                 "required": 0,
-                                "conditional_logic": 0,
+                                "conditional_logic": [],
                                 "wrapper": {
                                     "width": "",
                                     "class": "",
@@ -1542,13 +1542,13 @@
                                 },
                                 "message": "",
                                 "default_value": 0,
-                                "allow_in_bindings": 0,
-                                "ui_on_text": "",
-                                "ui_off_text": "",
-                                "ui": 1
+                                "ui": 1,
+                                "ui_on_text": "Áno",
+                                "ui_off_text": "Nie",
+                                "parent_repeater": "field_67bd640b1a2e9"
                             },
                             {
-                                "key": "field_67bca4af4a708",
+                                "key": "field_67bd64521a2eb",
                                 "label": "Typ",
                                 "name": "type",
                                 "aria-label": "",
@@ -1558,7 +1558,7 @@
                                 "conditional_logic": [
                                     [
                                         {
-                                            "field": "field_699c263eb623f",
+                                            "field": "field_67bd642c1a2ea",
                                             "operator": "==",
                                             "value": "1"
                                         }
@@ -1578,22 +1578,22 @@
                                 "return_format": "value",
                                 "multiple": 0,
                                 "allow_null": 0,
-                                "allow_in_bindings": 1,
                                 "ui": 1,
                                 "ajax": 0,
                                 "placeholder": "",
+                                "parent_repeater": "field_67bd640b1a2e9",
                                 "create_options": 0,
                                 "save_options": 0
                             },
                             {
-                                "key": "field_67bca4cf4a709",
+                                "key": "field_67bd647a1a2ec",
                                 "label": "Vlastný text",
                                 "name": "custom_text",
                                 "aria-label": "",
                                 "type": "text",
                                 "instructions": "Ak chcete namiesto ikony zobraziť text",
                                 "required": 0,
-                                "conditional_logic": false,
+                                "conditional_logic": [],
                                 "wrapper": {
                                     "width": "",
                                     "class": "",
@@ -1603,36 +1603,37 @@
                                 "maxlength": "",
                                 "placeholder": "",
                                 "prepend": "",
-                                "append": ""
+                                "append": "",
+                                "parent_repeater": "field_67bd640b1a2e9"
                             }
                         ]
                     },
                     {
-                        "key": "field_67bca4ef4a710",
+                        "key": "field_67bd649a1a2ed",
                         "label": "Basic",
                         "name": "basic",
                         "aria-label": "",
                         "type": "group",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": false,
+                        "conditional_logic": [],
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
                         "layout": "block",
-                        "parent_repeater": "field_67bca40f4a703",
+                        "parent_repeater": "field_67bd637f1a2e5",
                         "sub_fields": [
                             {
-                                "key": "field_699c26a3b6241",
+                                "key": "field_67bd64b41a2ee",
                                 "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
-                                "name": "umiestnit_ikonu_anonieciastocne_namiesto_textu_basic",
+                                "name": "umiestnit_ikonu_basic",
                                 "aria-label": "",
                                 "type": "true_false",
                                 "instructions": "",
                                 "required": 0,
-                                "conditional_logic": 0,
+                                "conditional_logic": [],
                                 "wrapper": {
                                     "width": "",
                                     "class": "",
@@ -1640,13 +1641,13 @@
                                 },
                                 "message": "",
                                 "default_value": 0,
-                                "allow_in_bindings": 0,
-                                "ui_on_text": "",
-                                "ui_off_text": "",
-                                "ui": 1
+                                "ui": 1,
+                                "ui_on_text": "Áno",
+                                "ui_off_text": "Nie",
+                                "parent_repeater": "field_67bd649a1a2ed"
                             },
                             {
-                                "key": "field_67bca50f4a711",
+                                "key": "field_67bd64d21a2ef",
                                 "label": "Typ",
                                 "name": "type",
                                 "aria-label": "",
@@ -1656,7 +1657,7 @@
                                 "conditional_logic": [
                                     [
                                         {
-                                            "field": "field_699c26a3b6241",
+                                            "field": "field_67bd64b41a2ee",
                                             "operator": "==",
                                             "value": "1"
                                         }
@@ -1676,22 +1677,22 @@
                                 "return_format": "value",
                                 "multiple": 0,
                                 "allow_null": 0,
-                                "allow_in_bindings": 1,
                                 "ui": 1,
                                 "ajax": 0,
                                 "placeholder": "",
+                                "parent_repeater": "field_67bd649a1a2ed",
                                 "create_options": 0,
                                 "save_options": 0
                             },
                             {
-                                "key": "field_67bca52f4a712",
+                                "key": "field_67bd64f01a2f0",
                                 "label": "Vlastný text",
                                 "name": "custom_text",
                                 "aria-label": "",
                                 "type": "text",
                                 "instructions": "Ak chcete namiesto ikony zobraziť text",
                                 "required": 0,
-                                "conditional_logic": false,
+                                "conditional_logic": [],
                                 "wrapper": {
                                     "width": "",
                                     "class": "",
@@ -1701,36 +1702,37 @@
                                 "maxlength": "",
                                 "placeholder": "",
                                 "prepend": "",
-                                "append": ""
+                                "append": "",
+                                "parent_repeater": "field_67bd649a1a2ed"
                             }
                         ]
                     },
                     {
-                        "key": "field_67bca54f4a713",
+                        "key": "field_67bd650e1a2f1",
                         "label": "Advanced",
                         "name": "advanced",
                         "aria-label": "",
                         "type": "group",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": false,
+                        "conditional_logic": [],
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
                         "layout": "block",
-                        "parent_repeater": "field_67bca40f4a703",
+                        "parent_repeater": "field_67bd637f1a2e5",
                         "sub_fields": [
                             {
-                                "key": "field_699c26e0b6242",
+                                "key": "field_67bd65281a2f2",
                                 "label": "Umiestniť ikonu (áno\/nie\/čiastočne) namiesto textu?",
-                                "name": "umiestnit_ikonu_anonieciastocne_namiesto_textu_advanced",
+                                "name": "umiestnit_ikonu_advanced",
                                 "aria-label": "",
                                 "type": "true_false",
                                 "instructions": "",
                                 "required": 0,
-                                "conditional_logic": 0,
+                                "conditional_logic": [],
                                 "wrapper": {
                                     "width": "",
                                     "class": "",
@@ -1738,13 +1740,13 @@
                                 },
                                 "message": "",
                                 "default_value": 0,
-                                "allow_in_bindings": 0,
-                                "ui_on_text": "",
-                                "ui_off_text": "",
-                                "ui": 1
+                                "ui": 1,
+                                "ui_on_text": "Áno",
+                                "ui_off_text": "Nie",
+                                "parent_repeater": "field_67bd650e1a2f1"
                             },
                             {
-                                "key": "field_67bca56f4a714",
+                                "key": "field_67bd65441a2f3",
                                 "label": "Typ",
                                 "name": "type",
                                 "aria-label": "",
@@ -1754,7 +1756,7 @@
                                 "conditional_logic": [
                                     [
                                         {
-                                            "field": "field_699c26e0b6242",
+                                            "field": "field_67bd65281a2f2",
                                             "operator": "==",
                                             "value": "1"
                                         }
@@ -1774,22 +1776,22 @@
                                 "return_format": "value",
                                 "multiple": 0,
                                 "allow_null": 0,
-                                "allow_in_bindings": 1,
                                 "ui": 1,
                                 "ajax": 0,
                                 "placeholder": "",
+                                "parent_repeater": "field_67bd650e1a2f1",
                                 "create_options": 0,
                                 "save_options": 0
                             },
                             {
-                                "key": "field_67bca58f4a715",
+                                "key": "field_67bd65621a2f4",
                                 "label": "Vlastný text",
                                 "name": "custom_text",
                                 "aria-label": "",
                                 "type": "text",
                                 "instructions": "Ak chcete namiesto ikony zobraziť text",
                                 "required": 0,
-                                "conditional_logic": false,
+                                "conditional_logic": [],
                                 "wrapper": {
                                     "width": "",
                                     "class": "",
@@ -1799,7 +1801,8 @@
                                 "maxlength": "",
                                 "placeholder": "",
                                 "prepend": "",
-                                "append": ""
+                                "append": "",
+                                "parent_repeater": "field_67bd650e1a2f1"
                             }
                         ]
                     }
