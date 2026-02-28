@@ -4,13 +4,13 @@
         <div class="container">
             <ul class="breadcrump__body">
                 <li class="breadcrump__item">
-                    <a href>Domov</a>
+                    <a href="<?php echo home_url('/'); ?>">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href>Blog</a>
+                    <a href="<?php echo home_url('/'); ?>blog/">Blog</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href><?php the_title(); ?></a>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </li>
             </ul>
         </div>
