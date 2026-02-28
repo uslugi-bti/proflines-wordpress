@@ -13,7 +13,7 @@ $blog_title = get_field('blog_title');
                     <a href="<?php echo home_url('/'); ?>">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Blog</a>
+                    <a href="<?php echo home_url('/'); ?>blog">Blog</a>
                 </li>
             </ul>
         </div>

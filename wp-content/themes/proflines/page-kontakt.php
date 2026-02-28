@@ -7,7 +7,7 @@
                     <a href="<?php echo home_url(); ?>">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href="<?php echo get_permalink(); ?>">Kontakt</a>
+                    <a href="<?php echo home_url(); ?>/kontakt">Kontakt</a>
                 </li>
             </ul>
         </div>

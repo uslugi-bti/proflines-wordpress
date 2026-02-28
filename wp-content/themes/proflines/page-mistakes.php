@@ -4,10 +4,10 @@
         <div class="container">
             <ul class="breadcrump__body">
                 <li class="breadcrump__item">
-                    <a href>Domov</a>
+                    <a href="<?php echo home_url('/'); ?>">Domov</a>
                 </li>
                 <li class="breadcrump__item">
-                    <a href>Sociálna iniciatíva</a>
+                    <a href="<?php echo home_url('/'); ?>social-initiative/">Sociálna iniciatíva</a>
                 </li>
             </ul>
         </div>
@@ -90,7 +90,7 @@
                     <?php endif; ?>
 
                     <div class="technical-list__button button">
-                        <a href><?php the_field('navigation_button_text'); ?></a>
+                        <a href="<?php echo home_url('/'); ?>social-initiative/"><?php the_field('navigation_button_text'); ?></a>
                     </div>
                 </ul>
             </div>
